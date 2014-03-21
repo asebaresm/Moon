@@ -428,31 +428,35 @@ STATUS world_turn_light_on_obj(World *w, Object *obj){
  -> The object must be lightable */ 
 STATUS world_turn_light_off_obj(World *w, Object *obj){
 	int i;
+	BOOL lighted;
 
 	if(!w || !obj)
 		return ERROR;
 	/*se puede encender?*/
 	if(obj_is_lightable(obj)==TRUE){
 		/*¿esta el objeto en el inventario?*/
-		for(i=0;i<w->player->inventory->objects->card;i++){
+
+		for(i=0;i<player_inv_size(w->player);i++){
 			/*¿ID objeto recibido misma que ID objeto de inventario?*/
-			if(obj->id == w->player->inventory->objects->v[i]){
+			if(get_object_id(obj)== w->player->inventory->objects->v[i]){
 				if(obj_is_lighted(obj)==FALSE)
 					return OK;
 				else{
-					obj->lighted=FALSE;
+					lighted=FALSE;
+					obj_set_lighted (obj,lighted);
 					return OK;
 				}
 			}
 		}
 		/*¿esta el objeto en ese espacio?*/
-		for(i=0;i<w->space->space_objects->card;i++){
+		for(i=0;i<get_space_set_size(w->space);i++){
 			/*¿ID objeto recibido misma que ID objeto de inventario?*/
-			if(obj->id == w->player->inventory->objects->v[i]){
+			if(get_object_id(obj) == w->player->inventory->objects->v[i]){
 				if(obj_is_lighted(obj)==FALSE)
 					return OK;
 				else{
-					obj->lighted=FALSE;
+					lighted=FALSE;
+					obj_set_lighted (obj,lighted);
 					return OK;
 				}
 			}
@@ -526,7 +530,7 @@ BOOL is_space_lighten_by_object(World *m, Space *space){
 			return TRUE;*/
 
 		/*objeto encendido y coincide la ID del objeto del mundo con ID del objeto del espacio recibido*/
-		if(obj_is_lighted(m->objects[i])==TRUE && (get_object_id(m->objects[i]) == get_id_from_space_set_index(space, int i)))
+		if(obj_is_lighted(m->objects[i])==TRUE && (get_object_id(m->objects[i]) == get_id_from_space_set_index(space, i)))
 			return TRUE;
 	}
 	return FALSE;

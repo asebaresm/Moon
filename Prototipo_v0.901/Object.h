@@ -66,6 +66,7 @@ STATUS obj_set_description_moved(Object *object, char *description);
  */
 STATUS obj_set_movable (Object *obj, BOOL movable);
 
+STATUS obj_set_lighted (Object *obj, BOOL lighted);
 
 /**
  *@name: const char * obj_get_description(Object *obj);

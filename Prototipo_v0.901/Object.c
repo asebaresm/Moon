@@ -122,6 +122,13 @@ STATUS obj_set_movable (Object *obj, BOOL movable){
     return OK;
 }
 
+STATUS obj_set_lighted (Object *obj, BOOL lighted){
+    if(obj == NULL)
+        return ERROR;
+
+    obj->lighted=lighted;
+    return OK;
+}
 
 /**
  *@name: const char * obj_get_description(Object *obj);
