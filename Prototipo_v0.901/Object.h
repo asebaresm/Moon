@@ -68,6 +68,8 @@ STATUS obj_set_movable (Object *obj, BOOL movable);
 
 STATUS obj_set_lighted (Object *obj, BOOL lighted);
 
+STATUS obj_set_not_hidden (Object *obj, BOOL hidden);
+
 /**
  *@name: const char * obj_get_description(Object *obj);
  *@brief: function that get the description of the object.
@@ -78,6 +80,8 @@ STATUS obj_set_lighted (Object *obj, BOOL lighted);
  */
 const char * obj_get_description(Object *obj);
 
+/*devuelve la descripciond e inspeccion del objeto*/
+const char * obj_get_descInspect(Object *obj);
 
 /**
  *@name: BOOL obj_is_movable(Object *obj);

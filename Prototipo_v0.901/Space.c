@@ -114,6 +114,14 @@ const char * desc_space(Space *space){
 	return space->description;
 
 }
+/*Devuelve la descripcion de inspeccion del espacio*/
+const char * desc_space_inspect(Space *space){
+	if(!space)
+		return NULL;
+	return space->descInspect;
+
+}
+
 /* Given a space returns the link to the north. Returns NO_ID if there is no such link */ 
 Id space_get_north(Space *space){
 	if(!space)
@@ -166,11 +174,18 @@ Id get_id_from_space_set_index(Space *space, int indice){
 }
 
 /*Comprueba si el set de objetos para un espacio esta vacio*/
- BOOL is_space_set_empty(Space *space){
+BOOL is_space_set_empty(Space *space){
  	if(!space)
  		return FALSE;
  	return is_empty(space->space_objects);
  }
+
+/*Comprueba si el espacio esta iluminado*/
+BOOL is_space_lighted(Space *space){
+	if(!space)
+		return FALSE;
+	return space->light;
+}
 
 /**
  *@name: Id space_get_id(Space *s);

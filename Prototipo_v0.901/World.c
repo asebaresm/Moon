@@ -256,13 +256,13 @@ STATUS world_inspect_space(World *w, Space *space, char *desc, int max_len){
 		/*comprobacion de coincidencia*/
 		if(where_is_player(m) == w->spaces[i]->id){
 			/*el espacio está iluminado*/
-			if(m->spaces[i]->light==TRUE){
-				strcpy(desc,descInspect);
+			if(is_space_lighted(w->spaces[i])==TRUE){
+				strcpy(desc, desc_space_inspect(w->spaces[i]));
 				return OK;
 			}
 			/*si no esta ilumninado: devuelve la descripcion base*/
 			else{
-				strcpy(desc,description);
+				strcpy(desc,desc_space(w->spaces[i]));
 				return OK;
 			}
 		}
@@ -279,34 +279,35 @@ hidden, the object is no longer hidden). The description is returned
 in the parameter desc which must be allocated by the client. ***************__allocated by the client__*****/ 
 STATUS world_inspect_obj(World * m, Object *obj, char *desc, int max_len){ /*int max_len?*******************/
 	int i;
+	BOOL hidden=FALSE;
 
 	if(!m || !obj)
 		return ERROR;
 	/*bucle para localizar el espacio del player*/
 	for(i=0;i<MAX_SPACES+1;i++){
 		/*comprobacion de coincidencia*/
-		if(where_is_player(m) == m->spaces[i]->id){
+		if(where_is_player(m) == space_get_id(m->spaces[i])){
 			/*el espacio está iluminado*/
-			if(m->spaces[i]->light==TRUE){
+			if(is_space_lighted(m->spaces[i])==TRUE){
 				/*entonces busca el objeto*/
-				for(i=0;i<m->spaces[i]->space_objects->card;i++){
+				for(i=0;i<get_space_set_size(m->spaces[i]);i++){
 					/*si coinciden las IDs, lo ha encontrado*/
-					if(m->spaces[i]->space_objects->v[i] == obj->id){
+					if(get_id_from_space_set_index(m->spaces[i], i) == get_object_id(obj)){
 						/*devuelve por *desc la descripcion de inspección*/
 						if(obj_is_hidden(obj)==TRUE)
-							obj->hidden=FALSE;
-						strcpy(desc,obj->descInspect);
+							obj_set_not_hidden (obj, hidden);
+						strcpy(desc,obj_get_descInspect(obj));
 						return OK;
 					}
 				}
 				/*si no encuentra el objeto en el espacio, lo busca en el inv*/
-				for(i=0;i<m->player->inventory->objects->card;i++){
+				for(i=0;i<player_inv_size(m->player);i++){
 					/*si coinciden las IDs, lo ha encontrado*/
-					if(m->player->inventory->objects->v[i] == obj->id){
+					if(get_id_from_player_inv_set_index(m->player, i) == get_object_id(obj)){
 						/*devuelve por *desc la descripcion de inspección*/
 						if(obj_is_hidden(obj)==TRUE)
-							obj->hidden=FALSE;
-						strcpy(desc,obj->descInspect);
+							obj_set_not_hidden (obj, hidden);
+						strcpy(desc,obj_get_descInspect(obj));
 						return OK;
 					}
 				}
@@ -316,22 +317,22 @@ STATUS world_inspect_obj(World * m, Object *obj, char *desc, int max_len){ /*int
 			/*si el espacio no esta iluminado:*/
 			else{
 				/*entonces busca el objeto en el espacio*/
-				for(i=0;i<m->spaces[i]->space_objects->card;i++){
+				for(i=0;i<m->get_space_set_size(m->spaces);i++){
 					/*si coinciden las IDs, lo ha encontrado*/
-					if(m->spaces[i]->space_objects->v[i] == obj->id){
+					if( get_id_from_space_set_index(m->spaces[i], i) == get_object_id(obj)){
 						/*devuelve por *desc la descripcion sin mas al no haber luz*/
 						/*obj->hidden se mantiene TRUE***************************************/
-						strcpy(desc,obj->description);
+						strcpy(desc,obj_get_description(obj));
 						return OK;
 					}
 				}
 				/*si no encuentra el objeto en el espacio, lo busca en el inv*/
-				for(i=0;i<m->player->inventory->objects->card;i++){
+				for(i=0;i<player_inv_size(m->player);i++){
 					/*si coinciden las IDs, lo ha encontrado*/
-					if(m->player->inventory->objects->v[i] == obj->id){
+					if(get_id_from_player_inv_set_index(m->player, i) == get_object_id(obj)){
 						/*devuelve por *desc la descripcion del objeto sin más*/
 						/*obj->hidden se mantiene TRUE*/
-						strcpy(desc,obj->description);
+						strcpy(desc,obj_get_description(obj));
 						return OK;
 					}
 				}
@@ -371,9 +372,9 @@ STATUS world_drop_obj(World *w, Object *obj){
 	if(!w || !obj)
 		return ERROR;
 	/*¿esta el objeto en el inventario?*/
-	for(i=0;i<w->player->inventory->objects->card;i++){
+	for(i=0;i<player_inv_size(w->player);i++){
 		/*¿ID objeto recibido misma que ID objeto de inventario?*/
-		if(obj->id == w->player->inventory->objects->v[i]){
+		if(get_object_id(obj) == get_id_from_player_inv_set_index(w->player, i)){
 			/*entonces dropeamos el objeto*********************************/
 			/*1.quitar del inventario*/
 			/*2.añadir al set del espacio en el que esta el player*/
@@ -387,31 +388,34 @@ STATUS world_drop_obj(World *w, Object *obj){
 */ 
 STATUS world_turn_light_on_obj(World *w, Object *obj){
 	int i;
+	BOOL lighted;
 
 	if(!w || !obj)
 		return ERROR;
 	/*se puede encender?*/
 	if(obj_is_lightable(obj)==TRUE){
 		/*¿esta el objeto en el inventario?*/
-		for(i=0;i<w->player->inventory->objects->card;i++){
+		for(i=0;i<player_inv_size(w->player);i++){
 			/*¿ID objeto recibido misma que ID objeto de inventario?*/
-			if(obj->id == w->player->inventory->objects->v[i]){
+			if(obj->id == get_id_from_player_inv_set_index(w->player, i)){
 				if(obj_is_lighted(obj)==TRUE)
 					return OK;
 				else{
-					obj->lighted=TRUE;
+					lighted=TRUE;
+					obj_set_lighted (obj,lighted);
 					return OK;
 				}
 			}
 		}
 		/*¿esta el objeto en ese espacio?*/
-		for(i=0;i<w->space->space_objects->card;i++){
+		for(i=0;i<get_space_set_size(w->space);i++){
 			/*¿ID objeto recibido misma que ID objeto de inventario?*/
-			if(obj->id == w->player->inventory->objects->v[i]){
+			if(get_object_id(obj) == get_id_from_player_inv_set_index(w->player, i)){
 				if(obj_is_lighted(obj)==TRUE)
 					return OK;
 				else{
-					obj->lighted=TRUE;
+					lighted=TRUE;
+					obj_set_lighted (obj,lighted);
 					return OK;
 				}
 			}
@@ -438,7 +442,7 @@ STATUS world_turn_light_off_obj(World *w, Object *obj){
 
 		for(i=0;i<player_inv_size(w->player);i++){
 			/*¿ID objeto recibido misma que ID objeto de inventario?*/
-			if(get_object_id(obj)== w->player->inventory->objects->v[i]){
+			if(get_object_id(obj)== get_id_from_player_inv_set_index(w->player, i)){
 				if(obj_is_lighted(obj)==FALSE)
 					return OK;
 				else{
@@ -450,8 +454,8 @@ STATUS world_turn_light_off_obj(World *w, Object *obj){
 		}
 		/*¿esta el objeto en ese espacio?*/
 		for(i=0;i<get_space_set_size(w->space);i++){
-			/*¿ID objeto recibido misma que ID objeto de inventario?*/
-			if(get_object_id(obj) == w->player->inventory->objects->v[i]){
+			/*¿ID objeto recibido misma que ID objeto de inventario?*/								
+			if(get_object_id(obj) == get_id_from_player_inv_set_index(w->player, i)){
 				if(obj_is_lighted(obj)==FALSE)
 					return OK;
 				else{

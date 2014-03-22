@@ -130,6 +130,12 @@ STATUS obj_set_lighted (Object *obj, BOOL lighted){
     return OK;
 }
 
+STATUS obj_set_not_hidden (Object *obj, BOOL hidden){
+    if(!obj)
+        return FALSE;
+    obj->hidden=FALSE;
+    return OK;
+}
 /**
  *@name: const char * obj_get_description(Object *obj);
  *@brief: function that get the description of the object.
@@ -143,6 +149,13 @@ const char * obj_get_description(Object *obj){
         return NULL;
     
     return obj->description;
+}
+
+const char * obj_get_descInspect(Object *obj){
+    if(obj == NULL)
+        return NULL;
+    
+    return obj->descInspect;
 }
 
 
