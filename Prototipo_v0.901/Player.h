@@ -39,5 +39,8 @@ Size player_inv_size(Player *player);
 /*Devuelve la direccion del inventario del player*/
 Inventory * get_player_inv(Player *player);
 
+/*Devuelve la id de un objeto que lleva un player en funcion de un indice*/
+Id get_id_from_player_inv_set_index(Player *player, int indice)
+
 #endif
 

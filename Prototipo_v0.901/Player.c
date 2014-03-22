@@ -91,3 +91,10 @@ Inventory * get_player_inv(Player *player){
 		return NULL;
 	return player->inventory;
 }
+
+/*Devuelve la id de un objeto que lleva un player en funcion de un indice*/
+Id get_id_from_player_inv_set_index(Player *player, int indice){
+	if(!player || indice<0)
+		return NO_ID;
+	return get_id_from_inv_index(player->inv, indice);
+}
