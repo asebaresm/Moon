@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
+
 
 #define MAX_OBJECT 100/*annadida*/
 #define WORD_SIZE 50/*annadida*/
