@@ -40,12 +40,12 @@ Object *world_get_obj(World *w, Id id){
  		return NULL;
  	for(i=0;i<MAX_SPACES+1;i++){
 
- 		if(get_space_id(w->spaces[i])==space){
+ 		if(space_get_id(w->spaces[i])==space){
  			/*Almacenar id espacio al norte*/
  			norte=space_get_north(w->spaces[i])
  			/*Comprobar el espacio con la id*/
  			for(j=0;j<MAX_SPACES+1;j++){
- 				if(get_space_id(w->spaces[j])==norte){
+ 				if(space_get_id(w->spaces[j])==norte){
  					/*Comprobar si el link existe entre ellos y esta abierto*/
  					for(k=0;k<MAX_LINKS;k++){
  						if(link_ask_linked(w->link[k], space, norte)==TRUE){
@@ -61,13 +61,13 @@ Object *world_get_obj(World *w, Id id){
 /* Given the name of an object checks if it is located in a given space. Returns the object or NULL if it does not exist. */
  Object *world_get_obj_from_space(World *w, char *name, Id space){
  	int i;
- 	if(!w || !name)
+ 	if(!w || !name || space==NO_ID)
  		return NULL;
-	for(i=0;i<MAX_OBJECTS+1;i++){
-		if(strcmp(w->objects[i]->name,name))
-			return w->objects[i];
+ 	for (i = 0; i < MAX_SPACES; ++i)
+ 	{
+ 		
+ 	}
 
-	}
 	return NULL;
 
 
@@ -99,44 +99,8 @@ Object *world_get_obj(World *w, Id id){
  /*************************08948438578357987897897848e397894***********************************/
 
 
- /*Funciones a AÑADIR en otros modulos****************************************/
- /*OBJETO*/
- /*Funcion que devuelve un NAME de un objeto o NULL en caso incorrecto*/
-  char * obj_get_name(Object *obj){
-    if(!obj)
-        return NULL;
-    
-    return obj->name;
-}
-
-/*Given an object returns the id, or NO_ID if there is an error*/
-id obj_get_id(Object *obj){
-	if(!obj)
-        return -1;
-
-    return obj->id;
-}
 
 
-/*SPACE*/
-/*Given an space returns the id, or NO_ID if there is an error*/
-id get_space_id(Space *space){
-	if(!space)
-		return -1;
 
-	return space->id;
 
-}
 
-/*UNION*/
-BOOL link_ask_linked(Link *link, Id space1_id, Id space2_id){
-	int i;
-	id id_union;
-	if(!link)
-		return FALSE;
-	if((link->space1==space1_id)&&(link->space2==space2_id)&&(link->openable==TRUE)&&(link->close==FALSE))
-		return TRUE;
-	return FALSE;
-}
-
-/*LINK*/

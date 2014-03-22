@@ -8,7 +8,6 @@
 
 /*Notas:
 * Que hacer con Set *space_objects; 
-* Que hacer con la última funcion?
 */
 
 #include "Space.h"
@@ -121,6 +120,7 @@ Id space_get_north(Space *space){
 		return NO_ID;
 	if (space->north==0)
 		return NO_ID;
+
 	return space->north;
 
 }
@@ -155,7 +155,6 @@ también tienes que incluir una nueva función en el módulo World para que los 
  	return get_size(space->space_objects);
  }
 
-Space *world_add_space(World *w, Id id);
 
 /*Devuelve la id de un objeto del set para ese espacio en funcion de un indice*/
 Id get_id_from_space_set_index(Space *space, int indice){
@@ -178,13 +177,23 @@ Id get_id_from_space_set_index(Space *space, int indice){
  *@author: Pablo Yus.
  *@brief: devuleve el id de un espacio.
  
- *@param: Space * s: espacio del que se quiere conocer su id.
+ *@param: Space * space: espacio del que se quiere conocer su id.
  
- *@return: el id del espacio o NULL si hay algun errror.
+ *@return: el id del espacio o NO_ID si hay algun errror.
  */
  Id space_get_id(Space *space){
- 	if (s == NULL)
- 		return NULL
+ 	if (space == NULL)
+ 		return NO_ID;
 
  	return space->id;
  }
+
+/*Returns the objetc of the objetcs name*/
+Object* space_get_object(Space *space, char *name){
+ 	if (space == NULL || !name)
+ 		return NULL;
+ 	
+
+
+
+} 

@@ -242,3 +242,28 @@ BOOL obj_is_movable(Object *obj){
         return FALSE;
     return obj->movable;
 }
+
+ /*Funcion que devuelve un NAME de un objeto o NULL en caso incorrecto*/
+  char * obj_get_name(Object *obj){
+    if(!obj)
+        return NULL;
+    
+    return obj->name;
+}
+
+/*Given an object returns the id, or NO_ID if there is an error*/
+id obj_get_id(Object *obj){
+    if(!obj)
+        return -1;
+
+    return obj->id;
+}
+
+/*Given a name return ID if the objetc exists, NO_ID in the other case*/
+ID obj_is_name(Object *obj, char *name){
+    if(!obj)
+        return NO_ID;
+    if(strcmp(obj->name,name)==0)
+        return obj->id;
+    return NO_ID;
+}

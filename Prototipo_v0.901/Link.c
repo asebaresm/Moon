@@ -94,3 +94,13 @@ STATUS link_join_spaces(Link *link, Id space1_id, Id space2_id){
   	printf("\n openable %d",link->openable);
   	printf("\n close %d",link->close);
   }
+
+BOOL link_ask_linked(Link *link, Id space1_id, Id space2_id){
+	int i;
+	id id_union;
+	if(!link)
+		return FALSE;
+	if((link->space1==space1_id)&&(link->space2==space2_id)&&(link->openable==TRUE)&&(link->close==FALSE))
+		return TRUE;
+	return FALSE;
+}
