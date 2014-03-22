@@ -1,24 +1,25 @@
-
 #include "Set.h"
 
-
-
-struct _Set{
+struct _Set {
     Id v[MAX_SET]; /* elemento del conjunto*/
-    int card;      /* numero de elementos del conjunto*/
+    int card; /* numero de elementos del conjunto*/
 };
 
 /**
  *@name: Set *new_set();
  *@brief: Create a new set of IDs, it returns NULL if not possible.  
  */
-Set * new_set(){
-	Set * set;
-	
-	set = (Set*) malloc (U * sizeof(Set));
-	set-> card = 0;
-	
-	return set;;
+Set * new_set() {
+    int i;
+    Set * set;
+
+    set = (Set*) malloc(U * sizeof (Set));
+    set-> card = 0;
+    /*se inicializa a 0 todos los elementos por la implementacion elegida*/
+    for(i=0;i<MAX_SET;i++)
+        set->v[i]=0;
+    
+    return set;
 }
 
 /**
@@ -27,15 +28,14 @@ Set * new_set(){
 
  *@param: ccj allows to set to NULL the pointer to the set after. 
  */
-void destroy_set(Set *ccj){
-     
-	if(ccj!=NULL){
-        ccj->card = 0;
-         
-        free(ccj);
-	}
-}
+void destroy_set(Set *ccj) {
 
+    if (ccj != NULL) {
+        ccj->card = 0;
+
+        free(ccj);
+    }
+}
 
 /**
  *@name: 
@@ -46,18 +46,24 @@ void destroy_set(Set *ccj){
 
  *@return: Returns error if the ID was already in the set.
  */
-STATUS add(Set *cj, Id id){
+STATUS add(Set *cj, Id id) {
+    
+    int i;
+    
+    if (cj == NULL || id == NO_ID)
+        return ERROR;
 
-	if(cj==NULL || id == NO_ID)
-		return ERROR;
+    if (contains(cj, id) == TRUE)
+        return ERROR;
 
-	if(contains(cj, id) == TRUE)
-		return ERROR;
-     
-	cj->v[cj->card] = id;
-	cj->card++;
-     
-	return TRUE;
+    for(i=0;i<MAX_SET;i++){
+        if(cj->v[i]==0){
+            cj->v[i]=id;
+            cj->card++;
+            return OK;
+        }
+    }
+    return ERROR;
 }
 
 /**
@@ -69,19 +75,19 @@ STATUS add(Set *cj, Id id){
 
  *@return: TRUE todo es correcto, cualquier otro caso FALSE.
  */
-BOOL contains(Set *cj, Id id){
+BOOL contains(Set *cj, Id id) {
 
-	int i = 0;
+    int i;
 
-	if(cj == NULL)
-		return FALSE;
-	
-	for(i = 0; i < cj->card; i++){
-		if(cj->v[i]==id)
-			return TRUE;
-	}
+    if (cj == NULL)
+        return FALSE;
 
-	return FALSE;
+    for (i = 0; i < cj->card; i++) {
+        if (cj->v[i] == id)
+            return TRUE;
+    }
+
+    return FALSE;
 }
 
 /**
@@ -93,22 +99,31 @@ BOOL contains(Set *cj, Id id){
 
  *@return: It returns error if the ID is not an element of the set.
  */
-STATUS remove(Set *cj, Id id){
+STATUS remove_id(Set *cj, Id id){
+    int i, j;
 
-	int i = 0;
-	if(cj == NULL)
-		return ERROR;
-	
-	if(contains(cj, id) == TRUE)
-		return ERROR;
-			for(;i < cj->card; i++) 
-				cj->v[i] = cj->v[i + 1];
-			break;
-
-		}
-	}
-	cj->card --;
-	return TRUE;
+    /*encontrar id en el array*/
+    for (i = 0; i < cj->card; i++) {
+        if (cj->v[i] == id) {
+            /*caso 1: la id es la ultima del array*/
+            if (i == cj->card - 1) {
+                /*ponerlo a NO_ID*/
+                cj->v[i] = EMPTY_ID;
+                cj->card--;
+                return OK;
+            }
+            /*caso 2: mover todo una posicion*/
+            else {
+                /*busca el 0 en el array (id sin inicializar)*/
+                for (j = 0; cj->v[i]!=EMPTY_ID; j++, i++)
+                    cj->v[i] = cj->v[i + 1];
+                cj->card--;
+                return OK;
+            }
+        }
+    }
+    /*id no encontrada*/
+    return ERROR;
 }
 
 /**
@@ -117,13 +132,13 @@ STATUS remove(Set *cj, Id id){
 
  *@param: cj is a pointer to a valid set. 
  */
-Size get_size(Set *cj){
-      
-	if(cj==NULL){
-		return NO_TAM;
-	}
+Size get_size(Set *cj) {
 
-	return cj->card;
+    if (cj == NULL) {
+        return NO_TAM;
+    }
+
+    return cj->card;
 }
 
 /**
@@ -135,13 +150,13 @@ Size get_size(Set *cj){
 
  *@return: Id.
  */
-Id get_i_id(Set *cj, int indice){
-	/*puntero NULL || id del objeto menor o igual que 0*/				
-	if(cj==NULL || cj->v[indice]<=0){
-		return NO_ID;
-	}
+Id get_i_id(Set *cj, int indice) {
+    /*puntero NULL || id del objeto menor o igual que 0*/
+    if (cj == NULL || cj->v[indice] <= 0) {
+        return NO_ID;
+    }
 
-	return cj->v[indice];
+    return cj->v[indice];
 }
 
 /**
@@ -152,13 +167,12 @@ Id get_i_id(Set *cj, int indice){
  
  *@return: TRUE todo es correcto, cualquier otro caso FALSE.
  */
-BOOL is_empty(Set *cj){
+BOOL is_empty(Set *cj) {
 
-	if(cj==NULL || cj->card != 0)
-		return FALSE;
-      
-	if (cj->card == 0)
-		return TRUE;
+    if (cj == NULL || cj->card != 0)
+        return FALSE;
+
+    if (cj->card == 0)
+        return TRUE;
+    return FALSE;
 }
-
-

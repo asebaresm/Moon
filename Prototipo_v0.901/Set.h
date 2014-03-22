@@ -1,4 +1,3 @@
-
 #include "Types.h"
 
 
@@ -6,6 +5,7 @@
 #define _SET
 
 #define MAX_SET 100
+#define EMPTY_ID 0
 
 typedef struct _Set Set;
 /**
@@ -56,7 +56,7 @@ BOOL contains(Set *cj, Id id);
 
  *@return: It returns error if the ID is not an element of the set.
  */
-STATUS remove(Set *cj, Id id);
+STATUS remove_id(Set *cj, Id id);
 
 /**
  *@name: Size get_size(Set *cj);  
