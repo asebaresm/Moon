@@ -26,6 +26,9 @@ STATUS player_remove_obj(Player *player, Id object_id);
 /* Searches for an object in the inventory of the player. */
 BOOL player_search_obj(Player *player, Id object_id);
 
+/*Comprueba si el inventario del player esta lleno*/
+BOOl is_player_inv_full(Player *player);
+
 STATUS player_set_max_objects(Player *player, unsigned int max_objects);
 
 STATUS player_set_location(Player *player, Id space_id);

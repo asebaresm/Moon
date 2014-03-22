@@ -52,6 +52,11 @@ BOOL player_search_obj(Player *player, Id object_id){
 
 }
 
+/*Comprueba si el onventario del player esta lleno*/
+BOOl is_player_inv_full(Player *player){
+	
+}
+
 STATUS player_set_max_objects(Player *player, unsigned int max_objects){
 	if(!player)
 		return ERROR;

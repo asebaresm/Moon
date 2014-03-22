@@ -372,9 +372,9 @@ STATUS world_drop_obj(World *w, Object *obj){
 	if(!w || !obj)
 		return ERROR;
 	/*¿esta el objeto en el inventario?*/
-	for(i=0;i<w->player->inventory->objects->card;i++){
+	for(i=0;i<player_inv_size(w->player);i++){
 		/*¿ID objeto recibido misma que ID objeto de inventario?*/
-		if(obj->id == w->player->inventory->objects->v[i]){
+		if(get_object_id(obj) == get_id_from_player_inv_set_index(w->player, i)){
 			/*entonces dropeamos el objeto*********************************/
 			/*1.quitar del inventario*/
 			/*2.añadir al set del espacio en el que esta el player*/
