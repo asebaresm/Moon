@@ -2,8 +2,6 @@
 #include "Set.h"
 
 
-#ifndef _SET
-#define _SET
 
 struct _Set{
     Id v[MAX_SET]; /* elemento del conjunto*/
@@ -163,4 +161,4 @@ BOOL is_empty(Set *cj){
 		return TRUE;
 }
 
-#endif /* _SET */
+

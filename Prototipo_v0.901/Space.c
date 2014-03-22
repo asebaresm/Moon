@@ -122,7 +122,7 @@ const char * desc_space_inspect(Space *space){
 
 }
 
-/* Given a space returns the link to the north. Returns NO_ID if there is no such link */ 
+/* Given a space returns the id Space to the north. Returns NO_ID if there is no such link */ 
 Id space_get_north(Space *space){
 	if(!space)
 		return NO_ID;
@@ -203,12 +203,9 @@ BOOL is_space_lighted(Space *space){
  	return space->id;
  }
 
-/*Returns the objetc of the objetcs name*/
-Object* space_get_object(Space *space, char *name){
- 	if (space == NULL || !name)
- 		return NULL;
- 	
-
-
-
+/*Returns the objetc of the objetcs id*/
+BOOL space_get_object(Space *space, Id id){
+ 	if (space == NULL || Id==-1)
+ 		return FALSE;
+ 		return  contains(space->space_objects,id);
 } 

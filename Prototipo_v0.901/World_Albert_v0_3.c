@@ -60,28 +60,30 @@ Object *world_get_obj(World *w, Id id){
  }
 /* Given the name of an object checks if it is located in a given space. Returns the object or NULL if it does not exist. */
  Object *world_get_obj_from_space(World *w, char *name, Id space){
- 	int i;
+ 	int i,j;
  	if(!w || !name || space==NO_ID)
  		return NULL;
- 	for (i = 0; i < MAX_SPACES; ++i)
- 	{
- 		
+ 	for (i = 0; i < MAX_SPACES; ++i){
+ 		if(space_get_id(w->spaces[i])==space){
+ 			for ( j = 0; j < MAX_OBJECTS; ++j){
+ 				if(space_get_object(w->spaces[i],obj_is_name(w->objects[j], name))==TRUE)
+ 					return w->objects[j];
+ 			}
+ 		}
  	}
-
+ }
 	return NULL;
-
-
  }
 /* Shows the description of the space and its visible objects. Hidden objects are not shown. The client must reserve enough memory for desc. */ 
  STATUS world_get_space_description(World *w, Id space, char * desc, Size max_len){
- 	if(!w || !desc)
+ 	 	int i;
+ 	if(!w || !desc || strlen(desc)>max_len)
  		return ERROR;
- 	int i;
+
  	desc=(char*)malloc (max_len*sizeof(char));
  	for(i=0;i<MAX_SPACES;i++){
- 		if(w->spaces[i]->id==space){
-
- 			strcpy(desc,w->spaces[i]->description);
+ 		if(space_get_id(w->spaces[i])==space){
+ 			strcpy(desc,desc_space(w->spaces[i]));
  			return OK;
  		}
  	}
@@ -92,8 +94,36 @@ Object *world_get_obj(World *w, Id id){
  STATUS world_move_player(World *w, DIRECTION dir){
  	if(!w)
  		return ERROR;
- 	w->player->location=dir;
- 	return OK;
+ 	switch (dir){
+ 		case N:
+ 			 	for (int i = 0; i < MAX_SPACES; ++i){
+ 					if(space_get_id(w->spaces[i])==player_get_location(w->player)){
+ 						player_set_location(w->player,space_get_north(w->spaces[i]));
+ 					}	
+ 				}
+ 				return OK;
+
+ 			break;
+ 		case S: 
+ 			
+ 			break;
+ 		case E:
+
+ 			break;
+ 		case W: 
+ 			
+ 			break; 
+ 		case UP:
+
+ 			break;
+ 		case DOWN: 
+ 			
+ 			break; 						
+ 		default:
+ 			return ERROR;		
+ 	}
+
+ 	return ERROR;
 
  }
  /*************************08948438578357987897897848e397894***********************************/
