@@ -115,6 +115,14 @@ const char * desc_space(Space *space){
 	return space->description;
 
 }
+/*Devuelve la descripcion de inspeccion del espacio*/
+const char * desc_space_inspect(Space *space){
+	if(!space)
+		return NULL;
+	return space->descInspect;
+
+}
+
 /* Given a space returns the link to the north. Returns NO_ID if there is no such link */ 
 Id space_get_north(Space *space){
 	if(!space)

@@ -40,6 +40,9 @@ STATUS space_add_obj (Space *space, Id object_id);
 /* Functions to access the properties of a space */ 
 const char * desc_space(Space *space);
 
+/*Devuelve la descripcion de inspeccion del espacio*/
+const char * desc_space_inspect(Space *space);
+
 /* Given a space returns the link to the north. Returns NO_ID if there is no such link */ 
 Id space_get_north(Space *space);
 

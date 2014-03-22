@@ -256,13 +256,13 @@ STATUS world_inspect_space(World *w, Space *space, char *desc, int max_len){
 		/*comprobacion de coincidencia*/
 		if(where_is_player(m) == w->spaces[i]->id){
 			/*el espacio está iluminado*/
-			if(m->spaces[i]->light==TRUE){
-				strcpy(desc,descInspect);
+			if(is_space_lighted(w->spaces[i])==TRUE){
+				strcpy(desc, desc_space_inspect(w->spaces[i]));
 				return OK;
 			}
 			/*si no esta ilumninado: devuelve la descripcion base*/
 			else{
-				strcpy(desc,description);
+				strcpy(desc,desc_space(w->spaces[i]));
 				return OK;
 			}
 		}
