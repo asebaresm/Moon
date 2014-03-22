@@ -1,3 +1,4 @@
+
 #include "Types.h"
 #include "Set.h"
 
@@ -56,6 +57,9 @@ STATUS obj_set_description(Object *obj, char *description);
 STATUS obj_set_description_moved(Object *object, char *description);
 
 
+STATUS obj_set_description_inspect(Object *object, char *description);
+
+STATUS obj_set_name(Object *obj, char *name);
 /**
  *@name:
  *@brief: function that modify the property, movable, of the object.
@@ -68,7 +72,9 @@ STATUS obj_set_movable (Object *obj, BOOL movable);
 
 STATUS obj_set_lighted (Object *obj, BOOL lighted);
 
-STATUS obj_set_not_hidden (Object *obj, BOOL hidden);
+STATUS obj_set_lightable (Object *obj, BOOL lightable);
+
+STATUS obj_set_not_hidden (Object *obj);
 
 /**
  *@name: const char * obj_get_description(Object *obj);
@@ -78,11 +84,14 @@ STATUS obj_set_not_hidden (Object *obj, BOOL hidden);
 
  *@return:
  */
-const char * obj_get_description(Object *obj);
+ char * obj_get_description(Object *obj);
 
 /*devuelve la descripciond e inspeccion del objeto*/
-const char * obj_get_descInspect(Object *obj);
+ char * obj_get_descInspect(Object *obj);
 
+ char * obj_get_descMoved(Object *obj);
+
+ char * obj_get_name(Object *obj);
 /**
  *@name: BOOL obj_is_movable(Object *obj);
  *@brief:
