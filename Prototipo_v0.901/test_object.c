@@ -79,10 +79,15 @@ int main(int argc, char** argv) {
     assert(strcmp(return4,descripcionMueve)==0);
     printf("OK");
     
+    
     /*P7*/
     printf("\nPasando prueba 7: ");
     assert(obj_print(obj)==OK);
     printf("OK");
+    
+    /*liberamos recursos de las pruebas*/
+    obj_destroy(obj);
+    
     printf("\n");
     return (EXIT_SUCCESS);
 }
