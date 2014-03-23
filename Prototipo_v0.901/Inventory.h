@@ -7,6 +7,8 @@
 #include "Types.h"
 #include "Set.h"
 
+#define MAX_DEFAULT 50
+
 typedef struct _Inventory Inventory;
 
 /* Functions to create and destroy an inventory */
@@ -31,7 +33,7 @@ STATUS inventory_remove_obj(Inventory *inv, Id id);
  Size get_inventory_set_size(Inventory *inv);
 
  /*Devuelve la id de un objeto del inventario*/
- Id get_id_from_inv_obj(Inventory *inv, Object *obj);
+ Id get_id_from_inv_obj(Inventory *inv, Id id);
 
  /*devuelve una ID de un objeto dle inventario a partir de un indice*/
 Id get_id_from_inv_index(Inventory *inv, int indice);
