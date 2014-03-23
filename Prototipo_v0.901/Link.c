@@ -10,7 +10,7 @@
 
 #include "Link.h"
 
-typedef struct _Link {
+struct _Link {
     Id id;
     Id space1;
     Id space2;

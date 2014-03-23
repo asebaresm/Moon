@@ -1,3 +1,13 @@
+/* 
+ * File:   Space.h
+ * Author: Albert
+ *
+ * Created on 22 de marzo de 2014, 22:26
+ */
+
+#ifndef SPACE_H
+#define	SPACE_H
+
 /**
 *@brief TAD que representa un espacio en el mundo
 *@file espacio.h
@@ -6,7 +16,7 @@
 *@date 06-03-2014
 */
 
-#include "Types.h"
+
 #include "Set.h"
 
 typedef struct _Space Space;
@@ -72,7 +82,8 @@ BOOL is_space_lighted(Space *space);
  */
  Id space_get_id(Space *space);
 
-/*NOTA
-ambién tienes que incluir una nueva función en el módulo World para que los espacios se pueden añadir a un mundo concreto.*/
+/*Returns the objetc of the objetcs id*/
+BOOL space_get_object(Space *space, Id id);
 
-/* Space *world_add_space(World *w, Id id); */
+#endif	/* SPACE_H */
+
