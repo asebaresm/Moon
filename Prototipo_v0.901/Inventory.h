@@ -32,6 +32,8 @@ STATUS inventory_remove_obj(Inventory *inv, Id id);
 /*Devuelve el numero de elmentos del set del inventario*/
  Size get_inventory_set_size(Inventory *inv);
 
+ Size get_inventory_max(Inventory *inv);
+ 
  /*Devuelve la id de un objeto del inventario*/
  Id get_id_from_inv_obj(Inventory *inv, Id id);
 

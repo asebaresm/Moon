@@ -73,6 +73,12 @@ Size get_inventory_set_size(Inventory *inv) {
     return get_size(inv->objects);
 }
 
+Size get_inventory_max(Inventory *inv){
+    if(!inv)
+        return NO_TAM;
+    return inv->max_objects;
+}
+
 /*Devuelve la id de un objeto del inventario */
 Id get_id_from_inv_obj(Inventory *inv, Id id) {
     int i;
