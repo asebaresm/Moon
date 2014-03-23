@@ -152,7 +152,7 @@ Size get_size(Set *cj) {
  */
 Id get_i_id(Set *cj, int indice) {
     /*puntero NULL || id del objeto menor o igual que 0*/
-    if (cj == NULL || cj->v[indice] <= 0) {
+    if (cj == NULL || cj->v[indice] < 0 || indice> MAX_SET) {
         return NO_ID;
     }
 
@@ -176,3 +176,4 @@ BOOL is_empty(Set *cj) {
         return TRUE;
     return FALSE;
 }
+

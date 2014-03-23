@@ -1,8 +1,7 @@
-#include "Types.h"
-
-
 #ifndef _SET
 #define _SET
+
+#include "Types.h"
 
 #define MAX_SET 100
 #define EMPTY_ID 0
