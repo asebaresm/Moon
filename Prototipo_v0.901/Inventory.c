@@ -42,6 +42,8 @@ STATUS inventory_set_max_objects(Inventory * inv, unsigned int max_objects) {
 STATUS inventory_add_obj(Inventory *inv, Id id) {
     if (!inv)
         return ERROR;
+    if(get_inventory_max(inv)== get_inventory_set_size(inv))
+        return ERROR;
     if (add(inv->objects, id) == ERROR)
         return ERROR;
     return OK;

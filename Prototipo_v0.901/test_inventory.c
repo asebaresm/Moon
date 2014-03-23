@@ -14,13 +14,13 @@
 int main(int argc, char** argv) {
 
     /*variables para las pruebas*/
-    Inventory *inv;
+    Inventory *inv=NULL;
     Id id1=100,id2=110,id3=120,id4=130;
     int indice;
     unsigned int max_objects=10;
    
     
-    printf("\n>>>Pruebas del modulo Set:");
+    printf("\n>>>Pruebas del modulo Inventory:");
     
     /*P1*/
     printf("\nPasando prueba 1: ");

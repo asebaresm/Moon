@@ -10,7 +10,7 @@
 
 int main(int argc, char** argv) {
 
-    Set * s1;
+    Set * s1=NULL;
     /*IDs del set de pruebas*/
     Id id1=1200,id2=1100,id3=1000,id4=900;
     int index=2;
