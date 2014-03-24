@@ -87,8 +87,7 @@ Space *world_get_space(World *w, Id id);
 Object *world_get_obj_by_name(World *w, char * name);
 
 Object *world_get_obj(World *w, Id id);
-/* Returns the current location of the player */
- Id world_get_player_location(World *w);
+
 /* Given a space ID returns the space located north. Returns NULL if there is none or if the link between them is closed. */
  Space *world_get_space_north(World *w, Id space);
 /* Given the name of an object checks if it is located in a given space. Returns the object or NULL if it does not exist. */
@@ -155,6 +154,8 @@ BOOL is_object_inventory(World *m, Inventory *inv);
 
 /*AUX_world_4*/
 Id where_is_player(World *w);
+
+STATUS set_player_location(World *w, Id id);
 
 /*AUX_object_1*/
 BOOL obj_is_lightable(Object *obj);

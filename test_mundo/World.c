@@ -17,10 +17,11 @@ struct _World {
  *@return: the world you have create.
  */
 World *create_world() {
+   
     World * w;
-
+    
     w = (World*) malloc(sizeof (World));
-
+    
     w->n_links = 0;
     w->n_spaces = 0;
     w->n_objects = 0;
@@ -164,7 +165,7 @@ Object *world_get_obj_by_name(World *w, char * name) {
         return NULL;
 
     for (i = 0; i < MAX_OBJECTS + 1; i++) {
-        if (strcmp(obj_get_name(w->objects[i]), name))
+        if (strcmp(obj_get_name(w->objects[i]), name)==0)
             return w->objects[i];
     }
     return NULL;
@@ -183,13 +184,6 @@ Object *world_get_obj(World *w, Id id) {
     return NULL;
 }
 
-/* Returns the current location of the player */
-Id world_get_player_location(World *w) {
-    if (!w)
-        return -1;
-
-    return player_get_location(w->player);
-}
 
 /* Given a space ID returns the space located north. Returns NULL if there is none or if the link between them is closed. */
 Space *world_get_space_north(World *w, Id space) {
@@ -614,6 +608,14 @@ BOOL is_object_inventory_lighted(World *m, Inventory *inv) {
             return TRUE;
     }
     return FALSE;
+}
+
+STATUS set_player_location(World *w, Id id){
+    if (!w)
+        return NO_ID;
+    if(player_set_location(w->player, id)==ERROR)
+        return ERROR;
+    return OK;
 }
 
 /*AUX_world_3*/
