@@ -47,6 +47,7 @@ STATUS space_add_link_north(Space *space, Id link_id);
 
 STATUS space_add_obj (Space *space, Id object_id);
 
+STATUS space_remove_obj (Space *space, Id object_id);
 /* Functions to access the properties of a space */ 
 const char * desc_space(Space *space);
 

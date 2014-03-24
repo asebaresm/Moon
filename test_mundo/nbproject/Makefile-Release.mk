@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=Cygwin-Windows
+CND_PLATFORM=Cygwin_4.x-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -35,15 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/World.o \
-	${OBJECTDIR}/Space.o \
-	${OBJECTDIR}/test_mundo.o \
-	${OBJECTDIR}/Action.o \
+	${OBJECTDIR}/Inventory.o \
 	${OBJECTDIR}/Link.o \
 	${OBJECTDIR}/Object.o \
 	${OBJECTDIR}/Player.o \
-	${OBJECTDIR}/Inventory.o \
-	${OBJECTDIR}/Set.o
+	${OBJECTDIR}/Set.o \
+	${OBJECTDIR}/Space.o \
+	${OBJECTDIR}/World.o \
+	${OBJECTDIR}/test_mundo.o
 
 
 # C Compiler Flags
@@ -68,27 +67,12 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_mundo.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_mundo ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test_mundo ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/World.o: World.c 
+${OBJECTDIR}/Inventory.o: Inventory.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/World.o World.c
-
-${OBJECTDIR}/Space.o: Space.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Space.o Space.c
-
-${OBJECTDIR}/test_mundo.o: test_mundo.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/test_mundo.o test_mundo.c
-
-${OBJECTDIR}/Action.o: Action.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Action.o Action.c
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Inventory.o Inventory.c
 
 ${OBJECTDIR}/Link.o: Link.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -105,15 +89,25 @@ ${OBJECTDIR}/Player.o: Player.c
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Player.o Player.c
 
-${OBJECTDIR}/Inventory.o: Inventory.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Inventory.o Inventory.c
-
 ${OBJECTDIR}/Set.o: Set.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Set.o Set.c
+
+${OBJECTDIR}/Space.o: Space.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Space.o Space.c
+
+${OBJECTDIR}/World.o: World.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/World.o World.c
+
+${OBJECTDIR}/test_mundo.o: test_mundo.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/test_mundo.o test_mundo.c
 
 # Subprojects
 .build-subprojects:

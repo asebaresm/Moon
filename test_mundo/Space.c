@@ -100,6 +100,12 @@ STATUS space_add_obj(Space *space, Id object_id) {
     return add(space->space_objects, object_id);
 }
 
+STATUS space_remove_obj (Space *space, Id object_id){
+    if(!space || object_id == NO_ID)
+        return ERROR;
+    return remove_id(space->space_objects, object_id);
+}
+
 /* Functions to access the properties of a space */
 const char * desc_space(Space *space) {
     if (!space)

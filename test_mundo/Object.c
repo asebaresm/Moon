@@ -284,14 +284,6 @@ BOOL obj_is_hidden(Object *obj) {
 }
 
 
-/*Given an object returns the id, or NO_ID if there is an error*/
-Id obj_get_id(Object *obj) {
-    if (!obj)
-        return -1;
-
-    return obj->id;
-}
-
 /*Given a name return ID if the objetc exists, NO_ID in the other case*/
 Id obj_is_name(Object *obj, char *name) {
     if (!obj)

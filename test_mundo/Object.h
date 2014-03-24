@@ -125,6 +125,7 @@ BOOL obj_is_hidden(Object *obj);
 /*AUX_object_4*/
 BOOL obj_is_movable(Object *obj);
 
+Id obj_is_name(Object *obj, char *name);
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 También tienes que incluir una nueva función en el modulo World para que los objetos 
 se puedan añadir a un mundo concreto. 
