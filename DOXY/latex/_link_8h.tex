@@ -1,0 +1,207 @@
+\hypertarget{_link_8h}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Link.h File Reference}
+\label{_link_8h}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Link.\-h@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Link.\-h}}
+}
+
+
+T\-A\-D que representa una union entre dos espacios.  
+
+
+{\ttfamily \#include \char`\"{}Types.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_ae3b299941e67be6971bfd64a25505eff}{typedef struct \hyperlink{struct___link}{\-\_\-\-Link} \hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}\label{_link_8h_ae3b299941e67be6971bfd64a25505eff}
+
+\begin{DoxyCompactList}\small\item\em T\-A\-D Link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Link $\ast$create\-\_\-link(Id id);}\par
+{\em crea un nuevo link
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el link creado o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a02fba51353278fd30dc22989eeda90b1}{\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ {\bfseries create\-\_\-link} (\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_link_8h_a02fba51353278fd30dc22989eeda90b1}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void destroy\-\_\-link(Link $\ast$link);}\par
+{\em destruye un link
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a07543036203587023b2f3fa16158c057}{void {\bfseries destroy\-\_\-link} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)}\label{_link_8h_a07543036203587023b2f3fa16158c057}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S link\-\_\-join\-\_\-spaces(Link $\ast$link, Id space1\-\_\-id, Id space2\-\_\-id);}\par
+{\em se encarga de crear un link entre dos espacios
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em space1\-\_\-id} & \\
+\hline
+{\em space2\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien y E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_ae087e15020a237e45c5188419455fdf9}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries link\-\_\-join\-\_\-spaces} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space1\-\_\-id, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space2\-\_\-id)}\label{_link_8h_ae087e15020a237e45c5188419455fdf9}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id link\-\_\-get\-\_\-space(Link $\ast$link, int space);}\par
+{\em devuelve el id de uno de los dos espacios que posee un link
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el id del esapcio1 o del espacio2, o N\-O\-\_\-\-I\-D en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a16cb223dafae403e09691eb55ed006c5}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries link\-\_\-get\-\_\-space} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, int space)}\label{_link_8h_a16cb223dafae403e09691eb55ed006c5}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L link\-\_\-is\-\_\-openable(Link $\ast$link, B\-O\-O\-L openable);}\par
+{\em comprueba si el link se puede abrir o no
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em openable} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve T\-R\-U\-E si se puede abrir o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a594ab779080a0de760c77b79dcb1913d}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries link\-\_\-is\-\_\-openable} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} openable)}\label{_link_8h_a594ab779080a0de760c77b79dcb1913d}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S link\-\_\-open(Link $\ast$link);}\par
+{\em hace que un link este abierto
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K en caso de haya ido todo bien o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a7993b94cbfa5de4e4086e5499ac43461}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries link\-\_\-open} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)}\label{_link_8h_a7993b94cbfa5de4e4086e5499ac43461}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S link\-\_\-close(Link $\ast$link);}\par
+{\em hace que un link este cerrado
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K en caso de haya ido todo bien o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a1f26781833ca6b299c0bc35a6f08a36d}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries link\-\_\-close} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)}\label{_link_8h_a1f26781833ca6b299c0bc35a6f08a36d}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S link\-\_\-print(Link $\ast$link);}\par
+{\em imprime un link con todos sus campos
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K en caso de haya ido todo bien o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a95ea756dad592e65440a33dfbe47edcf}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries link\-\_\-print} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)}\label{_link_8h_a95ea756dad592e65440a33dfbe47edcf}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L link\-\_\-ask\-\_\-linked(Link $\ast$link, Id space1\-\_\-id, Id space2\-\_\-id);}\par
+{\em comprueba si una union esta unida
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em space1\-\_\-id} & \\
+\hline
+{\em space2\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E en caso de unido o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_ae12d4430057a837bb3009e5ef7270a04}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries link\-\_\-ask\-\_\-linked} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)}\label{_link_8h_ae12d4430057a837bb3009e5ef7270a04}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id link\-\_\-get\-\_\-id(Link $\ast$link);}\par
+{\em Devuelve la id de un link
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_link_8h_a2bbd320f995a72b2ea7ea639b1c81892}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries link\-\_\-get\-\_\-id} (\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)}\label{_link_8h_a2bbd320f995a72b2ea7ea639b1c81892}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+T\-A\-D que representa una union entre dos espacios. \begin{DoxyAuthor}{Author}
+Albert Soler 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/03-\/2014 
+\end{DoxyDate}

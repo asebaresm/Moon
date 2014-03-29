@@ -1,0 +1,119 @@
+\hypertarget{_world_8c}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-World.c File Reference}
+\label{_world_8c}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-World.\-c@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-World.\-c}}
+}
+
+
+T\-A\-D que representa un mundo.  
+
+
+{\ttfamily \#include \char`\"{}World.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___world}{\-\_\-\-World}
+\begin{DoxyCompactList}\small\item\em T\-A\-D World. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8c_a579bc7a837e35e1a9f7b888dd5c27e68}{\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$ {\bfseries create\-\_\-world} ()}\label{_world_8c_a579bc7a837e35e1a9f7b888dd5c27e68}
+
+\item 
+\hypertarget{_world_8c_a4929b8795ea4ef44dc848717ec5ce03b}{void {\bfseries destroy\-\_\-world} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)}\label{_world_8c_a4929b8795ea4ef44dc848717ec5ce03b}
+
+\item 
+\hypertarget{_world_8c_a5a2aaa2808be60b1f493a41381806196}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-add\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8c_a5a2aaa2808be60b1f493a41381806196}
+
+\item 
+\hypertarget{_world_8c_a33a4926515d01b0cb7a802366324ccda}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-add\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8c_a33a4926515d01b0cb7a802366324ccda}
+
+\item 
+\hypertarget{_world_8c_a82a3e6bafc1b379fa2ed855d9c0b9e85}{\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ {\bfseries world\-\_\-add\-\_\-link} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8c_a82a3e6bafc1b379fa2ed855d9c0b9e85}
+
+\item 
+\hypertarget{_world_8c_acdf09fed8abc6faa60f6292e79af7c22}{\hyperlink{struct___player}{Player} $\ast$ {\bfseries world\-\_\-set\-\_\-player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)}\label{_world_8c_acdf09fed8abc6faa60f6292e79af7c22}
+
+\item 
+\hypertarget{_world_8c_a8e755d97683ccb5b617b304d6e4247bc}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8c_a8e755d97683ccb5b617b304d6e4247bc}
+
+\item 
+\hypertarget{_world_8c_ac12ba0b866696faaef8023a3aa2c9866}{\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ {\bfseries world\-\_\-get\-\_\-link} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8c_ac12ba0b866696faaef8023a3aa2c9866}
+
+\item 
+\hypertarget{_world_8c_a1096bf81322c41ceba51ff19d2ece0eb}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-get\-\_\-obj\-\_\-by\-\_\-name} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$name)}\label{_world_8c_a1096bf81322c41ceba51ff19d2ece0eb}
+
+\item 
+\hypertarget{_world_8c_a396d75f1323bf0360c54d6a83053e4cd}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-get\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8c_a396d75f1323bf0360c54d6a83053e4cd}
+
+\item 
+\hypertarget{_world_8c_ae78a01836b7a8dc7fdc48250eb434b10}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-north} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8c_ae78a01836b7a8dc7fdc48250eb434b10}
+
+\item 
+\hypertarget{_world_8c_a30f3b7f990612cfeae8af017d010b4c3}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-south} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8c_a30f3b7f990612cfeae8af017d010b4c3}
+
+\item 
+\hypertarget{_world_8c_a6fd15a7f387089f7d853ef521e7e7fb1}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-east} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8c_a6fd15a7f387089f7d853ef521e7e7fb1}
+
+\item 
+\hypertarget{_world_8c_af819a6afb809c1dff9fa28a3b07acf63}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-west} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8c_af819a6afb809c1dff9fa28a3b07acf63}
+
+\item 
+\hypertarget{_world_8c_a49f6603e1445b12dda8d6909aa59583b}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-up} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8c_a49f6603e1445b12dda8d6909aa59583b}
+
+\item 
+\hypertarget{_world_8c_aa6b9fde7f5e0bc64c307ec0787b23b76}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-down} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8c_aa6b9fde7f5e0bc64c307ec0787b23b76}
+
+\item 
+\hypertarget{_world_8c_ad3c636d2c4142b2e1d730466e110e535}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-get\-\_\-obj\-\_\-from\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$name, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8c_ad3c636d2c4142b2e1d730466e110e535}
+
+\item 
+\hypertarget{_world_8c_a1c3cbdc760fde903d4afad687d4d231d}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-get\-\_\-space\-\_\-description} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space, char $\ast$desc, Size max\-\_\-len)}\label{_world_8c_a1c3cbdc760fde903d4afad687d4d231d}
+
+\item 
+\hypertarget{_world_8c_a88e080ea1522b070c94ff610f32d6aa2}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-move\-\_\-player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_aa268a41a13430b18e933ed40207178d0}{D\-I\-R\-E\-C\-T\-I\-O\-N} dir)}\label{_world_8c_a88e080ea1522b070c94ff610f32d6aa2}
+
+\item 
+\hypertarget{_world_8c_a564335cce09d3a709f90b0d8c67bb5bc}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-inspect\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$desc, int max\-\_\-len)}\label{_world_8c_a564335cce09d3a709f90b0d8c67bb5bc}
+
+\item 
+\hypertarget{_world_8c_ab7c2389c1b930817fa354604c74d9854}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-inspect\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj, char $\ast$desc, int max\-\_\-len)}\label{_world_8c_ab7c2389c1b930817fa354604c74d9854}
+
+\item 
+\hypertarget{_world_8c_a2c9386f8e6cd7e60195ffa94715830c2}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-pick\-\_\-up\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8c_a2c9386f8e6cd7e60195ffa94715830c2}
+
+\item 
+\hypertarget{_world_8c_a9cdcc7a6e812f6484f418a0ea6f22c7a}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-drop\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8c_a9cdcc7a6e812f6484f418a0ea6f22c7a}
+
+\item 
+\hypertarget{_world_8c_a4b6b9b2fd63a83155257be174c239e9e}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-turn\-\_\-light\-\_\-on\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8c_a4b6b9b2fd63a83155257be174c239e9e}
+
+\item 
+\hypertarget{_world_8c_a4ffbc0d2d702397d38d80ad928b627fe}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-turn\-\_\-light\-\_\-off\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8c_a4ffbc0d2d702397d38d80ad928b627fe}
+
+\item 
+\hypertarget{_world_8c_a2aa080be80c43657e010e8a7d722d8ce}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-illuminate\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_world_8c_a2aa080be80c43657e010e8a7d722d8ce}
+
+\item 
+\hypertarget{_world_8c_aff195841c28ab5af25958b51456c9e92}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-space\-\_\-lighten\-\_\-by\-\_\-object} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_world_8c_aff195841c28ab5af25958b51456c9e92}
+
+\item 
+\hypertarget{_world_8c_a96a77734ff6f763196ab3fc7484dd8e9}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-object\-\_\-inventory\-\_\-lighted} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)}\label{_world_8c_a96a77734ff6f763196ab3fc7484dd8e9}
+
+\item 
+\hypertarget{_world_8c_a8aef7d378e914716e74267f80db8229d}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries set\-\_\-player\-\_\-location} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8c_a8aef7d378e914716e74267f80db8229d}
+
+\item 
+\hypertarget{_world_8c_ad0659f4c43f609d9d92e70a7d2adb4a8}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries where\-\_\-is\-\_\-player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)}\label{_world_8c_ad0659f4c43f609d9d92e70a7d2adb4a8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\-A\-D que representa un mundo. \begin{DoxyAuthor}{Author}
+Albert Soler, Alfonso Sebares y Pablo yus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/03-\/2014 
+\end{DoxyDate}

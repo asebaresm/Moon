@@ -2,6 +2,7 @@
  *@file Object.c
  *@brief contiene las implementaciones de las funciones de Object
  *@author Alfonso
+ *@version 0.01
  *@date 24-03-2014
  */
 
@@ -159,7 +160,7 @@ char * obj_get_name(Object *obj) {
     return obj->name;
 }
 
-/*comprueba si un objeto s epuede mover*/
+/* comprueba si un objeto s epuede mover*/
 BOOL obj_is_movable(Object *obj) {
     if (obj == NULL)
         return FALSE;

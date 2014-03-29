@@ -1,4 +1,4 @@
-/**
+                /**
  *@file Inventory.c
  *@brief contiene las implementaciones de las funciones de Inventory
  *@author Alfonso
@@ -10,13 +10,13 @@
 
 #include "Inventory.h"
 
-/*  *  @brief TAD inventario*/
+/**  *  @brief TAD inventario*/
 struct _Inventory {
     unsigned int max_objects;
     Set * objects;
 };
 
-/*  *  @brief funcion que crea un inventario */
+/*   funcion que crea un inventario */
 Inventory *create_inventory() {
     Inventory *new_inv;
     Set *new_set_obj;
@@ -28,13 +28,13 @@ Inventory *create_inventory() {
     return new_inv;
 }
 
-/*  *  @brief funcion que destruye un inventario */
+/*  funcion que destruye un inventario */
 void destroy_inventory(Inventory *inv) {
     destroy_set(inv->objects);
     free(inv);
 }
 
-/*  *  @brief Sets the maximum number of objects in the inventory */
+/*  brief Sets the maximum number of objects in the inventory */
 STATUS inventory_set_max_objects(Inventory * inv, unsigned int max_objects) {
     if (!inv)
         return ERROR;
@@ -42,7 +42,7 @@ STATUS inventory_set_max_objects(Inventory * inv, unsigned int max_objects) {
     return OK;
 }
 
-/*  *  @brief Function to include an object in the inventory */
+/*  Function to include an object in the inventory */
 STATUS inventory_add_obj(Inventory *inv, Id id) {
     if (!inv)
         return ERROR;
@@ -53,14 +53,14 @@ STATUS inventory_add_obj(Inventory *inv, Id id) {
     return OK;
 }
 
-/*  *  @brief Given an ID searches the inventory for the corresponding object. */
+/*  Given an ID searches the inventory for the corresponding object. */
 BOOL inventory_search_obj(Inventory *inv, Id id) {
     if (!inv)
         return FALSE;
     return contains(inv->objects, id);
 }
 
-/*  *  @brief Given an object ID and an inventory, the corresponding object is 
+/*  Given an object ID and an inventory, the corresponding object is 
         removed from the inventory */
 STATUS inventory_remove_obj(Inventory *inv, Id id) {
     if (!inv)
@@ -70,7 +70,7 @@ STATUS inventory_remove_obj(Inventory *inv, Id id) {
     return OK;
 }
 
-/*  *  @briefDevuelve el numero de elmentos del set del inventario*/
+/*  Devuelve el numero de elmentos del set del inventario*/
 Size get_inventory_set_size(Inventory *inv) {
     if (!inv)
         return NO_TAM;
@@ -79,14 +79,14 @@ Size get_inventory_set_size(Inventory *inv) {
     return get_size(inv->objects);
 }
 
-/*  *  @brief devuelve el tam max de un iventario*/
+/*   devuelve el tam max de un iventario*/
 Size get_inventory_max(Inventory *inv) {
     if (!inv)
         return NO_TAM;
     return inv->max_objects;
 }
 
-/*  *  @briefDevuelve la id de un objeto del inventario */
+/* Devuelve la id de un objeto del inventario */
 Id get_id_from_inv_obj(Inventory *inv, Id id) {
     int i;
 
@@ -102,7 +102,7 @@ Id get_id_from_inv_obj(Inventory *inv, Id id) {
     return NO_ID;
 }
 
-/*  *  @briefdevuelve una ID de un objeto dle inventario a partir de un indice*/
+/* devuelve una ID de un objeto dle inventario a partir de un indice*/
 Id get_id_from_inv_index(Inventory *inv, int indice) {
     if (!inv || indice < 0)
         return NO_ID;

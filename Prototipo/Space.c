@@ -1,18 +1,15 @@
 /**
  *@brief TAD que representa un espacio en el mundo
- *@file espacio.c
+ *@file space.c
  *@author Albert Soler
  *@version 0.01
  *@date 13-03-2014
  */
 
-/*Notas:
- * Que hacer con Set *space_objects; 
- */
 
 #include "Space.h"
 
-/*Tipo opaco de datos*/
+/** * @brief TAD Space */
 struct _Space {
     Id id;
     char description[WORD_SIZE + 1];
@@ -29,10 +26,10 @@ struct _Space {
 
 /* Functions to create and destroy a particular space */
 
-/**
- *@brief Funcion que crea un espacio
- *@param id 
- *@return devuelve un puntero al espacio formado.
+/*
+ *brief Funcion que crea un espacio
+ *param id 
+ *return devuelve un puntero al espacio formado.
  */
 Space *create_space(Id id) {
     Space *new_space;
@@ -48,10 +45,9 @@ Space *create_space(Id id) {
     return new_space;
 
 }
-
-/**
- *@brief Funcion que destruye un espacio
- *@param space espacio a destruir
+/*
+ *brief Funcion que destruye un espacio
+ *param space espacio a destruir
  */
 void destroy_space(Space *space) {
     destroy_set(space->space_objects);
@@ -265,14 +261,14 @@ BOOL is_space_lighted(Space *space) {
     return space->light;
 }
 
-/**
- *@name: Id space_get_id(Space *s);
- *@author: Pablo Yus.
- *@brief: devuleve el id de un espacio.
+/*
+ *name: Id space_get_id(Space *s);
+ *author: Pablo Yus.
+ *brief: devuleve el id de un espacio.
  
- *@param: Space * space: espacio del que se quiere conocer su id.
+ *param: Space * space: espacio del que se quiere conocer su id.
  
- *@return: el id del espacio o NO_ID si hay algun errror.
+ *return: el id del espacio o NO_ID si hay algun errror.
  */
 Id space_get_id(Space *space) {
     if (space == NULL)

@@ -1,3 +1,13 @@
+/**
+ *@brief contiene las implementaciones de las funciones de S
+ *@file Set.h
+ *@author Alfonso
+ *@version 0.01
+ *@date 24-03-2014
+ */
+
+
+
 #ifndef _SET
 #define _SET
 
@@ -6,6 +16,7 @@
 #define MAX_SET 100 /*!< maximo de ids del set*/
 #define EMPTY_ID 0  /*!< macro para ID vacia*/
 
+/** @brief Estrucutura Set*/
 typedef struct _Set Set;
 
 /**

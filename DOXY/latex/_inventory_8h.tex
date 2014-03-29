@@ -1,0 +1,212 @@
+\hypertarget{_inventory_8h}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Inventory.h File Reference}
+\label{_inventory_8h}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Inventory.\-h@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Inventory.\-h}}
+}
+
+
+contiene los protoipos de las funciones de Inventory  
+
+
+{\ttfamily \#include \char`\"{}Types.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Set.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_inventory_8h_a4d5a8df821d47fddfd17cdfcc374b697}{M\-A\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}~50
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{typedef struct \hyperlink{struct___inventory}{\-\_\-\-Inventory} \hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}}\label{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}
+
+\begin{DoxyCompactList}\small\item\em estrucutra inverntory \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Inventory $\ast$create\-\_\-inventory();}\par
+{\em crea un nuevo inventario
+
+\begin{DoxyReturn}{Returns}
+el inventario creado y en caso de error devolvera N\-U\-L\-L 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_ac46d2d92f8dcc93f415c2067511542ce}{\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ {\bfseries create\-\_\-inventory} ()}\label{_inventory_8h_ac46d2d92f8dcc93f415c2067511542ce}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void destroy\-\_\-inventory(Inventory $\ast$inv);}\par
+{\em destruye inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_aa2de18095a84277a534e1b94a37de984}{void {\bfseries destroy\-\_\-inventory} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)}\label{_inventory_8h_aa2de18095a84277a534e1b94a37de984}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S inventory\-\_\-set\-\_\-max\-\_\-objects(Inventory $\ast$ inv, unsigned int max\-\_\-objects);}\par
+{\em determina el maximo de objetos que puede tener un inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+{\em max\-\_\-objects} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si se ha establecido el maximo de forma correcta o E\-R\-R\-O\-R en caso contrario. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_a1015b35087fcdf0270363e6ffe1179b6}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries inventory\-\_\-set\-\_\-max\-\_\-objects} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, unsigned int max\-\_\-objects)}\label{_inventory_8h_a1015b35087fcdf0270363e6ffe1179b6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S inventory\-\_\-add\-\_\-obj(Inventory $\ast$inv, Id id);}\par
+{\em añade un objeto a un inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_a04f08935a726751f9633110cd08f86d3}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries inventory\-\_\-add\-\_\-obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_inventory_8h_a04f08935a726751f9633110cd08f86d3}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L inventory\-\_\-search\-\_\-obj(Inventory $\ast$inv, Id id);}\par
+{\em busca objeto en inventario a partir de su id
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve T\-R\-U\-E si el objeto se encuentra en el inventario, F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_ab52cf5d051300007bb78e62e6994be27}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries inventory\-\_\-search\-\_\-obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_inventory_8h_ab52cf5d051300007bb78e62e6994be27}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S inventory\-\_\-remove\-\_\-obj(Inventory $\ast$inv, Id id);}\par
+{\em elimina un objeto de un inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si se eliminado correctamente o E\-R\-R\-O\-R si no ha sido asi 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_a969cfc1fb8d657b86bdf1841d5d2883a}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries inventory\-\_\-remove\-\_\-obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_inventory_8h_a969cfc1fb8d657b86bdf1841d5d2883a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Size get\-\_\-inventory\-\_\-set\-\_\-size(Inventory $\ast$inv);}\par
+{\em funcion que establece el tamaño de un inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el tamño delñ inventario o N\-O\-\_\-\-T\-A\-M en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_af787e9d7cd53b6d0d775001d7865a382}{Size {\bfseries get\-\_\-inventory\-\_\-set\-\_\-size} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)}\label{_inventory_8h_af787e9d7cd53b6d0d775001d7865a382}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Size get\-\_\-inventory\-\_\-max(Inventory $\ast$inv);}\par
+{\em funcion que devuelve el tamaño de un inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el tamaño maximo inventario o N\-O\-\_\-\-T\-A\-M en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_afa7cbb4fdaa21196739faf8a718aaf5a}{Size {\bfseries get\-\_\-inventory\-\_\-max} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)}\label{_inventory_8h_afa7cbb4fdaa21196739faf8a718aaf5a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id get\-\_\-id\-\_\-from\-\_\-inv\-\_\-obj(Inventory $\ast$inv, Id id);}\par
+{\em Devuelve la id de un objeto del inventario en funcion del indice del array del set
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del objeto que se encuentra en el inventario o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_acdf0965717966fd4f4998928e5d26e16}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries get\-\_\-id\-\_\-from\-\_\-inv\-\_\-obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_inventory_8h_acdf0965717966fd4f4998928e5d26e16}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id get\-\_\-id\-\_\-from\-\_\-inv\-\_\-index(Inventory $\ast$inv, int indice);}\par
+{\em devuelve una I\-D de un objeto del inventario a partir de un indice
+
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & \\
+\hline
+{\em indice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del objeto o N\-O\-\_\-\-I\-D en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_inventory_8h_acb8e023b33d761940c947671f5b05b2a}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries get\-\_\-id\-\_\-from\-\_\-inv\-\_\-index} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, int indice)}\label{_inventory_8h_acb8e023b33d761940c947671f5b05b2a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+contiene los protoipos de las funciones de Inventory \begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_inventory_8h_a4d5a8df821d47fddfd17cdfcc374b697}{\index{Inventory.\-h@{Inventory.\-h}!M\-A\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T@{M\-A\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}}
+\index{M\-A\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T@{M\-A\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}!Inventory.h@{Inventory.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T~50}}\label{_inventory_8h_a4d5a8df821d47fddfd17cdfcc374b697}
+maximo de por defecto de inventario 

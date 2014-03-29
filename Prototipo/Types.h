@@ -2,7 +2,7 @@
 #define _TYPE
 /**
  *@brief tipos de datos comunes
- *@file union.h
+ *@file Types.h
  *@author Albert Soler
  *@version 0.01
  *@date 13-03-2014

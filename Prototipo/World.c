@@ -1,5 +1,14 @@
-#include "World.h"
+/**
+ *@brief TAD que representa un mundo
+ *@file world.c
+ *@author Albert Soler, Alfonso Sebares y Pablo yus
+ *@version 0.01
+ *@date 13-03-2014
+ */
 
+
+#include "World.h"
+/** * @brief TAD World */
 struct _World {
     Space * spaces[MAX_SPACES + 1];
     Object * objects[MAX_OBJECTS + 1];

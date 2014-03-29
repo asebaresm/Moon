@@ -4,6 +4,7 @@
  *@author Alfonso
  *@date 24-03-2014
  */
+
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
@@ -11,6 +12,10 @@
 #include "Set.h"
 
 #define MAX_DEFAULT 50 /*!< maximo de por defecto de inventario*/
+
+ /**
+ *@brief estrucutra inverntory
+ */
 
 typedef struct _Inventory Inventory;
 

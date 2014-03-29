@@ -1,0 +1,687 @@
+\hypertarget{_world_8h}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-World.h File Reference}
+\label{_world_8h}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-World.\-h@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-World.\-h}}
+}
+
+
+T\-A\-D que representa un mundo.  
+
+
+{\ttfamily \#include \char`\"{}Types.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Player.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Link.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Space.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Object.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{typedef struct \hyperlink{struct___world}{\-\_\-\-World} \hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World}}\label{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}
+
+\begin{DoxyCompactList}\small\item\em Estructura de mundo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf \-: World $\ast$create\-\_\-world();}\par
+{\em \-: function to create the world.
+
+\begin{DoxyReturn}{Returns}
+\-: the world you have create. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a579bc7a837e35e1a9f7b888dd5c27e68}{\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$ {\bfseries create\-\_\-world} ()}\label{_world_8h_a579bc7a837e35e1a9f7b888dd5c27e68}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: void destroy\-\_\-world(World $\ast$w);}\par
+{\em \-: function to destroy the world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & the world that you want destroy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: N\-U\-L\-L si hay algun errror. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a4929b8795ea4ef44dc848717ec5ce03b}{void {\bfseries destroy\-\_\-world} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)}\label{_world_8h_a4929b8795ea4ef44dc848717ec5ce03b}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Space $\ast$world\-\_\-add\-\_\-space(World $\ast$w, Id id);}\par
+{\em \-: añade un espacio a menudo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & mundo al que añadir el espacio. \\
+\hline
+{\em } & id del espacio que se quiere añadir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el espacio que se ha añadido, o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a5a2aaa2808be60b1f493a41381806196}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-add\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8h_a5a2aaa2808be60b1f493a41381806196}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Object $\ast$world\-\_\-add\-\_\-obj(World $\ast$w, Id id);}\par
+{\em \-: añade un objeto a mundo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & mundo al que añadir el objeto. \\
+\hline
+{\em } & id del objeto que se quiere añadir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el objeto que se ha añadido, o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a33a4926515d01b0cb7a802366324ccda}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-add\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8h_a33a4926515d01b0cb7a802366324ccda}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Link $\ast$world\-\_\-add\-\_\-link(World $\ast$w, Id id);}\par
+{\em \-: añade un link al mundo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & mundo al que añadir el link. \\
+\hline
+{\em } & id del link que se quiere añadir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el link que se ha añadido, o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a82a3e6bafc1b379fa2ed855d9c0b9e85}{\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ {\bfseries world\-\_\-add\-\_\-link} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8h_a82a3e6bafc1b379fa2ed855d9c0b9e85}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Player $\ast$world\-\_\-set\-\_\-player(World $\ast$w);}\par
+{\em \-: inicializa un jugador en mundo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & mundo al que añadir el jugador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el jugador que se ha añadido, o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_acdf09fed8abc6faa60f6292e79af7c22}{\hyperlink{struct___player}{Player} $\ast$ {\bfseries world\-\_\-set\-\_\-player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)}\label{_world_8h_acdf09fed8abc6faa60f6292e79af7c22}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Space $\ast$world\-\_\-get\-\_\-space(World $\ast$w, Id id);}\par
+{\em \-: obtienes un espacio a partir de su id y del mundo en el que se encuentra.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & mundo donde esta el esapcio. \\
+\hline
+{\em } & id del espacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el espacio que se queria obtener, o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a8e755d97683ccb5b617b304d6e4247bc}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8h_a8e755d97683ccb5b617b304d6e4247bc}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Link $\ast$world\-\_\-get\-\_\-link(World $\ast$w, Id id);}\par
+{\em \-: obtienes un link a partir de su id y del mundo en el que se encuentra.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & mundo donde esta el link. \\
+\hline
+{\em } & id del link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el link que se queria obtener, o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_ac12ba0b866696faaef8023a3aa2c9866}{\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ {\bfseries world\-\_\-get\-\_\-link} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8h_ac12ba0b866696faaef8023a3aa2c9866}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Object $\ast$world\-\_\-get\-\_\-obj\-\_\-by\-\_\-name(World $\ast$w, char $\ast$ name);}\par
+{\em coge un objeto del mundo a partir de su nombre
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em name} & el objeto correspondiente o N\-U\-L\-L en caso de error \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a1096bf81322c41ceba51ff19d2ece0eb}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-get\-\_\-obj\-\_\-by\-\_\-name} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$name)}\label{_world_8h_a1096bf81322c41ceba51ff19d2ece0eb}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Object $\ast$world\-\_\-get\-\_\-obj(World $\ast$w, Id id);}\par
+{\em obtien un objeto del mundo a partir de su id
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el objeto correspondiente o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a396d75f1323bf0360c54d6a83053e4cd}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-get\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8h_a396d75f1323bf0360c54d6a83053e4cd}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Space $\ast$world\-\_\-get\-\_\-space\-\_\-north(World $\ast$w, Id space);}\par
+{\em toma un espacio que esta al norte a partir de un mundo y el id del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_ae78a01836b7a8dc7fdc48250eb434b10}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-north} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8h_ae78a01836b7a8dc7fdc48250eb434b10}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Space $\ast$world\-\_\-get\-\_\-space\-\_\-south(World $\ast$w, Id space);}\par
+{\em toma un espacio que esta al sur a partir de un mundo y el id del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a30f3b7f990612cfeae8af017d010b4c3}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-south} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8h_a30f3b7f990612cfeae8af017d010b4c3}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Space $\ast$world\-\_\-get\-\_\-space\-\_\-east(World $\ast$w, Id space);}\par
+{\em toma un espacio que esta al este a partir de un mundo y el id del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a6fd15a7f387089f7d853ef521e7e7fb1}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-east} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8h_a6fd15a7f387089f7d853ef521e7e7fb1}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Space $\ast$world\-\_\-get\-\_\-space\-\_\-west(World $\ast$w, Id space);}\par
+{\em toma un espacio que esta al oeste a partir de un mundo y el id del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_af819a6afb809c1dff9fa28a3b07acf63}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-west} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8h_af819a6afb809c1dff9fa28a3b07acf63}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Space $\ast$world\-\_\-get\-\_\-space\-\_\-up(World $\ast$w, Id space) ;}\par
+{\em toma un espacio que esta a arriba a partir de un mundo y el id del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a49f6603e1445b12dda8d6909aa59583b}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-up} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8h_a49f6603e1445b12dda8d6909aa59583b}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Space $\ast$world\-\_\-get\-\_\-space\-\_\-down(World $\ast$w, Id space);}\par
+{\em toma un espacio que esta debajo a partir de un mundo y el id del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_aa6b9fde7f5e0bc64c307ec0787b23b76}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries world\-\_\-get\-\_\-space\-\_\-down} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8h_aa6b9fde7f5e0bc64c307ec0787b23b76}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Object $\ast$world\-\_\-get\-\_\-obj\-\_\-from\-\_\-space(World $\ast$w, char $\ast$name, Id space);}\par
+{\em coge un objeto de un espacio que se encuentra en un mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em name} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el objeto o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_ad3c636d2c4142b2e1d730466e110e535}{\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ {\bfseries world\-\_\-get\-\_\-obj\-\_\-from\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$name, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)}\label{_world_8h_ad3c636d2c4142b2e1d730466e110e535}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-get\-\_\-space\-\_\-description(World $\ast$w, Id space, char $\ast$ desc, Size max\-\_\-len);}\par
+{\em da la descripcion de un espacio contenido en un mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+{\em desc} & \\
+\hline
+{\em max\-\_\-len} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K en caso de que haya ido todo bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a1c3cbdc760fde903d4afad687d4d231d}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-get\-\_\-space\-\_\-description} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space, char $\ast$desc, Size max\-\_\-len)}\label{_world_8h_a1c3cbdc760fde903d4afad687d4d231d}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-move\-\_\-player(World $\ast$w, D\-I\-R\-E\-C\-T\-I\-O\-N dir);}\par
+{\em mover un jugador que se encuentra en el mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em dir} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si se ha movido el jugador correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a88e080ea1522b070c94ff610f32d6aa2}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-move\-\_\-player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_aa268a41a13430b18e933ed40207178d0}{D\-I\-R\-E\-C\-T\-I\-O\-N} dir)}\label{_world_8h_a88e080ea1522b070c94ff610f32d6aa2}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-inspect\-\_\-space(World $\ast$w, Space $\ast$space, char $\ast$desc, int max\-\_\-len);}\par
+{\em comprueba la descripcion de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em space} & \\
+\hline
+{\em desc} & \\
+\hline
+{\em max\-\_\-len} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K en caso de que se haya podido inspeccionar o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a564335cce09d3a709f90b0d8c67bb5bc}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-inspect\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$desc, int max\-\_\-len)}\label{_world_8h_a564335cce09d3a709f90b0d8c67bb5bc}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-inspect\-\_\-obj(World $\ast$ m, Object $\ast$obj, char $\ast$desc, int max\-\_\-len);}\par
+{\em ese encarga de inspeccionar un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em obj} & \\
+\hline
+{\em desc} & \\
+\hline
+{\em max\-\_\-len} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si se ha podido inspeccionar o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_ab7c2389c1b930817fa354604c74d9854}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-inspect\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj, char $\ast$desc, int max\-\_\-len)}\label{_world_8h_ab7c2389c1b930817fa354604c74d9854}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-pick\-\_\-up\-\_\-obj(World $\ast$w, Object $\ast$obj);}\par
+{\em coge un objeto perteneciente a un mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si se ha podido coger o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a2c9386f8e6cd7e60195ffa94715830c2}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-pick\-\_\-up\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_a2c9386f8e6cd7e60195ffa94715830c2}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-drop\-\_\-obj(World $\ast$w, Object $\ast$obj);}\par
+{\em dejar un objeto que esta en un mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si se ha podido dejar o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a9cdcc7a6e812f6484f418a0ea6f22c7a}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-drop\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_a9cdcc7a6e812f6484f418a0ea6f22c7a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-turn\-\_\-light\-\_\-on\-\_\-obj(World $\ast$w, Object $\ast$obj);}\par
+{\em ilumina un objeto que hay en un mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a4b6b9b2fd63a83155257be174c239e9e}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-turn\-\_\-light\-\_\-on\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_a4b6b9b2fd63a83155257be174c239e9e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-turn\-\_\-light\-\_\-off\-\_\-obj(World $\ast$w, Object $\ast$obj);}\par
+{\em apaga un objeto que hay en un mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a4ffbc0d2d702397d38d80ad928b627fe}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-turn\-\_\-light\-\_\-off\-\_\-obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_a4ffbc0d2d702397d38d80ad928b627fe}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S world\-\_\-illuminate\-\_\-space(World $\ast$ m, Space $\ast$space);}\par
+{\em ilumina un espacio de un mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien o E\-R\-R\-O\-R en cualquier otro caso 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a2aa080be80c43657e010e8a7d722d8ce}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries world\-\_\-illuminate\-\_\-space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_world_8h_a2aa080be80c43657e010e8a7d722d8ce}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L is\-\_\-space\-\_\-lighten\-\_\-by\-\_\-object(World $\ast$m, Space $\ast$space);}\par
+{\em busca si algun objeto encendido del mundo m esta en el espacio space
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E si esta el objeto en el espacio o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_aff195841c28ab5af25958b51456c9e92}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-space\-\_\-lighten\-\_\-by\-\_\-object} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_world_8h_aff195841c28ab5af25958b51456c9e92}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L is\-\_\-object\-\_\-inventory\-\_\-lighted(World $\ast$m, Inventory $\ast$inv);}\par
+{\em busca si algun objeto encendido del mundo m esta en el inventario inv
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em inv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E si esta el obejto que se buscaba o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a96a77734ff6f763196ab3fc7484dd8e9}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-object\-\_\-inventory\-\_\-lighted} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)}\label{_world_8h_a96a77734ff6f763196ab3fc7484dd8e9}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L is\-\_\-object\-\_\-inventory(World $\ast$m, Inventory $\ast$inv);}\par
+{\em comprueba si un objeto esta en el inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em inv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E si esta, F\-A\-L\-S\-E si no esta 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a58e3a47ab4ad6f2f00550b902dc0ce81}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-object\-\_\-inventory} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)}\label{_world_8h_a58e3a47ab4ad6f2f00550b902dc0ce81}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id where\-\_\-is\-\_\-player(World $\ast$w);}\par
+{\em da la id del jugador que se encuentra en el mundo
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del jueador o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_ad0659f4c43f609d9d92e70a7d2adb4a8}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries where\-\_\-is\-\_\-player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)}\label{_world_8h_ad0659f4c43f609d9d92e70a7d2adb4a8}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S set\-\_\-player\-\_\-location(World $\ast$w, Id id);}\par
+{\em establece la posicion del player
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-R\-R\-O\-R / O\-K 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a8aef7d378e914716e74267f80db8229d}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries set\-\_\-player\-\_\-location} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_world_8h_a8aef7d378e914716e74267f80db8229d}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L obj\-\_\-is\-\_\-lightable(Object $\ast$obj);}\par
+{\em comprueba si un objeto se puede encender
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E o F\-A\-L\-S\-E 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_ae77af4f85237b48c4e1f2ca491078a50}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries obj\-\_\-is\-\_\-lightable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_ae77af4f85237b48c4e1f2ca491078a50}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L obj\-\_\-is\-\_\-lighted(Object $\ast$obj);}\par
+{\em comprueba si un objeto esta encendido
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E o F\-A\-L\-S\-E 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a8dbc642d141c38a04dbd9c3411a0a081}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries obj\-\_\-is\-\_\-lighted} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_a8dbc642d141c38a04dbd9c3411a0a081}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L obj\-\_\-is\-\_\-hidden(Object $\ast$obj);}\par
+{\em comprueba si un objeto esta escondido
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E o F\-A\-L\-S\-E 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a883dc62c0ee79dfd2a06d413f0be6eb7}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries obj\-\_\-is\-\_\-hidden} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_a883dc62c0ee79dfd2a06d413f0be6eb7}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L obj\-\_\-is\-\_\-movable(Object $\ast$obj);}\par
+{\em comprueba si un objeto se puede mover
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E o F\-A\-L\-S\-E 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_world_8h_a02f3705c93e5f0fe0ca328e58a99bd08}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries obj\-\_\-is\-\_\-movable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$obj)}\label{_world_8h_a02f3705c93e5f0fe0ca328e58a99bd08}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+T\-A\-D que representa un mundo. \begin{DoxyAuthor}{Author}
+Albert Soler, Alfonso Sebares y Pablo yus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/03-\/2014 
+\end{DoxyDate}

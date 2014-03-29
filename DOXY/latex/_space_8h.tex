@@ -1,0 +1,530 @@
+\hypertarget{_space_8h}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Space.h File Reference}
+\label{_space_8h}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Space.\-h@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Space.\-h}}
+}
+
+
+T\-A\-D que representa un espacio en el mundo.  
+
+
+{\ttfamily \#include \char`\"{}Set.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{typedef struct \hyperlink{struct___space}{\-\_\-\-Space} \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}}\label{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}
+
+\begin{DoxyCompactList}\small\item\em Estrucura de espacio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Space $\ast$create\-\_\-space(Id id);}\par
+{\em Funcion que crea un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve un puntero al espacio formado. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a315e2f533b1068822bcce06236d534cd}{\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries create\-\_\-space} (\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_space_8h_a315e2f533b1068822bcce06236d534cd}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void destroy\-\_\-space(Space $\ast$space);}\par
+{\em Funcion que destruye un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio a destruir \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a70ce4e90068b370e1fe5824a4ded3fb8}{void {\bfseries destroy\-\_\-space} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a70ce4e90068b370e1fe5824a4ded3fb8}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-set\-\_\-description(Space $\ast$space, char $\ast$description);}\par
+{\em establece una descripcion a un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha salido correctamente o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a7aecc426029f567d452a0f916fd512d6}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-set\-\_\-description} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$description)}\label{_space_8h_a7aecc426029f567d452a0f916fd512d6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-set\-\_\-description\-\_\-inspect(Space $\ast$space, char $\ast$description);}\par
+{\em establece la descripcion ,al inspeccionar un espacio, de este mismo
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si se ha establecido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a1f803068e91e1aff851c9efbe58ba5b2}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-set\-\_\-description\-\_\-inspect} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$description)}\label{_space_8h_a1f803068e91e1aff851c9efbe58ba5b2}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-set\-\_\-light(Space $\ast$space, B\-O\-O\-L light);}\par
+{\em establece si un espacio esta iluminado
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em light} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha ido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a97cdd4deef92d7d220ed0fe70ebc68e2}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-set\-\_\-light} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} light)}\label{_space_8h_a97cdd4deef92d7d220ed0fe70ebc68e2}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-add\-\_\-link\-\_\-north(Space $\ast$space, Id link\-\_\-id);}\par
+{\em añade un union(link) al lado norte de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em link\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha ido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a005fe4b6bb3779efbbc711348a799096}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-add\-\_\-link\-\_\-north} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\-\_\-id)}\label{_space_8h_a005fe4b6bb3779efbbc711348a799096}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-add\-\_\-link\-\_\-west(Space $\ast$space, Id link\-\_\-id);}\par
+{\em añade un union(link) al lado oeste de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em link\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha ido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a8698d6a0cc47b99a1b77a507ab3b7c66}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-add\-\_\-link\-\_\-west} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\-\_\-id)}\label{_space_8h_a8698d6a0cc47b99a1b77a507ab3b7c66}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-add\-\_\-link\-\_\-south(Space $\ast$space, Id link\-\_\-id);}\par
+{\em añade un union(link) al lado sur de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em link\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha ido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a338babba4918ae8a3da35a38800477eb}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-add\-\_\-link\-\_\-south} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\-\_\-id)}\label{_space_8h_a338babba4918ae8a3da35a38800477eb}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-add\-\_\-link\-\_\-east(Space $\ast$space, Id link\-\_\-id);}\par
+{\em añade un union(link) al lado este de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em link\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha ido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a6cb152bc1cf74f6aeb6de0c4cc7b7d41}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-add\-\_\-link\-\_\-east} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\-\_\-id)}\label{_space_8h_a6cb152bc1cf74f6aeb6de0c4cc7b7d41}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-add\-\_\-link\-\_\-up(Space $\ast$space, Id link\-\_\-id);}\par
+{\em añade un union(link) al lado arriba de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em link\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha ido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a50341c6c4b2787b4d8173212d5320b69}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-add\-\_\-link\-\_\-up} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\-\_\-id)}\label{_space_8h_a50341c6c4b2787b4d8173212d5320b69}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-add\-\_\-link\-\_\-down(Space $\ast$space, Id link\-\_\-id);}\par
+{\em añade un union(link) al lado abajo de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em link\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si todo ha ido bien o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a41952d8c39c524cf810dc632c1af498c}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-add\-\_\-link\-\_\-down} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\-\_\-id)}\label{_space_8h_a41952d8c39c524cf810dc632c1af498c}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-add\-\_\-obj(Space $\ast$space, Id object\-\_\-id);}\par
+{\em añade un objeto, a partir de su id, al espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em object\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_aec940cea106ecc711414288f3b519ffc}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-add\-\_\-obj} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)}\label{_space_8h_aec940cea106ecc711414288f3b519ffc}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S space\-\_\-remove\-\_\-obj (Space $\ast$space, Id object\-\_\-id);}\par
+{\em elimina un objeto del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em object\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-R\-R\-O\-R / O\-K 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a220ad5c3ebcbef20ff1bfddb9c24fd3e}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries space\-\_\-remove\-\_\-obj} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)}\label{_space_8h_a220ad5c3ebcbef20ff1bfddb9c24fd3e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf const char $\ast$ desc\-\_\-space(Space $\ast$space);}\par
+{\em da la descripcion de un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve la descripcion de dicho espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_abe22d565626a6a182e917ae3bc26affa}{const char $\ast$ {\bfseries desc\-\_\-space} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_abe22d565626a6a182e917ae3bc26affa}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf const char $\ast$ desc\-\_\-space\-\_\-inspect(Space $\ast$space);}\par
+{\em da la descripcion de un espacio cuando se inspecciona
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve la descripcion de dicho espacio o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a51b0a6ba8718798a8b05f99b3e40a676}{const char $\ast$ {\bfseries desc\-\_\-space\-\_\-inspect} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a51b0a6ba8718798a8b05f99b3e40a676}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id space\-\_\-get\-\_\-north(Space $\ast$space);}\par
+{\em da la id del espacio que se encuentra por el lado norte del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del espacio o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_ad331fba774897900f615d9d2e8d81a90}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space\-\_\-get\-\_\-north} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_ad331fba774897900f615d9d2e8d81a90}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id space\-\_\-get\-\_\-south(Space $\ast$space);}\par
+{\em da la id del espacio que se encuentra por el lado sur del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del espacio o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a9b86e1335c423eaad832e50d4c12cf1f}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space\-\_\-get\-\_\-south} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a9b86e1335c423eaad832e50d4c12cf1f}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id space\-\_\-get\-\_\-east(Space $\ast$space);}\par
+{\em da la id del espacio que se encuentra por el lado este del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del espacio o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a978a22b77f74bb2dab68a00571abbe0b}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space\-\_\-get\-\_\-east} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a978a22b77f74bb2dab68a00571abbe0b}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id space\-\_\-get\-\_\-west(Space $\ast$space);}\par
+{\em da la id del espacio que se encuentra por el lado oeste del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del espacio o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_af495ebfd5d13eba1a48cebd10992a17f}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space\-\_\-get\-\_\-west} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_af495ebfd5d13eba1a48cebd10992a17f}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id space\-\_\-get\-\_\-up(Space $\ast$space);}\par
+{\em da la id del espacio que se encuentra por el lado de arriba del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del espacio o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a174a988b899d5a0db889a31b70763c9c}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space\-\_\-get\-\_\-up} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a174a988b899d5a0db889a31b70763c9c}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id space\-\_\-get\-\_\-down(Space $\ast$space);}\par
+{\em da la id del espacio que se encuentra por el lado de abajo del espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del espacio o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_ab269eab72b9ea7254044b34b1c177602}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space\-\_\-get\-\_\-down} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_ab269eab72b9ea7254044b34b1c177602}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L space\-\_\-print(Space $\ast$space);}\par
+{\em imprime por pantalla el espacio con cada uno de sus campos
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E si la impresion por pantalla ha sido correcta o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a672865cd8a2beebb8361174bcb1092c2}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries space\-\_\-print} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a672865cd8a2beebb8361174bcb1092c2}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id get\-\_\-id\-\_\-from\-\_\-space\-\_\-set\-\_\-index(Space $\ast$space, int indice);}\par
+{\em devuelve la id de un objeto del set para ese espacio en funcion de un indice
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+{\em indice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del objeto o en caos de error N\-O\-\_\-\-I\-D 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_ab1b4ae0f6bd11e8b14f305a8ab2fff33}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries get\-\_\-id\-\_\-from\-\_\-space\-\_\-set\-\_\-index} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, int indice)}\label{_space_8h_ab1b4ae0f6bd11e8b14f305a8ab2fff33}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Size get\-\_\-space\-\_\-set\-\_\-size(Space $\ast$space);}\par
+{\em devuelve el numero de objetos que hay en un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el numero de objetos que hay en el espacio o N\-O\-\_\-\-T\-A\-M en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a74a9adefad1cf86b8f89d1726ea56225}{Size {\bfseries get\-\_\-space\-\_\-set\-\_\-size} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a74a9adefad1cf86b8f89d1726ea56225}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L is\-\_\-space\-\_\-set\-\_\-empty(Space $\ast$space);}\par
+{\em comprueba si el set
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el numero de objetos que hay en el espacio o N\-O\-\_\-\-T\-A\-M en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_a907f66e51ddc4fa75f0b50c8e0c89ecf}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-space\-\_\-set\-\_\-empty} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_a907f66e51ddc4fa75f0b50c8e0c89ecf}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: B\-O\-O\-L is\-\_\-space\-\_\-lighted(Space $\ast$space);}\par
+{\em \-: comprueba si un estapcio esta iluminado
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: T\-R\-U\-E si esta encendido (iluminado) o F\-A\-L\-S\-E si no lo esta 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_ae49c81f00ced22411476a4a6362db2fc}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-space\-\_\-lighted} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_ae49c81f00ced22411476a4a6362db2fc}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Id space\-\_\-get\-\_\-id(Space $\ast$s);}\par
+{\em \-: devuleve el id de un espacio.
+
+\begin{DoxyAuthor}{Author}
+\-: Pablo Yus. 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em } & Space $\ast$ s\-: espacio del que se quiere conocer su id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el id del espacio o N\-U\-L\-L si hay algun errror. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_ac8ddfd0d8692fd852ee49698c446cb50}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space\-\_\-get\-\_\-id} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)}\label{_space_8h_ac8ddfd0d8692fd852ee49698c446cb50}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: B\-O\-O\-L space\-\_\-get\-\_\-object(Space $\ast$space, Id id);}\par
+{\em \-: coge un objeto que se encuentra en un espacio
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & space \\
+\hline
+{\em } & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: T\-R\-U\-E si se ha podidod coger el objeto o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_space_8h_ac9493754d918e70dfae2137daabd2e8a}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries space\-\_\-get\-\_\-object} (\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_space_8h_ac9493754d918e70dfae2137daabd2e8a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+T\-A\-D que representa un espacio en el mundo. \begin{DoxyAuthor}{Author}
+Albert Soler 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/03-\/2014 
+\end{DoxyDate}

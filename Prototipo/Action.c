@@ -1,4 +1,4 @@
-/**
+﻿/**
  *@file Action.c
  *@brief contiene las implementaciones de las funciones de Action
  *@author Pablo Yus
@@ -7,15 +7,13 @@
 
 #include "Action.h"
 
-/*
- **************************************************************************************************************
- */
+ /** * @brief TAD Acion */
 struct _Action {
     ActionType id; /* type of action to do */
     char *do_act; /* direct object */
 };
 
-/**
+/*
  *name: action_execute
  *brief: ejecuta una accione en particular en mundo (excepto A_PICK_UP)
  *param: World *w: mundo sobre el que se ejecuta la accion
@@ -106,7 +104,7 @@ STATUS action_execute(World *w, Action *a) {
     return ERROR;
 }
 
-/**
+/*
  *name: action_execute_inspect
  *brief: reserva memeoria para la cadena que almacenara la descripicion del objeto inspeccionado.
  *param: World *w: mundo que contine aquello que se va a inspeccionar.
@@ -146,7 +144,7 @@ STATUS action_execute_inspect(World *w, Action *a, char *inspected, Size max_len
     }
 }
 
-/**
+/*
  *name: topic_is_valid
  *brief: permite comprobar si el tema es valido para ese momento del juego. 
  *param: World *w: mundo actual
@@ -165,6 +163,13 @@ current state of the game. Returns TRUE if so and FALSE otherwise.
 
 /*----------------Auxiliares---------------*/
 
+/*
+ * name Action* new_action(const char* do_act, ActionType id);
+ * brief crea una nueva accion
+ * param do_act
+ * param id
+ * return la accion si se ha creado correctamente o NULL en caso contrario
+ */
 Action* new_action(const char* do_act, ActionType id) {
     Action *a;
 
@@ -180,6 +185,11 @@ Action* new_action(const char* do_act, ActionType id) {
     return a;
 
 }
+/*
+ * name void destroy_action(Action *a);
+ * brief destruye una accion liberando memoria que habia sido reservada previamente
+ * param a
+ */
 
 void destroy_action(Action *a) {
     free(a->do_act);

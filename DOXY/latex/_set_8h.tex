@@ -1,0 +1,181 @@
+\hypertarget{_set_8h}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Set.h File Reference}
+\label{_set_8h}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Set.\-h@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Set.\-h}}
+}
+
+
+contiene las implementaciones de las funciones de S  
+
+
+{\ttfamily \#include \char`\"{}Types.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_set_8h_abc21882f4958e6b56aaf2f3c18f80d43}{M\-A\-X\-\_\-\-S\-E\-T}~100
+\item 
+\#define \hyperlink{_set_8h_a7f86870481feb2a3f606c51b6109248d}{E\-M\-P\-T\-Y\-\_\-\-I\-D}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{typedef struct \hyperlink{struct___set}{\-\_\-\-Set} \hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}}\label{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}
+
+\begin{DoxyCompactList}\small\item\em Estrucutura Set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf \-: Set $\ast$new\-\_\-set();}\par
+{\em \-: Create a new set of I\-Ds.
+
+\begin{DoxyReturn}{Returns}
+\-: El set que ha sido creado, o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_ab17865f5cee4fff9e6943dd0f90cad97}{\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ {\bfseries new\-\_\-set} ()}\label{_set_8h_ab17865f5cee4fff9e6943dd0f90cad97}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: void destroy\-\_\-set(Set $\ast$ccj);}\par
+{\em \-: Free the allocated resources for the set of I\-Ds, if they were any.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ccj allows to set to N\-U\-L\-L the pointer to the set after. \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_a7b31a60ec2802881a624a744a4f9df35}{void {\bfseries destroy\-\_\-set} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ccj)}\label{_set_8h_a7b31a60ec2802881a624a744a4f9df35}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: S\-T\-A\-T\-U\-S add(Set $\ast$cj, Id id);}\par
+{\em \-: Adds a new I\-D to the set if it is not already in it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & cj is a pointer to a valid set. \\
+\hline
+{\em } & id is the new I\-D to add to the set (in case it is not already in it).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: Returns error if the I\-D was already in the set. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_a155cc026d73dff0879ad898e5284befd}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries add} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_set_8h_a155cc026d73dff0879ad898e5284befd}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-:}\par
+{\em \-: Given an I\-D and a Set, it indicates whether the I\-D is an element of the set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & cj is a pointer to a valid set. \\
+\hline
+{\em } & id is the I\-D to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: T\-R\-U\-E todo es correcto, cualquier otro caso F\-A\-L\-S\-E. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_a836f467e2513189a19ee6d9f65ef2746}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries contains} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_set_8h_a836f467e2513189a19ee6d9f65ef2746}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: S\-T\-A\-T\-U\-S remove(Set $\ast$cj, Id id);}\par
+{\em \-: Given an I\-D and a Set it removes the I\-D from the set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & cj is a pointer to a valid set. \\
+\hline
+{\em } & id is the I\-D to remove from the set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: It returns error if the I\-D is not an element of the set. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_ad0655699245e63cd80e113964b03c069}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries remove\-\_\-id} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)}\label{_set_8h_ad0655699245e63cd80e113964b03c069}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Size get\-\_\-size(Set $\ast$cj);}\par
+{\em \-: It returns the current size of the set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & cj is a pointer to a valid set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: el tamño del conjunto o N\-U\-L\-L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_aa3096793cddb7331b711f142df779bb5}{Size {\bfseries get\-\_\-size} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj)}\label{_set_8h_aa3096793cddb7331b711f142df779bb5}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: Id get\-\_\-i\-\_\-id(Set $\ast$cj, int indice);}\par
+{\em \-: It returns the i-\/th I\-D of the set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & cj is a pointer to a valid set. \\
+\hline
+{\em } & index(indice) defines the i-\/th position.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: Id del conjunto. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_a4db002ffadfcf32648302e8f8b90fd18}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries get\-\_\-i\-\_\-id} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, int indice)}\label{_set_8h_a4db002ffadfcf32648302e8f8b90fd18}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: B\-O\-O\-L is\-\_\-empty(Set $\ast$cj);}\par
+{\em \-: Checks wheter the set is empty or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & cj is a pointer to a valid set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: T\-R\-U\-E todo es correcto, cualquier otro caso F\-A\-L\-S\-E. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_set_8h_ab9ebdd880f6d9f149c357c16a32e0194}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-empty} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj)}\label{_set_8h_ab9ebdd880f6d9f149c357c16a32e0194}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de S \begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_set_8h_a7f86870481feb2a3f606c51b6109248d}{\index{Set.\-h@{Set.\-h}!E\-M\-P\-T\-Y\-\_\-\-I\-D@{E\-M\-P\-T\-Y\-\_\-\-I\-D}}
+\index{E\-M\-P\-T\-Y\-\_\-\-I\-D@{E\-M\-P\-T\-Y\-\_\-\-I\-D}!Set.h@{Set.\-h}}
+\subsubsection[{E\-M\-P\-T\-Y\-\_\-\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-M\-P\-T\-Y\-\_\-\-I\-D~0}}\label{_set_8h_a7f86870481feb2a3f606c51b6109248d}
+macro para I\-D vacia \hypertarget{_set_8h_abc21882f4958e6b56aaf2f3c18f80d43}{\index{Set.\-h@{Set.\-h}!M\-A\-X\-\_\-\-S\-E\-T@{M\-A\-X\-\_\-\-S\-E\-T}}
+\index{M\-A\-X\-\_\-\-S\-E\-T@{M\-A\-X\-\_\-\-S\-E\-T}!Set.h@{Set.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-S\-E\-T~100}}\label{_set_8h_abc21882f4958e6b56aaf2f3c18f80d43}
+maximo de ids del set 

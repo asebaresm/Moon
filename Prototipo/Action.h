@@ -1,13 +1,26 @@
+/**
+ *@file Action.h
+ *@brief contiene las implementaciones de las funciones de Action
+ *@author Pablo Yus
+ *@version 0.01
+ *@date 24-03-2014
+ */
+
 #ifndef _ACTION
 #define _ACTION
+
+
+
+
+
+
 
 #include "World.h"
 #include "Types.h"
 
-/*
- **************************************************************************************************************
- */
-
+/**
+* @brief enumeracion de acciones
+*/
 typedef enum {
     A_GO,
     A_PICK_UP,
@@ -18,6 +31,9 @@ typedef enum {
     A_SPEAK
 } ActionType;
 
+/**
+* @brief Estrucura accion 
+*/
 typedef struct _Action Action;
 
 /**

@@ -1,7 +1,8 @@
 /**
- *@file Set.c
  *@brief contiene las implementaciones de las funciones de S
+ *@file Set.c
  *@author Alfonso
+ *@version 0.01
  *@date 24-03-2014
  */
 

@@ -1,5 +1,4 @@
-#ifndef _LINK
-#define _LINK
+
 /**
  *@file Link.h
  *@brief TAD que representa una union entre dos espacios
@@ -8,7 +7,13 @@
  *@date 13-03-2014
  */
 
+#ifndef _LINK
+#define _LINK
+
+
 #include "Types.h"
+
+ /** @brief TAD Link*/
 
 typedef struct _Link Link;
 

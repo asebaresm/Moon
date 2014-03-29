@@ -1,3 +1,14 @@
+/**
+ *@brief TAD que representa un mundo
+ *@file world.h
+ *@author Albert Soler, Alfonso Sebares y Pablo yus
+ *@version 0.01
+ *@date 13-03-2014
+ */
+
+
+
+
 #ifndef _WORLD
 #define _WORLD
 
@@ -6,6 +17,10 @@
 #include "Link.h"
 #include "Space.h"
 #include "Object.h"
+
+/**
+ *@brief Estructura de mundo
+ */
 
 
 typedef struct _World World;
@@ -28,8 +43,8 @@ void destroy_world(World *w);
 
 /**
  *@name: Space *world_add_space(World *w, Id id); 
- *@brief: añade un espacio a menudo
- *@param: mundo al que añadir el espacio
+ *@brief: añade un espacio a menudo.
+ *@param: mundo al que añadir el espacio.
  *@param: id del espacio que se quiere añadir.
  *@return: el espacio que se ha añadido, o NULL en caso de error.
  */
@@ -332,13 +347,5 @@ BOOL obj_is_hidden(Object *obj);
  */
 BOOL obj_is_movable(Object *obj);
 
-/**
- * @name Space *world_add_space(World *w, Id id);
- * @brief añade un espacio al mundo en funcion de su id
- * @param w
- * @param id
- * @return puntero al espacio
- */
-Space *world_add_space(World *w, Id id);
 
 #endif /*_WORLD*/

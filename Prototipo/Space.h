@@ -1,24 +1,18 @@
-/* 
- * File:   Space.h
- * Author: Albert
- *
- * Created on 22 de marzo de 2014, 22:26
+/**
+ *@brief TAD que representa un espacio en el mundo
+ *@file space.h
+ *@author Albert Soler
+ *@version 0.01
+ *@date 13-03-2014
  */
 
 #ifndef SPACE_H
 #define	SPACE_H
 
-/**
- *@brief TAD que representa un espacio en el mundo
- *@file espacio.h
- *@author Albert Soler
- *@version 0.01
- *@date 06-03-2014
- */
-
 
 #include "Set.h"
 
+/** @brief Estrucura de espacio */
 typedef struct _Space Space;
 
 /**

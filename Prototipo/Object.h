@@ -1,9 +1,19 @@
+/**
+ *@brief contiene las implementaciones de las funciones de Object
+ *@file Object.h
+ *@author Alfonso
+ *@version 0.01 
+ *@date 24-03-2014
+ */
+
+
 #ifndef _OBJECT
 #define _OBJECT
 
 #include "Types.h"
 #include "Set.h"
 
+/** * @brief TAD Object */
 typedef struct _Object Object;
 
 
@@ -177,13 +187,6 @@ BOOL obj_is_lighted(Object *obj);
  */
 BOOL obj_is_hidden(Object *obj);
 
-/**
- * @name BOOL obj_is_movable(Object *obj);
- * @brief comprueba si el objeto es se mueve
- * @param obj
- * @return TRUE en caso de que sea hidden(oculto), FALSE en caso contrario
- */
-BOOL obj_is_movable(Object *obj);
 
 /**
  * @name Id obj_is_name(Object *obj, char *name);

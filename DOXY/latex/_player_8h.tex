@@ -1,0 +1,270 @@
+\hypertarget{_player_8h}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Player.h File Reference}
+\label{_player_8h}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Player.\-h@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Player.\-h}}
+}
+
+
+contiene los prototipos de las funciones de Player  
+
+
+{\ttfamily \#include \char`\"{}Types.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Inventory.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_af30e2030635a69690f85e48bc6ef202f}{typedef struct \hyperlink{struct___player}{\-\_\-\-Player} {\bfseries Player}}\label{_player_8h_af30e2030635a69690f85e48bc6ef202f}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Player $\ast$create\-\_\-player();}\par
+{\em crea un nuevo jugador
+
+\begin{DoxyReturn}{Returns}
+devuelve el jugador creado o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a37a8bafa3bd82b382ed0dc10b6a47bc6}{\hyperlink{struct___player}{Player} $\ast$ {\bfseries create\-\_\-player} ()}\label{_player_8h_a37a8bafa3bd82b382ed0dc10b6a47bc6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void destroy\-\_\-player(Player $\ast$player);}\par
+{\em destruye un jugador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a2cbe20d0f858f5cbe571c48535063c6a}{void {\bfseries destroy\-\_\-player} (\hyperlink{struct___player}{Player} $\ast$player)}\label{_player_8h_a2cbe20d0f858f5cbe571c48535063c6a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id player\-\_\-get\-\_\-location(Player $\ast$player);}\par
+{\em da la localizacion de un jugador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el id de la localizacion del jugador o N\-O\-\_\-\-I\-D en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_aa50ce77ab79af7166d749619fd60acfe}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries player\-\_\-get\-\_\-location} (\hyperlink{struct___player}{Player} $\ast$player)}\label{_player_8h_aa50ce77ab79af7166d749619fd60acfe}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$player\-\_\-get\-\_\-name(Player $\ast$player);}\par
+{\em devuelve el nombre del player
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nombre del jugador 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a260d3419c458edcdb3d2b5e9d4a867e8}{char $\ast$ {\bfseries player\-\_\-get\-\_\-name} (\hyperlink{struct___player}{Player} $\ast$player)}\label{_player_8h_a260d3419c458edcdb3d2b5e9d4a867e8}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S player\-\_\-remove\-\_\-obj(Player $\ast$player, Id object\-\_\-id);}\par
+{\em dado un id de un objeto, borrara este objeto del inventario del jugador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em object\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si el objeto se ha podido elimniar de forma correcta o E\-R\-R\-O\-R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a76f30db90ac442079f2b0196fd080e04}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries player\-\_\-remove\-\_\-obj} (\hyperlink{struct___player}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)}\label{_player_8h_a76f30db90ac442079f2b0196fd080e04}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L player\-\_\-search\-\_\-obj(Player $\ast$player, Id object\-\_\-id);}\par
+{\em busca un objeto, dado su id, en el inventario de un juegador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em object\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E si el objeto se ha encontrado o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_ab7900ea3244822f4da9e8e4ad38e872e}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries player\-\_\-search\-\_\-obj} (\hyperlink{struct___player}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)}\label{_player_8h_ab7900ea3244822f4da9e8e4ad38e872e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\-O\-O\-L is\-\_\-player\-\_\-inv\-\_\-full(Player $\ast$player);}\par
+{\em comprueba si el inventario esta lleno
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E si el inventario esta lleno o F\-A\-L\-S\-E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_abad520f06b20f68426190496f920058a}{\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} {\bfseries is\-\_\-player\-\_\-inv\-\_\-full} (\hyperlink{struct___player}{Player} $\ast$player)}\label{_player_8h_abad520f06b20f68426190496f920058a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S player\-\_\-set\-\_\-max\-\_\-objects(Player $\ast$player, unsigned int max\-\_\-objects);}\par
+{\em determina el tamaño maximo de objetos que puede tener uun jugador en su inventario
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em max\-\_\-objects} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien, E\-R\-R\-O\-R si ha habido algun error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a5bbcef62933294bd39699155f4f99dd0}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries player\-\_\-set\-\_\-max\-\_\-objects} (\hyperlink{struct___player}{Player} $\ast$player, unsigned int max\-\_\-objects)}\label{_player_8h_a5bbcef62933294bd39699155f4f99dd0}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S player\-\_\-set\-\_\-location(Player $\ast$player, Id space\-\_\-id);}\par
+{\em establece la localicizacion de un jugador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em space\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien, E\-R\-R\-O\-R si ha habido algun error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_af69494ddbfa83c542f25d9c99ad4d2dc}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries player\-\_\-set\-\_\-location} (\hyperlink{struct___player}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\-\_\-id)}\label{_player_8h_af69494ddbfa83c542f25d9c99ad4d2dc}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S player\-\_\-set\-\_\-name (Player $\ast$player, char $\ast$name);}\par
+{\em establece el nombre de un jugador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien, E\-R\-R\-O\-R si ha habido algun error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a6a30809f7775f5c2d3bef47d92769e59}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries player\-\_\-set\-\_\-name} (\hyperlink{struct___player}{Player} $\ast$player, char $\ast$name)}\label{_player_8h_a6a30809f7775f5c2d3bef47d92769e59}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\-T\-A\-T\-U\-S player\-\_\-add\-\_\-obj(Player $\ast$player, Id object\-\_\-id);}\par
+{\em añade un objeto, a partir de su id, al inventario del jugador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em object\-\_\-id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\-K si ha ido todo bien, E\-R\-R\-O\-R si ha habido algun error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a7a78306a87a33ed9524db08fbb7ab3ee}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries player\-\_\-add\-\_\-obj} (\hyperlink{struct___player}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)}\label{_player_8h_a7a78306a87a33ed9524db08fbb7ab3ee}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Size player\-\_\-inv\-\_\-size(Player $\ast$player);}\par
+{\em calcula el tamaño del inventario del jugador
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el tamaño del inventario del jugador o en caso de error N\-O\-\_\-\-T\-A\-M 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a1d59106cf562ed4f055cdd5282303344}{Size {\bfseries player\-\_\-inv\-\_\-size} (\hyperlink{struct___player}{Player} $\ast$player)}\label{_player_8h_a1d59106cf562ed4f055cdd5282303344}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inventory $\ast$ get\-\_\-player\-\_\-inv(Player $\ast$player);}\par
+{\em devuelve la direccion del inventario del player
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el inventario del jugador o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_a19145716ebc2170d98749f2775059414}{\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ {\bfseries get\-\_\-player\-\_\-inv} (\hyperlink{struct___player}{Player} $\ast$player)}\label{_player_8h_a19145716ebc2170d98749f2775059414}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id get\-\_\-id\-\_\-from\-\_\-player\-\_\-inv\-\_\-set\-\_\-index(Player $\ast$player, int indice);}\par
+{\em Devuelve la id de un objeto que lleva un player en funcion de un indice
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em indice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id del objeto o N\-U\-L\-L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_player_8h_aad43ab4878222a74c15a51f80e410314}{\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries get\-\_\-id\-\_\-from\-\_\-player\-\_\-inv\-\_\-set\-\_\-index} (\hyperlink{struct___player}{Player} $\ast$player, int indice)}\label{_player_8h_aad43ab4878222a74c15a51f80e410314}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+contiene los prototipos de las funciones de Player \begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}

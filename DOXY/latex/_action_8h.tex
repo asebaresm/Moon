@@ -1,0 +1,118 @@
+\hypertarget{_action_8h}{\section{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Action.h File Reference}
+\label{_action_8h}\index{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Action.\-h@{C\-:/\-Users/\-Albert/\-Desktop/\-T\-O\-D\-O\-X\-Y/\-Action.\-h}}
+}
+
+
+contiene las implementaciones de las funciones de Action  
+
+
+{\ttfamily \#include \char`\"{}World.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Types.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{typedef struct \hyperlink{struct___action}{\-\_\-\-Action} \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action}}\label{_action_8h_a01c7d823f4985d5878a7fb633744c26b}
+
+\begin{DoxyCompactList}\small\item\em Estrucura accion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\-Type} \{ \\*
+{\bfseries A\-\_\-\-G\-O}, 
+{\bfseries A\-\_\-\-P\-I\-C\-K\-\_\-\-U\-P}, 
+{\bfseries A\-\_\-\-D\-R\-O\-P}, 
+{\bfseries A\-\_\-\-I\-N\-S\-P\-E\-C\-T}, 
+\\*
+{\bfseries A\-\_\-\-T\-U\-R\-N\-\_\-\-L\-I\-G\-H\-T\-\_\-\-O\-N}, 
+{\bfseries A\-\_\-\-T\-U\-R\-N\-\_\-\-L\-I\-G\-H\-T\-\_\-\-O\-F\-F}, 
+{\bfseries A\-\_\-\-S\-P\-E\-A\-K}
+ \}
+\begin{DoxyCompactList}\small\item\em enumeracion de acciones \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf \-: action\-\_\-execute}\par
+{\em \-: ejecuta una accione en particular en mundo (excepto A\-\_\-\-P\-I\-C\-K\-\_\-\-U\-P)
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & World $\ast$w\-: mundo sobre el que se ejecuta la accion \\
+\hline
+{\em } & Action $\ast$a\-: accion que se va a ejecutar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: devuelve O\-K si todo ha ido bien o E\-R\-R\-O\-R si algo ha fallado
+\end{DoxyReturn}
+Executes a particular action on the world (except A\-\_\-\-P\-I\-C\-K\-\_\-\-U\-P). The action includes the type of action and the direct object the action is performed over. Returns O\-K if everything goes well or E\-R\-R\-O\-R if there is an error. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_action_8h_a63f8aa1fa3805bd81e924443336b4097}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries action\-\_\-execute} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a)}\label{_action_8h_a63f8aa1fa3805bd81e924443336b4097}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-: action\-\_\-execute\-\_\-inspect}\par
+{\em \-: reserva memeoria para la cadena que almacenara la descripicion del objeto inspeccionado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & World $\ast$w\-: mundo que contine aquello que se va a inspeccionar. \\
+\hline
+{\em } & Action $\ast$a\-: accion a realizar \\
+\hline
+{\em } & char $\ast$inspected\-: cadena de caracteres que guarda la descripcion de lo inspeccionado. \\
+\hline
+{\em } & Size max\-\_\-len\-: tamño maximo de la cadena inspected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: devuelve Ok si todo ha ido bien o E\-R\-R\-O\-R si ha habido algun error.
+\end{DoxyReturn}
+Executes the inspect action. The description is returned in the “inspected“ parameter, which must be allocated by the client. Returns O\-K if everything goes well and E\-R\-R\-O\-R otherwise. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_action_8h_a0f594fd8ee553b4e5bd5f277306ea30e}{\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} {\bfseries action\-\_\-execute\-\_\-inspect} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a, char $\ast$inspected, Size max\-\_\-len)}\label{_action_8h_a0f594fd8ee553b4e5bd5f277306ea30e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Action$\ast$ new\-\_\-action(const char$\ast$ do\-\_\-act, Action\-Type id);}\par
+{\em crea una nueva accion
+
+
+\begin{DoxyParams}{Parameters}
+{\em do\-\_\-act} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la accion si se ha creado correctamente o N\-U\-L\-L en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_action_8h_a76343bb555249eea2a60e629ae7e7b67}{\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$ {\bfseries new\-\_\-action} (const char $\ast$do\-\_\-act, \hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\-Type} id)}\label{_action_8h_a76343bb555249eea2a60e629ae7e7b67}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void destroy\-\_\-action(Action $\ast$a);}\par
+{\em destruye una accion liberando memoria que habia sido reservada previamente
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_action_8h_ac5668fcde5c28de5e93961ab66024126}{void {\bfseries destroy\-\_\-action} (\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a)}\label{_action_8h_ac5668fcde5c28de5e93961ab66024126}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de Action \begin{DoxyAuthor}{Author}
+Pablo Yus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}

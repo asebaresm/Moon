@@ -1,6 +1,6 @@
 /**
  *@brief TAD que representa una union entre dos espacios
- *@file union.c
+ *@file link.c
  *@author Albert Soler
  *@version 0.01
  *@date 13-03-2014
@@ -9,7 +9,7 @@
 
 #include "Link.h"
 
-/* * @brief TAD Link*/
+/** * @brief TAD Link*/
 struct _Link {
     Id id;
     Id space1;
