@@ -38,6 +38,7 @@ Object *obj_create(Id id) {
 
     obj = (Object*) malloc(sizeof (Object));
     obj->id = id;
+    obj->location = NO_ID;
     obj->hidden = FALSE;
     obj->movable = FALSE;
     obj->moved = FALSE;
@@ -85,6 +86,13 @@ STATUS obj_set_description_inspect(Object *object, char *description) {
     return OK;
 }
 
+/*establece la localizacion del objeto*/
+STATUS obj_set_location(Object *object, Id location){
+    if (!object)
+        return ERROR;
+    object->location=location;
+    return OK;
+}
 /*establece el nombre de un objeto*/
 STATUS obj_set_name(Object *object, char *name) {
     if (object == NULL || name == NULL)

@@ -8,6 +8,7 @@
 
 
 #include "World.h"
+
 /** * @brief TAD World */
 struct _World {
     Space * spaces[MAX_SPACES + 1];
@@ -105,8 +106,6 @@ Player *world_set_player(World *w) {
     if (w->player == NULL)
         return NULL;
     return w->player;
-    /*Solo queda esta que no se que quiere que haga la funcion.*/
-
 }
 
 /*obtienes un espacio a partir de su id y del mundo en el que se encuentra.*/
@@ -143,10 +142,20 @@ Object *world_get_obj_by_name(World *w, char * name) {
     if (!w || !name)
         return NULL;
 
-
-
     for (i = 0; i < MAX_OBJECTS; i++) {
         if (strcmp(obj_get_name(w->objects[i]), name) == 0)
+            return w->objects[i];
+    }
+    return NULL;
+}
+
+Object *world_get_obj_by_descInspec(World *w, char * descInspec) {
+    int i = 0;
+    if (!w || !descInspec)
+        return NULL;
+
+    for (i = 0; i < MAX_OBJECTS; i++) {
+        if (strcmp(obj_get_descInspect(w->objects[i]), descInspec) == 0)
             return w->objects[i];
     }
     return NULL;
@@ -384,30 +393,28 @@ STATUS world_move_player(World *w, DIRECTION dir) {
         return ERROR;
     switch (dir) {
         case N:
-            player_set_location(w->player, link_get_space(world_get_link(w, space_get_north(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
-            return OK;
+            return player_set_location(w->player, link_get_space(world_get_link(w, space_get_north(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
 
             break;
         case S:
-            player_set_location(w->player, link_get_space(world_get_link(w, space_get_south(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
-            return OK;
+            return player_set_location(w->player, link_get_space(world_get_link(w, space_get_south(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
 
             break;
         case E:
-            player_set_location(w->player, link_get_space(world_get_link(w, space_get_east(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
-            return OK;
+            return player_set_location(w->player, link_get_space(world_get_link(w, space_get_east(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
+
             break;
         case W:
-            player_set_location(w->player, link_get_space(world_get_link(w, space_get_west(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
-            return OK;
+            return player_set_location(w->player, link_get_space(world_get_link(w, space_get_west(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
+
             break;
         case UP:
-            player_set_location(w->player, link_get_space(world_get_link(w, space_get_up(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
-            return OK;
+            return player_set_location(w->player, link_get_space(world_get_link(w, space_get_up(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
+
             break;
         case DOWN:
-            player_set_location(w->player, link_get_space(world_get_link(w, space_get_down(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
-            return OK;
+            return player_set_location(w->player, link_get_space(world_get_link(w, space_get_down(world_get_space(w, player_get_location(w->player)))), player_get_location(w->player)));
+
             break;
         default:
             return ERROR;
@@ -431,10 +438,12 @@ STATUS world_inspect_space(World *w, Space *space, char *desc, int max_len) {
             /*el espacio está iluminado*/
             if (is_space_lighted(w->spaces[i]) == TRUE) {
                 strcpy(desc, desc_space_inspect(w->spaces[i]));
+                printf(" %s (printf en world_inspect_space)", desc);
                 return OK;
             }/*si no esta ilumninado: devuelve la descripcion base*/
             else {
                 strcpy(desc, desc_space(w->spaces[i]));
+                printf(" %s (printf en world_inspect_space)", desc);
                 return OK;
             }
         }
@@ -528,22 +537,32 @@ STATUS world_pick_up_obj(World *w, Object *obj) {
     if (is_player_inv_full(w->player) == TRUE || player_search_obj(w->player, get_object_id(obj)) == TRUE)
         return ERROR;
     /*entonces añadimos la id al set del inventario*/
-    if (player_add_obj(w->player, get_object_id(obj)) == ERROR)
-        return ERROR;
+    /*if (player_add_obj(w->player, get_object_id(obj)) == ERROR)
+        return ERROR;*/
     for (i = 0; i < MAX_SPACES; i++) {
         /*buscar el espacio donde esta el player con el objeto*/
         /*Comprobar que no devuelvan -1*/
-        if (space_get_id(w->spaces[i]) != -1)
+        if (space_get_id(w->spaces[i]) != NO_ID) {
+            /*si encuentra que el player esta en ese espacio*/
             if (space_get_id(w->spaces[i]) == player_get_location(w->player)) {
-                /*lo eliminamos del set*/
-                if (player_add_obj(w->player, get_object_id(obj)) == ERROR)
-                    return ERROR;
-                if (space_remove_obj(w->spaces[i], get_object_id(obj)) == ERROR)
-                    return ERROR;
-                
+                /*si ese espacio contiene el objeto a añadir*/
+                if (space_get_object(w->spaces[i], get_object_id(obj)) == TRUE) {
+                    /*entonces añadimos la id al set del inventario*/
+                    if (player_add_obj(w->player, get_object_id(obj)) == ERROR)
+                        return ERROR;
+                    /*y lo eliminamos del set del espacio*/
+                    if (space_remove_obj(w->spaces[i], get_object_id(obj)) == ERROR)
+                        return ERROR;
+                    /*actualizar posicion del objeto*/
+                    if (obj_set_location(obj, PLAYER_BAG) == ERROR)
+                        return ERROR;
+                    /*insercion y extraccion correctas*/
+                    return OK;
+                }
             }
-    }
-    return OK;
+        }
+    }/*fin del for de busqueda*/
+    return ERROR;
 }
 
 /* Drop an object*/
@@ -562,13 +581,19 @@ STATUS world_drop_obj(World *w, Object *obj) {
             /*buscar el espacio donde esta el player con el objeto*/
             /*Comprobar que no devuelvan -1*/
             if (space_get_id(w->spaces[i]) != NO_ID)
+                /*si encuentra el espacio donde esta el player:*/
                 if (space_get_id(w->spaces[i]) == player_get_location(w->player)) {
                     /*lo añadimos al set*/
                     if (space_add_obj(w->spaces[i], get_object_id(obj)) == ERROR)
                         return ERROR;
+                    /*actualizar posicion del objeto*/
+                    if (obj_set_location(obj, space_get_id(w->spaces[i])) == ERROR)
+                        return ERROR;
+                    /*si todo OK*/
+                    return OK;
                 }
-        }
-    }
+        }/*fin del for de busqueda de espacios*/
+    }/*sale directamente si no encuentra el objeto en el inventario del player*/
     return ERROR;
 }
 

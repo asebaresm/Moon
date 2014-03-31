@@ -103,6 +103,15 @@ Link *world_get_link(World *w, Id id);
 Object *world_get_obj_by_name(World *w, char * name);
 
 /**
+ * @name Object *world_get_obj_by_descInspec(World *w, char * descInspec);
+ * @brief coge un objeto del mundo a partir de su descripcion de inspeccion
+ * @param w
+ * @param descInspec
+ * @retur el objeto correspondiente o NULL en caso de error
+ */
+Object *world_get_obj_by_descInspec(World *w, char * descInspec);
+
+/**
  * @name Object *world_get_obj(World *w, Id id);
  * @brief obtien un objeto del mundo a partir de su id
  * @param w

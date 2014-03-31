@@ -71,6 +71,15 @@ STATUS obj_set_description_moved(Object *object, char *description);
 STATUS obj_set_description_inspect(Object *object, char *description);
 
 /**
+ * @name STATUS objet_set_location(Object *object, Id location);
+ * @brief establece la localizaciond e un objeto
+ * @param object
+ * @param location
+ * @return OK si todo ha ido correctamente o ERROR si ha habido algun problema
+ */
+STATUS obj_set_location(Object *object, Id location);
+
+/**
  * @name STATUS obj_set_name(Object *obj, char *name);
  * @brief se establece un nombre a un objeto
  * @param object

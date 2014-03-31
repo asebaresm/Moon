@@ -8,57 +8,11 @@
 #include <assert.h>
 #include "Action.h"
 
-/*
- * 
- */
 
-/*World *mundo_prueba_espacios() {
-    World *w = NULL;
-    Space *spa1 = NULL, *spa2 = NULL, *spa3 = NULL, *spa4 = NULL;
-    Player *player = NULL;
-    Object *obj = NULL;
-    Id id1 = 21, id2 = 22, id3 = 23, id4 = 24;
-    Link *l1 = NULL, *l2 = NULL, *l3 = NULL;
-    Id il1 = 32, il2 = 31, il3 = 30;
-
-    w = create_world();
-    if (w == NULL)return NULL;
-
-    spa1 = create_space(id1);
-    if (spa1 == NULL)return NULL;
-    spa2 = create_space(id2);
-    if (spa2 == NULL)return NULL;
-    spa3 = create_space(id3);
-    if (spa3 == NULL)return NULL;
-    spa4 = create_space(id4);
-    if (spa4 == NULL)return NULL;
-
-    player = create_player();
-    if (player == NULL)return NULL;
-    if(player_set_location(player, id1)==ERROR)return NULL;
-
-    l1 = create_link(il1);
-    if (l1 == NULL)return NULL;
-    l2 = create_link(il2);
-    if (l2 == NULL)return NULL;
-    l3 = create_link(il3);
-    if (l3 == NULL)return NULL;
-
-    if ((link_join_spaces(l1, id1, id2) == ERROR) || (link_join_spaces(l2, id1, id3)) == ERROR ||
-            (link_join_spaces(l3, id1, id4)) == ERROR)return NULL;
-    
-    obj = obj_create();
-    if(obj == NULL)return NULL;
-    
-    
-    
-
-
-
-}*/
 
 int main(int argc, char** argv) {
 
+    /*Variables utilizadas en el mundo de pruebas*/
     World *world = NULL;
     Space *s1 = NULL, *s2 = NULL, *s3 = NULL, *s4 = NULL;
     Player *p1 = NULL;
@@ -69,16 +23,19 @@ int main(int argc, char** argv) {
     BOOL light = TRUE;
     char nombre[WORD_SIZE] = "Linterna";
     char desc[WORD_SIZE] = "Linterna sin bateria";
-    char return_desc[WORD_SIZE] = "\0";
+    char return_desc[WORD_SIZE] = "";
     int max_len = 0;
 
 
+    /*Variables propias de las pruebas de Action*/
     Action *a = NULL;
     Object *obj = NULL;
-    Space *spa = NULL;
-    Id id11 = 14, id21 = 18;
-    char *name = "Pala", *descrip = "Descrito";
 
+    Id id11 = 14;
+    char nombre2[WORD_SIZE] = "Pala";
+    char desc2[WORD_SIZE] = "Descripcion de inspeccion";
+    
+    char do_act[WORD_SIZE]="";
     /*P1*/
     printf("\nPasando prueba 1: ");
     assert((world = create_world()) != NULL);
@@ -129,21 +86,21 @@ int main(int argc, char** argv) {
 
 
 
-    /*Prueba relacionada con link */
+    /*Pruebas relacionadas con link */
     /*P8*/
-    printf("\n Pasando prueba 8.1: ");
+    printf("\nPasando prueba 8.1: ");
     assert(link_join_spaces(world_add_link(world, 1), id1, id2) != ERROR);
     assert(space_add_link_west(s1, 1) == OK);
     assert(space_add_link_east(s2, 1) == OK);
     printf("OK");
 
-    printf("\n Pasando prueba 8.2: ");
+    printf("\nPasando prueba 8.2: ");
     assert(link_join_spaces(world_add_link(world, 2), id2, id3) != ERROR);
     assert(space_add_link_north(s2, 2) == OK);
     assert(space_add_link_south(s3, 2) == OK);
     printf("OK");
 
-    printf("\n Pasando prueba 8.3: ");
+    printf("\nPasando prueba 8.3: ");
     assert(link_join_spaces(world_add_link(world, 3), id3, id4) != ERROR);
     assert(space_add_link_down(s3, 3) == OK);
     assert(space_add_link_up(s4, 3) == OK);
@@ -164,124 +121,100 @@ int main(int argc, char** argv) {
 
     printf("\n>>>Pruebas del modulo Action:");
 
-    if (world != NULL) {
-        printf("\nPasando prueba 1:");
+    printf("\n\tPasando prueba 1:");
 
-        printf("\nAl norte...");
-        /*assert((w = create_world()) != NULL);*/
-        assert((a = new_action((const char*) "NORTE", (ActionType) A_GO)) != NULL);
-        assert((action_execute(world, a)) == OK);
-        /*destroy_action(a);*/
-        /*assert(a == NULL);*/
+    printf("\n\tAl oeste...");
+    strcpy(do_act,"OESTE");
+    assert((a = new_action(do_act, A_GO)) != NULL);
+    assert(action_execute(world, a) == OK);
+    
+    
+    printf("\n\tAl norte...");
+    strcpy(do_act,"NORTE");
+    assert((set_action(a, do_act, A_GO))==OK);
+    assert((action_execute(world, a)) == OK);
 
-        printf("\nAl sur...");
-        assert((a = new_action("SUR", A_GO)) != NULL);
-        assert((action_execute(world, a)) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-
-        printf("\nAl este...");
-        assert((a = new_action("ESTE", A_GO)) != NULL);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-
-        printf("\nAl oeste...");
-        assert((a = new_action("OESTE", A_GO)) != NULL);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-
-        printf("\nArriba...");
-        assert((a = new_action("ARRIBA", A_GO)) != NULL);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-
-        printf("\nAbajo...");
-        assert((a = new_action("ABAJO", A_GO)) != NULL);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-        printf("OK1.");
-
-        printf("\nPasando prueba 2:");
-
-        printf("\nCogiendo objeto...");
-        assert((a = new_action("Pala", A_PICK_UP)) != NULL);
-        assert((obj = world_add_obj(world, id11)) != NULL);
-        assert(obj_set_name(obj, "Pala") == OK);
-        assert(obj_set_movable(obj, TRUE) == OK);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-        printf("OK2.");
-
-        printf("\nPasando prueba 4:");
-
-        printf("\nEncendiendo objeto...");
-        assert((a = new_action("Pala", A_TURN_LIGHT_ON)) != NULL);
-        assert(obj_set_lightable(obj, TRUE) == OK);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-        printf("OK4.");
-
-        printf("\nPasando prueba 5:");
-
-        printf("\nApagando objeto...");
-        assert((a = new_action("Pala", A_TURN_LIGHT_OFF)) != NULL);
-        assert(obj_is_lighted(obj) == TRUE);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-        printf("OK5.");
-
-        printf("\nPasando prueba 6:");
-
-        printf("\nHablando...");
-        assert((a = new_action("Hola", A_SPEAK)) != NULL);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-        printf("OK6.");
-
-        printf("\nPasando prueba 7a:");
-
-        printf("\nInspeccionando espacio...");
-        assert((spa = create_space(id21)) != NULL);
-        assert(space_set_description_inspect(spa, descrip) == OK);
-        assert((a = new_action("ESPACIO", A_INSPECT)) != NULL);
-        destroy_space(spa);
-        /*assert(spa = NULL);*/
-        destroy_action(a);
-        /*assert(a == NULL);*/
-
-        printf("\nPasando prueba 7b:");
-
-        printf("\nInspeccionando objeto...");
-        assert((a = new_action("Pala", A_INSPECT)) != NULL);
-        assert(obj_set_description_inspect(obj, descrip) == OK);
-        obj_destroy(obj);
-        /*assert(obj == NULL);*/
-        destroy_action(a);
-        /*assert(a == NULL);*/
-        
-        printf("\nPasando prueba 3:");
-
-        printf("\nDejando objeto...");
-        assert((a = new_action("Pala", A_DROP)) != NULL);
-        assert(obj_set_name(obj, name) == OK);
-        assert(obj_set_movable(obj, TRUE) == OK);
-        assert(action_execute(world, a) == OK);
-        destroy_action(a);
-        /*assert(a == NULL);*/
-        printf("OK3.");
+    
+    printf("\n\tAbajo...");
+    strcpy(do_act,"ABAJO");
+    assert((set_action(a, do_act, A_GO))==OK);
+    assert(action_execute(world, a) == OK);
+    
+    
+    printf("\n\tArriba...");
+    strcpy(do_act, "ARRIBA");
+    assert((set_action(a, do_act, A_GO))==OK);
+    assert(action_execute(world, a) == OK);
+    
+    
+    printf("\n\tAl sur...");
+    strcpy(do_act,"SUR");
+    assert((set_action(a, do_act, A_GO))==OK);
+    assert((action_execute(world, a)) == OK);
 
 
-    } else {
-        printf("\nLas pruebas no se han podido pasar!!!!");
-    }
+    printf("\n\tAl este...");
+    strcpy(do_act,"ESTE");
+    assert((set_action(a, do_act, A_GO))==OK);
+    assert(action_execute(world, a) == OK);
+
+
+    printf("\n\tPasando prueba 2:");
+    printf("\n\tCogiendo objeto...");
+    assert((set_action(a, nombre2, A_PICK_UP))==OK);
+    assert((obj = world_add_obj(world, id11)) != NULL);
+    assert(obj_set_name(obj, nombre2) == OK);
+    assert(obj_set_movable(obj, TRUE) == OK);
+    assert(space_add_obj(s1,id11));
+    assert(action_execute(world, a) == OK);
+
+
+    printf("\n\tPasando prueba 4:");
+    printf("\n\tEncendiendo objeto...");
+    assert((set_action(a, nombre2, A_TURN_LIGHT_ON))==OK);
+    assert(obj_set_lightable(obj, TRUE) == OK);
+    assert(action_execute(world, a) == OK);
+
+
+    printf("\n\tPasando prueba 5:");
+    printf("\n\tApagando objeto...");
+    assert((set_action(a, nombre2, A_TURN_LIGHT_OFF))==OK);
+    assert(obj_is_lighted(obj) == TRUE);
+    assert(action_execute(world, a) == OK);
+
+
+    printf("\n\tPasando prueba 6:");
+    printf("\n\tHablando...");
+    strcpy(do_act,"Hola");
+    assert((set_action(a, do_act, A_SPEAK))==OK);
+    assert(action_execute(world, a) == OK);
+
+
+    printf("\n\tPasando prueba 7:");
+    printf("\n\tInspeccionando espacio...");
+    assert(space_set_description_inspect(s4, desc2) == OK);
+    strcpy(do_act,"SPACE");
+    assert((set_action(a, do_act, A_INSPECT))==OK);
+    assert(action_execute(world, a) == OK);
+
+
+    printf("\n\tPasando prueba 8:");
+    printf("\n\tInspeccionando objeto...");
+    assert((set_action(a, nombre2, A_INSPECT))==OK);
+    assert(obj_set_description_inspect(obj, desc2) == OK);
+    assert(action_execute(world,a) == OK);
+    
+
+    printf("\n\tPasando prueba 9:");
+    printf("\n\tDejando objeto...");
+    assert((set_action(a, nombre2, A_DROP))==OK);
+    assert(action_execute(world, a) == OK);
+
+
+    /*free de recursos de las pruebas:*/
+    destroy_action(a);
+    destroy_world(world);
+    
     return (EXIT_SUCCESS);
 }
 

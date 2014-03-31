@@ -1,4 +1,4 @@
-﻿/**
+/**
  *@file Action.c
  *@brief contiene las implementaciones de las funciones de Action
  *@author Pablo Yus
@@ -27,12 +27,14 @@ is an error. */
 STATUS action_execute(World *w, Action *a) {
 
     Object * obj = NULL;
-    char * desc = NULL;
-    Size max_len = 20;
+    char * desc;
+    Size max_len = WORD_SIZE;
 
+    if((desc = (char *)malloc(max_len * sizeof(char)))==NULL)
+        return ERROR;
     if (w == NULL || a == NULL)
         return ERROR;
-
+    
     switch (a->id) {
         case A_GO:
             if (strcmp(a->do_act, "NORTE") == 0) {
@@ -78,7 +80,11 @@ STATUS action_execute(World *w, Action *a) {
             break;
 
         case A_INSPECT:
-            return action_execute_inspect(w, a, desc, max_len);
+            if(action_execute_inspect(w, a, desc, max_len)==ERROR)
+                return ERROR;
+            free(desc);
+            return OK;
+            
             break;
 
         case A_TURN_LIGHT_ON:
@@ -88,7 +94,7 @@ STATUS action_execute(World *w, Action *a) {
 
         case A_TURN_LIGHT_OFF:
             obj = world_get_obj_by_name(w, a->do_act);
-            return world_turn_light_on_obj(w, obj);
+            return world_turn_light_off_obj(w, obj);
             break;
 
         case A_SPEAK:
@@ -123,11 +129,9 @@ STATUS action_execute_inspect(World *w, Action *a, char *inspected, Size max_len
     Space *spa = NULL;
     Object *obj = NULL;
 
-    if (w == NULL || a == NULL || inspected == NULL || max_len < 0)
+    if (w == NULL || a == NULL || max_len < 0)
         return ERROR;
-
-    /*inspected = (char*) malloc(max_len * sizeof (char));*/
-
+    
     /*Para exapminar espacios*/
     if (strcmp(a->do_act, "SPACE") == 0) {
 
@@ -139,9 +143,10 @@ STATUS action_execute_inspect(World *w, Action *a, char *inspected, Size max_len
     } else {
 
         id = where_is_player(w);
-        obj = world_get_obj_by_name(w, inspected);
+        obj = world_get_obj_by_name(w, a->do_act);
         return world_inspect_obj(w, obj, inspected, (int) max_len);
     }
+    return ERROR;
 }
 
 /*
@@ -171,18 +176,18 @@ current state of the game. Returns TRUE if so and FALSE otherwise.
  * return la accion si se ha creado correctamente o NULL en caso contrario
  */
 Action* new_action(const char* do_act, ActionType id) {
-    Action *a;
+    Action *action;
 
-    a = (Action*) malloc(sizeof (Action));
-    a->do_act = (char*) malloc(sizeof (char));
+    action = (Action*) malloc(sizeof (Action));
+    action->do_act = malloc(sizeof(char) * (strlen(do_act)+1));
 
-    if (a == NULL || do_act == NULL)
+    if (action == NULL || do_act == NULL)
         return NULL;
 
-    a->id = id;
-    strcpy(a->do_act, do_act);
+    action->id = id;
+    strcpy(action->do_act, do_act);
 
-    return a;
+    return action;
 
 }
 /*
@@ -196,4 +201,12 @@ void destroy_action(Action *a) {
     free(a);
     a = NULL;
     return;
+}
+
+STATUS set_action(Action *a, const char *do_act, ActionType id){
+    if (!a || !do_act)
+        return ERROR;
+    a->id=id;
+    strcpy(a->do_act, do_act);
+    return OK;
 }

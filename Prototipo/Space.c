@@ -8,7 +8,7 @@
 
 
 #include "Space.h"
-
+#include "World.h"
 /** * @brief TAD Space */
 struct _Space {
     Id id;
@@ -35,11 +35,18 @@ Space *create_space(Id id) {
     Space *new_space;
     if (id == NO_ID)
         return NULL;
-
-
+    
     new_space = (Space*) malloc(sizeof (Space));
     if (!new_space)
         return NULL;
+    
+    new_space->north=NO_ID;
+    new_space->south=NO_ID;
+    new_space->east=NO_ID;
+    new_space->west=NO_ID;
+    new_space->up=NO_ID;
+    new_space->down=NO_ID;
+    
     new_space->id = id;
     new_space->space_objects = new_set();
     return new_space;
@@ -128,7 +135,7 @@ STATUS space_add_link_down(Space *space, Id link_id) {
 
 STATUS space_add_obj(Space *space, Id object_id) {
     if (!space || object_id == NO_ID)
-        return ERROR;
+        return ERROR; 
     return add(space->space_objects, object_id);
 }
 

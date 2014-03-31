@@ -10,13 +10,8 @@
 #define _ACTION
 
 
-
-
-
-
-
 #include "World.h"
-#include "Types.h"
+
 
 /**
 * @brief enumeracion de acciones
@@ -93,5 +88,8 @@ Action* new_action(const char* do_act, ActionType id);
  * @param a
  */
 void destroy_action(Action *a);
+
+
+STATUS set_action(Action *a, const char *do_act, ActionType id);
 
 #endif /*_ACTION*/

@@ -89,7 +89,7 @@ STATUS player_set_max_objects(Player *player, unsigned int max_objects) {
 
 /*establece la posicion del player*/
 STATUS player_set_location(Player *player, Id space_id) {
-    if (!player)
+    if (!player || space_id==NO_ID)
         return ERROR;
     player->location = space_id;
     return OK;
