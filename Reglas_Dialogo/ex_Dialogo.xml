@@ -1,0 +1,17 @@
+<dialogue>
+	<rules>
+		<rule id=1>
+			<patterns>
+				<pattern> * </pattern>
+			</patterns>
+			<templates>
+				<template>Buenos dias como se encuentra usted </template>
+			</templates>
+		</rule>
+	</rules>	
+		<topics>
+			<topic name="T_INIT_GAME">
+				<rule id=1></rule>
+			</topic>
+		</topics>
+</dialogue>							
