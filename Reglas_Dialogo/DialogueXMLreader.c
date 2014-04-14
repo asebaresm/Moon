@@ -17,11 +17,12 @@
 #define RULEST "rulest"
 #define RULET "rulet"
 
-
-
 #define RULES "rules"
 #define RULE "rule"
-#define PATTERNS "pattern"
+#define PATTERNS "patterns"
+#define PATTERN "pattern"
+#define TEMPLATES "templates"
+#define TEMPLATE "template"
 
 
 
@@ -40,11 +41,7 @@ static xml_RETURN wreader_process_rulet(xmlDocPtr doc, xmlNodePtr node,DialogueR
 static xml_RETURN wreader_process_rules(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr);
 static xml_RETURN wreader_process_rule(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr);
 static xml_RETURN wreader_process_pattern(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id);
-
-
-
-
-
+static xml_RETURN wreader_process_template(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id);
 
 
 
@@ -213,9 +210,7 @@ static xml_RETURN wreader_process_rule(xmlDocPtr doc, xmlNodePtr node,DialogueRu
 
 	xmlChar *id = NULL;
 	xml_RETURN ret = XML_OK;
-	char aux[WORD_SIZE+1];
 	Id new_id;
-	BOOL boolean;
 	
 	if(!doc || !node || !dr)
 		return ret = XML_ERR;
@@ -230,31 +225,31 @@ static xml_RETURN wreader_process_rule(xmlDocPtr doc, xmlNodePtr node,DialogueRu
 	sscanf((char *) id, "%ld", &(new_id));
 	xmlFree(id);
 
-
 	/*Creamos una regla con la id*/
- 	if(dialog_add_rule(dr,id)==NO_ID)
+ 	if(dialog_add_rule(dr,new_id)==NO_ID)
  		return ret = XML_ERR; 
 	/**
 	 * Visits nested nodes
 	 */ 
 	node = node->xmlChildrenNode; /** First node */
 	while (node != NULL) {
-		/*Añadimos aptrones a la regla seleccioanda*/
+		/*Añadimos patrones a la regla seleccioanda*/
 		if (!xmlStrcmp(node->name, (const xmlChar *) PATTERNS)) {
-			if ( wreader_process_pattern(doc,node,dr,id) == XML_ERR)
+			if ( wreader_process_pattern(doc,node,dr,new_id) == XML_ERR)
 				return ret = XML_ERR;
 		} 
 		/*Templates*/
+		else if (!xmlStrcmp(node->name, (const xmlChar *) TEMPLATES)) {
+			if ( wreader_process_template(doc,node,dr,new_id) == XML_ERR)
+				return ret = XML_ERR;
+		} 
 		node = node->next;
 	}
-	
 	return ret;
-
-
-
 }
 
 static xml_RETURN wreader_process_pattern(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id);
+static xml_RETURN wreader_process_template(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id);
 
 
 
