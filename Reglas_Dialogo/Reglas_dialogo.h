@@ -64,6 +64,10 @@ char * select_ouput_template(DialogueRules *dr, Id rule_id);
 
 char * select_random_output_template (DialogueRules *dr, Id rule_id);
 
-Id search_rule_and_pattern (int * ind_patr, Id topic, const char * txt_ent);
+Id search_rule_and_pattern (DialogueRules *dr, int * ind_patr, Id topic, const char * txt_ent);
+
+/*aux de search_rule_and_pattern: busca coincidencias entre los aptrones de una regla a partir del indice
+ *del array que ocupa dicha regla en "DialogueRules *dr" */
+int search_pattern_coincidence(int rule_index, char *txt_ent);
 
  #endif /* REGLAS_H_ */
