@@ -199,8 +199,48 @@ char * select_random_output_template (DialogueRules *dr, Id rule_id){
     return NULL;
 }
 
-Id search_rule_and_pattern (int * ind_patr, Id topic, const char * txt_ent){
+Id search_rule_and_pattern (DialogueRules *dr, int * ind_patr, Id topic, const char * txt_ent){
+    int i,j,k, located_pattern;
+    Id rule_id, located_rule;
+    Size set_size;
+
     if(!ind_patr || !text_ent)
         return NOT_FOUND;
+    /*recorriendo el array de topics:*/
+    for(i=0; i < dr->num_topic; i++){
+        /*cuando encuentra el topic on esa id:*/
+        if(dr->l_topic[i]->id == topic){
+            /*size del set de reglas que contiene el topic con esa id*/
+            set_size = get_size(dr->l_topic[i]->topic_rules);
+            /*recorriendo el set de reglas:*/
+            for(j=0; j < set_size; j++){
+                rule_id = get_i_id(dr->l_topic[i]->topic_rules, j);
+                for(k=0; k < dr->num_rules; k++){
+                    /*si el rule_id coincide con una regla del array de reglas:*/
+                    if(rule_id == dr->l_rule[k]->id){
+                        located_pattern = search_pattern_coincidence(k, txt_ent);
+                        if(located_pattern != NOT_FOUND){
+                            *ind_patr = located_pattern;
+                            return rule_id;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return NOT_FOUND;
+}
+
+int search_pattern_coincidence(int rule_index, char *txt_ent){
+    int l;
+    char aux_ent[WORD_SIZE];
+
+    for(l=0; l < dr->l_rule[k]->num_patterns; l++){
+        strcpy(aux_ent, txt_ent);
+        aux_ent[strlen(dr->l_rule[k]->pattern[l])]='\0';
+        if(strcmp(aux_ent, dr->l_rule[k]->pattern[l]) == 0)
+            return l;
+    }
+    return NOT_FOUND;
 }
 
