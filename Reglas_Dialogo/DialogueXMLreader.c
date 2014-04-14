@@ -7,17 +7,45 @@
 */
 
 
+
+/*ejemplo de formato del .xml a leer:
+<dialogue>
+	<rules>
+		<rule id="1">
+			<patterns>
+				<pattern> * </pattern>
+			</patterns>
+			<templates>
+				<template>Buenos dias como se encuentra usted </template>
+			</templates>
+		</rule>
+		...
+	</rules>	
+	<topics>
+		<topic name="T_INIT_GAME">
+			<topicid id="1"/>
+			<rulest>
+				<rulet id="1"/>
+				<rulet id="2"/>
+				...
+			</rulest>
+		</topic>
+		...
+	</topics>
+</dialogue>		
+*/
+
+
 #include "DialogueXMLreader.h"
 
 /**!Labels of the XML file*/
-#define DIALOGUE "dialogue"
+#define DIALOGUE "dialogue" /*Labels de topics*/
 #define TOPICS "topics"
 #define TOPIC "topic"
 #define TOPICID "topicid"
 #define RULEST "rulest"
 #define RULET "rulet"
-
-#define RULES "rules"
+#define RULES "rules" /*labels de reglas*/
 #define RULE "rule"
 #define PATTERNS "patterns"
 #define PATTERN "pattern"
@@ -44,13 +72,9 @@ static xml_RETURN wreader_process_pattern(xmlDocPtr doc, xmlNodePtr node,Dialogu
 static xml_RETURN wreader_process_template(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id);
 
 
-
+/*Funciones genericas procesar texto e ID's*/
 static xml_RETURN wreader_process_id(xmlDocPtr doc, xmlNodePtr node, Id *id);
 static xml_RETURN wreader_process_text(xmlDocPtr doc, xmlNodePtr node, char *text);
-static xml_RETURN wreader_process_bool(xmlDocPtr doc, xmlNodePtr node, BOOL *boolean);
-static xml_RETURN wreader_process_bool_initial(xmlDocPtr doc, xmlNodePtr node, BOOL *boolean);
-
-
 
 
 
@@ -89,16 +113,14 @@ STATUS dialogue_load(char *file_name, DialogueRules *dr){
 
 	node = node->xmlChildrenNode;
 		while(node != NULL) {
-			if (!xmlStrcmp(node->name, (const xmlChar*) TOPICS)) {
-				wreader_process_topics(doc, node->xmlChildrenNode, dr);
-			}
-			else if (!xmlStrcmp(node->name, (const xmlChar*) RULES)) {
+			if (!xmlStrcmp(node->name, (const xmlChar*) RULES)) {
 				wreader_process_rules(doc, node->xmlChildrenNode, dr);
+			}
+			else if (!xmlStrcmp(node->name, (const xmlChar*) TOPICS)) {
+				wreader_process_topics(doc, node->xmlChildrenNode, dr);
 			}
 			node = node->next;
 		}
-
-
 	xmlFreeDoc(doc);
 	return TRUE;
 }
@@ -248,14 +270,51 @@ static xml_RETURN wreader_process_rule(xmlDocPtr doc, xmlNodePtr node,DialogueRu
 	return ret;
 }
 
-static xml_RETURN wreader_process_pattern(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id);
-static xml_RETURN wreader_process_template(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id);
+static xml_RETURN wreader_process_pattern(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id){
+
+	xml_RETURN ret = XML_OK;
+	
+	if(!doc || !node || !dr || rule_id==NO_ID)
+		return ret = XML_ERR;
+
+	/**
+	 * Visits nested nodes
+	 */ 
+	 node = node->xmlChildrenNode; /* First node */
+	 while (node != NULL) {
+		/*Añadimos patrones a la regla seleccioanda*/
+		if (!xmlStrcmp(node->name, (const xmlChar *) PATTERN)) {
+			if (wreader_process_text(doc, node, aux) != ret || dialog_add_pattern(dr,rule_id, aux) == ERROR )
+				return ret = XML_ERR;
+		} 
+		node = node->next;
+	}
+	return ret;
+}
 
 
+static xml_RETURN wreader_process_template(xmlDocPtr doc, xmlNodePtr node,DialogueRules *dr, Id rule_id){
+	
+	xml_RETURN ret = XML_OK;
+	
+	if(!doc || !node || !dr || rule_id==NO_ID)
+		return ret = XML_ERR;
 
+	/**
+	 * Visits nested nodes
+	 */ 
+	 node = node->xmlChildrenNode; /* First node */
+	 while (node != NULL) {
+		/*Añadimos templates a la regla seleccioanda*/
+		if (!xmlStrcmp(node->name, (const xmlChar *) TEMPLATE)) {
+			if (wreader_process_text(doc, node, aux) != ret || dialog_add_output_templ(dr,rule_id, aux) == ERROR )
+				return ret = XML_ERR;
+		} 
+		node = node->next;
+	}
+	return ret;
 
-
-
+}
 
 
 
@@ -313,62 +372,6 @@ xml_RETURN wreader_process_id(xmlDocPtr doc, xmlNodePtr node, Id *id) {
 	return ret;
 }
 
-/**
- * @brief Processes a Boolean value
- *
- * Reads a Boolean value from an XML file.
- *
- * @param doc pointer to an XML file
- * @param node current XML node in the file
- * @param boolean pointer in which store the read Boolean value
- * @return XML_OK in case of no ERROR, XML_ERR otherwise
- **/
-xml_RETURN wreader_process_bool(xmlDocPtr doc, xmlNodePtr node, BOOL *boolean) {
 
-	xmlChar *value = NULL;
-	xml_RETURN ret = XML_OK;
- 
-	if ((!doc) || (!node) || (!boolean))
-		return ret = XML_ERR;
- 
-	value = xmlGetProp(node, (const xmlChar *) VALUE);
- 
-	if (value == NULL)
-		return ret = XML_ERR; 
- 
-	if (!strcmp(TRUE_VALUE, (char *)value)) {
-		*boolean = TRUE;
-	} else if (!strcmp(FALSE_VALUE, (char *)value)) {
-		*boolean = FALSE;
-	} else {
-		ret = XML_ERR;
-	}
-	xmlFree(value);
- 
-	return ret;
-}
 
-static xml_RETURN wreader_process_bool_initial(xmlDocPtr doc, xmlNodePtr node, BOOL *boolean)
-{
-	xmlChar *value = NULL;
-	xml_RETURN ret = XML_OK;
- 
-	if ((!doc) || (!node) || (!boolean))
-		return ret = XML_ERR;
- 
-	*boolean = FALSE; 
-	value = xmlGetProp(node, (const xmlChar *) INITIAL); 
-	if (value == NULL)
-		return ret = XML_OK; /** it may be the case that the initial parameter does not exist */ 
- 
-	if (!strcmp(TRUE_VALUE, (char *)value)) {
-		*boolean = TRUE;
-	} else if (!strcmp(FALSE_VALUE, (char *)value)) {
-		*boolean = FALSE;
-	} else {
-		ret = XML_ERR;
-	}
-	xmlFree(value);
- 
-	return ret; 
-}
+
