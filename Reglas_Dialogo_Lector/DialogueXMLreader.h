@@ -9,7 +9,7 @@
 #ifndef XML_READER_H
 #define XML_READER_H
 
-#include "reglas.h"
+#include "Reglas_dialogo.h"
 
 
 #include <libxml/xmlmemory.h>
