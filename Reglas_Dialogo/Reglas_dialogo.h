@@ -11,6 +11,7 @@
 #ifndef REGLAS_H_
 #define REGLAS_H_
 
+#include "Set.h"
 #include "Types.h"
 
 #define NOT_FOUND -1
@@ -23,17 +24,6 @@ typedef struct _Topic Topic;
 typedef struct _DialogueRules DialogueRules;
 
 typedef struct _Rule Rule;
-
-/*antiguo tema */
-typedef enum {
- /*0*/   T_INICIO,       /**< Tema para el comienzo  */
- /*1*/   T_PREGUNTA,	 /**< Tema para una pregunta  */
- /*2*/   T_NORMAL,       /**< Tema de conversacion normal */
- /*3*/   T_TONTA,        /**< Tema para cuando no sabes que decir */
- /*4*/   T_DESPEDIDA,    /**< Tema para despedirse */
- /*5*/   T_VACIA,        /**< Tema para vacia*/
- /*6*/   T_REPETIDO	 /**< Tema para repetido*/
-} Tema;
 
 /* Constructor and destructor of the structures that store the 
 dialogue rules */
@@ -68,6 +58,6 @@ Id search_rule_and_pattern (DialogueRules *dr, int * ind_patr, Id topic, const c
 
 /*aux de search_rule_and_pattern: busca coincidencias entre los aptrones de una regla a partir del indice
  *del array que ocupa dicha regla en "DialogueRules *dr" */
-int search_pattern_coincidence(int rule_index, char *txt_ent);
+int search_pattern_coincidence(DialogueRules *dr, int rule_index, const char *txt_ent);
 
  #endif /* REGLAS_H_ */

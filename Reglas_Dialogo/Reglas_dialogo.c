@@ -19,7 +19,7 @@ Set *topic_rules;               /* set of rule indexes associated with a topic *
 };
 
 
-typedef struct _Rule
+struct _Rule
 {
 Id id; 						    /* rule identifier */
 char * pattern [MAX_PATTERNS];  /* If the string matches any of these input patterns, then executes this rule */
@@ -27,7 +27,7 @@ int num_patterns;               /* number of patterns */
 char * template [MAX_PATTERNS]; /* List of possible templates that can be used as a response */
 int num_templates;              /* number of possible answers */
 int last;                       /* Last used template*/
-} Rule;
+};
 
 struct _DialogueRules
 {
@@ -41,7 +41,7 @@ int num_topic;                  /* number of topics stored in l_topic */
 DialogueRules *create_dialog(){
 	DialogueRules * new_dr=NULL;
 
-	new_dr=(DialogueRules*)calloc(1,sizeof(DialogueRules);
+	new_dr=(DialogueRules*)calloc(1,sizeof(DialogueRules));
 	return new_dr;
 }
 
@@ -54,22 +54,22 @@ void destroy_dialog(DialogueRules *dr){
 		return;
     /*bucle que libera todos los patrones y plantillas para cada regla (i)*/
 	for(i = 0; i < dr->num_rules ; i++){
-        patterns= dr->l_rule[i]->num_patterns-1;
-        templates= dr->l_rule[i]->num_templates-1;
+        patterns= dr->l_rule[i].num_patterns-1;
+        templates= dr->l_rule[i].num_templates-1;
         /*libera aptrones*/
         for(j=0; j < patterns; patterns--){
-            free(dr->l_rule[i]->pattern[patterns]);
+            free(dr->l_rule[i].pattern[patterns]);
             patterns--;
         }
         /*libera plantillas*/
         for(j=0; j < templates; templates--){
-            free(dr->l_rule[i]->template[templates]);
+            free(dr->l_rule[i].template[templates]);
             templates--;
         }
     }
     /*bucle que libera los sets de los temas*/
     for(i=0; i< dr->num_topic; i++){
-        destroy_set(dr->l_topic[i]->topic_rules);
+        destroy_set(dr->l_topic[i].topic_rules);
     }
     /*liberada toda la memoria dinámica contenida en los TADs, libera el TAD principal*/
     free(dr);
@@ -80,11 +80,11 @@ void destroy_dialog(DialogueRules *dr){
 is properly added. Otherwise a negative identifier is returned. */
 /*ORG: int dialog_add_topic(DialogueRules *dr, char *topic_name);*/
 int dialog_add_topic(DialogueRules *dr, char *topic_name, Id topic_id){
-    if(!dr || !topic_name || topic_Id == NO_ID)
+    if(!dr || !topic_name || topic_id == NO_ID)
         return NO_ID;
-    strcpy(dr->l_topic[dr->num_topic]->nombre, topic_name);
-    dr->l_topic[dr->num_topic]->id = topic_id;
-    dr->l_topic[dr->num_topic]->topic_rules=new_set();
+    strcpy(dr->l_topic[dr->num_topic].nombre, topic_name);
+    dr->l_topic[dr->num_topic].id = topic_id;
+    dr->l_topic[dr->num_topic].topic_rules=new_set();
     dr->num_topic++;
     return topic_id;
 }
@@ -94,15 +94,13 @@ Returns the rule ID if it is properly added. Otherwise a negative
 identifier is returned.*/
 /*ORG: int dialog_add_rule(DialogueRules *dr, Id topic, char *pattern);*/
 int dialog_add_rule(DialogueRules *dr, Id rule) {
-    int i;
     
-    if(!dr || !pattern || rule == NO_ID)
+    if(!dr || rule == NO_ID)
         return NO_ID;
     /*dr->l_rule[dr->num_rules]->pattern[dr->l_rule[dr->num_rules]->num_patterns]=(char*)calloc(1,strlen(pattern)+1);
     strcpy(dr->l_rule[dr->num_rules]->pattern[dr->l_rule[dr->num_rules]->num_patterns], pattern);*/
-    dr->l_rule[dr->num_rules]->id = rule;
-    dr->l_rule[dr->num_rules]->num_patterns++;
-    dr->l_rule[dr->num_rules]->last = NO_ID;
+    dr->l_rule[dr->num_rules].id = rule;
+    dr->l_rule[dr->num_rules].last = NO_ID;
     dr->num_rules++;
     return rule;
 }
@@ -116,10 +114,10 @@ STATUS dialog_add_pattern(DialogueRules *dr, Id rule, char *pattern){
     /*busqueda de la regla con esa id*/
     for(i=0; i < dr->num_rules; i++){
         /*si encuentra al regla:*/
-        if(dr->l_rule[i]->id == rule){
-            dr->l_rule[i]->pattern[dr->l_rule[i]->num_patterns]=(char*)calloc(1,strlen(pattern)+1);
-            strcpy(dr->l_rule[i]->pattern[dr->l_rule[i]->num_patterns],pattern);
-            dr->l_rule[i]->num_patterns++;
+        if(dr->l_rule[i].id == rule){
+            dr->l_rule[i].pattern[dr->l_rule[i].num_patterns]=(char*)calloc(1,strlen(pattern)+1);
+            strcpy(dr->l_rule[i].pattern[dr->l_rule[i].num_patterns],pattern);
+            dr->l_rule[i].num_patterns++;
             return OK;
         }
     }
@@ -136,10 +134,10 @@ STATUS dialog_add_output_templ(DialogueRules *dr, Id rule, char *template){
     /*busqueda de la regla con esa id*/
     for(i=0; i < dr->num_rules; i++){
         /*si encuentra la regla:*/
-        if(dr->l_rule[i]->id == rule){
-            dr->l_rule[i]->template[dr->l_rule[i]->num_templates]=(char*)calloc(1,strlen(template)+1);
-            strcpy(dr->l_rule[i]->template[dr->l_rule[i]->num_templates],template);
-            dr->l_rule[i]->num_templates++;
+        if(dr->l_rule[i].id == rule){
+            dr->l_rule[i].template[dr->l_rule[i].num_templates]=(char*)calloc(1,strlen(template)+1);
+            strcpy(dr->l_rule[i].template[dr->l_rule[i].num_templates],template);
+            dr->l_rule[i].num_templates++;
             return OK;
         }
     }
@@ -154,8 +152,8 @@ STATUS dialog_add_ruleid_to_topic(DialogueRules *dr, Id topic_id, Id rule_id){
         return ERROR;
     /*bucle de busqueda del topic con ese topic_id*/
     for(i=0; i< dr->num_topic; i++){
-        if(dr->l_topic[i]->id == topic_id){
-            if(add(dr->l_topic[i]->topic_rules, rule_id) == OK)
+        if(dr->l_topic[i].id == topic_id){
+            if(add(dr->l_topic[i].topic_rules, rule_id) == OK)
                 return OK;
         }
     }
@@ -170,15 +168,15 @@ char * select_ouput_template(DialogueRules *dr, Id rule_id){
         return NULL;
     }
     for(i=0; i < dr->num_rules; i++){
-        if(dr->l_rule[i]->id == rule_id){
-            dr->l_rule[i]->last++;
+        if(dr->l_rule[i].id == rule_id){
+            dr->l_rule[i].last++;
             /*caso 1: iteracion normal del array*/
-            if(dr->l_rule[i]->last < dr->l_rule[i]->num_templates)
-                return dr->l_rule[i]->template[dr->l_rule[i]->last];
+            if(dr->l_rule[i].last < dr->l_rule[i].num_templates)
+                return dr->l_rule[i].template[dr->l_rule[i].last];
             /*caso 2: la ultima plantilla impresa es la ultima posible para esta regla. 
               Se resetea el indicador del array*/
-            dr->l_regla[i]->last=0;
-            return dr->l-regla[i]->template[dr->l_rule[i]->last];
+            dr->l_rule[i].last=0;
+            return dr->l_rule[i].template[dr->l_rule[i].last];
         }
     }
     return NULL;
@@ -190,10 +188,10 @@ char * select_random_output_template (DialogueRules *dr, Id rule_id){
     int i, rand_capped;  
     
     for(i=0; i < dr->num_rules; i++){
-        if(dr->l_rule[i]->id == rule_id){
+        if(dr->l_rule[i].id == rule_id){
             r = rand();                
-            rand_capped = (r/RAND_MAX)*(dr->l_rule[i]->num_templates);
-            return dr->l_rule[i]->template[rand_capped];
+            rand_capped = (r/RAND_MAX)*(dr->l_rule[i].num_templates);
+            return dr->l_rule[i].template[rand_capped];
         }
     } 
     return NULL;
@@ -201,24 +199,24 @@ char * select_random_output_template (DialogueRules *dr, Id rule_id){
 
 Id search_rule_and_pattern (DialogueRules *dr, int * ind_patr, Id topic, const char * txt_ent){
     int i,j,k, located_pattern;
-    Id rule_id, located_rule;
+    Id rule_id;
     Size set_size;
 
-    if(!ind_patr || !text_ent)
+    if(!ind_patr || !txt_ent)
         return NOT_FOUND;
     /*recorriendo el array de topics:*/
     for(i=0; i < dr->num_topic; i++){
         /*cuando encuentra el topic on esa id:*/
-        if(dr->l_topic[i]->id == topic){
+        if(dr->l_topic[i].id == topic){
             /*size del set de reglas que contiene el topic con esa id*/
-            set_size = get_size(dr->l_topic[i]->topic_rules);
+            set_size = get_size(dr->l_topic[i].topic_rules);
             /*recorriendo el set de reglas:*/
             for(j=0; j < set_size; j++){
-                rule_id = get_i_id(dr->l_topic[i]->topic_rules, j);
+                rule_id = get_i_id(dr->l_topic[i].topic_rules, j);
                 for(k=0; k < dr->num_rules; k++){
                     /*si el rule_id coincide con una regla del array de reglas:*/
-                    if(rule_id == dr->l_rule[k]->id){
-                        located_pattern = search_pattern_coincidence(k, txt_ent);
+                    if(rule_id == dr->l_rule[k].id){
+                        located_pattern = search_pattern_coincidence(dr, k, txt_ent);
                         if(located_pattern != NOT_FOUND){
                             *ind_patr = located_pattern;
                             return rule_id;
@@ -231,14 +229,14 @@ Id search_rule_and_pattern (DialogueRules *dr, int * ind_patr, Id topic, const c
     return NOT_FOUND;
 }
 
-int search_pattern_coincidence(int rule_index, char *txt_ent){
+int search_pattern_coincidence(DialogueRules *dr, int rule_index, const char *txt_ent){
     int l;
     char aux_ent[WORD_SIZE];
 
-    for(l=0; l < dr->l_rule[k]->num_patterns; l++){
+    for(l=0; l < dr->l_rule[rule_index].num_patterns; l++){
         strcpy(aux_ent, txt_ent);
-        aux_ent[strlen(dr->l_rule[k]->pattern[l])]='\0';
-        if(strcmp(aux_ent, dr->l_rule[k]->pattern[l]) == 0)
+        aux_ent[strlen(dr->l_rule[rule_index].pattern[l])]='\0';
+        if(strcmp(aux_ent, dr->l_rule[rule_index].pattern[l]) == 0)
             return l;
     }
     return NOT_FOUND;
