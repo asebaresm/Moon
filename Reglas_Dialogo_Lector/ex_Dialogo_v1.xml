@@ -8,7 +8,6 @@
 				<template>Buenos dias como se encuentra usted </template>
 			</templates>
 		</rule>
-		...
 	</rules>	
 	<topics>
 		<topic name="T_INIT_GAME">
@@ -19,6 +18,5 @@
 				...
 			</rulest>
 		</topic>
-		...
 	</topics>
 </dialogue>							
