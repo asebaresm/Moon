@@ -160,7 +160,7 @@ STATUS dialog_add_ruleid_to_topic(DialogueRules *dr, Id topic_id, Id rule_id){
     return ERROR;
 }
 
-char * select_ouput_template(DialogueRules *dr, Id rule_id){
+char * select_output_template(DialogueRules *dr, Id rule_id){
     int i;
 
     /*comprobacion de que el ind_regla que recibe sea valido*/
@@ -201,8 +201,8 @@ Id search_rule_and_pattern (DialogueRules *dr, int * ind_patr, Id topic, const c
     int i,j,k, located_pattern;
     Id rule_id;
     Size set_size;
-
-    if(!ind_patr || !txt_ent)
+    
+    if(!txt_ent)
         return NOT_FOUND;
     /*recorriendo el array de topics:*/
     for(i=0; i < dr->num_topic; i++){

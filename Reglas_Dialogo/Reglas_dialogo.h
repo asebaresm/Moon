@@ -50,7 +50,7 @@ STATUS dialog_add_output_templ(DialogueRules *dr, Id rule, char *template);
 /*Añade la id de una regla al set de reglas de un topic*/
 STATUS dialog_add_ruleid_to_topic(DialogueRules *dr, Id topic_id, Id rule_id);
 
-char * select_ouput_template(DialogueRules *dr, Id rule_id);
+char * select_output_template(DialogueRules *dr, Id rule_id);
 
 char * select_random_output_template (DialogueRules *dr, Id rule_id);
 

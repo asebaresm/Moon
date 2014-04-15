@@ -7,6 +7,7 @@
 
 #include "Reglas_dialogo.h"
 #include <assert.h>
+#include <time.h>
 
 int main(int argc, char** argv) {
     
@@ -18,6 +19,11 @@ int main(int argc, char** argv) {
     
     /*Rule ids:*/
     Id rid_1=10, rid_2=20, rid_3=30, rid_4=40, rid_5=50;
+    
+    /*Variables para prueba de "search_rule_and_pattern": */
+    int *pind_patr = NULL;
+    int ind_patr;
+    char txt_ent[WORD_SIZE]="MOVER NORTE JUGADOR";
     
     /*Topic names:*/
     char tname1[WORD_SIZE]="T_MOVER_N";
@@ -39,7 +45,8 @@ int main(int argc, char** argv) {
     char tmpl3[WORD_SIZE]="Caminas hacia el norte";
     char tmpl4[WORD_SIZE]="Te mueves a la sala que hay al norte";
     
-    
+    /*Inicializamos el seed para la funcion de plantilla aleatoria*/
+    srand(time(NULL));
     /*P1*/
     printf("\nPasando prueba 1: ");
     assert((dr = create_dialog()) != NULL);
@@ -86,8 +93,29 @@ int main(int argc, char** argv) {
     printf("OK");
     
     /*P7*/
-    /*printf("\nPasando prueba 7: ");
-    printf("OK");*/
+    printf("\nPasando prueba 7: (Plantillas secuenciales)");
+    printf("\nPlantilla 1: %s", select_output_template(dr, rid_5));
+    printf("\nPlantilla 2: %s", select_output_template(dr, rid_5));
+    printf("\nPlantilla 3: %s", select_output_template(dr, rid_5));
+    printf("\nPlantilla 4: %s", select_output_template(dr, rid_5));
+    printf("\nPlantilla 5: %s", select_output_template(dr, rid_5));
+    printf("\nOK");
+    
+    /*P8*/
+    printf("\nPasando prueba 8: (Plantillas aleatorias)");
+    printf("\nPlantilla 1: %s", select_random_output_template(dr, rid_5));
+    printf("\nPlantilla 2: %s", select_random_output_template(dr, rid_5));
+    printf("\nPlantilla 3: %s", select_random_output_template(dr, rid_5));
+    printf("\nPlantilla 4: %s", select_random_output_template(dr, rid_5));
+    printf("\nPlantilla 5: %s", select_random_output_template(dr, rid_5));
+    printf("\nOK");
+    
+    /*P9*/
+    printf("\nPasando prueba 9: ");
+    pind_patr = &ind_patr;
+    assert( 50 == search_rule_and_pattern (dr, pind_patr, tid_1, txt_ent));
+    assert( ind_patr == 0);
+    printf("OK");
     
     printf("\n");
     return (EXIT_SUCCESS);
