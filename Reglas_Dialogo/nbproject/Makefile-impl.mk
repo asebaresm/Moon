@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Reglas_dialogo
+PROJECTNAME=Reglas_Dialogo
 
 # Active Configuration
 DEFAULTCONF=Debug

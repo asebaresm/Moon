@@ -1,0 +1,245 @@
+<game>
+<spaces>
+<space id="0">
+	<description>Desc. Espace 0</description>
+	<idescription>Desc. Espace 0</idescription>
+	<north>10</north>
+	<light value="TRUE"/>
+	<objects>
+		<object id="20"/>
+	</objects>
+</space>
+<space id="1">
+	<description>Desc. Espace 1</description>
+	<idescription>Desc. Espace 1</idescription>
+	<north>11</north>
+	<south>10</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="21"/>
+	</objects>
+</space>
+<space id="2">
+	<description>Desc. Espace 2</description>
+	<idescription>Desc. Espace 2</idescription>
+	<north>12</north>
+	<south>11</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="22"/>
+	</objects>
+</space>
+<space id="3">
+	<description>Desc. Espace 3</description>
+	<idescription>Desc. Espace 3</idescription>
+	<north>13</north>
+	<south>12</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="23"/>
+	</objects>
+</space>
+<space id="4">
+	<description>Desc. Espace 4</description>
+	<idescription>Desc. Espace 4</idescription>
+	<north>14</north>
+	<south>13</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="24"/>
+	</objects>
+</space>
+<space id="5">
+	<description>Desc. Espace 5</description>
+	<idescription>Desc. Espace 5</idescription>
+	<north>15</north>
+	<south>14</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="25"/>
+	</objects>
+</space>
+<space id="6">
+	<description>Desc. Espace 6</description>
+	<idescription>Desc. Espace 6</idescription>
+	<north>16</north>
+	<south>15</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="26"/>
+	</objects>
+</space>
+<space id="7">
+	<description>Desc. Espace 7</description>
+	<idescription>Desc. Espace 7</idescription>
+	<north>17</north>
+	<south>16</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="27"/>
+	</objects>
+</space>
+<space id="8">
+	<description>Desc. Espace 8</description>
+	<idescription>Desc. Espace 8</idescription>
+	<north>18</north>
+	<south>17</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="28"/>
+	</objects>
+</space>
+<space id="9">
+	<description>Desc. Espace 9</description>
+	<idescription>Desc. Espace 9</idescription>
+	<south>18</south>
+	<light value="TRUE"/>
+	<objects>
+		<object id="29"/>
+	</objects>
+</space>
+</spaces>
+<links>
+<link id="10">
+	<connection_1>0</connection_1>
+	<connection_2>1</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="11">
+	<connection_1>1</connection_1>
+	<connection_2>2</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="12">
+	<connection_1>2</connection_1>
+	<connection_2>3</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="13">
+	<connection_1>3</connection_1>
+	<connection_2>4</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="14">
+	<connection_1>4</connection_1>
+	<connection_2>5</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="15">
+	<connection_1>5</connection_1>
+	<connection_2>6</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="16">
+	<connection_1>6</connection_1>
+	<connection_2>7</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="17">
+	<connection_1>7</connection_1>
+	<connection_2>8</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+<link id="18">
+	<connection_1>8</connection_1>
+	<connection_2>9</connection_2>
+	<openable value="FALSE" initial="FALSE"/>
+</link>
+</links>
+<objects>
+<object id="20">
+	<name>obj20</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="21">
+	<name>obj21</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="22">
+	<name>obj22</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="23">
+	<name>obj23</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="24">
+	<name>obj24</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="25">
+	<name>obj25</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="26">
+	<name>obj26</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="27">
+	<name>obj27</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="28">
+	<name>obj28</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+<object id="29">
+	<name>obj29</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
+</objects>
+<player>
+	<location>0</location>
+	<max_objects>5</max_objects>
+</player>
+</game>

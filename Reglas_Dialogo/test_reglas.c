@@ -117,6 +117,8 @@ int main(int argc, char** argv) {
     assert( ind_patr == 0);
     printf("OK");
     
+    destroy_dialog(dr);
+    
     printf("\n");
     return (EXIT_SUCCESS);
 }
