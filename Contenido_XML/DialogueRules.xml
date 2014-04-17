@@ -1,0 +1,509 @@
+<dialogue>
+	<rules>
+		<!-- REGLAS DE MOVIMIENTO -->
+		<rule id="100">
+			<patterns>
+				<pattern>IR NORTE</pattern>
+				<pattern>IR AL NORTE</pattern>
+				<pattern>MOVER NORTE</pattern>
+				<pattern>MOVER AL NORTE</pattern>
+				<pattern>AVANZAR NORTE</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al norte...</template>
+				<template>Te diriges a la sala que hay al norte...</template>
+				<template>Te mueves al norte...</template>
+			</templates>
+		</rule>
+		<rule id="101">
+			<patterns>
+				<pattern>IR NORTE</pattern>
+				<pattern>IR AL NORTE</pattern>
+				<pattern>MOVER NORTE</pattern>
+				<pattern>MOVER AL NORTE</pattern>
+				<pattern>AVANZAR NORTE</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al norte ahora mismo</template>
+				<template>El paso al norte esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="102">
+			<patterns>
+				<pattern>IR SUR</pattern>
+				<pattern>IR AL SUR</pattern>
+				<pattern>MOVER SUR</pattern>
+				<pattern>MOVER AL SUR</pattern>
+				<pattern>AVANZAR SUR</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al sur...</template>
+				<template>Te diriges a la sala que hay al sur...</template>
+				<template>Te mueves al sur...</template>
+			</templates>
+		</rule>
+		<rule id="103">
+			<patterns>
+				<pattern>IR SUR</pattern>
+				<pattern>IR AL SUR</pattern>
+				<pattern>MOVER SUR</pattern>
+				<pattern>MOVER AL SUR</pattern>
+				<pattern>AVANZAR SUR</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al sur ahora mismo</template>
+				<template>El paso al sur esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="104">
+			<patterns>
+				<pattern>IR ESTE</pattern>
+				<pattern>IR AL ESTE</pattern>
+				<pattern>MOVER ESTE</pattern>
+				<pattern>MOVER AL ESTE</pattern>
+				<pattern>AVANZAR ESTE</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al este...</template>
+				<template>Te diriges a la sala que hay al este...</template>
+				<template>Te mueves al este...</template>
+			</templates>
+		</rule>
+		<rule id="105">
+			<patterns>
+				<pattern>IR ESTE</pattern>
+				<pattern>IR AL ESTE</pattern>
+				<pattern>MOVER ESTE</pattern>
+				<pattern>MOVER AL ESTE</pattern>
+				<pattern>AVANZAR ESTE</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al este ahora mismo</template>
+				<template>El paso al este esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="106">
+			<patterns>
+				<pattern>IR OESTE</pattern>
+				<pattern>IR AL OESTE</pattern>
+				<pattern>MOVER OESTE</pattern>
+				<pattern>MOVER AL OESTE</pattern>
+				<pattern>AVANZAR OESTE</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al oeste...</template>
+				<template>Te diriges a la sala que hay al oeste...</template>
+				<template>Te mueves al oeste...</template>
+			</templates>
+		</rule>
+		<rule id="107">
+			<patterns>
+				<pattern>IR OESTE</pattern>
+				<pattern>IR AL OESTE</pattern>
+				<pattern>MOVER OESTE</pattern>
+				<pattern>MOVER AL OESTE</pattern>
+				<pattern>AVANZAR OESTE</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al oeste ahora mismo</template>
+				<template>El paso al oeste esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="108">
+			<patterns>
+				<pattern>IR ARRIBA</pattern>
+				<pattern>MOVER ARRIBA</pattern>
+				<pattern>AVANZAR ARRIBA</pattern>
+			</patterns>
+			<templates>
+				<template>Vas hacia arriba...</template>
+				<template>Avanzas a la sala que hay arriba...</template>
+				<template>Te diriges a la sala que hay arriba...</template>
+				<template>Te mueves arriba...</template>
+			</templates>
+		</rule>
+		<rule id="109">
+			<patterns>
+				<pattern>IR ARRIBA</pattern>
+				<pattern>MOVER ARRIBA</pattern>
+				<pattern>AVANZAR ARRIBA</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes ir arriba ahora mismo</template>
+				<template>El paso hacia arriba esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="110">
+			<patterns>
+				<pattern>IR ABAJO</pattern>
+				<pattern>MOVER ABAJO</pattern>
+				<pattern>AVANZAR ABAJO</pattern>
+			</patterns>
+			<templates>
+				<template>Vas hacia abajo...</template>
+				<template>Avanzas a la sala que hay debajo...</template>
+				<template>Te diriges a la sala que hay debajo...</template>
+				<template>Te mueves hacia abajo...</template>
+			</templates>
+		</rule>
+		<rule id="111">
+			<patterns>
+				<pattern>IR ABAJO</pattern>
+				<pattern>MOVER ABAJO</pattern>
+				<pattern>AVANZAR ABAJO</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes ir abajo ahora mismo</template>
+				<template>El paso hacia abajo esta bloqueado</template>
+			</templates>
+		</rule>
+		<!-- REGLAS DE ACCION DEL PLAYER -->
+		<rule id="200">
+			<patterns>
+				<!-- indice de patron == ID del objeto -->
+				<pattern>COGER LINTERNA</pattern>
+				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
+				<pattern>COGER TANQUE OXIGENO</pattern>
+				<pattern>COGER RECARGA DE OXIGENO</pattern>
+				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
+				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
+				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
+				<pattern>COGER CABLES</pattern>
+				<pattern>COGER GENERADOR</pattern>
+				<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
+				<pattern>COGER ORDENADOR</pattern>
+				<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
+				<pattern>COGER PLAN DE VUELO</pattern>
+				<pattern>COGER ROVER</pattern>
+				<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
+				<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
+				<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
+				<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
+				<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
+				<pattern>COGER GUANTES DE TRAJE EVA</pattern>
+				<pattern>COGER SUMINISTROS</pattern>
+				<pattern>COGER TANQUE DE AGUA</pattern>
+				<pattern>COGER MAQUINA DE EJERCICIO</pattern>
+			</patterns>
+			<templates>
+				<template>Recoges *</template>
+				<template>Has cogido *</template>
+				<template>Añades * a tu inventario</template>
+			</templates>
+		</rule>
+		<rule id="201">
+			<patterns>
+				<!-- indice de patron == ID del objeto -->
+				<pattern>COGER LINTERNA</pattern>
+				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
+				<pattern>COGER TANQUE OXIGENO</pattern>
+				<pattern>COGER RECARGA DE OXIGENO</pattern>
+				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
+				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
+				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
+				<pattern>COGER CABLES</pattern>
+				<pattern>COGER GENERADOR</pattern>
+				<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
+				<pattern>COGER ORDENADOR</pattern>
+				<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
+				<pattern>COGER PLAN DE VUELO</pattern>
+				<pattern>COGER ROVER</pattern>
+				<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
+				<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
+				<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
+				<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
+				<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
+				<pattern>COGER GUANTES DE TRAJE EVA</pattern>
+				<pattern>COGER SUMINISTROS</pattern>
+				<pattern>COGER TANQUE DE AGUA</pattern>
+				<pattern>COGER MAQUINA DE EJERCICIO</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes coger eso todavia</template>
+				<template>No parece que sea el momento apropiado de coger eso</template>
+			</templates>
+		</rule>
+		<rule id="202">
+			<patterns>
+				<!-- indice de patron == ID del objeto -->
+				<pattern>COGER LINTERNA</pattern>
+				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
+				<pattern>COGER TANQUE OXIGENO</pattern>
+				<pattern>COGER RECARGA DE OXIGENO</pattern>
+				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
+				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
+				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
+				<pattern>COGER CABLES</pattern>
+				<pattern>COGER GENERADOR</pattern>
+				<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
+				<pattern>COGER ORDENADOR</pattern>
+				<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
+				<pattern>COGER PLAN DE VUELO</pattern>
+				<pattern>COGER ROVER</pattern>
+				<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
+				<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
+				<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
+				<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
+				<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
+				<pattern>COGER GUANTES DE TRAJE EVA</pattern>
+				<pattern>COGER SUMINISTROS</pattern>
+				<pattern>COGER TANQUE DE AGUA</pattern>
+				<pattern>COGER MAQUINA DE EJERCICIO</pattern>
+			</patterns>
+			<templates>
+				<template>No parece que algo tan grande quepa en tu inventario</template>
+				<template>Por muy grande que parezca tu inventario, eso no cabe</template>
+			</templates>
+		</rule>
+		<rule id="203">
+			<patterns>
+				<!-- indice de patron == ID del objeto -->
+				<pattern>DEJAR LINTERNA</pattern>
+				<pattern>DEJAR TANQUE COMBUSTIBLE</pattern>
+				<pattern>DEJAR TANQUE OXIGENO</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO</pattern>
+				<pattern>DEJAR TARJETA DE IDENTIFICACION</pattern>
+				<pattern>DEJAR TARJETA DE ACCESO ALMACEN</pattern>
+				<pattern>DEJAR TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
+				<pattern>DEJAR CABLES</pattern>
+				<pattern>DEJAR GENERADOR</pattern>
+				<pattern>DEJAR DESTORNILLADOR ESTRELLA</pattern>
+				<pattern>DEJAR ORDENADOR</pattern>
+				<pattern>DEJAR PIEZAS DE MAQUINARIA AVERIADA</pattern>
+				<pattern>DEJAR PLAN DE VUELO</pattern>
+				<pattern>DEJAR ROVER</pattern>
+				<pattern>DEJAR KIT DE RUEDAS TRASERAS</pattern>
+				<pattern>DEJAR KIT DE RUEDAS DELANTERAS</pattern>
+				<pattern>DEJAR CAJA DE HERRAMIENTAS</pattern>
+				<pattern>DEJAR ESCAFANDRA DE TRAJE EVA</pattern>
+				<pattern>DEJAR EQUIPO DE TRAJE EVA</pattern>
+				<pattern>DEJAR GUANTES DE TRAJE EVA</pattern>
+				<pattern>DEJAR SUMINISTROS</pattern>
+				<pattern>DEJAR TANQUE DE AGUA</pattern>
+				<pattern>DEJAR MAQUINA DE EJERCICIO</pattern>
+			</patterns>
+			<templates>
+				<template>Dejas *</template>
+				<template>Has dejado *</template>
+				<template>* ya no esta en tu inventario</template>
+			</templates>
+		</rule>
+		<rule id="204">
+			<patterns>
+				<!-- indice de patron == ID del objeto -->
+				<pattern>DEJAR LINTERNA</pattern>
+				<pattern>DEJAR TANQUE COMBUSTIBLE</pattern>
+				<pattern>DEJAR TANQUE OXIGENO</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO</pattern>
+				<pattern>DEJAR TARJETA DE IDENTIFICACION</pattern>
+				<pattern>DEJAR TARJETA DE ACCESO ALMACEN</pattern>
+				<pattern>DEJAR TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
+				<pattern>DEJAR CABLES</pattern>
+				<pattern>DEJAR GENERADOR</pattern>
+				<pattern>DEJAR DESTORNILLADOR ESTRELLA</pattern>
+				<pattern>DEJAR ORDENADOR</pattern>
+				<pattern>DEJAR PIEZAS DE MAQUINARIA AVERIADA</pattern>
+				<pattern>DEJAR PLAN DE VUELO</pattern>
+				<pattern>DEJAR ROVER</pattern>
+				<pattern>DEJAR KIT DE RUEDAS TRASERAS</pattern>
+				<pattern>DEJAR KIT DE RUEDAS DELANTERAS</pattern>
+				<pattern>DEJAR CAJA DE HERRAMIENTAS</pattern>
+				<pattern>DEJAR ESCAFANDRA DE TRAJE EVA</pattern>
+				<pattern>DEJAR EQUIPO DE TRAJE EVA</pattern>
+				<pattern>DEJAR GUANTES DE TRAJE EVA</pattern>
+				<pattern>DEJAR SUMINISTROS</pattern>
+				<pattern>DEJAR TANQUE DE AGUA</pattern>
+				<pattern>DEJAR MAQUINA DE EJERCICIO</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes dejar eso</template>
+			</templates>
+		</rule>
+		<!-- REGLAS DE SECUENCIA DEL JUEGO -->
+		<rule id="300">
+			<patterns>
+				<pattern>0</pattern>
+			</patterns>
+			<templates>
+				<template>"texto de iniciar juego 1"</template>
+			</templates>
+		</rule>
+		<rule id="301">
+			<patterns>
+				<pattern>1</pattern>
+			</patterns>
+			<templates>
+				<template>"texto de iniciar juego 2"</template>
+			</templates>
+		</rule>
+		<rule id="302">
+			<patterns>
+				<pattern>2</pattern>
+			</patterns>
+			<templates>
+				<template>"texto de iniciar juego 3"</template>
+			</templates>
+		</rule>
+		<rule id="350">
+			<patterns>
+				<pattern>1</pattern>
+			</patterns>
+			<templates>
+				<template>"texto de cerrar juego 1"</template>
+			</templates>
+		</rule>
+		<rule id="351">
+			<patterns>
+				<pattern>2</pattern>
+			</patterns>
+			<templates>
+				<template>"texto de cerrar juego 2"</template>
+			</templates>
+		</rule>
+		<rule id="352">
+			<patterns>
+				<pattern>3</pattern>
+			</patterns>
+			<templates>
+				<template>"texto de cerrar juego 3"</template>
+			</templates>
+		</rule>
+		<!-- REGLAS DE AYUDA/INTERFAZ -->
+		<rule id="400">
+			<patterns>
+				<pattern>AYUDA</pattern>
+				<pattern>HELP</pattern>
+			</patterns>
+			<templates>
+				<template>"texto de ayuda de controles"</template>
+			</templates>
+		</rule>
+	</rules>
+	<topics>
+		<topic name="T_MOV_N">
+			<topicid id="0100"/>
+			<rulest>
+				<rulet id="100">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_N_ERROR">
+			<topicid id="0101">
+			<rulest>
+				<rulet id="101">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_S">
+			<topicid id="0102">
+			<rulest>
+				<rulet id="102">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_S_ERROR">
+			<topicid id="0103">
+			<rulest>
+				<rulet id="103">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_E">
+			<topicid id="0104">
+			<rulest>
+				<rulet id="104">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_E_ERROR">
+			<topicid id="0105">
+			<rulest>
+				<rulet id="105">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_W">
+			<topicid id="0106">
+			<rulest>
+				<rulet id="106">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_W_ERROR">
+			<topicid id="0107">
+			<rulest>
+				<rulet id="107">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_UP">
+			<topicid id="0108">
+			<rulest>
+				<rulet id="108">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_UP_ERROR">
+			<topicid id="0109">
+			<rulest>
+				<rulet id="109">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_DOWN">
+			<topicid id="0110">
+			<rulest>
+				<rulet id="110">
+			</rulest>
+		</topic>
+		<topic name="T_MOV_DOWN_ERROR">
+			<topicid id="0111">
+			<rulest>
+				<rulet id="111">
+			</rulest>
+		</topic>
+		<topic name="T_PICK">
+			<topicid id="0200">
+			<rulest>
+				<rulet id="200">
+			</rulest>
+		</topic>
+		<topic name="T_PICK_ERROR_GENERIC">
+			<topicid id="0201">
+			<rulest>
+				<rulet id="201">
+			</rulest>
+		</topic>
+		<topic name="T_PICK_ERROR_TOOBIG">
+			<topicid id="0202">
+			<rulest>
+				<rulet id="202">
+			</rulest>
+		</topic>
+		<topic name="T_DROP">
+			<topicid id="0203">
+			<rulest>
+				<rulet id="203">
+			</rulest>
+		</topic>
+		<topic name="T_DROP_ERROR_GENERIC">
+			<topicid id="0204">
+			<rulest>
+				<rulet id="204">
+			</rulest>
+		</topic>
+		<!-- entra por cadena de entrada 1, 2 o 3 -->
+		<topic name="T_INIT_GAME">
+			<topicid id="0300">
+			<rulest>
+				<rulet id="300">
+				<rulet id="301">
+				<rulet id="302">	
+			</rulest>
+		</topic>
+		<topic name="T_END_GAME">
+			<topicid id="03500">
+			<rulest>
+				<rulet id="350">
+				<rulet id="351">
+				<rulet id="352">	
+			</rulest>
+		</topic>
+		<topic name="T_HELP_CONTROLS">
+			<topicid id="0400">
+			<rulest>
+				<rulet id="400">
+			</rulest>
+		</topic>
+	</topics>	
+</dialogue>
