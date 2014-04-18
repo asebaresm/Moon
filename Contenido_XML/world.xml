@@ -1,0 +1,287 @@
+<game>
+<spaces>
+<space id="1">
+	<description>Almacen</description>
+	<idescription>Inspec Almacen</idescription>
+	<south>10</south>
+	<light value="FALSE"/>
+	<objects>
+		<object id="0"/>
+		<object id="1"/>
+	</objects>
+</space>
+<space id="2">
+	<description>Suministros de mineria</description>
+	<idescription>Inspec Suministros de mineria</idescription>
+	<south>12</south>
+	<east>13</east>
+	<light value="FALSE"/>
+	<objects>
+		<object id="9"/>
+		<object id="6"/>
+	</objects>
+</space>
+<space id="3">
+	<description>Bodega de carga</description>
+	<idescription>Inspec Bodega de carga</idescription>
+	<east>11</east>
+	<north>10</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="10"/>
+		<object id="4"/> <!-- N3 -->
+		<object id="12"/>
+	</objects>
+</space>
+<space id="4">
+	<description>Central termoelectrica</description>
+	<idescription>Inspec Central termoelectrica</idescription>
+	<north>12</north>
+	<west>11</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="13"/>
+		<object id="14"/>
+	</objects>
+</space>
+<space id="5">
+	<description>Acceso nivel superior</description>
+	<idescription>Inspec Acceso nivel superior</idescription>
+	<up>14</up>
+	<west>13</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="2"/> <!-- N1 -->
+	</objects>
+</space>
+<space id="6">
+	<description>Garaje</description>
+	<idescription>Inspec Garaje</idescription>
+	<east>19</east>
+	<west>20</west>
+	<up>21</up>
+	<light value="FALSE"/>
+	<objects>
+		<object id="18"/>
+		<object id="19"/>
+	</objects>
+</space>
+<space id="7">
+	<description>Centro de mando</description>
+	<idescription>Inspec Centro de Mando</idescription>
+	<south>18</south>
+	<west>19</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="17"/>
+		<object id="22"/>
+	</objects>
+</space>
+<space id="8">
+	<description>Sala de mantenimiento</description>
+	<idescription>Inspec Sala de mantenimiento</idescription>
+	<south>17</south>
+	<north>18</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="21"/>
+		<object id="20"/>
+		<object id="5"/> <!-- N4 -->
+	</objects>
+</space>
+<space id="9">
+	<description>Pasillo principal del modulo</description>
+	<idescription>Inspec pasillo principal del modulo</idescription>
+	<east>16</east>
+	<north>17</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="3"/> <!-- N2 -->
+	</objects>
+</space>
+<space id="10">
+	<description>Sala de maquinas</description>
+	<idescription>Inspec Sala de maquinas</idescription>
+	<south>15</south>
+	<light value="FALSE"/>
+	<objects>
+		<object id="15"/>
+		<object id="16"/>
+	</objects>
+</space>
+<space id="11">
+	<description>Acceso nivel inferior</description>
+	<idescription>Inspec Acceso nivel inferior</idescription>
+	<down>14</down>
+	<north>15</north>
+	<west>16</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="7"/>
+	</objects>
+</space>
+<space id="12">
+	<description>Zona comun</description>
+	<idescription>Inspec Zona comun</idescription>
+	<south>22</south>
+	<east>23</east>
+	<light value="FALSE"/>
+	<objects>
+		<object id="8"/>
+		<object id="27"/>
+	</objects>
+</space>
+<space id="13">
+	<description>Modulo Dormitorio 1</description>
+	<idescription>Inspec Modulo Dormitorio 1</idescription>
+	<west>23</west>
+	<east>24</east>
+	<south>25</south>
+	<light value="FALSE"/>
+	<objects>
+		<object id="11"/>
+	</objects>
+</space>
+<space id="14">
+	<description>Modulo Dormitorio 2</description>
+	<idescription>Inspec Modulo Dormitorio 2</idescription>
+	<west>24</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="23"/>
+	</objects>
+</space>
+<space id="15">
+	<description>Cocinas</description>
+	<idescription>Inspec Cocinas</idescription>
+	<north>22</north>
+	<down>21</down>
+	<light value="FALSE"/>
+	<objects>
+		<object id="25"/>
+		<object id="26"/>
+	</objects>
+</space>
+<space id="16">
+	<description>Baños</description>
+	<idescription>Inspec Baños</idescription>
+	<north>10</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="24"/>
+	</objects>
+<space id="17">
+	<description>Exteriores de la base</description>
+	<idescription>Inspec Exteriores de la base</idescription>
+	<east>20</east>
+	<west>26</west>
+	<light value="FALSE"/>
+	<objects>
+	</objects>
+</space>
+<space id="18">
+	<description>Plataforma de lanzamiento</description>
+	<idescription>Inspec Plataforma de lanzamiento</idescription>
+	<east>26</east>
+	<light value="FALSE"/>
+	<objects>
+	</objects>
+</space>
+</spaces>
+<links>
+<link id="10">
+	<connection_1>1</connection_1>
+	<connection_2>3</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="11">
+	<connection_1>3</connection_1>
+	<connection_2>4</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="12">
+	<connection_1>2</connection_1>
+	<connection_2>4</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="13">
+	<connection_1>2</connection_1>
+	<connection_2>5</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="14">
+	<connection_1>5</connection_1>
+	<connection_2>11</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="15">
+	<connection_1>10</connection_1>
+	<connection_2>11</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="16">
+	<connection_1>11</connection_1>
+	<connection_2>9</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="17">
+	<connection_1>9</connection_1>
+	<connection_2>8</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="18">
+	<connection_1>7</connection_1>
+	<connection_2>8</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="19">
+	<connection_1>7</connection_1>
+	<connection_2>6</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="20">
+	<connection_1>6</connection_1>
+	<connection_2>17</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="21">
+	<connection_1>6</connection_1>
+	<connection_2>15</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="22">
+	<connection_1>12</connection_1>
+	<connection_2>15</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="23">
+	<connection_1>12</connection_1>
+	<connection_2>13</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="24">
+	<connection_1>13</connection_1>
+	<connection_2>14</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="25">
+	<connection_1>13</connection_1>
+	<connection_2>16</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+</links>
+<objects>
+	<name>Linterna</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="TRUE"/>
+	<hidden value="FALSE"/>
+	<light  value="TRUE" initial="FALSE"/>
+</objects>
+<!-- ........................................... -->
+<player>
+<location>1</location>
+<max_objects>5</max_objects>
+</player>
+</game>

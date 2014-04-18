@@ -161,29 +161,34 @@
 		<rule id="200">
 			<patterns>
 				<!-- indice de patron == ID del objeto -->
-				<pattern>COGER LINTERNA</pattern>
-				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
-				<pattern>COGER TANQUE OXIGENO</pattern>
-				<pattern>COGER RECARGA DE OXIGENO</pattern>
-				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
-				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
-				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
-				<pattern>COGER CABLES</pattern>
-				<pattern>COGER GENERADOR</pattern>
-				<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
-				<pattern>COGER ORDENADOR</pattern>
-				<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
-				<pattern>COGER PLAN DE VUELO</pattern>
-				<pattern>COGER ROVER</pattern>
-				<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
-				<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
-				<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
-				<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
-				<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
-				<pattern>COGER GUANTES DE TRAJE EVA</pattern>
-				<pattern>COGER SUMINISTROS</pattern>
-				<pattern>COGER TANQUE DE AGUA</pattern>
-				<pattern>COGER MAQUINA DE EJERCICIO</pattern>
+			0	<pattern>COGER LINTERNA</pattern>
+			1	<pattern>COGER TANQUE COMBUSTIBLE</pattern>
+			2	<pattern>COGER TANQUE OXIGENO N1</pattern>
+			3	<pattern>COGER TANQUE OXIGENO N2</pattern>
+			4	<pattern>COGER TANQUE OXIGENO N3</pattern>
+			5	<pattern>COGER TANQUE OXIGENO N4</pattern>
+			6	<pattern>COGER RECARGA DE OXIGENO M425</pattern>
+			7	<pattern>COGER RECARGA DE OXIGENO M658</pattern>
+			8	<pattern>COGER RECARGA DE OXIGENO M129</pattern>
+			9	<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
+			10	<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
+			11	<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
+		    12	<pattern>COGER CABLES</pattern>
+			13	<pattern>COGER GENERADOR</pattern>
+			14	<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
+			15	<pattern>COGER ORDENADOR</pattern>
+			16	<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
+			17	<pattern>COGER PLAN DE VUELO</pattern>
+			18	<pattern>COGER ROVER</pattern>
+			19	<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
+			20	<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
+			21	<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
+			22	<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
+			23	<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
+			24	<pattern>COGER GUANTES DE TRAJE EVA</pattern>
+			25	<pattern>COGER SUMINISTROS</pattern>
+			26	<pattern>COGER TANQUE DE AGUA</pattern>
+			27	<pattern>COGER MAQUINA DE EJERCICIO</pattern>
 			</patterns>
 			<templates>
 				<template>Recoges *</template>
@@ -196,8 +201,13 @@
 				<!-- indice de patron == ID del objeto -->
 				<pattern>COGER LINTERNA</pattern>
 				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
-				<pattern>COGER TANQUE OXIGENO</pattern>
-				<pattern>COGER RECARGA DE OXIGENO</pattern>
+				<pattern>COGER TANQUE OXIGENO N1</pattern>
+				<pattern>COGER TANQUE OXIGENO N2</pattern>
+				<pattern>COGER TANQUE OXIGENO N3</pattern>
+				<pattern>COGER TANQUE OXIGENO N4</pattern>
+				<pattern>COGER RECARGA DE OXIGENO M425</pattern>
+				<pattern>COGER RECARGA DE OXIGENO M658</pattern>
+				<pattern>COGER RECARGA DE OXIGENO M129</pattern>
 				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
 				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
 				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
@@ -228,8 +238,13 @@
 				<!-- indice de patron == ID del objeto -->
 				<pattern>COGER LINTERNA</pattern>
 				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
-				<pattern>COGER TANQUE OXIGENO</pattern>
-				<pattern>COGER RECARGA DE OXIGENO</pattern>
+				<pattern>COGER TANQUE OXIGENO N1</pattern>
+				<pattern>COGER TANQUE OXIGENO N2</pattern>
+				<pattern>COGER TANQUE OXIGENO N3</pattern>
+				<pattern>COGER TANQUE OXIGENO N4</pattern>
+				<pattern>COGER RECARGA DE OXIGENO M425</pattern>
+				<pattern>COGER RECARGA DE OXIGENO M658</pattern>
+				<pattern>COGER RECARGA DE OXIGENO M129</pattern>
 				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
 				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
 				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
@@ -260,8 +275,13 @@
 				<!-- indice de patron == ID del objeto -->
 				<pattern>DEJAR LINTERNA</pattern>
 				<pattern>DEJAR TANQUE COMBUSTIBLE</pattern>
-				<pattern>DEJAR TANQUE OXIGENO</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N1</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N2</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N3</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N4</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO M425</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO M658</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO M129</pattern>
 				<pattern>DEJAR TARJETA DE IDENTIFICACION</pattern>
 				<pattern>DEJAR TARJETA DE ACCESO ALMACEN</pattern>
 				<pattern>DEJAR TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
@@ -293,8 +313,13 @@
 				<!-- indice de patron == ID del objeto -->
 				<pattern>DEJAR LINTERNA</pattern>
 				<pattern>DEJAR TANQUE COMBUSTIBLE</pattern>
-				<pattern>DEJAR TANQUE OXIGENO</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N1</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N2</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N3</pattern>
+				<pattern>DEJAR TANQUE OXIGENO N4</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO M425</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO M658</pattern>
+				<pattern>DEJAR RECARGA DE OXIGENO M129</pattern>
 				<pattern>DEJAR TARJETA DE IDENTIFICACION</pattern>
 				<pattern>DEJAR TARJETA DE ACCESO ALMACEN</pattern>
 				<pattern>DEJAR TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
