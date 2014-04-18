@@ -173,7 +173,7 @@
 			9	<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
 			10	<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
 			11	<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
-		    12	<pattern>COGER CABLES</pattern>
+			12	<pattern>COGER CABLES</pattern>
 			13	<pattern>COGER GENERADOR</pattern>
 			14	<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
 			15	<pattern>COGER ORDENADOR</pattern>
