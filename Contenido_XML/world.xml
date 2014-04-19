@@ -284,7 +284,15 @@
 <location>1</location>
 <max_objects>5</max_objects>
 <objects>
-	<object id="0">
+<object id="20">
+	<name>obj20</name>
+	<pdescription>Desc. 1</pdescription>
+	<mdescription>Desc. 2</mdescription>
+	<idescription>Desc. 3</idescription>
+	<mobile value="FALSE"/>
+	<hidden value="FALSE"/>
+	<light  value="FALSE" initial="FALSE"/>
+</object>
 </objects>
 </player>
 </game>
