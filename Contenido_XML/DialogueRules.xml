@@ -160,35 +160,7 @@
 		<!-- REGLAS DE ACCION DEL PLAYER -->
 		<rule id="200">
 			<patterns>
-				<!-- indice de patron == ID del objeto -->
-	<!--0-->	<pattern>COGER LINTERNA</pattern>
-	<!--1-->	<pattern>COGER TANQUE COMBUSTIBLE</pattern>
-	<!--2-->	<pattern>COGER TANQUE OXIGENO N1</pattern>
-	<!--3-->	<pattern>COGER TANQUE OXIGENO N2</pattern>
-	<!--4-->	<pattern>COGER TANQUE OXIGENO N3</pattern>
-	<!--5-->	<pattern>COGER TANQUE OXIGENO N4</pattern>
-	<!--6-->	<pattern>COGER RECARGA DE OXIGENO M425</pattern>
-	<!--7-->	<pattern>COGER RECARGA DE OXIGENO M658</pattern>
-	<!--8-->	<pattern>COGER RECARGA DE OXIGENO M129</pattern>
-	<!--9-->	<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
-	<!--10-->	<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
-	<!--11-->	<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
-	<!--12-->	<pattern>COGER CABLES</pattern>
-	<!--13-->	<pattern>COGER GENERADOR</pattern>
-	<!--14-->	<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
-	<!--15-->	<pattern>COGER ORDENADOR</pattern>
-	<!--16-->	<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
-	<!--17-->	<pattern>COGER PLAN DE VUELO</pattern>
-	<!--18-->	<pattern>COGER ROVER</pattern>
-	<!--19-->	<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
-	<!--20-->	<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
-	<!--21-->	<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
-	<!--22-->	<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
-	<!--23-->	<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
-	<!--24-->	<pattern>COGER GUANTES DE TRAJE EVA</pattern>
-	<!--25-->	<pattern>COGER SUMINISTROS</pattern>
-	<!--26-->	<pattern>COGER TANQUE DE AGUA</pattern>
-	<!--27-->	<pattern>COGER MAQUINA DE EJERCICIO</pattern>
+			<pattern>COGER</pattern>
 			</patterns>
 			<templates>
 				<template>Recoges *</template>
@@ -198,35 +170,7 @@
 		</rule>
 		<rule id="201">
 			<patterns>
-				<!-- indice de patron == ID del objeto -->
-				<pattern>COGER LINTERNA</pattern>
-				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
-				<pattern>COGER TANQUE OXIGENO N1</pattern>
-				<pattern>COGER TANQUE OXIGENO N2</pattern>
-				<pattern>COGER TANQUE OXIGENO N3</pattern>
-				<pattern>COGER TANQUE OXIGENO N4</pattern>
-				<pattern>COGER RECARGA DE OXIGENO M425</pattern>
-				<pattern>COGER RECARGA DE OXIGENO M658</pattern>
-				<pattern>COGER RECARGA DE OXIGENO M129</pattern>
-				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
-				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
-				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
-				<pattern>COGER CABLES</pattern>
-				<pattern>COGER GENERADOR</pattern>
-				<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
-				<pattern>COGER ORDENADOR</pattern>
-				<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
-				<pattern>COGER PLAN DE VUELO</pattern>
-				<pattern>COGER ROVER</pattern>
-				<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
-				<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
-				<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
-				<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
-				<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
-				<pattern>COGER GUANTES DE TRAJE EVA</pattern>
-				<pattern>COGER SUMINISTROS</pattern>
-				<pattern>COGER TANQUE DE AGUA</pattern>
-				<pattern>COGER MAQUINA DE EJERCICIO</pattern>
+				<pattern>COGER</pattern>
 			</patterns>
 			<templates>
 				<template>No puedes coger eso todavia</template>
@@ -235,35 +179,7 @@
 		</rule>
 		<rule id="202">
 			<patterns>
-				<!-- indice de patron == ID del objeto -->
-				<pattern>COGER LINTERNA</pattern>
-				<pattern>COGER TANQUE COMBUSTIBLE</pattern>
-				<pattern>COGER TANQUE OXIGENO N1</pattern>
-				<pattern>COGER TANQUE OXIGENO N2</pattern>
-				<pattern>COGER TANQUE OXIGENO N3</pattern>
-				<pattern>COGER TANQUE OXIGENO N4</pattern>
-				<pattern>COGER RECARGA DE OXIGENO M425</pattern>
-				<pattern>COGER RECARGA DE OXIGENO M658</pattern>
-				<pattern>COGER RECARGA DE OXIGENO M129</pattern>
-				<pattern>COGER TARJETA DE IDENTIFICACION</pattern>
-				<pattern>COGER TARJETA DE ACCESO ALMACEN</pattern>
-				<pattern>COGER TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
-				<pattern>COGER CABLES</pattern>
-				<pattern>COGER GENERADOR</pattern>
-				<pattern>COGER DESTORNILLADOR ESTRELLA</pattern>
-				<pattern>COGER ORDENADOR</pattern>
-				<pattern>COGER PIEZAS DE MAQUINARIA AVERIADA</pattern>
-				<pattern>COGER PLAN DE VUELO</pattern>
-				<pattern>COGER ROVER</pattern>
-				<pattern>COGER KIT DE RUEDAS TRASERAS</pattern>
-				<pattern>COGER KIT DE RUEDAS DELANTERAS</pattern>
-				<pattern>COGER CAJA DE HERRAMIENTAS</pattern>
-				<pattern>COGER ESCAFANDRA DE TRAJE EVA</pattern>
-				<pattern>COGER EQUIPO DE TRAJE EVA</pattern>
-				<pattern>COGER GUANTES DE TRAJE EVA</pattern>
-				<pattern>COGER SUMINISTROS</pattern>
-				<pattern>COGER TANQUE DE AGUA</pattern>
-				<pattern>COGER MAQUINA DE EJERCICIO</pattern>
+				<pattern>COGER</pattern>
 			</patterns>
 			<templates>
 				<template>No parece que algo tan grande quepa en tu inventario</template>
@@ -272,35 +188,7 @@
 		</rule>
 		<rule id="203">
 			<patterns>
-				<!-- indice de patron == ID del objeto -->
-				<pattern>DEJAR LINTERNA</pattern>
-				<pattern>DEJAR TANQUE COMBUSTIBLE</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N1</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N2</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N3</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N4</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO M425</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO M658</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO M129</pattern>
-				<pattern>DEJAR TARJETA DE IDENTIFICACION</pattern>
-				<pattern>DEJAR TARJETA DE ACCESO ALMACEN</pattern>
-				<pattern>DEJAR TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
-				<pattern>DEJAR CABLES</pattern>
-				<pattern>DEJAR GENERADOR</pattern>
-				<pattern>DEJAR DESTORNILLADOR ESTRELLA</pattern>
-				<pattern>DEJAR ORDENADOR</pattern>
-				<pattern>DEJAR PIEZAS DE MAQUINARIA AVERIADA</pattern>
-				<pattern>DEJAR PLAN DE VUELO</pattern>
-				<pattern>DEJAR ROVER</pattern>
-				<pattern>DEJAR KIT DE RUEDAS TRASERAS</pattern>
-				<pattern>DEJAR KIT DE RUEDAS DELANTERAS</pattern>
-				<pattern>DEJAR CAJA DE HERRAMIENTAS</pattern>
-				<pattern>DEJAR ESCAFANDRA DE TRAJE EVA</pattern>
-				<pattern>DEJAR EQUIPO DE TRAJE EVA</pattern>
-				<pattern>DEJAR GUANTES DE TRAJE EVA</pattern>
-				<pattern>DEJAR SUMINISTROS</pattern>
-				<pattern>DEJAR TANQUE DE AGUA</pattern>
-				<pattern>DEJAR MAQUINA DE EJERCICIO</pattern>
+				<pattern>DEJAR</pattern>
 			</patterns>
 			<templates>
 				<template>Dejas *</template>
@@ -310,38 +198,58 @@
 		</rule>
 		<rule id="204">
 			<patterns>
-				<!-- indice de patron == ID del objeto -->
-				<pattern>DEJAR LINTERNA</pattern>
-				<pattern>DEJAR TANQUE COMBUSTIBLE</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N1</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N2</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N3</pattern>
-				<pattern>DEJAR TANQUE OXIGENO N4</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO M425</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO M658</pattern>
-				<pattern>DEJAR RECARGA DE OXIGENO M129</pattern>
-				<pattern>DEJAR TARJETA DE IDENTIFICACION</pattern>
-				<pattern>DEJAR TARJETA DE ACCESO ALMACEN</pattern>
-				<pattern>DEJAR TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
-				<pattern>DEJAR CABLES</pattern>
-				<pattern>DEJAR GENERADOR</pattern>
-				<pattern>DEJAR DESTORNILLADOR ESTRELLA</pattern>
-				<pattern>DEJAR ORDENADOR</pattern>
-				<pattern>DEJAR PIEZAS DE MAQUINARIA AVERIADA</pattern>
-				<pattern>DEJAR PLAN DE VUELO</pattern>
-				<pattern>DEJAR ROVER</pattern>
-				<pattern>DEJAR KIT DE RUEDAS TRASERAS</pattern>
-				<pattern>DEJAR KIT DE RUEDAS DELANTERAS</pattern>
-				<pattern>DEJAR CAJA DE HERRAMIENTAS</pattern>
-				<pattern>DEJAR ESCAFANDRA DE TRAJE EVA</pattern>
-				<pattern>DEJAR EQUIPO DE TRAJE EVA</pattern>
-				<pattern>DEJAR GUANTES DE TRAJE EVA</pattern>
-				<pattern>DEJAR SUMINISTROS</pattern>
-				<pattern>DEJAR TANQUE DE AGUA</pattern>
-				<pattern>DEJAR MAQUINA DE EJERCICIO</pattern>
+				<pattern>DEJAR</pattern>
 			</patterns>
 			<templates>
 				<template>No puedes dejar eso</template>
+			</templates>
+		</rule>
+		<rule id="205">
+			<patterns>
+				<pattern>ENCENDER</pattern>
+			</patterns>
+			<templates>
+				<template>Enciendes *</template>
+			</templates>
+		</rule>
+		<rule id="206">
+			<patterns>
+				<pattern>ENCENDER</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes encender * ahora mismo</template>
+			</templates>
+		</rule>
+		<rule id="207">
+			<patterns>
+				<pattern>APAGAR</pattern>
+			</patterns>
+			<templates>
+				<template>Apagas *</template>
+			</templates>
+		</rule>
+		<rule id="208">
+			<patterns>
+				<pattern>APAGAR</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes apagar * ahora mismo</template>
+			</templates>
+		</rule>
+		<rule id="209">
+			<patterns>
+				<pattern>INSPECCIONAR</pattern>
+			</patterns>
+			<templates>
+				<template>Inspeccionas * con detenimiento</template>
+			</templates>
+		</rule>
+		<rule id="210">
+			<patterns>
+				<pattern>INSPECCIONAR</pattern>
+			</patterns>
+			<templates>
+				<template>No es posible inspeccionar * ahora mismo</template>
 			</templates>
 		</rule>
 		<!-- REGLAS DE SECUENCIA DEL JUEGO -->
@@ -405,6 +313,7 @@
 		</rule>
 	</rules>
 	<topics>
+		<!-- MOVIMIENTO -->
 		<topic name="T_MOV_N">
 			<topicid id="0100"/>
 			<rulest>
@@ -477,6 +386,7 @@
 				<rulet id="111">
 			</rulest>
 		</topic>
+		<!-- OBJETOS -->
 		<topic name="T_PICK">
 			<topicid id="0200">
 			<rulest>
@@ -507,6 +417,43 @@
 				<rulet id="204">
 			</rulest>
 		</topic>
+		<topic name="T_LIGHTUP">
+			<topicid id="0205">
+			<rulest>
+				<rulet id="205">
+			</rulest>
+		</topic>
+		<topic name="T_LIGHTUP_ERROR_GENERIC">
+			<topicid id="0206">
+			<rulest>
+				<rulet id="206">
+			</rulest>
+		</topic>
+		<topic name="T_LIGHTOFF">
+			<topicid id="0207">
+			<rulest>
+				<rulet id="207">
+			</rulest>
+		</topic>
+		<topic name="T_LIGHTOFF_ERROR_GENERIC">
+			<topicid id="0208">
+			<rulest>
+				<rulet id="208">
+			</rulest>
+		</topic>
+		<topic name="T_INSPECT">
+			<topicid id="0209">
+			<rulest>
+				<rulet id="209">
+			</rulest>
+		</topic>
+		<topic name="T_INSPECT_ERROR_GENERIC">
+			<topicid id="0210">
+			<rulest>
+				<rulet id="210">
+			</rulest>
+		</topic>
+		<!-- FUNCIONAMIENTO DEL JUEGO -->
 		<!-- entra por cadena de entrada 1, 2 o 3 -->
 		<topic name="T_INIT_GAME">
 			<topicid id="0300">
@@ -524,11 +471,13 @@
 				<rulet id="352">	
 			</rulest>
 		</topic>
+		<!-- AYUDA/OTROS -->
 		<topic name="T_HELP_CONTROLS">
 			<topicid id="0400">
 			<rulest>
 				<rulet id="400">
 			</rulest>
+		</topic>
 		</topic>
 	</topics>	
 </dialogue>

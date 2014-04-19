@@ -1,0 +1,31 @@
+<patterns>
+				<!-- indice de patron == ID del objeto -->
+	<!--0-->	<pattern> LINTERNA</pattern>
+	<!--1-->	<pattern> TANQUE COMBUSTIBLE</pattern>
+	<!--2-->	<pattern> TANQUE OXIGENO N1</pattern>
+	<!--3-->	<pattern> TANQUE OXIGENO N2</pattern>
+	<!--4-->	<pattern> TANQUE OXIGENO N3</pattern>
+	<!--5-->	<pattern> TANQUE OXIGENO N4</pattern>
+	<!--6-->	<pattern> RECARGA DE OXIGENO M425</pattern>
+	<!--7-->	<pattern> RECARGA DE OXIGENO M658</pattern>
+	<!--8-->	<pattern> RECARGA DE OXIGENO M129</pattern>
+	<!--9-->	<pattern> TARJETA DE IDENTIFICACION</pattern>
+	<!--10-->	<pattern> TARJETA DE ACCESO ALMACEN</pattern>
+	<!--11-->	<pattern> TARJETA DE ACCESO SALA DE MAQUINAS</pattern>
+	<!--12-->	<pattern> CABLES</pattern>
+	<!--13-->	<pattern> GENERADOR</pattern>
+	<!--14-->	<pattern> DESTORNILLADOR ESTRELLA</pattern>
+	<!--15-->	<pattern> ORDENADOR</pattern>
+	<!--16-->	<pattern> PIEZAS DE MAQUINARIA AVERIADA</pattern>
+	<!--17-->	<pattern> PLAN DE VUELO</pattern>
+	<!--18-->	<pattern> ROVER</pattern>
+	<!--19-->	<pattern> KIT DE RUEDAS TRASERAS</pattern>
+	<!--20-->	<pattern> KIT DE RUEDAS DELANTERAS</pattern>
+	<!--21-->	<pattern> CAJA DE HERRAMIENTAS</pattern>
+	<!--22-->	<pattern> ESCAFANDRA DE TRAJE EVA</pattern>
+	<!--23-->	<pattern> EQUIPO DE TRAJE EVA</pattern>
+	<!--24-->	<pattern> GUANTES DE TRAJE EVA</pattern>
+	<!--25-->	<pattern> SUMINISTROS</pattern>
+	<!--26-->	<pattern> TANQUE DE AGUA</pattern>
+	<!--27-->	<pattern> MAQUINA DE EJERCICIO</pattern>
+</patterns>
