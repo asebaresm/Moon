@@ -272,8 +272,8 @@
 </links>
 <objects>
 	<name>Linterna</name>
-	<pdescription>Desc. 1</pdescription>
-	<mdescription>Desc. 2</mdescription>
+	<pdescription>Desc. 1</pdescription> <!--desc -->
+	<mdescription>Desc. 2</mdescription> <!-- desc moved -->
 	<idescription>Desc. 3</idescription>
 	<mobile value="TRUE"/>
 	<hidden value="FALSE"/>
@@ -283,5 +283,8 @@
 <player>
 <location>1</location>
 <max_objects>5</max_objects>
+<objects>
+	<object id="0">
+</objects>
 </player>
 </game>

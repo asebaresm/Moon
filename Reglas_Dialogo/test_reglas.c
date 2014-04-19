@@ -117,6 +117,11 @@ int main(int argc, char** argv) {
     assert( ind_patr == 0);
     printf("OK");
     
+        /*P10*/
+    printf("\nPasando prueba 10: ");
+    assert( 110 == get_id_from_topic(dr, pttrn3));
+    printf("OK");
+    
     destroy_dialog(dr);
     
     printf("\n");

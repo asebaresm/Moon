@@ -60,4 +60,6 @@ Id search_rule_and_pattern (DialogueRules *dr, int * ind_patr, Id topic, const c
  *del array que ocupa dicha regla en "DialogueRules *dr" */
 int search_pattern_coincidence(DialogueRules *dr, int rule_index, const char *txt_ent);
 
+Id get_id_from_topic(DialogueRules *dr, const char *txt_ent);
+
  #endif /* REGLAS_H_ */

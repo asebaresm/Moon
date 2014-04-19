@@ -76,7 +76,6 @@ void destroy_dialog(DialogueRules *dr){
 
 /* Add a new topic defined by a topic name. Returns the topic ID if it 
 is properly added. Otherwise a negative identifier is returned. */
-/*ORG: int dialog_add_topic(DialogueRules *dr, char *topic_name);*/
 int dialog_add_topic(DialogueRules *dr, char *topic_name, Id topic_id){
     if(!dr || !topic_name || topic_id == NO_ID)
         return NO_ID;
@@ -90,13 +89,10 @@ int dialog_add_topic(DialogueRules *dr, char *topic_name, Id topic_id){
 /* Add a new rule to a topic. The rule is defined by a pattern. 
 Returns the rule ID if it is properly added. Otherwise a negative 
 identifier is returned.*/
-/*ORG: int dialog_add_rule(DialogueRules *dr, Id topic, char *pattern);*/
 int dialog_add_rule(DialogueRules *dr, Id rule) {
     
     if(!dr || rule == NO_ID)
         return NO_ID;
-    /*dr->l_rule[dr->num_rules]->pattern[dr->l_rule[dr->num_rules]->num_patterns]=(char*)calloc(1,strlen(pattern)+1);
-    strcpy(dr->l_rule[dr->num_rules]->pattern[dr->l_rule[dr->num_rules]->num_patterns], pattern);*/
     dr->l_rule[dr->num_rules].id = rule;
     dr->l_rule[dr->num_rules].last = NO_ID;
     dr->num_rules++;
@@ -240,3 +236,20 @@ int search_pattern_coincidence(DialogueRules *dr, int rule_index, const char *tx
     return NOT_FOUND;
 }
 
+Id get_id_from_topic(DialogueRules *dr, const char *txt_ent){
+    int i,j,rule_id;
+
+    if(!dr || !txt_ent)
+        return NOT_FOUND;
+    for(i=0; i < dr->num_rules; i++){
+        rule_id = search_pattern_coincidence(dr, i, txt_ent);
+        if(rule_id != NOT_FOUND)
+            break;
+    }
+    for(j=0; j<dr->num_topic; j++){
+        if(contains(dr->l_topic[j].topic_rules, dr->l_rule[i].id) == TRUE){
+            return dr->l_topic[j].id;
+        }
+    }
+    return NOT_FOUND;
+}
