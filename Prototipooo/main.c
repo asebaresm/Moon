@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
 	World *world=NULL;
 	char *ptr; /*Strtok*/
 	Action *action;
-        ActionType id;
+    ActionType id;
 
 
 	/*Comprobamos que el numero de parametros de entrada es 2: archivo,

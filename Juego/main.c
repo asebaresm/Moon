@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
 
 	int cont_oxi=0; /*Contador de oxigeno personal*/
 	int cont_lint=0; /*Contador para la linterna*/
-	int fin=0; /*Condicion de victoria*/
+	int fin=-1; /*Condicion de victoria*/
 	char *ptr; /*Strtok*/
 
 	/*cadenas eliza*/
@@ -43,6 +43,10 @@ int main(int argc, char* argv[]) {
     char respuesta_ori [MAX] = {'\0'};
     char respuesta_ant [MAX] = {'\0'}; 
     char dst[MAX] = {'\0'};
+
+    int *pind_patr = NULL;
+    int ind_patr;
+    pind_patr = &ind_patr;
 
 
 	/*Comprobamos que el numero de parametros de entrada es 3: archivo,
@@ -81,7 +85,7 @@ int main(int argc, char* argv[]) {
     /*Inicializamos el seed para la funcion rand() de elecciona_plan_sal()*/
     srand(time(NULL));
     /*Lamada a T_INICIO */
-    printf("%s \n", select_output_template(T_INICIO));
+    printf("%s \n", select_output_template(search_rule_and_pattern (dr,pind_patr, 0300,0)));
 
     /*Llamar a T_PREGUNTA aleatoria*/
     printf("\n %s: ", select_random_output_template(T_PREGUNTA));
@@ -122,22 +126,40 @@ int main(int argc, char* argv[]) {
         /*Copiar la cadena dst en respuesta*/
         strcpy(respuesta, respuesta_a_mayus);
 
+        /*Comparar la cadena con la palabra para salir*/
+        if(strcmp(respuesta,"SALIR")==0){
+        	fin = 2; /*Finaliza el juego, pero no porque halla ganado o perdido*/
+        	break;
+        }
+
+        /*Comparar la cadena con la palabra para pedir ayuda*/
+        if(strcmp(respuesta,"AYUDA")==0){
+        	printf("%s \n", select_output_template(search_rule_and_pattern (dr,pind_patr, 0400,0)));
+        	continue;
+        }
+
+
+         
         /*Utilizamos la funcion strtok para separar la cadena por los espacios*/
-    	ptr=strtok(entrada," "); /*Primer token*/
+    	ptr=strtok(respuesta," "); /*Primer token*/
         ptr=strtok(NULL," ");
         /*comparamos la cadena con las acciones*/
-    	if(strcmp(entrada,"IR")==0)
+    	if(strcmp(respuesta,"IR")==0)
             id=0;
-    	if(strcmp(entrada,"COGER")==0)
+    	if(strcmp(respuesta,"COGER")==0)
             id=1;
-        if(strcmp(entrada,"DEJAR")==0)
+        if(strcmp(respuesta,"DEJAR")==0)
             id=2;
-    	if(strcmp(entrada,"ENCENDER")==0)
+        if(strcmp(respuesta,"INSPECCIONAR")==0)
+            id=3;
+    	if(strcmp(respuesta,"ENCENDER")==0)
             id=4;
-        if(strcmp(entrada,"APAGAR")==0)
+        if(strcmp(respuesta,"APAGAR")==0)
             id=5;
-    	if(strcmp(entrada,"HABLAR")==0)
+    	if(strcmp(respuesta,"HABLAR")==0)
             id=6;
+
+
     	/*
         0 A_GO,
         1A_PICK_UP,
@@ -145,9 +167,15 @@ int main(int argc, char* argv[]) {
         3A_INSPECT,
         4A_TURN_LIGHT_ON,
         5A_TURN_LIGHT_OFF,
-         6A_SPEAK
-         */
-        
+        6A_SPEAK
+        */
+        /*Mirar si el inventario esta lleno cuando hace pick*/
+        if (id==1 && (is_player_inv_full(world->player)==TRUE)){
+        	printf("\n El inventario esta lleno, no puedes coger más objetos");
+        	continue;
+        }
+
+
         /*Inicilizamos la accion*/
     	if(set_action(action,ptr,id)==ERROR){
     		printf("\n Error en action_ini");
@@ -155,17 +183,33 @@ int main(int argc, char* argv[]) {
     	}
     	/*LLamar a action*/
     	if(action_execute(world,action)==ERROR){
-    		printf("\n ERROR");
+    		printf("\n %s: ", select_random_output_template(search_rule_and_pattern (dr,pind_patr,get_id_from_topic(dr,respuesta)+1,respuesta)));
     	}
-        else
-    	printf("\n OK");
+        else{
+        	cont_oxi++;
+        	cont_lint++;
+        	printf("\n %s: ", select_random_output_template(search_rule_and_pattern (dr,pind_patr,get_id_from_topic(dr,respuesta),respuesta)));
+        }
+
+        /*Mirar oxigeno*/
+        if(cont_oxi==20)
+        	fin=1;
+        /*Mirar linterna*/
+        if(cont_lint==20){
+        	/*FALTA METER LA ID DE LA LINTERNA*/
+        	if(consume_obj(world,Id object_id)==ERROR){
+        		printf("\n ERROR en consume_obj");
+        		return (EXIT_FAILURE);
+        	}
+        	printf("\n Se le han acabado las pilas a la linterna y ha desaparecido");
+
+        }
 
 
+    }while(fin==-1)
 
-
-
-
-    }while(fin)
+    /*Fin=0 te has pasado el juego, fin=1 mueres, fin=2 has abandonado*/
+    printf("%s \n", select_output_template(search_rule_and_pattern (dr,pind_patr, 03500,fin)));
 
 
 
