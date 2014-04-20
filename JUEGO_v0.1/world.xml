@@ -271,13 +271,15 @@
 </link>
 </links>
 <objects>
-	<name>Linterna</name>
-	<pdescription>Desc. 1</pdescription> <!--desc -->
-	<mdescription>Desc. 2</mdescription> <!-- desc moved -->
-	<idescription>Desc. 3</idescription>
-	<mobile value="TRUE"/>
-	<hidden value="FALSE"/>
-	<light  value="TRUE" initial="FALSE"/>
+	<object id="1">
+		<name>Linterna</name>
+		<pdescription>Desc. 1</pdescription> <!--desc -->
+		<mdescription>Desc. 2</mdescription> <!-- desc moved -->
+		<idescription>Desc. 3</idescription>
+		<mobile value="TRUE"/>
+		<hidden value="FALSE"/>
+		<light  value="TRUE" initial="FALSE"/>
+	</object>
 </objects>
 <!-- ........................................... -->
 <player>

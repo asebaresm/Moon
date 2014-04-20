@@ -436,7 +436,7 @@ xml_RETURN wreader_process_object(xmlDocPtr doc, xmlNodePtr node, World *world) 
 		if (!xmlStrcmp(node->name, (const xmlChar *) LOCATION)) {
 			if ( wreader_process_id(doc, node, &new_id) != ret || obj_set_location(object, new_id) == ERROR)
 				return ret = XML_ERR;
-		if (!xmlStrcmp(node->name, (const xmlChar *) NAME)) {
+		}else if (!xmlStrcmp(node->name, (const xmlChar *) NAME)) {
 			if ( wreader_process_text(doc, node, aux) != ret || obj_set_name(object, aux) == ERROR)
 				return ret = XML_ERR;
 		} else if (!xmlStrcmp(node->name, (const xmlChar *) DESCR_PRIMARY)) {
@@ -731,3 +731,4 @@ static xml_RETURN wreader_process_bool_initial(xmlDocPtr doc, xmlNodePtr node, B
  
 	return ret; 
 }
+
