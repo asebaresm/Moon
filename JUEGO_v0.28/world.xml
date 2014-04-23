@@ -352,7 +352,7 @@ ________    ____________
 		<light  value="FALSE" initial="FALSE"/>
 	</object>
 	<object id="6">
-		<location>-1</location>
+		<location>2</location>
 		<name>Recarga de oxigeno M425</name>
 		<pdescription>Desc. 1</pdescription> 
 		<mdescription>Desc. 2</mdescription>

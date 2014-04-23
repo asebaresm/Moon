@@ -147,3 +147,19 @@ char *elimina_verbo_accion(const char *txt_ent){
     ps[k]='\0';
     return ps;
 }
+
+char *elimina_objeto_map(const char *seps, const char *map){
+    int i,j;
+    char *pmap=NULL;
+    if(!map || !seps || !(pmap=(char*)calloc(1,strlen(map)+1)))
+        return NULL;
+    strcpy(pmap,map);
+    for(i=0;i<strlen(map); i++){
+        for(j=0; j<strlen(seps); j++){
+            if(pmap[i]==seps[j])
+                pmap[i]=' ';
+        }
+    }
+    return pmap;
+}
+

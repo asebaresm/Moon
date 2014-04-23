@@ -1,0 +1,28 @@
+Tanque de combustible					TE
+Tanque de oxigeno N1					T1		
+Tanque de oxigeno N2					T2
+Tanque de oxigeno N3					T3
+Tanque de oxigeno N4					T4
+Recarga de oxigeno M425					R5
+Recarga de oxigeno M658					R8
+Recarga de oxigeno M129					R9
+Tarjeta de identificacion				TN
+Tarjeta de acceso a almacen				TN
+tarjeta de acceso a sala de maquinas	TS
+Cables peldos							CS
+Generador								GR
+Destornillador torx						DX
+Ordenador de control					OL
+Piezas de maquina averiada				PA
+Datos de plan de vuelo					DO
+Rover lunar								RR
+Kit de ruedas traseras					KS
+Kit de ruedas delanteras				KS
+Caja de herramientas					CS
+Escafandra de traje EVA					EA
+Equipo de traje EVA						EA
+Guantes de traje EVA					GA
+Suministros								SS
+Deposito de agua lleno					DO
+Maquina de ejercicio					MO
+Linterna								LA

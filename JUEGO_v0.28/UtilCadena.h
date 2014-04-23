@@ -79,4 +79,18 @@ char * limpia_espacios(char * dst, const char * ori, size_t n);
  */
 char *elimina_verbo_accion(const char *txt_ent); 
 
+/**
+ * @name char *elimina_objeto_map(const char *seps, const char *map); 
+ *
+ * @brief Elimina la representacion de un objeto del mapa
+ *
+ * @param seps cadena con los caracteres que pueden representar el objeto
+ * 
+ * @param map mapa del espacio donde esta el bojeto
+ * 
+ * @return char cadena sin primer verbo
+ * 
+ */
+char *elimina_objeto_map(const char *seps, const char *map);
+
 #endif	/* UTILCADENA_H */
