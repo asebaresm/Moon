@@ -9,14 +9,11 @@
 #ifndef XML_READER_H
 #define XML_READER_H
 
+#define WORD_SIZE 1024
+
 #include "Reglas_dialogo.h"
-
-
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
-
-/*#include <libxml/parser.h>*/
-#define WORD_SIZE 1024
 
 STATUS dialogue_load(char *file_name, DialogueRules *dr);
 

@@ -76,68 +76,68 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/juego_v0.28: ${OBJECTFILES}
 
 ${OBJECTDIR}/Action.o: Action.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Action.o Action.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Action.o Action.c
 
 ${OBJECTDIR}/DialogueXMLreader.o: DialogueXMLreader.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/DialogueXMLreader.o DialogueXMLreader.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DialogueXMLreader.o DialogueXMLreader.c
 
 ${OBJECTDIR}/Inventory.o: Inventory.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Inventory.o Inventory.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Inventory.o Inventory.c
 
 ${OBJECTDIR}/Link.o: Link.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Link.o Link.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Link.o Link.c
 
 ${OBJECTDIR}/Object.o: Object.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Object.o Object.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Object.o Object.c
 
 ${OBJECTDIR}/Player.o: Player.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Player.o Player.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Player.o Player.c
 
 ${OBJECTDIR}/Reglas_dialogo.o: Reglas_dialogo.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Reglas_dialogo.o Reglas_dialogo.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Reglas_dialogo.o Reglas_dialogo.c
 
 ${OBJECTDIR}/Set.o: Set.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Set.o Set.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Set.o Set.c
 
 ${OBJECTDIR}/Space.o: Space.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/Space.o Space.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Space.o Space.c
 
 ${OBJECTDIR}/UtilCadena.o: UtilCadena.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/UtilCadena.o UtilCadena.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UtilCadena.o UtilCadena.c
 
 ${OBJECTDIR}/World.o: World.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/World.o World.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/World.o World.c
 
 ${OBJECTDIR}/WorldXMLReader.o: WorldXMLReader.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/WorldXMLReader.o WorldXMLReader.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WorldXMLReader.o WorldXMLReader.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -Wall `xml2-config --cflags` -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:
