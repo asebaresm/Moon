@@ -26,8 +26,10 @@
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" MAPA_plantilla.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" MAPA_plantilla.txt </runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" MAPA_plantilla.txt Lista_objetos.txt</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" MAPA_plantilla.txt</runcommand>
+        <runcommand>"${OUTPUT_PATH}" MAPA_plantilla.txt Lista_objetos.txt</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <console-type>1</console-type>
