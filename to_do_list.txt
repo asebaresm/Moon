@@ -1,0 +1,16 @@
+
+Importante:
+- Violacion de segmento que surge de forma random al intercalar T_VACIA, T_TONTA y "SALIR" en principio
+- Violacion de segmento por free ilegal que surge de forma aleatoria, no esta claro de donde viene tampoco
+
+Mas:
+- Acabar integracion de mapas interactivos
+- Dar contenido a maps, descripciones de mapas, descripcion de inpesc de mapas...
+- Dar contenido a objetos, descs, imagen ascii...
+- Dar contenido de tipo: version final de mensajes de inicio, mensaje de fin del juego, etc
+- Implementar: Inspeccionar espacio
+- Implementar: accion HABLAR (obligatoria) con su correspondiente NPC (la computadora en nuestro caso)
+- Probar juego a fondo
+
+Por ultimo:
+- Revisar lo que falte de entregas anteriores
