@@ -1,0 +1,1748 @@
+<game>
+<spaces>
+<space id="1">
+	<description>Almacen</description>
+	<idescription>Inspec Almacen</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                      [TC]                                |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                         |      |                         |
+|_________________________|      |_________________________|
+</map>
+	<south>10</south>
+	<light value="FALSE"/>
+	<objects>
+		<object id="1"/>
+	</objects>
+</space>
+<space id="2">
+	<description>Suministros de mineria</description>
+	<idescription>Inspec Suministros de mineria</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [TI]                                        |
+|                                                     __ __|
+|                                                            
+|                                                      
+|                           [R4]                      __ __
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                         |      |                         |
+|_________________________|      |_________________________|
+</map>
+	<south>12</south>
+	<east>13</east>
+	<light value="FALSE"/>
+	<objects>
+		<object id="9"/>
+		<object id="6"/> <!-- M425 -->
+	</objects>
+</space>
+<space id="3">
+	<description>Bodega de carga</description>
+	<idescription>Inspec Bodega de carga</idescription>
+	<map>
+ _________________________        _________________________
+|                         |       |                        |
+|    [CP]                 |       |                        |
+|                                                          |
+|                                                          |
+|              [TA]                                        |
+|                                                     __ __|
+|                                                          
+|                                                      
+|                           [T3]                      __ __
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__________________________________________________________|
+</map>
+
+	<east>11</east>
+	<north>10</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="10"/>
+		<object id="4"/> <!-- N3 -->
+		<object id="12"/>
+	</objects>
+</space>
+<space id="4">
+	<description>Central termoelectrica</description>
+	<idescription>Inspec Central termoelectrica</idescription>
+	<map>
+ _________________________        _________________________
+|                         |       |                        |
+|                         |       |                        |
+|                                                          |
+|                                                          |
+|              [GN]                                        |
+|__ __                                                     |
+                                                           |    
+                                                           |
+ __ __                      [DT]                           |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__________________________________________________________|
+	</map>
+	<north>12</north>
+	<west>11</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="13"/>
+		<object id="14"/>
+	</objects>
+</space>
+<space id="5">
+	<description>Acceso nivel superior</description>
+	<idescription>Inspec Acceso nivel superior</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [T1]                                        |
+|__ __                                                     |
+                                                           |
+                                                           |
+ __ __                                                     |
+|                                                          |
+|                                                 ASCENSOR |
+|                                                   _______|
+|                                                  |=======|
+|                                                  |  UP   |
+|__________________________________________________|_______|
+	</map>
+	<up>14</up>
+	<west>13</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="2"/> <!-- N1 -->
+	</objects>
+</space>
+<space id="6">
+	<description>Garaje</description>
+	<idescription>Inspec Garaje</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [RL]                                        |
+|__ __                                                __ __|
+                                                          
+                                                      
+ __ __                      [KT]                      __ __
+|                                                          |
+|                                                 ASCENSOR |
+|                                                   _______|
+|                                                  |       |
+|                                                  |  UP   |
+|__________________________________________________|_______|
+	</map>
+	<east>19</east>
+	<west>20</west>
+	<up>21</up>
+	<light value="FALSE"/>
+	<objects>
+		<object id="18"/>
+		<object id="19"/>
+	</objects>
+</space>
+<space id="7">
+	<description>Centro de mando</description>
+	<idescription>Inspec Centro de Mando</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [PV]                                        |
+|__ __                                                     |
+                                                           |
+                                                           |
+ __ __                      [EE]                           |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                         |      |                         |
+|_________________________|      |_________________________|
+	</map>
+	<south>18</south>
+	<west>19</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="17"/>
+		<object id="22"/>
+	</objects>
+</space>
+<space id="8">
+	<description>Sala de mantenimiento</description>
+	<idescription>Inspec Sala de mantenimiento</idescription>
+	<map>
+ _________________________        _________________________
+|                         |       |                        |
+|                         |       |                        |
+|                                                          |
+|                                                          |
+|              [GH]                     [T4]               |
+|                                                          |
+|                                                          |
+|                                                          |
+|                 [KD]                                     |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                         |      |                         |
+|_________________________|      |_________________________|
+	</map>
+	<south>17</south>
+	<north>18</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="21"/>
+		<object id="20"/>
+		<object id="5"/> <!-- N4 -->
+	</objects>
+</space>
+<space id="9">
+	<description>Pasillo principal del modulo</description>
+	<idescription>Inspec pasillo principal del modulo</idescription>
+	<map>
+ _________________________        _________________________
+|                         |       |                        |
+|                         |       |                        |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                     __ __|
+|                                                          
+|                                                      
+|                           [T2]                      __ __
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__________________________________________________________|
+	</map>
+	<east>16</east>
+	<north>17</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="3"/> <!-- N2 -->
+	</objects>
+</space>
+<space id="10">
+	<description>Sala de maquinas</description>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [OC]                                        |
+|                                                          |
+|                                                          |
+|                                                          |
+|                      [PM]                                |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                         |======|                         |
+|_________________________|======|_________________________|
+	</map>
+	<idescription>Inspec Sala de maquinas</idescription>
+	<south>15</south>
+	<light value="FALSE"/>
+	<objects>
+		<object id="15"/>
+		<object id="16"/>
+	</objects>
+</space>
+<space id="11">
+	<description>Acceso nivel inferior</description>
+	<idescription>Inspec Acceso nivel inferior</idescription>
+	<map>
+ _________________________         ________________________
+|                         |=======|                        |
+|                         |=======|                        |
+|                                                          |
+|                                                          |
+|              [R6]                                        |
+|__ __                                                     |
+                                                           |
+                                                           |
+ __ __                                                     |
+|                                                          |
+|                                                 ASCENSOR |
+|                                                   _______|
+|                                                  |=======|
+|                                                  |  UP   |
+|__________________________________________________|_______|
+	</map>
+	<down>14</down>
+	<north>15</north>
+	<west>16</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="7"/> <!-- M658 -->
+	</objects>
+</space>
+<space id="12">
+	<description>Zona comun</description>
+	<idescription>Inspec Zona comun</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [R1]                                        |
+|                                                     __ __|
+|                                                            
+|                                                      
+|                           [ME]                      __ __
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                         |      |                         |
+|_________________________|      |_________________________|
+	</map>
+	<south>22</south>
+	<east>23</east>
+	<light value="FALSE"/>
+	<objects>
+		<object id="8"/> <!-- M129 -->
+		<object id="27"/>
+	</objects>
+</space>
+<space id="13">
+	<description>Modulo Dormitorio 1</description>
+	<idescription>Inspec Modulo Dormitorio 1</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [TS]                                        |
+|__ __                                                __ __|
+                                                          
+                                                      
+ __ __                                                __ __
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                         |      |                         |
+|_________________________|      |_________________________|
+	</map>
+	<west>23</west>
+	<east>24</east>
+	<south>25</south>
+	<light value="FALSE"/>
+	<objects>
+		<object id="11"/>
+	</objects>
+</space>
+<space id="14">
+	<description>Modulo Dormitorio 2</description>
+	<idescription>Inspec Modulo Dormitorio 2</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|              [QE]                                        |
+|__ __                                                     |
+                                                           |
+                                                           |
+ __ __                                                     |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__________________________________________________________|
+	</map>
+	<west>24</west>
+	<light value="FALSE"/>
+	<objects>
+		<object id="23"/>
+	</objects>
+</space>
+<space id="15">
+	<description>Cocinas</description>
+	<idescription>Inspec Cocinas</idescription>
+	<map>
+ _________________________        _________________________
+|                         |       |                        |
+|                         |       |                        |
+|                                           [DA]           |
+|         [SU]                                             |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                 ASCENSOR |
+|                                                   _______|
+|                                                  |       |
+|                                                  |  DOWN |
+|__________________________________________________|_______|
+	</map>
+	<north>22</north>
+	<down>21</down>
+	<light value="FALSE"/>
+	<objects>
+		<object id="25"/>
+		<object id="26"/>
+	</objects>
+</space>
+<space id="16">
+	<description>Baños</description>
+	<idescription>Inspec Baños</idescription>
+	<map>
+ _________________________        _________________________
+|                         |       |                        |
+|                         |       |                        |
+|                                                          |
+|         [GE]                                             |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__________________________________________________________|
+	</map>
+	<north>25</north>
+	<light value="FALSE"/>
+	<objects>
+		<object id="24"/>
+	</objects>
+</space>
+<space id="17">
+	<description>Exteriores de la base</description>
+	<idescription>Inspec Exteriores de la base</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__ __                                                __ __|
+                                                          
+                                                      
+ __ __                                                __ __
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__________________________________________________________|
+	</map>
+	<east>20</east>
+	<west>26</west>
+	<light value="FALSE"/>
+	<objects>
+	</objects>
+</space>
+<space id="18">
+	<description>Plataforma de lanzamiento</description>
+	<idescription>Inspec Plataforma de lanzamiento</idescription>
+	<map>
+ __________________________________________________________
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                     __ __|
+|                                                            
+|                                                      
+|                                                     __ __
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|                                                          |
+|__________________________________________________________|
+	</map>
+	<east>26</east>
+	<light value="FALSE"/>
+	<objects>
+	</objects>
+</space>
+</spaces>
+
+<links>
+<link id="10">
+	<connection_1>1</connection_1>
+	<connection_2>3</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="11">
+	<connection_1>3</connection_1>
+	<connection_2>4</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="12">
+	<connection_1>2</connection_1>
+	<connection_2>4</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="13">
+	<connection_1>2</connection_1>
+	<connection_2>5</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="14">
+	<connection_1>5</connection_1>
+	<connection_2>11</connection_2>
+	<openable value="TRUE" initial="FALSE"/>
+</link>
+<link id="15">
+	<connection_1>10</connection_1>
+	<connection_2>11</connection_2>
+	<openable value="TRUE" initial="FALSE"/>
+</link>
+<link id="16">
+	<connection_1>11</connection_1>
+	<connection_2>9</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="17">
+	<connection_1>9</connection_1>
+	<connection_2>8</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="18">
+	<connection_1>7</connection_1>
+	<connection_2>8</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="19">
+	<connection_1>7</connection_1>
+	<connection_2>6</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="20">
+	<connection_1>6</connection_1>
+	<connection_2>17</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="21">
+	<connection_1>6</connection_1>
+	<connection_2>15</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="22">
+	<connection_1>12</connection_1>
+	<connection_2>15</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="23">
+	<connection_1>12</connection_1>
+	<connection_2>13</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="24">
+	<connection_1>13</connection_1>
+	<connection_2>14</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="25">
+	<connection_1>13</connection_1>
+	<connection_2>16</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+<link id="26">
+	<connection_1>17</connection_1>
+	<connection_2>18</connection_2>
+	<openable value="TRUE" initial="TRUE"/>
+</link>
+</links>
+<objects>
+	<object id="1">
+		<location>1</location>
+		<name>Tanque de combustible</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+                                                            
+                                                            
+        .II=.                                               
+          M8MDNN.                                           
+                M8?         .. .                            
+                .MZNN.  .8OZZZZZZZZZZZZO,                   
+                 .NONN.8OZZZZZZZZZZZZZZZOO8.                
+                  .MNDOZZ$O888888DDD8OOOOOOO8?              
+                  .D8ZZON.           .D8OOOOOO8.            
+                .D8OOZZOMN,.          M8OOOOOOO8            
+              .D8OOOOOOOMNNNNNNDNNNNNMN8OOOZZOO8.           
+             .D88OOOOOOO8DNNNNNNNNNNNDDOOOZZZZO88           
+             ND8OOOOOOOOO888D8DDDDD888OOOZZZZZO88           
+            .D88OOOOOZZZZZZZZZZZZZZZZZZZZZZZZZO88           
+            .D88OOOOZZZZZZZZZZZZZZZZZ$$$7777ZZO88           
+             D8OOOOOOOOZOOOOOOOZZZZZZZZZ$$$$$ZO88           
+             D8OOOOOOOOOOOOOOOOOOOZZZZZZZZ$$$ZO8D           
+             D88OOOOOOOOOOOOOOOOOOOOOZZZZZZ$$ZO8D           
+            .D88OOOOOOOOOOOOOOOOOOOOOOZZZZZZZOO8D           
+            .D88OOOOOOOOOOOOOOOOOOOOOOOOOZZZZOO8D           
+            .D88OOOOOOOOOOOOOOOOOOOOOOOOOOOZZOO8D.          
+    ........,D88OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO8N........   
+..........,,,D88OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO88............
+...........,,D888OOOOOOOOOOOOOOOOOOOOOOOOOOOOO8D............
+............:ND88OOOOOOOOOOOOOOOOOOOOOOOOOOOOO8D,...........
+...........,,ND8888888888888O88OOOOOOOOOOOOOO88N,,,.........
+..........,,,:NDDD8888888888888888888888888888D:,,,,........
+..........,,,:~+MNNNNNNNNNNNDDDDDDDDDDDDDDDDDD~:,,,,........
+............,,::~==++++?????????IIIIIIIIIII?+~:,,,,.........
+...............,,,,,::::::::::::::~~~~~~~~:::,,,,...........
+.......................,,,,,,,,,,,,,,,,,,,,.................
+............................................................
+	
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="2">
+		<location>5</location>
+		<name>Tanque de oxigeno N1</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                                                            
+                                                            
+                        ..7D8.                              
+                      .+77I77$$7=.                          
+                    +?$$ZZZZOOOO88OI                        
+                   .$Z$I?7ZOO88888OZ,                       
+                   .ZZZ7I7ZOO88888OZ:                       
+                   .ZZ$$I$ZOO88888OZ,                       
+                   .ZZ$$7$ZOO88888OZ,                       
+                   .ZZ$7+IZZOO888OOO:                       
+                   .ZZZZZZO8O88888OZ,                       
+                   .ZZZZZZOOO8888OOZ:                       
+                   .8ZZZZZOOO8888OOZ:                       
+                   .ZZZZZZOOOO888OOZ.                       
+                   .OZZZZZOOOO888888.                       
+                   .$$Z$Z$ZOO8$88OOZ.                       
+                    I$$$$$ZZOOOOO8O$                        
+  
+			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="3">
+		<location>9</location>
+		<name>Tanque de oxigeno N2</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+                        ..7D8.                              
+                      .+77I77$$7=.                          
+                    +?$$ZZZZOOOO88OI                        
+                   .$Z$I?7ZOO88888OZ,                       
+                   .ZZZ7I7ZOO88888OZ:                       
+                   .ZZ$$I$ZOO88888OZ,                       
+                   .ZZ$$7$ZOO88888OZ,                       
+                   .ZZ$7+IZZOO888OOO:                       
+                   .ZZZZZZO8O88888OZ,                       
+                   .ZZZZZZOOO8888OOZ:                       
+                   .8ZZZZZOOO8888OOZ:                       
+                   .ZZZZZZOOOO888OOZ.                       
+                   .OZZZZZOOOO888888.                       
+                   .$$Z$Z$ZOO8$88OOZ.                       
+                    I$$$$$ZZOOOOO8O$     			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="4">
+		<location>3</location>
+		<name>Tanque de oxigeno N3</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+                        ..7D8.                              
+                      .+77I77$$7=.                          
+                    +?$$ZZZZOOOO88OI                        
+                   .$Z$I?7ZOO88888OZ,                       
+                   .ZZZ7I7ZOO88888OZ:                       
+                   .ZZ$$I$ZOO88888OZ,                       
+                   .ZZ$$7$ZOO88888OZ,                       
+                   .ZZ$7+IZZOO888OOO:                       
+                   .ZZZZZZO8O88888OZ,                       
+                   .ZZZZZZOOO8888OOZ:                       
+                   .8ZZZZZOOO8888OOZ:                       
+                   .ZZZZZZOOOO888OOZ.                       
+                   .OZZZZZOOOO888888.                       
+                   .$$Z$Z$ZOO8$88OOZ.                       
+                    I$$$$$ZZOOOOO8O$     			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="5">
+		<location>8</location>
+		<name>Tanque de oxigeno N4</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+                        ..7D8.                              
+                      .+77I77$$7=.                          
+                    +?$$ZZZZOOOO88OI                        
+                   .$Z$I?7ZOO88888OZ,                       
+                   .ZZZ7I7ZOO88888OZ:                       
+                   .ZZ$$I$ZOO88888OZ,                       
+                   .ZZ$$7$ZOO88888OZ,                       
+                   .ZZ$7+IZZOO888OOO:                       
+                   .ZZZZZZO8O88888OZ,                       
+                   .ZZZZZZOOO8888OOZ:                       
+                   .8ZZZZZOOO8888OOZ:                       
+                   .ZZZZZZOOOO888OOZ.                       
+                   .OZZZZZOOOO888888.                       
+                   .$$Z$Z$ZOO8$88OOZ.                       
+                    I$$$$$ZZOOOOO8O$     			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="6">
+		<location>2</location>
+		<name>Recarga de oxigeno M425</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+			
+                                                           
+                         . ..                             
+                         .?:O?O.                           
+                         ..I$.$.                           
+                           .Z888O.                         
+                           .$$$$$                          
+                            $$$$$                          
+                            $$$$$                         
+                            $$$$$                          
+                           .$$$$$                          
+                           .$$$$$                          
+                           .$$$$$                          
+                           .$$$$$                         
+                           .$$$$$.                         
+                           .$$$$$                          
+                           .$$$$$.                         
+                            $$$$$                          
+                            $$$$$                          
+                            $$$$$                          
+                            $$$$$.                         
+                            $$$$$                          
+                           ..Z$Z..                         
+                                                           
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="7">
+		<location>11</location>
+		<name>Recarga de oxigeno M658</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+                         . ..                             
+                         .?:O?O.                           
+                         ..I$.$.                           
+                           .Z888O.                         
+                           .$$$$$                          
+                            $$$$$                          
+                            $$$$$                         
+                            $$$$$                          
+                           .$$$$$                          
+                           .$$$$$                          
+                           .$$$$$                          
+                           .$$$$$                         
+                           .$$$$$.                         
+                           .$$$$$                          
+                           .$$$$$.                         
+                            $$$$$                          
+                            $$$$$                          
+                            $$$$$                          
+                            $$$$$.                         
+                            $$$$$                          
+                           ..Z$Z..       			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="8">
+		<location>12</location>
+		<name>Recarga de oxigeno M129</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+                         . ..                             
+                         .?:O?O.                           
+                         ..I$.$.                           
+                           .Z888O.                         
+                           .$$$$$                          
+                            $$$$$                          
+                            $$$$$                         
+                            $$$$$                          
+                           .$$$$$                          
+                           .$$$$$                          
+                           .$$$$$                          
+                           .$$$$$                         
+                           .$$$$$.                         
+                           .$$$$$                          
+                           .$$$$$.                         
+                            $$$$$                          
+                            $$$$$                          
+                            $$$$$                          
+                            $$$$$.                         
+                            $$$$$                          
+                           ..Z$Z..       			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="9">
+		<location>2</location>
+		<name>Tarjeta de identificacion</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+                                     .  ...     ..          
+                                   ....,,:........ .        
+                                ..NNNNODNND88DM8DNDN...     
+                               .Z8NOM8DD88DDDDNONDN.D.      
+                            ..=ODM8O8,..DND....:ODDD$,.     
+                            .Z8DN.D.D.....NDD. . .+DDN.     
+                           .8DD...8.N8N....Z8Z..  ..MD.     
+                           .ZD.   78,$N8NDN..D$....8D8.     
+                          .Z8O.   .$8N..D8O888N$$OONN+.     
+                           ZO.   . .78NM.. .+DDDDN+8Z..     
+             ..~~=...    .ZO,..     ..ZDO8DDO8DDD88.        
+            .,:,,,,,~:...,DO          . Z,:+7?...           
+           .:~,:,,,,::,:+NN+.         ..   ..               
+          .~=::,,,,,,,,,,:,==,.                             
+         .,+,,,,,,,,,,,,,,,,:,:~....                        
+         ,,,,,,,,,,,,,,,,,,,,,,,~:~~..                      
+       .:,,,,,,,,,,,,,,,,,,,,,,,,,,:.:.                     
+      .:=:,,,,,,,,,,,,,,,,,,,,,,...::,                      
+      ..=+,=:,,,,,,,,,,,,,,,..,...:.~.                      
+         ..+=~:,,,,,,,..,........:,=.                       
+              ==~,,.,,,,,.......,.~.                        
+                ..+=.:,,.......:.~                          
+                  . .+~,,,....,.=.                          
+                        +~,,,,,~                            
+                          .=~.=                             
+                            . .                             
+                                                      			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="10">
+		<location>3</location>
+		<name>Tarjeta de acceso a almacen</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                                                            
+                                                            
+                     ,,                                     
+                   :....,                                   
+                  ........:                                 
+                ,...........                                
+               ...............                              
+             ,..................                            
+           :,,,,,,ZZ,,............                          
+          ,,,,,,?ZZZZZ,,............                        
+        ,,,,,,,Z$ZZZZZZZ,............:                      
+       ,,,,,,,,ZZZZZZZZZ,,.............                     
+     ,,,,,,,,,,,,ZZZZZ:,,,...............                   
+   :,,,,,,,,,,,,,,~ZZ,,,,,,,...............                 
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,................               
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,..............,,             
+      ,,,,,,,,,,,,,,,,,,,,,,,,,,,,........,,,,,,            
+       ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,          
+      MMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,        
+    MMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,      
+   MMMMMMMMMN,,,,,.....,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:    
+  MMMMMMMMMMMM+,........,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,   
+  MMMMMMMMMMMMMM.........,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.   
+     MMMMMMMMMMMMM.......,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,     
+        MMMMMMMMMMMM.....,,,,,,,,,,,,,,,,,,,,,,,,,,,,,      
+          MMMMMMMMMMMM...,,,,,,,,,,,,,,,,,,,,,,,,,,,        
+             MMMMMMMMMM=,,,,,,,,,,,,,,,,,,,,,,,,,,,         
+                MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,           
+                   MMMMMMMM,,,,,,::::::,,,,,,,,,            
+                      MMMMMMM,:::::::::,,,,,,,,             
+                         MMMMMO:::::::::,,,,,               
+                            MMMM::::::::,,,,                
+                              MMMM:::::::,                  
+                                 MMM:::::                   
+                                    MM,                    			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="11">
+		<location>13</location>
+		<name>Tarjeta de acceso a sala de maquinas</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                                                            
+                                                            
+                     ,,                                     
+                   :....,                                   
+                  ........:                                 
+                ,...........                                
+               ...............                              
+             ,..................                            
+           :,,,,,,ZZ,,............                          
+          ,,,,,,?ZZZZZ,,............                        
+        ,,,,,,,Z$ZZZZZZZ,............:                      
+       ,,,,,,,,ZZZZZZZZZ,,.............                     
+     ,,,,,,,,,,,,ZZZZZ:,,,...............                   
+   :,,,,,,,,,,,,,,~ZZ,,,,,,,...............                 
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,................               
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,..............,,             
+      ,,,,,,,,,,,,,,,,,,,,,,,,,,,,........,,,,,,            
+       ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,          
+      MMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,        
+    MMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,      
+   MMMMMMMMMN,,,,,.....,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:    
+  MMMMMMMMMMMM+,........,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,   
+  MMMMMMMMMMMMMM.........,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.   
+     MMMMMMMMMMMMM.......,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,     
+        MMMMMMMMMMMM.....,,,,,,,,,,,,,,,,,,,,,,,,,,,,,      
+          MMMMMMMMMMMM...,,,,,,,,,,,,,,,,,,,,,,,,,,,        
+             MMMMMMMMMM=,,,,,,,,,,,,,,,,,,,,,,,,,,,         
+                MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,           
+                   MMMMMMMM,,,,,,::::::,,,,,,,,,            
+                      MMMMMMM,:::::::::,,,,,,,,             
+                         MMMMMO:::::::::,,,,,               
+                            MMMM::::::::,,,,                
+                              MMMM:::::::,                  
+                                 MMM:::::                   
+                                    MM,                    			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="12">
+		<location>3</location>
+		<name>Cables pelados</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+:::,,,,,,,,,,,,,,,..,,,,,,,,,,,,,,,,:::::+:::~~~~~~~~~======
+:::::,,,,,,?,,,,,,,,~,,.,,,,,,,,,,,,::::==:Z:~~~~=~~=~======
+::::,,,,,,,+?,,,,,,$?I:,,,,,,,,,,,,:::::?+=Z?~~~?II~?:==+===
+::::~+,,,,,,:,,,,~,,?+,,,,,,,,,,,,,::::::=7+I~~~~+?=?~~+====
+:::::=I::,,?,7?,,=,,I,,,,,,,,,,,,,:::::::?::7~~~7+?+~~=~===:
+::::::I+=,,,,::,,~?~=,,,,,,,,,,,::::::::::7:=~~=I+?+~~~~?=~=
+~::::+::~~,,:?,,,+~?:,,,,:::::::::::::::::=:~+~I+=++~~~~$+==
+?:~:::+:=I=+:==::=?=,:::::::::::::::::::::?7~:=~=+?==~7=====
+~~:?:::::7?~=:I+:?I,:::::::::::::::::::::::7:?+=+~+I+==~==++
+~~~::=7::+$I~++I:7=::::::::::::::::::::::::777++?~+~~~~==+==
+~~~~:::~+:777$??+=~::::::::::::::::::::::::II~7+~===~~~~====
+~~~~~::::::I~77~I+~::::::::::::::::::::::::=+$=~O~=+=~~~====
+~~~:::::::::::=$=??::::::::::::::::::~::::~~??Z~=~=+=~~=====
+~~~~~::::::::::::Z$::::::=?$$$I?~~::~~~~~~~?ZZ~~=====~~=====
+~~~~~~:::::::::::$Z$:::?Z77::::+$$$?~~~~~~~$Z~~~~===========
+~~~~~~~~::::::::~~$Z7~$$$:::::::~~~$ZI~~~=$$~~~~~===========
+~~~~~~~~~~::::::~::$ZZZ~~:::::::~:~~$$$==$Z~~~~~~===========
+~~~~~~~~~::~::::~:~+$ZO=~~~~~~~~~~~~~~$Z$Z~~~~~~~~==========
+~~~~~~~~~~~~::::::~~7$$==~~~~~~~~~~~~~ZZO~~~~~~~~~==========
+~~~~~~~~~~::::::~~~~Z7$Z==~~~~~~~~~~=$O$Z~~~~~~~~~~=========
+~~~~~~~~~~:::::~~:~~=O87ZZ==~~~====ZOZO$7~~~~~~~~~~=====~===
+~~~~~~~~~~~~:::::~~:~ZO8$$OZ=====ZOZ$8$I:~~~~~~~~~~~====~~==
+~~~~~~~~~~~~::::::~:~~IOI+DD8D$7$Z$O$7+~:~~~~~~~~~~~====~~==
+~~~~~~~~~~~~:::~~~~:~==~I$$ZZ$$7I7I~:::::~~~~~~~~~~~====~~==
+~~~~~~~~~~~~~::::~~:~====~~==~~~~~=~::::~~=====~~~~~========
+                                           		
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="13">
+		<location>4</location>
+		<name>Generador</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                           .. .                             
+                      ..+++++++++=.                         
+               .?++==++++++++++++++++++++                   
+  ......??+==+???+++++=:?+++++++++++?+888NN8?+..            
+ $ZZZZZ$??++???????????+??++++.88888888..  D8OZZ88I?:.      
+.ZN. .7ZZZZO8I??????????D88888888..            ..8O8O.8.    
+.ZN.      .$ZZZZ88N88D8D8D8          ..              OOOZ   
+.ON.          .ZZZZZZ?IIN?II77?...$8ID7:I:~           .OZ.  
+.$DD.            MMNZZ$$78II~MM7I????I?+++~++==:       O8I  
+ $D.             DMNNNMM$$777?N7Z=8777I$..~::,:,,.     Z8O  
+ 7D.            .DN$M8MNM77O77.DO$ZNN8888,,,N~=,,:     O8Z  
+ 7D.            .8$$ZDMMM77777I$8OOOOO88O,,,=7,:,      DD$  
+ 7DD            .D$$$Z$7M$$777778OOOO8888,,,,,,,,      D8$  
+ :ND             $$$Z$MDMM$$7$$87O8888888,,,,,,       .D$.  
+ .ZD             .::OZ$O8MOZ$$$D7$$8O8888DOOO...      .D7.  
+  ID             .:+=ZZ7+INZZZZD78O888DNMD8OO$?.      .D7.  
+ .ID            ..:O?OO.~.$DZZZD78$8ONDO8ZOMZD7.      DD7   
+  IN        ..+?II7ZDN,...~MMMOD$8$8,OZ88:7NMZ87O     DN7   
+  ID.    II?+?IIII???NM::,+OMMOO$O$NDO$OZD8OM777M.    DD7   
+  ID.7IIIII??II7I????NNN.?.O$O~O$Z$.MZ88MD8$MOMZZ.    D$    
+  .Z8?II77??7777=??8DNNNDDNM7Z~I7$$ZZZONDNI$$7$7.     D7    
+  .87IZ7III777I?I7$:~NNNNNNDZ7I~$$$ZZZZOMNON$$7I.    .DI    
+   ...$7OI77$7II77Z7ZZNNNNNNNDIM$$$+OZ$Z$8Z$ND7787I..DO.    
+        .77O77777$$$$DDDDD8DNNNI$$$$NDZ$777Z78$7$DDDD.      
+          .$7Z$O$$Z$$DDDDOD$DDDN$$$ZNMNNNN8$$Z.             
+            ..7$$$O$ODDD8ZOZDDDI$$$DDDDO$$Z.                
+                $$7$D8DD8$ZD8D8D$$$D8ZZO                    
+                  .7$$$O888O$88O$$$ZZ                       
+                   .$$ZZ8D888D8$Z$.                         
+                     ZON$$DMNZZ$Z$.                         
+                          $$$$$$I                           
+                             ..                             
+                                                            
+                                            		
+		</gdescription>
+		<mobile value="FALSE"/>
+		<hidden value="FALSE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="14">
+		<location>4</location>
+		<name>Destornillador Torx</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+           ..  .   .       ..O88.   .                       
+           .               .O8DDD.        .    .            
+           ..              DDMDNMN    . .  ..               
+           .              =8DO8NNN.. . .    .  .            
+           .           .  88O88NNND                         
+                    .  .  Z8OD8DNND . . .   .  .            
+           . .            O8O88DNND.                        
+                     ..   .8OO8DNN....    . . .             
+           . .     .      .D8Z8NNN..  ..                    
+           .     .         .88DNN+    .      .              
+             .   . .  .   . O8DDN......  ..... .            
+                           .O8DDD.. .    .                  
+                   .       .O8DNN         .                 
+             .   .    . .  .88DNN. .  . .... ...            
+                           .888NN.. ... ........            
+                           .8O8NN.        .                 
+                            O8DND. .. .  ..   ..            
+                           ...+....  . . . ....             
+                             .?  .    . . .    .            
+                 . .      .  .+.   .     ..  .              
+           .       .  .     . +. .  ... .....  .            
+                              +.   .  . . . ...             
+                   .        . +. . .   . ..  .              
+                              +...   ..     ..              
+                              +. . .      .. ...            
+                              +. .  .  ..   ...             
+                              +...    . . . ..              
+                             .+.             .              
+             . . ..        ...=. . ........ ..              
+             .   .           .=..  . .    . ...             
+                   .         .=.   ..        .              
+           . .     .       ...=. ...... ........            
+                           .  ?.     .        .             
+                   .       .  ~.   .         .              
+                      .     . 8...   .. . . ..              
+                 . .         .N. . . .. .  ...              
+             .    .        .  .. . . . .  ......            
+             .        .      .   . .      ......            
+                                             		
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="15">
+		<location>10</location>
+		<name>Ordenador de control</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                      MMMMMMMMMMMMMMMMMMMMMMMMMM            
+    MMMM888888888M   MMMMMM7777777777777777MMMMMMMM         
+  8888888888888888   MMM777777777777777777777777MMM         
+ M888888888888M888  MMM7777777777777777777777777MMM         
+ 88          88888M MMM7777777777777777777777777MMM         
+ 88888888888888888M MMM7777777777777777777777777MMM         
+ 88MMMMMMMMMM88M888  MM7777777777777777777777777MMM         
+ 88888888888888M888  MMM777777777777777777777777MMM         
+ 88888888888888M888  MMM777777777777777777777777MMM         
+ 8888888888M 888888  MMM777777777777777777777777MMM         
+ 888888888888888888  MMM777777777777777777777777MMM         
+ 888888888888888888  MMM777777777777777777777777MMM         
+ 888888888888888888   MMMMM77777777777777777777MMM          
+ 888888888888888888    MMMMMMMMMMMMMMMMMMMMMMMMMMM          
+ M88888888888888888              MMMMM                      
+ M88888888888888888M             MMMMM    MMMMMMMMMM        
+ M88888888888888888M        MMMMMMMMMMMMMMMM        M       
+  88888888888888888        MMMMMMMMMMMMMMMM     M           
+  88888888888888888                               MIIIMM    
+  8888888888888M8M    MMIIIIIIIIIIIIIIIIIIIIIIIM  MIIMMMMM  
+  8888888888888M     IMIIIIMMMMMMMMMMMMMMMMMMMMII   MMMMMM  
+                    MIIIIIIIIIIIIIIIIIIIIIIIIIIIII          
+                     MIIIIIIIIIIIIIIIIIIIIIIIIIIIM          
+                                                            
+      		
+		</gdescription>
+		<mobile value="FALSE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="16">
+		<location>10</location>
+		<name>Piezas de maquina averiada</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+............................................................
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,=IZ7:,,,,,,,,?I7~,,,,.
+,,,,,,,?I~,,,,,,,,,,,,,,,===+=,,,,,,,,?$$$I,,,,,,,???I?,,,,.
+,,,,,,??II?I,,,,,,,,,,,,I====7?=,,,,,,=7Z$I,,,,,,,7==II,,,,.
+....7??ZOOI=,??,.......+=7Z?=$D$,.....,$Z$I.......Z?=+I,... 
+...$?7Z7,=$I$I8....:?~~$$ZOO$DO7.....:=ZNZ7?......O=+:7.....
+...DDII......$......DZ77Z...$Z,......=~O8O$$......$I$+$.....
+.....................:77I.............7$OZZ7......78N$?.....
+............................................................
+........................................................... 
+                    	
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="17">
+		<location>7</location>
+		<name>Datos de plan de vuelo</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>Desc. 4</gdescription>
+		<mobile value="FALSE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="18">
+		<location>6</location>
+		<name>Rover lunar</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+............................................................
+............................................................
+..............,:........+...................................
+...............:.~,~~~=?....................................
+..............::,~:~~=?.....................................
+...........:=,,,~~:~~I......................................
+..........:,~~~,:?+?=.......................................
+.........+::~:I???I.........................................
+..................7.........................................
+...................?+.......................................
+....................~.......................................
+...................:........................................
+........................~+?.................................
+........................+I7.............?...................
+......................7ZZ=~~,..~.==~.+=+:.....,,............
+.......................OOO+=+:.??????.?:====Z?=.+...........
+...I7$$................N,NOI==.??????.???????+~.............
+..7?~7.:.............:=.I=?7++:$~Z8II7I?????+Z7,............
+...O................,.=~=7.~87~:=+=MZMDDOOII?ZI?~+=.........
+...O.................?.7$8O:O~?O~77:~~~=+7D+.,Z87N8?7+O.....
+...?77,.+=.O==?O........O8D:$DD7888M~~:~~:O??$.~+I+Z$888?...
+...,Z7I?IZOOI7II???7I=+O+8Z:DD?NN8888OO+?:+=ND=?..$?D7Z$8...
+...IZ?+7NN888IIIII7=~~==?7O~7II7$NDD888??OI?++?$DNZDD$=$D...
+...I$I~I$$:NN7III7OZ+++++?I~IOIOIOIZ7D??===,,....8ON8~+=8...
+..??:7?=OII$8NM7DOOO?????MZ==~8?7$++===,,,,,,,,,,,NN8+=D....
+...II+=:$~~=7?++++IDIIIIII$DOD=:===......,,,,,::::NNNO8:,...
+...NMM7I7?8$7DM8ZIIIII7III~MDO8DM..........,,,,::=?7OOI=:...
+....,MMMM?OO8N$ZDI7II7Z$?MO?OD8O8M,,,.,,......,,,,:::::,....
+..,:=?7$I?=~~$ZZ$?I7MNZIMMO88Z7ID8,,,,..............,.......
+...,::::::::::::,,OZOD$MDDDZ=+Z7Z8..........................
+.....,,,,,,:::::::::,Z7NDD8~$~II78..........................
+........,,,,,::::::::ZMND8=?I+I+DO..........................
+..........,,,,,:::::::NND8++=+.D8,,,........................
+............,,,,,,,:::NND88===D8~~:,,,......................
+...................,,,:~DNDD8D7?=~:,,.......................
+....................,,:~+I$Z$I=~:,..........................
+........................,,:,,...............................
+............................................................
+                                             	
+		</gdescription>
+		<mobile value="FALSE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="19">
+		<location>6</location>
+		<name>Kit de ruedas traseras</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+             .DDZO8D..             .D8O8888OON8. .        .+
+         .O8OOOOOO888ZDO.        DODOOOOOOODO88888$         
+       .OO8O88OOO8OOOOOOMO    .ZDOOZOZ8ZDMDDD8DNNDN88       
+      ~O8O8DDDD88888OOOZO88D D88ZDZZONO8DNDNDDNDNNNN88.     
+     OOOOD8DDNDDNDN88OODOODDZNZZ$NDD8DD8NNNNNNNNNNNNNND     
+    O8OO8DD~:.:=,:~D8D8OZZODOZ8ZNO8D8DNNNNNNNNNNNMNNNNND    
+   +8OO8D=.I$ZZZ$7I~O888Z8OOOONND8DDNNNDDDDNDN8DDNNNNNND?   
+  ,8OOOD:.I7$::..,,I=8O8ZO8ODO88D8DNNNDD==I7II~~DDNNNNDDN   
+  O8OOOO =I=~..==,.+,O88N8888DDD8DNNDD+I7+$7III=+7DDNNNNN   
+  88OZZ$ ??+NN=I++:,.Z88O8DOODDDNNND7I?+I$Z77I7I=+NDNNNDN   
+ .O8O$7Z ++,8,?II?=,~O8ND8D8DDDDNDDOI~?I+=IIIII$I7INNDNDD   
+  O8OZ$O. +I7,,,+?:,ZO8OO88DDDNNNDDI$7ZI=::.$$I$7IINDDNN8   
+  88OZ$7O .I7..,=?.8DOOO8D8NDDDNDDOI~??$$+++M?7I?I7NNDNDD   
+   88OZZIO.   ....8OOOD8888DDNDNDD++:???IIIDZ?II?+DNDNN8    
+   ZO8OZ$77$OZZ$ZZOOO888O8DDDDDDD8DI?$II++~7Z7I+:8DDDDDN    
+    8DO8OOZZZOZZOZO8O88NDO8DDD8DDDD7?I$7$II+?~+,O8DND8=    .
+     .O8O888OZO88O88ODDD8ZDODNDDDDND7I????::+:=D88DDOO. .   
+      .7OO88O8888ZON8D8DDMOODDDDD8DDDDII?+=,Z8O8DDD8O       
+        .+8ZZOOZZ88O8O   .D88D8D8DDDDDDDD88888DDD8$.        
+         .   . . .         .OZ888O88DDDDDDDDDDD8$O          
+                             .N8OOD8O88DD8OOOOO,            
+                                .Z8D88OOO888..              
+                              .                      .      
+                                ...                         
+                                           			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="20">
+		<location>8</location>
+		<name>Kit de ruedas delanteras</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+             .DDZO8D..             .D8O8888OON8. .        .+
+         .O8OOOOOO888ZDO.        DODOOOOOOODO88888$         
+       .OO8O88OOO8OOOOOOMO    .ZDOOZOZ8ZDMDDD8DNNDN88       
+      ~O8O8DDDD88888OOOZO88D D88ZDZZONO8DNDNDDNDNNNN88.     
+     OOOOD8DDNDDNDN88OODOODDZNZZ$NDD8DD8NNNNNNNNNNNNNND     
+    O8OO8DD~:.:=,:~D8D8OZZODOZ8ZNO8D8DNNNNNNNNNNNMNNNNND    
+   +8OO8D=.I$ZZZ$7I~O888Z8OOOONND8DDNNNDDDDNDN8DDNNNNNND?   
+  ,8OOOD:.I7$::..,,I=8O8ZO8ODO88D8DNNNDD==I7II~~DDNNNNDDN   
+  O8OOOO =I=~..==,.+,O88N8888DDD8DNNDD+I7+$7III=+7DDNNNNN   
+  88OZZ$ ??+NN=I++:,.Z88O8DOODDDNNND7I?+I$Z77I7I=+NDNNNDN   
+ .O8O$7Z ++,8,?II?=,~O8ND8D8DDDDNDDOI~?I+=IIIII$I7INNDNDD   
+  O8OZ$O. +I7,,,+?:,ZO8OO88DDDNNNDDI$7ZI=::.$$I$7IINDDNN8   
+  88OZ$7O .I7..,=?.8DOOO8D8NDDDNDDOI~??$$+++M?7I?I7NNDNDD   
+   88OZZIO.   ....8OOOD8888DDNDNDD++:???IIIDZ?II?+DNDNN8    
+   ZO8OZ$77$OZZ$ZZOOO888O8DDDDDDD8DI?$II++~7Z7I+:8DDDDDN    
+    8DO8OOZZZOZZOZO8O88NDO8DDD8DDDD7?I$7$II+?~+,O8DND8=    .
+     .O8O888OZO88O88ODDD8ZDODNDDDDND7I????::+:=D88DDOO. .   
+      .7OO88O8888ZON8D8DDMOODDDDD8DDDDII?+=,Z8O8DDD8O       
+        .+8ZZOOZZ88O8O   .D88D8D8DDDDDDDD88888DDD8$.        
+         .   . . .         .OZ888O88DDDDDDDDDDD8$O          
+                             .N8OOD8O88DD8OOOOO,            
+                                .Z8D88OOO888..              
+                              .                      .      
+                                ...                      			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="21">
+		<location>8</location>
+		<name>Caja de herramientas</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+............................................................
+............................................................
+............................................................
+.......................++~~~~~::,,,,........................
+.......................???I???I?????........................
+.........  7.~.,,,,.,..?I8D.,....,??........   ... ..  .....
+.......O:~,,,.,,.,:.788+?Z$ZODNMMM??MO.~,.,.:.,.:.,:$Z .....
+.....:NDO$7~:.7$7OD8~::==,:,,:,,,,Z~~:,:,:,:.,,,.:O88O......
+.....?NMII?=~~DMD8DDD8O?MZ+OOOZOOOOZ,..,,,:...:$8N8888......
+.....ZNMI?III+NMDOMMNNDNDMNNNNNNMNMN7DNMMN8DMN88DDD88D. ....
+......DN?I?I??NNNNNNNNDN8DDNNNMNNNMNI???+I+DNNO8DDDDZZ......
+......NN7III?IMMNDDDDDDNDNNDDDNNNNNN?????I?NNNOOD8OZZZ......
+..... 8MMI7?IIMNNDDDDDDDDNNDDDNDNDNM?????I?DMNDDOOOZZ+......
+.......DNNNNDDNNDDDDDDDDDDNDDDNDDDDM?I?I???DMNDDOOZOZ.......
+.....  ODDDDDDDDDDDDDDDMNDDNDDMNDDDMNI????IDMN88OOODZ.......
+.....  ?DDDDDDDDDDDDDDDNDDDDDDNDDDDNDNNDDNDDDD88OOOD$.......
+ ...... DDDDDDDDDDDDDDDNDDDDDDNDDDDDDDDDDDDDDDDDOOZDZ ......
+........DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD88OOODZ.......
+........DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD88OOOD$.......
+........ODDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD8OOOOD?,,.....
+ .......,DNDDDDDNDDNDDDDDDDDDDDDDDDDDDDDDDDDDDDOO8DD:,,,....
+     ......,,,,,,,:,:~7ODDNDDNDNDDNDDDDDDDDDDDD888=~::,,,...
+       ..................,,,,,,,~7NDNDDDNDDDDDD8D~~::,,,....
+            ..  ..................,.,,.=ODDDDDDZ~::,,,......
+                ..   ..  .................,.,..,............
+                                ............................
+                                       ............... .....
+                                            			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="22">
+		<location>7</location>
+		<name>Escafandra de traje EVA</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                                                            
+                        .?I7$$$$77?                         
+                    +7ZOO88888888888OZ7.                    
+                 ,7ZOO888OOOOOO888DDDD88O$                  
+               ~$ZO888OOZZ$$$$ZO88DDDDDD88OZ                
+              $ZO888OOZZ$77$$$$ZOO88DDDDD88OZ?              
+            +ZO88888OZZZ$$$7777$$ZOO8NMD88DMNOO             
+           7OO88888OOOZZ$$$7777$Z8$$7?+I777IIIIDZ           
+          78888888888OZZZ$$$77Z?I7777777777III?+78.         
+         .NN888DD888OOOZZZ$$?77I7777777777IIII?++NZ,        
+         OMDDDDD88888OOOZZI7777777777$$$$II7II?+=DD8.       
+        :NNODDD888888OOOZ7777777777ZMMNZ$77I+?I$=NDDD       
+        ZNODDDD8888888O77777777IIIINNMNM$77I?=??=?NND,      
+        ON8DDDDD88888M7I77777777IIINNDNMD7II?=++==NNN?      
+        OO8DDDDDDD88D77I$7777777IIINNDNNNII7?+=+=~NNN.      
+        OZ88DDDDDDDN77I777777$$$77$7788$NZI???+===...       
+        $O888DDDDDN$7I777777$ZZZZ$$$$$77IIM???++==          
+        .OO888DD88IIIII777$$$$$$$$$$Z$$777IM?++++=,         
+        .7ZD888887IIIIII7$$Z7IIIIIIIII$$7IIIM+=+++=         
+        .:$ZZO88DIIII777$$$$$$$$$$$7777III???NI++++         
+        .=77$ZOO77$$77$$$777777777777777777I?NM++7O=        
+      .,~+$.?7$::7777$7II?????????????IIIIIIIIZND+++        
+       ~,~7Z......???III?????????????????+MMMN7~???D        
+      .+~=.,Z.......??II??????????I+NNNMNN=~?????I?+Z.      
+       =:~~.,OO=.......,=+~?NMMMMNNN?.:====+????DD?$ .      
+       ::~~:=..,+Z8DDDD8O7=,..,,:::~~~~====+???$??+N        
+        :::=:?:,::........,,,,I=I?Z+~~~=,~==I+???7NZ        
+        .?:~,,...I,...~:...=,=7$7$I$Z===:~==++?7ND8.        
+          $7::,... =. ,.~,,7:==:?ZO7$?=====+INMNDD          
+         ..=ZO8=::,~,...+::?~?I:7ZZ$$?+?DNMNNND$7           
+            7,.8888O8~+::~:?~:~=~$8NNNNNNNNN+?I77           
+            ,,......?8888DDDDDDDDDDDN8=~=++?II77.           
+             O...............,,,,:::~~~=+??II7$             
+            ................,,,,,:::~~===+?I:               
+                  .........,,,,,::::~~===...                
+                          ...,,,.   . .                     
+                                                            
+                                                            
+                                            		
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="23">
+		<location>14</location>
+		<name>Equipo de traje EVA</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+............................................................
+............................................................
+...........................=~....=..........................
+.........................=,,,,..,.,=........................
+........................:,,..,,,,.,.=.......................
+........................,,,.........=.......................
+.....................?I??,:........=+?I?....................
+..................?III?I+I:,==+==:,7?I????~.................
+................:??I?IIII+II?IIIII??II???I??,...............
+................??IIII7II?IIIIIIIIII??I?IIII?...............
+...............7II???I7?II?I?II?I?:~IIII~II??I..............
+...............7II+??+?+III+7I,II+=:???=???+III.............
+..............IIIII?+?+?IIII??=7I?7:=?.+?III7I~.............
+..............??III?+=III?III.==II~,:I7=????I77.............
+..............I+?I+++.III?II:,?..:I,:I7.???+I7?.............
+.............?III??=:.II?:,,II?,,,:=.=7=~??II77.............
+.............I??III=.?I~II77~:II7I77?I7=.???II?7............
+.............??III?=.?:I:.I?.,?I7I7II77~,????I7?7...........
+.............=?+?II.?=II,:IIIIII?I?II77I,.????II?...........
+.............,:,:,...:?IIIIIIIIII??III7?...,,,~?............
+.....................?IIII7IIIIIIIIII77+:...................
+.....................?IIIIIIIIIIIIII7I7II...................
+....................?IIIIIIIIIIIIIIIII7II...................
+....................?IIIIIIIIIIIIII??II7I?..................
+....................IIIIIIIIIIIIIIII7I77I...................
+...................+?IIIIIIIII+????+????II..................
+....................?I?IIIIII+I?I??II777I...................
+....................?I?IIII7I++?II??+777I...................
+...................+?IIII=II7++?II=?7III++7.................
+...................+??IIII~?++=~?I?+?III???.................
+...................+???????+++=.?II+++++???.................
+...................~??II?++?+~,.++===+?I?I..................
+...................,+???+==+?=..??=+=????I..................
+....................+??II?++=~..I?+?=???+?..................
+....................+++II?+==:..????+++=+...................
+....................:+??+==~~:..=????+?++:..................
+....................:????III?....?++???++=..................
+....................=?????I??....?++??++==..................
+...................~=?????II:....+?=~=++?+..................
+...................=+??????+:.....++?+++==..................
+.....................?+??+++:.....+++++++?..................
+.....................==+~=~,,......=++?=?+..................
+.....................~=???=:.......++??++=..................
+.....................=++???+.......=++??+=..................
+.....................===+??=.......:+++??+..................
+.....................==?++...........+++?...................
+.....................=+++,...........=+?+...................
+.....................++=+............=+~~...................
+............................................................
+............................................................
+............................................................
+                                            			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="24">
+		<location>16</location>
+		<name>Guantes de traje EVA</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,...................~
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,,....................~
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.......................~
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,..........................~
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,..,...........................~
+.,,,,,,,,,,,,,,,,,,,,,,,,,,,..........,....................~
+.,..,,,.,,,,,,,,,,,,,,,,,,,...,.+~~====+++=................:
+..,....,,.,,,,,,,,,,..,...,.,++++~=++++++?==...............~
+........,.,,,,,,,,,,.,,....+++?+????=??+=+++=..............~
+..........................??7++??++??++=?7+++=.............~
+.................,+......?I7??II=+???+7???+==~~............~
+...=77I77777II++????+.....==+??=??I??7?=~IIIII?+?~.........~
+..+I77777777777777III?~.......~==+++I?,,~:II77???+=........~
+...~77777777777III7777I?........=::+II,,::=:==+~,==+.......~
+.....=77777I=??=+~=~~=+++~..........:?...+,,~~+,=.~........~
+.......777I=~?=+=+++~:~+:~............,.:~:::,==,,=........~
+........I?++::~:==+,+:,~I~:..............=~..+=.~+:,,......:
+...........~~.=?,=+,+~.,==................~..:++.~,~,+.....~
+..............~?:??:?I+.??...................:~:,~,~~:.....~
+...............=~+?,=?~.........................~+=~,=~....~
+.................................................,..~......~
+...........................................................~
+...........................................................~
+...........................................................~
+...........................................................~
+...........................................................~
+...........................................................~
+...........................................................~
+...........................................................,
+                                           		
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="25">
+		<location>15</location>
+		<name>Suministros</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+............................................................
+............................................................
+.................?+?777+..............7.....................
+.................?+?I?I:.............:7I7?7I................
+................7++?????7............,~~~,+,................
+...............7I~=++??I+~...........,~~=++....~++++?=......
+..............77?=+?~??7?~...........,.,~=,....:=:::::=.....
+...............7?+7++???+=...........,,..~,...:+,,:,:,:,....
+................?777I77?=....+?I?77II7.........:II????~:7I..
+........=+:......~I+++=~...7I~++?I?+?===I7...,,,+77?777?7~?.
+....~+++??:==+++I........777?~:=??+~:::=7777.=,,~=====?I7?7.
+....:=?I+?=+===+=,.....77777+~?==+II~::~+777II.~:~~=+777?7..
+....~,=~~=~====++,.....77777?=~=++7+::=,~777III...=??I~.....
+.....~I,=I+~=?=+?+....777777~=~?~+77~::+?777III7............
+.....,,++=I7~=???=I7..77777I=~~+++7++=I~==777I?I............
+.....,===77?++==~??I..7777I~++=~+I??+~++=?77II??............
+....,:~,I?I??~+~=+??...777?+777777I??77++II7I??I............
+.....=:,~I++=+=~I??I...:77?+777?77I???????III??.............
+.....I+?=++?+III?+:......77I?7II???+7II+~+~???..............
+......77+7I7?II?+.........?7~II???++====?+??I...............
+......,.,....................IIIII?==?++++,,................
+.......7+...................................................
+............................................................
+                                             GlassGiant.com
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="26">
+		<location>15</location>
+		<name>Deposito de agua lleno</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                      ..   .......                          
+             ....   ..  .................                   
+          ......... ..??II7I??I77I+++=:..  ...    .         
+          ...:+++?....?II??IIIII777$Z7:.. .......           
+            ..?I$.....7?+??IIIIII777?7.....+==+~...         
+           ...?I7:++++$III??IIIII77ZO8OO$?+:II7..           
+      .. ...:+=?+?=?I77777=+++++??7I77I???+II?I., ,..       
+       . .,=?+I+III?I?III?I+?II???II?7I7?I?II?$?I+,....     
+      ...=?????????+I?+++?+?+????I+?I??IIII7?I77I+?.,..     
+      ..:????I++??=++?++++=+??+????I???++=+I??II+7?I,..     
+       ,I???I????+?+?+++??++???????????+III?$II77+$I=..     
+     . +I?I?I???++???++++=+++++?+??+??II?II?I7I7777ZI..     
+     ..+7?=?++???????++=++++++++????I?II+II7777+$$Z$D..     
+    ...7+I7??I???????+?++=+++++??+I??III?II7II7I$7?Z7,.     
+    ...I7????I??+????????=???????+?IIII77I77?77?$$OZZ..     
+     ..77IIIIIII???+?+=+++???????+??+++??777777$$$ZOO..     
+     ..77+~+=?+?I???++??IIIIIIIIIIII7III77I7777$$$ZOO..     
+    ...?7I==?~+I++:I~~~:=,?~+?~I=~:=7IIII777777$$$ZZO..     
+    ...=7II7???=~=,?~~:=I:?=?I:I~+~=IIIII777777$$$ZZO..     
+     ..~7IIIIIIIII??I?=:~:+I???I?IIIIIIIII77777$$$ZOO..     
+     ..,7IIIIIIIII????IIIII?IIIIIIIIIIIIII77777$$$ZOO..     
+     ...7IIIIIIII??????I????IIIIIIIIIIIIII77777$$$ZZO..     
+      ..7IIIIII??????????????IIIIIIIIIIIII77777$$$ZOO..     
+      ..IIIIIII??????????????IIIIIIIIIIIII77777$$$ZZO..     
+   .....7IIIIIIII???????????IIIIIIIIIIIIII77777$$$ZZO..     
+   .....7IIIIIIII???????????IIIIIIIIIIIIII77777$$$ZZZ..     
+    ....IIIIIIIII??????I???????IIIIIIIIIII77777$$ZZZ7..     
+    ....7IIIIIIII???????III????IIIIIIIIII777777$$ZZZ? .     
+    ....7IIIIII????I???????IIIIIIIIIIIIII777777$$ZZZ=..     
+    ....7IIIIII??I???????????IIIIIIIIIIIII77777$$ZZ7~..     
+      ..IIIIIII???????????????IIIIIIIIIII777777$$$Z?,..     
+      ..IIIIIIIII?????????????IIIIIIIIIII777777$$$Z?,..     
+      ..IIIIIIII??????????????IIIIIIIIIIII77777$$ZZ?...     
+     ...=IIIIIII??????????????IIIIIIIIIII777777$$ZZ?...     
+     ...,IIIIIII??????????????IIIIIIIIIII777777$ZZOI...     
+      ...IIIIIIIIIII???????I??IIIIIIIIIIII7777$$$Z$$...     
+      ...II??IIIIIII???????I??IIIIIIIIIII7777$77I7OZ...     
+      ...7IIIII?????I???IIIIIIIIIIII?I77I7??77$$$ZOZ...     
+      ...7IIIIIIIIII7??I???????IIIIIIIIII7II7$$$ZZZO...     
+      ...IIIIIIII?????????????IIIIIIIIIII777777$$ZZO...     
+      ...77IIIIII?????????????IIIIIIIIIII777777$$ZZO...     
+      ...I7IIIIII?????????????IIIIIIIIIII777777$$ZZO...     
+      ...IIIIIIII??????????????IIIIIIIIII777777$$ZZO...     
+      ...7IIIIIII??????????????IIIIIIIIII777777$$ZOO...     
+      ...7IIIIIII???????????IIIIIIIIIIIII77777$$ZZOO...     
+      ...IIIIIIII???????????IIIIIIIIIIIII77777$$ZZOO...     
+      ...77IIIIII??????????I??IIIIIIIIIII77777$$$Z$O...     
+      ...IIIIIIII??????????I??IIIIIIIIIII77777$$ZZ$Z...     
+      ...IIIIIIII?????????????IIIIIIIIIII777777$$Z7$...     
+      ...IIIIIIII?????????????IIIIIIIIIII777777$ZZII...     
+      ...77IIII????????????II??IIIIIIIIII77777$$ZZI=...     
+      ...77IIIII???????????????IIIIIIIIII77777$$ZZI:...     
+      ...77IIIIII???????????????IIIIIIIIII7777$$ZZI,...     
+      ...77IIII??????????????IIIIIIIIIIIIII777$$$Z7....     
+      ...77IIII????????????????IIIIIIIIII777777$ZZ$.. .     
+      ...7IIII??I????????????IIIIIIIIIIII77777$$$ZZ.. .     
+      ...7IIIII??????????????IIIIIIIIIIII77777$$$ZO.. .     
+      ...?IIIIIIII?????????????IIIIIIIIII7777$$$ZZZ.. .     
+      ...:7IIIIII??????????????IIIIIIIIII7777$$$ZZ$.. .     
+      .. .=IIII??????????????IIIIIIIIIIII77777$ZZZ...       
+         .,~?II?I????????????IIIIIIIIIIII7777$$$$=...       
+           .,I?+??III??I?????IIIIIIIIII77I777$7~..          
+          . ...+II?II????????IIIIIIIII7II777+Z,...          
+          ..... ..:I?+???????IIIIIIIII+?7=,.....            
+                 ......,...:=??+~,..........                
+                 ....... ...................           			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="27">
+		<location>12</location>
+		<name>Maquina de ejercicio</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                                                            
+                                                            
+                                                            
+                 D    .8..                                  
+                 D. ?I.  8                                  
+                  O.8.?.  .Z                                
+                   O..,.D8Z.                                
+                    OD+.                                    
+                      7D8                                   
+                      .$.       . . .                       
+                       +:       =D88888                     
+                       .,         DOO?.                     
+                        =.        7~                        
+                        I7        =                         
+                        .~.      ~O                         
+                         ?.      +.                         
+                         .8II?I.I+D                         
+                        7I???,?I+.DDO                       
+                       IO?I?DDO+?..                         
+                     .+IDD?8DD8+$8                          
+                    DI...?888OZOO8.                         
+                    ..      .O88O87  .I:+O                  
+                                 :?I?I.                     
+                                  .I~.                      
+                                   I                        
+                                  D8                        
+                                                          			
+		</gdescription>
+		<mobile value="FALSE"/>
+		<hidden value="TRUE"/>
+		<light  value="FALSE" initial="FALSE"/>
+	</object>
+	<object id="28">
+		<location>-2</location>
+		<name>Linterna</name>
+		<pdescription>Desc. 1</pdescription> 
+		<mdescription>Desc. 2</mdescription>
+		<idescription>Desc. 3</idescription>
+		<gdescription>
+
+                                                 ..II7$$78. 
+                                           . ..ZZZ7$$$ZZZZ8 
+                                         ..Z7ZZZO888ZO88DDN=
+                                     . $Z$ZZOOZ8OOD8DNND888 
+                                  .7O$OZOOOO88D88DDND8OO8Z. 
+                              ..NII7$ZZO8O88DDDDNNDDD88O .  
+                           .N7$ZNMMDZZZONDDDDNNDDD888?.     
+              ..  .......D77O8NN8ZD$DNNNNNNDDD88888.        
+          ..N877$$Z$77$$IDOZZ$NO8DDNNNNMMDDDD888:.          
+       .ND8?O888ZOZZZOZZZOZDDNNNNNNNMMD888D888 .            
+    MNI77$$$ZZOZNZ$8DZZOOOOZONNMNMMN88888O8I.               
+ DMMMM$$$Z$ZZ$7MNDNMMNNNNNZZNNMMND8888OOO.                  
+8MNZ88MMZZZMMMMMMNNMMNMMNNNNNON88888OO=                     
+88Z88OO7MMMMMMMMN8DDDNNMMMMD8OO888OZ                        
+8D?=Z$OZONMMMNMNMM8DD8DNMMN8OOOOZ.                          
+DDO?==++I$MONNNNNNNMD8NMN888OZZ.                            
+MNN8Z$$$$$$NDMMMMMMNDND88O8OZI                              
+.MMD87777?I$MNMMMMMND8M8OOOO7                               
+ DNNZ7,:?777IMMMMD888DDZOOZ7                                
+ .MN$.?II7I77ZMD8888ODDOZ$.                                 
+   NNOZ7I77$$$M8888OODD$7.                                  
+  ..NMN8877$7INOOO8OO8,.                                    
+     NMM8O?:I7DOOZZI. .                                     
+     .:MMMO8Z$DZ$7,                                         
+       .ZMNMM$O~.            
+                                    			
+		</gdescription>
+		<mobile value="TRUE"/>
+		<hidden value="FALSE"/>
+		<light  value="TRUE" initial="FALSE"/>
+	</object>
+</objects>
+<player>
+	<location>1</location>
+	<max_objects>6</max_objects>
+	<objects>
+		<object id="28"/>
+	</objects>
+</player>
+</game>

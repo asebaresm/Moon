@@ -4,13 +4,13 @@ Importante:
 - Violacion de segmento por free ilegal que surge de forma aleatoria, no esta claro de donde viene tampoco
 
 Mas:
-- Acabar integracion de mapas interactivos
 - Dar contenido a maps, descripciones de mapas, descripcion de inpesc de mapas...
-- Dar contenido a objetos, descs, imagen ascii...
+- Dar contenido a objetos, descs, imagen ascii... (medio done)
 - Dar contenido de tipo: version final de mensajes de inicio, mensaje de fin del juego, etc
-- Implementar: Inspeccionar espacio
-- Implementar: accion HABLAR (obligatoria) con su correspondiente NPC (la computadora en nuestro caso)
+- Formato final de interfaz (sencilla)
+- Pasar a tolower reemplaza_asterisco
 - Probar juego a fondo
+- Informes y descripcion de las pruebas
 
 Por ultimo:
 - Revisar lo que falte de entregas anteriores

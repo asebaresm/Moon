@@ -1,0 +1,918 @@
+<dialogue>
+	<rules>
+		<!-- REGLAS DE MOVIMIENTO -->
+		<rule id="100">
+			<patterns>
+				<pattern>IR NORTE</pattern>
+				<pattern>IR AL NORTE</pattern>
+				<pattern>MOVER NORTE</pattern>
+				<pattern>MOVER AL NORTE</pattern>
+				<pattern>AVANZAR NORTE</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al norte...</template>
+				<template>Te diriges a la sala que hay al norte...</template>
+				<template>Te mueves al norte...</template>
+			</templates>
+		</rule>
+		<rule id="101">
+			<patterns>
+				<pattern>IR NORTE</pattern>
+				<pattern>IR AL NORTE</pattern>
+				<pattern>MOVER NORTE</pattern>
+				<pattern>MOVER AL NORTE</pattern>
+				<pattern>AVANZAR NORTE</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al norte ahora mismo</template>
+				<template>El paso al norte esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="102">
+			<patterns>
+				<pattern>IR SUR</pattern>
+				<pattern>IR AL SUR</pattern>
+				<pattern>MOVER SUR</pattern>
+				<pattern>MOVER AL SUR</pattern>
+				<pattern>AVANZAR SUR</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al sur...</template>
+				<template>Te diriges a la sala que hay al sur...</template>
+				<template>Te mueves al sur...</template>
+			</templates>
+		</rule>
+		<rule id="103">
+			<patterns>
+				<pattern>IR SUR</pattern>
+				<pattern>IR AL SUR</pattern>
+				<pattern>MOVER SUR</pattern>
+				<pattern>MOVER AL SUR</pattern>
+				<pattern>AVANZAR SUR</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al sur ahora mismo</template>
+				<template>El paso al sur esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="104">
+			<patterns>
+				<pattern>IR ESTE</pattern>
+				<pattern>IR AL ESTE</pattern>
+				<pattern>MOVER ESTE</pattern>
+				<pattern>MOVER AL ESTE</pattern>
+				<pattern>AVANZAR ESTE</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al este...</template>
+				<template>Te diriges a la sala que hay al este...</template>
+				<template>Te mueves al este...</template>
+			</templates>
+		</rule>
+		<rule id="105">
+			<patterns>
+				<pattern>IR ESTE</pattern>
+				<pattern>IR AL ESTE</pattern>
+				<pattern>MOVER ESTE</pattern>
+				<pattern>MOVER AL ESTE</pattern>
+				<pattern>AVANZAR ESTE</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al este ahora mismo</template>
+				<template>El paso al este esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="106">
+			<patterns>
+				<pattern>IR OESTE</pattern>
+				<pattern>IR AL OESTE</pattern>
+				<pattern>MOVER OESTE</pattern>
+				<pattern>MOVER AL OESTE</pattern>
+				<pattern>AVANZAR OESTE</pattern>
+			</patterns>
+			<templates>
+				<template>Avanzas a la sala que hay al oeste...</template>
+				<template>Te diriges a la sala que hay al oeste...</template>
+				<template>Te mueves al oeste...</template>
+			</templates>
+		</rule>
+		<rule id="107">
+			<patterns>
+				<pattern>IR OESTE</pattern>
+				<pattern>IR AL OESTE</pattern>
+				<pattern>MOVER OESTE</pattern>
+				<pattern>MOVER AL OESTE</pattern>
+				<pattern>AVANZAR OESTE</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes avanzar al oeste ahora mismo</template>
+				<template>El paso al oeste esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="108">
+			<patterns>
+				<pattern>IR ARRIBA</pattern>
+				<pattern>MOVER ARRIBA</pattern>
+				<pattern>AVANZAR ARRIBA</pattern>
+			</patterns>
+			<templates>
+				<template>Vas hacia arriba...</template>
+				<template>Avanzas a la sala que hay arriba...</template>
+				<template>Te diriges a la sala que hay arriba...</template>
+				<template>Te mueves arriba...</template>
+			</templates>
+		</rule>
+		<rule id="109">
+			<patterns>
+				<pattern>IR ARRIBA</pattern>
+				<pattern>MOVER ARRIBA</pattern>
+				<pattern>AVANZAR ARRIBA</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes ir arriba ahora mismo</template>
+				<template>El paso hacia arriba esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="110">
+			<patterns>
+				<pattern>IR ABAJO</pattern>
+				<pattern>MOVER ABAJO</pattern>
+				<pattern>AVANZAR ABAJO</pattern>
+			</patterns>
+			<templates>
+				<template>Vas hacia abajo...</template>
+				<template>Avanzas a la sala que hay debajo...</template>
+				<template>Te diriges a la sala que hay debajo...</template>
+				<template>Te mueves hacia abajo...</template>
+			</templates>
+		</rule>
+		<rule id="111">
+			<patterns>
+				<pattern>IR ABAJO</pattern>
+				<pattern>MOVER ABAJO</pattern>
+				<pattern>AVANZAR ABAJO</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes ir abajo ahora mismo</template>
+				<template>El paso hacia abajo esta bloqueado</template>
+			</templates>
+		</rule>
+		<rule id="112">
+			<patterns>
+				<pattern>IR</pattern>
+				<pattern>MOVER</pattern>
+				<pattern>AVANZAR</pattern>
+			</patterns>
+			<templates>
+				<template>Parece que * no es un lugar al que puedas ir</template>
+			</templates>
+		</rule>
+		<!-- REGLAS DE ACCION DEL PLAYER -->
+		<rule id="200">
+			<patterns>
+			<pattern>COGER</pattern>
+			</patterns>
+			<templates>
+				<template>Recoges *</template>
+				<template>Has cogido *</template>
+				<template>Añades * a tu inventario</template>
+			</templates>
+		</rule>
+		<rule id="201">
+			<patterns>
+				<pattern>COGER</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes coger eso todavia</template>
+				<template>No parece que sea el momento apropiado de coger eso</template>
+			</templates>
+		</rule>
+		<rule id="202">
+			<patterns>
+				<pattern>COGER</pattern>
+			</patterns>
+			<templates>
+				<template>No parece que algo tan grande quepa en tu inventario</template>
+				<template>Por muy grande que parezca tu inventario, eso no cabe</template>
+			</templates>
+		</rule>
+		<rule id="203">
+			<patterns>
+				<pattern>DEJAR</pattern>
+			</patterns>
+			<templates>
+				<template>Dejas *</template>
+				<template>Has dejado *</template>
+			</templates>
+		</rule>
+		<rule id="204">
+			<patterns>
+				<pattern>DEJAR</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes dejar eso</template>
+			</templates>
+		</rule>
+		<rule id="205">
+			<patterns>
+				<pattern>ENCENDER</pattern>
+			</patterns>
+			<templates>
+				<template>Enciendes *</template>
+			</templates>
+		</rule>
+		<rule id="206">
+			<patterns>
+				<pattern>ENCENDER</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes encender * ahora mismo</template>
+			</templates>
+		</rule>
+		<rule id="207">
+			<patterns>
+				<pattern>APAGAR</pattern>
+			</patterns>
+			<templates>
+				<template>Apagas *</template>
+			</templates>
+		</rule>
+		<rule id="208">
+			<patterns>
+				<pattern>APAGAR</pattern>
+			</patterns>
+			<templates>
+				<template>No puedes apagar * ahora mismo</template>
+			</templates>
+		</rule>
+		<rule id="209">
+			<patterns>
+				<pattern>INSPECCIONAR</pattern>
+			</patterns>
+			<templates>
+				<template>Inspeccionas * con detenimiento</template>
+			</templates>
+		</rule>
+		<rule id="210">
+			<patterns>
+				<pattern>INSPECCIONAR</pattern>
+			</patterns>
+			<templates>
+				<template>No es posible inspeccionar * ahora mismo</template>
+			</templates>
+		</rule>
+		<!-- REGLAS DE SECUENCIA DEL JUEGO -->
+		<rule id="300">
+			<patterns>
+				<pattern>0</pattern>
+			</patterns>
+			<templates>
+				<template>Welcome to hell
+Muevete por el mundo escribiendo acciones por teclado.
+Escribelas en mayusculas, aunque si no lo haces, lo haré
+yo por ti :) </template>
+			</templates>
+		</rule>
+		<rule id="301">
+			<patterns>
+				<pattern>1</pattern>
+			</patterns>
+			<templates>
+				<template>Introduce tu accion</template>
+			</templates>
+		</rule>
+		<rule id="302">
+			<patterns>
+				<pattern>2</pattern>
+			</patterns>
+			<templates>
+				<template>texto de iniciar juego 3</template>
+			</templates>
+		</rule>
+		<rule id="350">
+			<patterns>
+				<pattern>0</pattern>
+			</patterns>
+			<templates>
+				<template>Felicidades, has conseguido superar el juego</template>
+			</templates>
+		</rule>
+		<rule id="351">
+			<patterns>
+				<pattern>1</pattern>
+			</patterns>
+			<templates>
+				<template>Ohhh una pena que has muerto :)</template>
+			</templates>
+		</rule>
+		<rule id="352">
+			<patterns>
+				<pattern>2</pattern>
+			</patterns>
+			<templates>
+				<template>¿Ya renuncias? Tal vez es demasiado complicado</template>
+			</templates>
+		</rule>
+		<!-- REGLAS DE AYUDA/INTERFAZ -->
+		<rule id="400">
+			<patterns>
+				<pattern>AYUDA</pattern>
+				<pattern>HELP</pattern>
+			</patterns>
+			<templates>
+				<template>PANEL DE AYUDA
+Tipos de acciones:
+IR norte,sur,este,oeste,arriba,abajo
+COGER "nombre objeto"
+DEJAR "nombre del objeto
+INSPECCIONAR "nombre del objeto", espacio
+APAGAR "nombre del objeto"
+HABLAR "nombre del objeto"
+ABRIR puerta,ascensor
+
+Uso de objetos especiales
+-- Para abrir ciertas puertas o ascensores se requiere ciertas tarjetas
+-- La linterna no tiene pilas infitas, utilizala sabiamente
+-- Tal vez te gustaría coger botellas de oxigeno
+
+Ver inventario
+-- Introduce "inventario" para ver una lista con tus objetos
+-- Introduce "todo inventario" para ver una lista MUY detallada de los objetos
+
+Salir:
+-- si te rindes rápido,introduce "salir"
+
+
+</template>
+			</templates>
+		</rule>
+		<!-- REGLAS PARA TONTA/VACIA -->
+		<rule id="500">
+			<patterns>
+				<pattern>0</pattern>
+			</patterns>
+			<templates>
+				<template>La accion introducida no existe.</template>
+			</templates>
+		</rule>
+		<rule id="600">
+			<patterns>
+				<pattern>0</pattern>
+			</patterns>
+			<templates>
+				<template>No has escrito nada.</template>
+			</templates>
+		</rule>
+		<!-- REGLAS PARA ABRIR PUERTAS -->
+		<rule id="700">
+			<patterns>
+				<pattern>ABRIR</pattern>
+			</patterns>
+			<templates>
+				<template>Felicidades has conseguido abrir la *, que espera en la otra sala</template>
+			</templates>
+		</rule>
+		<rule id="701">
+			<patterns>
+				<pattern>ABRIR</pattern>
+			</patterns>
+			<templates>
+				<template>No es posible abrir la * ahora mismo</template>
+			</templates>
+		</rule>
+		<rule id="800">
+			<patterns>
+				<pattern>0</pattern>
+			</patterns>
+			<templates>
+				<template>
+[Te acercas lentamente a lo que parece un ordenador de control al lado
+de un panel de botones y circuitos polvorientos. La pantalla se ilumina
+cuando estas muy cerca]</template>
+			</templates>
+		</rule>
+		<rule id="801">
+			<patterns>
+				<pattern>1</pattern>
+			</patterns>
+			<templates>
+				<template>
+Hola! Noto bajos niveles de oxigeno en esta sala, espero que no hayas 
+tenido muchos problemas para llegar aqui. Por suerte yo no lo necesito.
+				</template>
+			</templates>
+		</rule>
+		<rule id="802">
+			<patterns>
+				<pattern>2</pattern>
+			</patterns>
+			<templates>
+				<template>
+Me programaron para encargarme de la 
+aria de esta sala, aunque como 
+veras ha habido algunos problemas durante tu ausencia. ¿Puedo ayudarte?.
+				</template>
+			</templates>
+		</rule>
+		<rule id="803">
+			<patterns>
+				<pattern>AYUDA</pattern>
+				<pattern>DONDE ESTOY</pattern>
+				<pattern>ESTOY</pattern>
+				<pattern>LUNA</pattern>
+				<pattern>BASE</pattern>
+			</patterns>
+			<templates>
+				<template>
+Te noto un poco confuso, tal vez hayas sufrido pérdida de memoria. En 
+efecto, estás en una de las bases lunares, en concreto la 019 de 
+mantenimiento de maquinaria. Y por lo que me dicen los sensores de 
+oxigeno, no te queda mucho tiempo. ¿Quieres saber "MAS INFORMACION"? ;)
+				</template>
+			</templates>
+		</rule>
+		<rule id="804">
+			<patterns>
+				<pattern>ADIOS</pattern>
+				<pattern>SALIR</pattern>
+				<pattern>ME VOY</pattern>
+				<pattern>HASTA LUEGO</pattern>
+			</patterns>
+			<templates>
+				<template>¿Ya te vas? Vaya, parecia que no hablabas con alguien desde hacia
+tiempo. Hasta pronto!.</template>
+			<template>Adios!. Ten cuidado por ahi, el estado de la base es... 
+cuestionable.</template>
+			</templates>
+		</rule>
+		<rule id="805">
+			<patterns>
+				<pattern>*</pattern>
+			</patterns>
+			<templates>
+				<template>Eh?.</template>
+				<template>Lo siento pero me temo que no entiendo que me estas diciendo.</template>
+				<template>Creo que me intentas decir algo pero no aciertas las palabras.
+Si te sirve de algo, fui programada para entender la palabra "AYUDA"</template>
+				<template>Se que me quieres decir algo pero no te entiendo :). ¿Probaste
+a escribir "AYUDA""?</template>
+			</templates>
+		</rule>
+		<rule id="806">
+			<patterns>
+				<pattern>LOS ORDENADORES</pattern>
+				<pattern>MISION</pattern>
+				<pattern>IA</pattern>
+				<pattern>LA LUNA</pattern>
+				<pattern>LUNA</pattern>
+				<pattern>MAQUINARIA</pattern>
+			</patterns>
+			<templates>
+				<template>Se una o dos cosas sobre *</template>
+				<template>La verdad es que no tengo muchas ganas de hablar sobre *. Hablame de ti</template>
+			</templates>
+		</rule>
+		<rule id="807">
+			<patterns>
+				<pattern>NO</pattern>
+			</patterns>
+			<templates>
+				<template>Cuando quieres decir no, quieres decir si?.</template>
+				<template>Por que no?</template>
+				<template>Te noto un poco negativo.</template>
+			</templates>
+		</rule>
+		<rule id="808">
+			<patterns>
+				<pattern>SI</pattern>
+			</patterns>
+			<templates>
+				<template>Ajam.</template>
+				<template>Ya veo.</template>
+				<template>Vale, continua.</template>
+			</templates>
+		</rule>
+		<rule id="809">
+			<patterns>
+				<pattern>COMO ESTAS</pattern>
+				<pattern>QUE TAL</pattern>
+				<pattern>TU</pattern>
+				<pattern>ME GUSTAS</pattern>
+			</patterns>
+			<templates>
+				<template>Me alegro que nos estemos conociendo mejor pero creo que
+deberias intimar con alguien que no sea una IA de una sala de maquinas.</template>
+			<template>Que cosas mas bonitas me dices :3.</template>
+			</templates>
+		</rule>
+		<rule id="810">
+			<patterns>
+				<pattern>SI</pattern>
+			</patterns>
+			<templates>
+				<template>Ajam.</template>
+				<template>Ya veo.</template>
+				<template>Vale, continua.</template>
+			</templates>
+		</rule>
+		<rule id="811">
+			<patterns>
+				<pattern>MAS INFORMACION</pattern>
+			</patterns>
+			<templates>
+				<template>
+Como te he dicho, no tienes mucho tiempo. Durante tu tiempo de inconsciencia 
+se activaron muchos protocolos de emergencia a la vez que han desestabilizado 
+la base. Segun la informacion que he podido recuperar, siquieres salir de 
+aqui con vida tendras que escapar de la base.
+				</template>
+			</templates>
+		</rule>
+		<rule id="812">
+			<patterns>
+				<pattern>COMO</pattern>
+				<pattern>ESCAPAR</pattern>
+				<pattern>HUIR</pattern>
+			</patterns>
+			<templates>
+				<template>
+¿Como hacerlo? Bueno, no tienes muchas opciones, aunque si alguna. En el
+exterior de la base hay una nave de carga lista para salir en cualquier 
+momento. Pero dicha nave necesita un plan de vuelo que esta almacenado en
+el centro de mando. El centro de mando necesita energia para funcionar, 
+aunque noto una fuente de corriente en el nivel inferior. ¿Que has encendido
+ahi abajo?
+				</template>
+			</templates>
+		</rule>
+		<rule id="813">
+			<patterns>
+				<pattern>GENERADOR</pattern>
+				<pattern>EL GENERADOR</pattern>
+			</patterns>
+			<templates>
+				<template>
+¡Perfecto! Eso debeŕia bastar, siempre y cuando no hayas excedido sus capacidades
+limitadas por estar en modo de emergencia. Si utilizaste mucha energia moviendote
+por la base, no podras poner en marcha el centro de mando. Si consigues encenderlo,
+introduce la clave 1337 para acceder al plan de vuelo. El como salir al exterior de
+la base te lo dejo a ti :d. Buena suerte!
+				</template>
+			</templates>
+		</rule>
+		<rule id="814">
+			<patterns>
+				<pattern>0</pattern>
+			</patterns>
+			<templates>
+				<template>Victory :D</template>
+			</templates>
+		</rule>
+		<!-- REGLAS PARA USAR EL GENERADOR -->
+		<rule id="900">
+			<patterns>
+				<pattern>ACTIVAR</pattern>
+			</patterns>
+			<templates>
+				<template>Felicidades has conseguido activar el * ahora podrás encender luz en los espacios sin necesiad de linterna</template>
+			</templates>
+		</rule>
+		<rule id="901">
+			<patterns>
+				<pattern>ACTIVAR</pattern>
+			</patterns>
+			<templates>
+				<template>No es posible activar el * ahora mismo</template>
+			</templates>
+		</rule>
+		<!-- REGLAS PARA USAR LA CONTRASENYA -->
+		<rule id="1000">
+			<patterns>
+				<pattern>USAR</pattern>
+			</patterns>
+			<templates>
+				<template>Felicidades has conseguido usar la * ahora podrás recoger el plan de vuelo y escapar de la base wiii</template>
+			</templates>
+		</rule>
+		<rule id="1001">
+			<patterns>
+				<pattern>USAR</pattern>
+			</patterns>
+			<templates>
+				<template>No es posible usar esa * ahora mismo. Es probable que este introduciendo una incorrecta. </template>
+			</templates>
+		</rule>
+		<!-- REGLAS PARA INICIAR EL HABLA CON EL NPC-->
+		<rule id="1100">
+			<patterns>
+				<pattern>HABLAR</pattern>
+			</patterns>
+			<templates>
+				<template>Comienzas a interactuar con el ordenador de la sala...</template>
+			</templates>
+		</rule>
+		<rule id="1101">
+			<patterns>
+				<pattern>HABLAR</pattern>
+			</patterns>
+			<templates>
+				<template>Parece que no estas en el lugar apropiado para *</template>
+			</templates>
+		</rule>
+	</rules>
+	<topics>
+		<!-- MOVIMIENTO -->
+		<topic name="T_MOV_N">
+			<topicid id="1000"/>
+			<rulest>
+				<rulet id="100"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_N_ERROR">
+			<topicid id="1010"/>
+			<rulest>
+				<rulet id="101"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_S">
+			<topicid id="1020"/>
+			<rulest>
+				<rulet id="102"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_S_ERROR">
+			<topicid id="1030"/>
+			<rulest>
+				<rulet id="103"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_E">
+			<topicid id="1040"/>
+			<rulest>
+				<rulet id="104"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_E_ERROR">
+			<topicid id="1050"/>
+			<rulest>
+				<rulet id="105"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_W">
+			<topicid id="1060"/>
+			<rulest>
+				<rulet id="106"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_W_ERROR">
+			<topicid id="1070"/>
+			<rulest>
+				<rulet id="107"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_UP">
+			<topicid id="1080"/>
+			<rulest>
+				<rulet id="108"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_UP_ERROR">
+			<topicid id="1090"/>
+			<rulest>
+				<rulet id="109"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_DOWN">
+			<topicid id="1100"/>
+			<rulest>
+				<rulet id="110"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_DOWN_ERROR">
+			<topicid id="1110"/>
+			<rulest>
+				<rulet id="111"/>
+			</rulest>
+		</topic>
+		<topic name="T_MOV_ERROR_GENERIC">
+			<topicid id="1120"/>
+			<rulest>
+				<rulet id="112"/>
+			</rulest>
+		</topic>
+		<!-- OBJETOS -->
+		<topic name="T_PICK">
+			<topicid id="2000"/>
+			<rulest>
+				<rulet id="200"/>
+			</rulest>
+		</topic>
+		<topic name="T_PICK_ERROR_GENERIC">
+			<topicid id="2010"/>
+			<rulest>
+				<rulet id="201"/>
+			</rulest>
+		</topic>
+		<topic name="T_PICK_ERROR_TOOBIG">
+			<topicid id="2020"/>
+			<rulest>
+				<rulet id="202"/>
+			</rulest>
+		</topic>
+		<topic name="T_DROP">
+			<topicid id="2030"/>
+			<rulest>
+				<rulet id="203"/>
+			</rulest>
+		</topic>
+		<topic name="T_DROP_ERROR_GENERIC">
+			<topicid id="2040"/>
+			<rulest>
+				<rulet id="204"/>
+			</rulest>
+		</topic>
+		<topic name="T_LIGHTUP">
+			<topicid id="2050"/>
+			<rulest>
+				<rulet id="205"/>
+			</rulest>
+		</topic>
+		<topic name="T_LIGHTUP_ERROR_GENERIC">
+			<topicid id="2060"/>
+			<rulest>
+				<rulet id="206"/>
+			</rulest>
+		</topic>
+		<topic name="T_LIGHTOFF">
+			<topicid id="2070"/>
+			<rulest>
+				<rulet id="207"/>
+			</rulest>
+		</topic>
+		<topic name="T_LIGHTOFF_ERROR_GENERIC">
+			<topicid id="2080"/>
+			<rulest>
+				<rulet id="208"/>
+			</rulest>
+		</topic>
+		<topic name="T_INSPECT">
+			<topicid id="2090"/>
+			<rulest>
+				<rulet id="209"/>
+			</rulest>
+		</topic>
+		<topic name="T_INSPECT_ERROR_GENERIC">
+			<topicid id="2100"/>
+			<rulest>
+				<rulet id="210"/>
+			</rulest>
+		</topic>
+		<!-- FUNCIONAMIENTO DEL JUEGO -->
+		<!-- entra por cadena de entrada 1, 2 o 3 -->
+		<topic name="T_INIT_GAME">
+			<topicid id="3000"/>
+			<rulest>
+				<rulet id="300"/>
+				<rulet id="301"/>
+				<rulet id="302"/>	
+			</rulest>
+		</topic>
+		<topic name="T_END_GAME">
+			<topicid id="3500"/>
+			<rulest>
+				<rulet id="350"/>
+				<rulet id="351"/>
+				<rulet id="352"/>	
+			</rulest>
+		</topic>
+		<!-- AYUDA/OTROS -->
+		<topic name="T_HELP_CONTROLS">
+			<topicid id="4000"/>
+			<rulest>
+				<rulet id="400"/>
+			</rulest>
+		</topic>
+		<topic name="T_TONTA">
+			<topicid id="5000"/>
+			<rulest>
+				<rulet id="500"/>
+			</rulest>
+		</topic>
+		<topic name="T_VACIA">
+			<topicid id="6000"/>
+			<rulest>
+				<rulet id="600"/>
+			</rulest>
+		</topic>
+		<topic name="T_ABRIR">
+			<topicid id="7000"/>
+			<rulest>
+				<rulet id="700"/>
+			</rulest>
+		</topic>
+		<topic name="T_ABRIR_ERROR">
+			<topicid id="7010"/>
+			<rulest>
+				<rulet id="701"/>
+			</rulest>
+		</topic>
+		<!-- PROPIOS DEL ORDENADOR DE LA SALA DE MAQUINAS -->
+		<topic name="T_PC_INICIO">
+			<topicid id="8000"/>
+			<rulest>
+				<rulet id="800"/>
+				<rulet id="801"/>
+				<rulet id="802"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_AYUDA">
+			<topicid id="8030"/>
+			<rulest>
+				<rulet id="803"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_DESPEDIDA">
+			<topicid id="8040"/>
+			<rulest>
+				<rulet id="804"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_TONTA">
+			<topicid id="8050"/>
+			<rulest>
+				<rulet id="805"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_NORMAL">
+			<topicid id="8060"/>
+			<rulest>
+				<tulet id="803"/>
+				<rulet id="806"/>
+				<rulet id="807"/>
+				<rulet id="808"/>
+				<rulet id="809"/>
+				<rulet id="810"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_FLAG1">
+			<topicid id="8110"/>
+			<rulest>
+				<rulet id="811"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_FLAG2">
+			<topicid id="8120"/>
+			<rulest>
+				<rulet id="812"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_FLAG3">
+			<topicid id="8130"/>
+			<rulest>
+				<rulet id="813"/>
+			</rulest>
+		</topic>
+		<topic name="T_PC_VICTORY">
+			<topicid id="8140"/>
+			<rulest>
+				<rulet id="814"/>
+			</rulest>
+		</topic>
+		<topic name="T_ACTIVAR">
+			<topicid id="9000"/>
+			<rulest>
+				<rulet id="900"/>
+			</rulest>
+		</topic>
+		<topic name="T_ACTIVAR_ERROR">
+			<topicid id="9010"/>
+			<rulest>
+				<rulet id="901"/>
+			</rulest>
+		</topic>
+		<topic name="T_USAR">
+			<topicid id="10000"/>
+			<rulest>
+				<rulet id="1000"/>
+			</rulest>
+		</topic>
+		<topic name="T_USAR_ERROR">
+			<topicid id="10010"/>
+			<rulest>
+				<rulet id="1001"/>
+			</rulest>
+		</topic>
+		<topic name="T_HABLAR">
+			<topicid id="11000"/>
+			<rulest>
+				<rulet id="1100"/>
+			</rulest>
+		</topic>
+		<topic name="T_HABLAR_ERROR">
+			<topicid id="11010"/>
+			<rulest>
+				<rulet id="1101"/>
+			</rulest>
+		</topic>
+	</topics>	
+</dialogue>
