@@ -1,0 +1,463 @@
+\hypertarget{_reglas__dialogo_8h}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Dialogue/\+Reglas\+\_\+dialogo.h File Reference}
+\label{_reglas__dialogo_8h}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue/\+Reglas\+\_\+dialogo.\+h@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue/\+Reglas\+\_\+dialogo.\+h}}
+}
+
+
+Reglas de dialogo del programa. Este modulo incluye aquellas funciones relativas a la gestión de las reglas que rigen el diálogo del juego.  
+
+
+{\ttfamily \#include \char`\"{}../\+Set/\+Set.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_reglas__dialogo_8h_a33bfc1f995233887a0414369c36936b8}{N\+O\+T\+\_\+\+F\+O\+U\+N\+D}~-\/1
+\item 
+\#define \hyperlink{_reglas__dialogo_8h_afcd3f2212725d2cc0d74135e7d25eb34}{M\+A\+X\+\_\+\+R\+U\+L\+E\+S}~255
+\item 
+\#define \hyperlink{_reglas__dialogo_8h_a91bc2cac3c4615c062e7524ba2ea2278}{M\+A\+X\+\_\+\+T\+O\+P\+I\+C\+S}~100
+\item 
+\#define \hyperlink{_reglas__dialogo_8h_a24c48ef77929deff9e40e141a891dbb8}{M\+A\+X\+\_\+\+P\+A\+T\+T\+E\+R\+N\+S}~100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___topic}{\+\_\+\+Topic} \hyperlink{_reglas__dialogo_8h_aa36dab328cdd19261f7bdd87154fab24}{Topic}
+\begin{DoxyCompactList}\small\item\em T\+A\+D topic. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct___dialogue_rules}{\+\_\+\+Dialogue\+Rules} \hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Dialogue\+Rules. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct___rule}{\+\_\+\+Rule} \hyperlink{_reglas__dialogo_8h_a7feb7efbc58c00994d4c633ef22eae8a}{Rule}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Rule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Dialogue\+Rules $\ast$create\+\_\+dialog();}\par
+{\em Crea un dialogo
+
+\begin{DoxyReturn}{Returns}
+Puntero a Dialogue\+Rules si todo ha ido bien, o N\+U\+L\+L en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$ \hyperlink{_reglas__dialogo_8h_a15f096f5343e6b1b5b6c3e75e9812bd2}{create\+\_\+dialog} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void destroy\+\_\+dialog(Dialogue\+Rules $\ast$dr);}\par
+{\em Destruye un dialogo
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_reglas__dialogo_8h_ac4576b529ef30484fec2d85b3d54b9d7}{destroy\+\_\+dialog} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf int dialog\+\_\+add\+\_\+topic(Dialogue\+Rules $\ast$dr, char $\ast$topic\+\_\+name, Id topic\+\_\+id);}\par
+{\em Add a new topic defined by a topic name
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em topic\+\_\+name} & \\
+\hline
+{\em topic\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the topic I\+D if it is properly added. Otherwise a negative identifier is returned 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_reglas__dialogo_8h_a10a3cc5b442f1f2413a7c688a6894486}{dialog\+\_\+add\+\_\+topic} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, char $\ast$topic\+\_\+name, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} topic\+\_\+id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf int dialog\+\_\+add\+\_\+rule(Dialogue\+Rules $\ast$dr, Id rule);}\par
+{\em Add a new rule to a topic
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em rule} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the rule I\+D if it is properly added. Otherwise a negative identifier is returned 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_reglas__dialogo_8h_a0fa7d6d4da528852b080dc09cee7ddeb}{dialog\+\_\+add\+\_\+rule} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S dialog\+\_\+add\+\_\+pattern(Dialogue\+Rules $\ast$dr, Id rule, char $\ast$pattern);}\par
+{\em Add an input pattern to a rule, increasing the num\+\_\+patterns
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em rule} & \\
+\hline
+{\em pattern} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K/\+E\+R\+R\+O\+R 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_reglas__dialogo_8h_a7a1a11c7ecb56d94f077a8931a096650}{dialog\+\_\+add\+\_\+pattern} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule, char $\ast$pattern)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S dialog\+\_\+add\+\_\+output\+\_\+templ(Dialogue\+Rules $\ast$dr, Id rule, char $\ast$template);}\par
+{\em Add a template response and is associated with a rule, increasing by one the num\+\_\+templates
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em rule} & \\
+\hline
+{\em template} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K/\+E\+R\+R\+O\+R 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_reglas__dialogo_8h_ae87dc07e7a5361b33c033d7cb51fdd04}{dialog\+\_\+add\+\_\+output\+\_\+templ} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule, char $\ast$template)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic(Dialogue\+Rules $\ast$dr, Id topic\+\_\+id, Id rule\+\_\+id);}\par
+{\em Añade la id de una regla al set de reglas de un topic
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em topic\+\_\+id} & \\
+\hline
+{\em rule\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K/\+E\+R\+R\+O\+R 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_reglas__dialogo_8h_a67f2bb2004a8ca2cd42bf38d27f998fe}{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} topic\+\_\+id, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ select\+\_\+output\+\_\+template(Dialogue\+Rules $\ast$dr, Id rule\+\_\+id);}\par
+{\em Selecciona una plantilla de salida
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em topic\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pùntero a char con la plantilla, o N\+U\+L\+L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_reglas__dialogo_8h_a98f16bd4253047957eabf1ac4558b219}{select\+\_\+output\+\_\+template} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ select\+\_\+random\+\_\+output\+\_\+template (Dialogue\+Rules $\ast$dr, Id rule\+\_\+id);}\par
+{\em Selecciona una plantilla de salida aleatoria
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em topic\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pùntero a char con la plantilla, o N\+U\+L\+L en caso de error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_reglas__dialogo_8h_ada18e5c9c964b3945e222f25a49b3065}{select\+\_\+random\+\_\+output\+\_\+template} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id search\+\_\+rule\+\_\+and\+\_\+pattern (Dialogue\+Rules $\ast$dr, int $\ast$ ind\+\_\+patr, Id topic, const char $\ast$ txt\+\_\+ent);}\par
+{\em Busca una regla
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em ind\+\_\+patr} & \\
+\hline
+{\em topic} & \\
+\hline
+{\em txt\+\_\+ent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+D de la regla o N\+O\+\_\+\+I\+D si no la encuentra 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_reglas__dialogo_8h_a3a6881c9058de241983490d4a51f39bd}{search\+\_\+rule\+\_\+and\+\_\+pattern} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, int $\ast$ind\+\_\+patr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} topic, const char $\ast$txt\+\_\+ent)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf int search\+\_\+pattern\+\_\+coincidence(Dialogue\+Rules $\ast$dr, int rule\+\_\+index, const char $\ast$txt\+\_\+ent);}\par
+{\em busca coincidencias entre los aptrones de una regla a partir del indice $\ast$del array que ocupa dicha regla en \char`\"{}\+Dialogue\+Rules $\ast$dr\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em rule\+\_\+index} & \\
+\hline
+{\em txt\+\_\+ent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int de la coincidencia o N\+O\+T\+\_\+\+F\+O\+U\+N\+D si no lo encuentra 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_reglas__dialogo_8h_a215eda5d03c8216e3b3a7f4d4914ff85}{search\+\_\+pattern\+\_\+coincidence} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, int rule\+\_\+index, const char $\ast$txt\+\_\+ent)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id get\+\_\+id\+\_\+from\+\_\+topic(Dialogue\+Rules $\ast$dr, const char $\ast$txt\+\_\+ent);}\par
+{\em Devuelve la id de un topic si coincide con la cadena de entrada
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em txt\+\_\+ent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+D del topic o N\+O\+\_\+\+I\+D si no la encuentra 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_reglas__dialogo_8h_a3505ba5ccab8d14843605c2a52bc9a17}{get\+\_\+id\+\_\+from\+\_\+topic} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, const char $\ast$txt\+\_\+ent)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf int size\+\_\+rule\+\_\+pattern (Dialogue\+Rules $\ast$dr, int rule\+\_\+index,int ind\+\_\+patr);}\par
+{\em Devuelve el tamaño del patron de entrada para ese indice de regla
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em rule\+\_\+index} & \\
+\hline
+{\em ind\+\_\+patr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tamaño del patron o N\+O\+T\+\_\+\+F\+O\+U\+N\+D si no lo encuentra 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_reglas__dialogo_8h_a825781e48344152a3563cca50f2321c5}{size\+\_\+rule\+\_\+pattern} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, int rule\+\_\+index, int ind\+\_\+patr)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$get\+\_\+pattern\+\_\+from\+\_\+index(Dialogue\+Rules $\ast$dr, Id rule\+\_\+id, int $\ast$index);}\par
+{\em Devuelve un patron desde un indice
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+{\em rule\+\_\+id} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al patron o N\+U\+L\+L si no lo encuentra 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_reglas__dialogo_8h_aed1f73036b139daa89eed706403d374b}{get\+\_\+pattern\+\_\+from\+\_\+index} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id, int $\ast$index)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Reglas de dialogo del programa. Este modulo incluye aquellas funciones relativas a la gestión de las reglas que rigen el diálogo del juego. 
+
+\begin{DoxyAuthor}{Author}
+Alfonso Sebares 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_reglas__dialogo_8h_a24c48ef77929deff9e40e141a891dbb8}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!M\+A\+X\+\_\+\+P\+A\+T\+T\+E\+R\+N\+S@{M\+A\+X\+\_\+\+P\+A\+T\+T\+E\+R\+N\+S}}
+\index{M\+A\+X\+\_\+\+P\+A\+T\+T\+E\+R\+N\+S@{M\+A\+X\+\_\+\+P\+A\+T\+T\+E\+R\+N\+S}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+P\+A\+T\+T\+E\+R\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+P\+A\+T\+T\+E\+R\+N\+S~100}}\label{_reglas__dialogo_8h_a24c48ef77929deff9e40e141a891dbb8}
+maximo de patrones \hypertarget{_reglas__dialogo_8h_afcd3f2212725d2cc0d74135e7d25eb34}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!M\+A\+X\+\_\+\+R\+U\+L\+E\+S@{M\+A\+X\+\_\+\+R\+U\+L\+E\+S}}
+\index{M\+A\+X\+\_\+\+R\+U\+L\+E\+S@{M\+A\+X\+\_\+\+R\+U\+L\+E\+S}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+R\+U\+L\+E\+S~255}}\label{_reglas__dialogo_8h_afcd3f2212725d2cc0d74135e7d25eb34}
+maximo de reglas \hypertarget{_reglas__dialogo_8h_a91bc2cac3c4615c062e7524ba2ea2278}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!M\+A\+X\+\_\+\+T\+O\+P\+I\+C\+S@{M\+A\+X\+\_\+\+T\+O\+P\+I\+C\+S}}
+\index{M\+A\+X\+\_\+\+T\+O\+P\+I\+C\+S@{M\+A\+X\+\_\+\+T\+O\+P\+I\+C\+S}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+T\+O\+P\+I\+C\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+T\+O\+P\+I\+C\+S~100}}\label{_reglas__dialogo_8h_a91bc2cac3c4615c062e7524ba2ea2278}
+maximo de topics \hypertarget{_reglas__dialogo_8h_a33bfc1f995233887a0414369c36936b8}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!N\+O\+T\+\_\+\+F\+O\+U\+N\+D@{N\+O\+T\+\_\+\+F\+O\+U\+N\+D}}
+\index{N\+O\+T\+\_\+\+F\+O\+U\+N\+D@{N\+O\+T\+\_\+\+F\+O\+U\+N\+D}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{N\+O\+T\+\_\+\+F\+O\+U\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+T\+\_\+\+F\+O\+U\+N\+D~-\/1}}\label{_reglas__dialogo_8h_a33bfc1f995233887a0414369c36936b8}
+No econtrado 
+
+\subsection{Typedef Documentation}
+\hypertarget{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!Dialogue\+Rules@{Dialogue\+Rules}}
+\index{Dialogue\+Rules@{Dialogue\+Rules}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{Dialogue\+Rules}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Dialogue\+Rules} {\bf Dialogue\+Rules}}}\label{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}
+
+
+T\+A\+D Dialogue\+Rules. 
+
+\hypertarget{_reglas__dialogo_8h_a7feb7efbc58c00994d4c633ef22eae8a}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!Rule@{Rule}}
+\index{Rule@{Rule}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{Rule}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Rule} {\bf Rule}}}\label{_reglas__dialogo_8h_a7feb7efbc58c00994d4c633ef22eae8a}
+
+
+T\+A\+D Rule. 
+
+\hypertarget{_reglas__dialogo_8h_aa36dab328cdd19261f7bdd87154fab24}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!Topic@{Topic}}
+\index{Topic@{Topic}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{Topic}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Topic} {\bf Topic}}}\label{_reglas__dialogo_8h_aa36dab328cdd19261f7bdd87154fab24}
+
+
+T\+A\+D topic. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_reglas__dialogo_8h_a15f096f5343e6b1b5b6c3e75e9812bd2}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!create\+\_\+dialog@{create\+\_\+dialog}}
+\index{create\+\_\+dialog@{create\+\_\+dialog}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{create\+\_\+dialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dialogue\+Rules}$\ast$ create\+\_\+dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a15f096f5343e6b1b5b6c3e75e9812bd2}
+\hypertarget{_reglas__dialogo_8h_ac4576b529ef30484fec2d85b3d54b9d7}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!destroy\+\_\+dialog@{destroy\+\_\+dialog}}
+\index{destroy\+\_\+dialog@{destroy\+\_\+dialog}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{destroy\+\_\+dialog}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+dialog (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_ac4576b529ef30484fec2d85b3d54b9d7}
+\hypertarget{_reglas__dialogo_8h_ae87dc07e7a5361b33c033d7cb51fdd04}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!dialog\+\_\+add\+\_\+output\+\_\+templ@{dialog\+\_\+add\+\_\+output\+\_\+templ}}
+\index{dialog\+\_\+add\+\_\+output\+\_\+templ@{dialog\+\_\+add\+\_\+output\+\_\+templ}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{dialog\+\_\+add\+\_\+output\+\_\+templ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialog\+\_\+add\+\_\+output\+\_\+templ (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule, }
+\item[{char $\ast$}]{template}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_ae87dc07e7a5361b33c033d7cb51fdd04}
+\hypertarget{_reglas__dialogo_8h_a7a1a11c7ecb56d94f077a8931a096650}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!dialog\+\_\+add\+\_\+pattern@{dialog\+\_\+add\+\_\+pattern}}
+\index{dialog\+\_\+add\+\_\+pattern@{dialog\+\_\+add\+\_\+pattern}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{dialog\+\_\+add\+\_\+pattern}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialog\+\_\+add\+\_\+pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule, }
+\item[{char $\ast$}]{pattern}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a7a1a11c7ecb56d94f077a8931a096650}
+\hypertarget{_reglas__dialogo_8h_a0fa7d6d4da528852b080dc09cee7ddeb}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!dialog\+\_\+add\+\_\+rule@{dialog\+\_\+add\+\_\+rule}}
+\index{dialog\+\_\+add\+\_\+rule@{dialog\+\_\+add\+\_\+rule}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{dialog\+\_\+add\+\_\+rule}]{\setlength{\rightskip}{0pt plus 5cm}int dialog\+\_\+add\+\_\+rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a0fa7d6d4da528852b080dc09cee7ddeb}
+\hypertarget{_reglas__dialogo_8h_a67f2bb2004a8ca2cd42bf38d27f998fe}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic@{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic}}
+\index{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic@{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{topic\+\_\+id, }
+\item[{{\bf Id}}]{rule\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a67f2bb2004a8ca2cd42bf38d27f998fe}
+\hypertarget{_reglas__dialogo_8h_a10a3cc5b442f1f2413a7c688a6894486}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!dialog\+\_\+add\+\_\+topic@{dialog\+\_\+add\+\_\+topic}}
+\index{dialog\+\_\+add\+\_\+topic@{dialog\+\_\+add\+\_\+topic}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{dialog\+\_\+add\+\_\+topic}]{\setlength{\rightskip}{0pt plus 5cm}int dialog\+\_\+add\+\_\+topic (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{char $\ast$}]{topic\+\_\+name, }
+\item[{{\bf Id}}]{topic\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a10a3cc5b442f1f2413a7c688a6894486}
+\hypertarget{_reglas__dialogo_8h_a3505ba5ccab8d14843605c2a52bc9a17}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!get\+\_\+id\+\_\+from\+\_\+topic@{get\+\_\+id\+\_\+from\+\_\+topic}}
+\index{get\+\_\+id\+\_\+from\+\_\+topic@{get\+\_\+id\+\_\+from\+\_\+topic}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{get\+\_\+id\+\_\+from\+\_\+topic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+id\+\_\+from\+\_\+topic (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{const char $\ast$}]{txt\+\_\+ent}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a3505ba5ccab8d14843605c2a52bc9a17}
+\hypertarget{_reglas__dialogo_8h_aed1f73036b139daa89eed706403d374b}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!get\+\_\+pattern\+\_\+from\+\_\+index@{get\+\_\+pattern\+\_\+from\+\_\+index}}
+\index{get\+\_\+pattern\+\_\+from\+\_\+index@{get\+\_\+pattern\+\_\+from\+\_\+index}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{get\+\_\+pattern\+\_\+from\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+pattern\+\_\+from\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule\+\_\+id, }
+\item[{int $\ast$}]{index}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_aed1f73036b139daa89eed706403d374b}
+\hypertarget{_reglas__dialogo_8h_a215eda5d03c8216e3b3a7f4d4914ff85}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!search\+\_\+pattern\+\_\+coincidence@{search\+\_\+pattern\+\_\+coincidence}}
+\index{search\+\_\+pattern\+\_\+coincidence@{search\+\_\+pattern\+\_\+coincidence}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{search\+\_\+pattern\+\_\+coincidence}]{\setlength{\rightskip}{0pt plus 5cm}int search\+\_\+pattern\+\_\+coincidence (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{int}]{rule\+\_\+index, }
+\item[{const char $\ast$}]{txt\+\_\+ent}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a215eda5d03c8216e3b3a7f4d4914ff85}
+\hypertarget{_reglas__dialogo_8h_a3a6881c9058de241983490d4a51f39bd}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!search\+\_\+rule\+\_\+and\+\_\+pattern@{search\+\_\+rule\+\_\+and\+\_\+pattern}}
+\index{search\+\_\+rule\+\_\+and\+\_\+pattern@{search\+\_\+rule\+\_\+and\+\_\+pattern}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{search\+\_\+rule\+\_\+and\+\_\+pattern}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} search\+\_\+rule\+\_\+and\+\_\+pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{int $\ast$}]{ind\+\_\+patr, }
+\item[{{\bf Id}}]{topic, }
+\item[{const char $\ast$}]{txt\+\_\+ent}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a3a6881c9058de241983490d4a51f39bd}
+\hypertarget{_reglas__dialogo_8h_a98f16bd4253047957eabf1ac4558b219}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!select\+\_\+output\+\_\+template@{select\+\_\+output\+\_\+template}}
+\index{select\+\_\+output\+\_\+template@{select\+\_\+output\+\_\+template}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{select\+\_\+output\+\_\+template}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ select\+\_\+output\+\_\+template (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a98f16bd4253047957eabf1ac4558b219}
+\hypertarget{_reglas__dialogo_8h_ada18e5c9c964b3945e222f25a49b3065}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!select\+\_\+random\+\_\+output\+\_\+template@{select\+\_\+random\+\_\+output\+\_\+template}}
+\index{select\+\_\+random\+\_\+output\+\_\+template@{select\+\_\+random\+\_\+output\+\_\+template}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{select\+\_\+random\+\_\+output\+\_\+template}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ select\+\_\+random\+\_\+output\+\_\+template (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_ada18e5c9c964b3945e222f25a49b3065}
+\hypertarget{_reglas__dialogo_8h_a825781e48344152a3563cca50f2321c5}{\index{Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}!size\+\_\+rule\+\_\+pattern@{size\+\_\+rule\+\_\+pattern}}
+\index{size\+\_\+rule\+\_\+pattern@{size\+\_\+rule\+\_\+pattern}!Reglas\+\_\+dialogo.\+h@{Reglas\+\_\+dialogo.\+h}}
+\subsubsection[{size\+\_\+rule\+\_\+pattern}]{\setlength{\rightskip}{0pt plus 5cm}int size\+\_\+rule\+\_\+pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{int}]{rule\+\_\+index, }
+\item[{int}]{ind\+\_\+patr}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8h_a825781e48344152a3563cca50f2321c5}

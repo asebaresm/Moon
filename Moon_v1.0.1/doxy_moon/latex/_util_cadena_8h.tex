@@ -1,0 +1,205 @@
+\hypertarget{_util_cadena_8h}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Dialogue/\+Util\+Cadena.h File Reference}
+\label{_util_cadena_8h}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue/\+Util\+Cadena.\+h@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue/\+Util\+Cadena.\+h}}
+}
+
+
+Este módulo contiene los prototipos de las funciones de manejo de cadenas de caracteres.  
+
+
+{\ttfamily \#include \char`\"{}../\+Types.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_util_cadena_8h_ae0b4816fb45161ef9da5e6d6134ee28a}{T\+A\+M}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf char $\ast$ elimina\+\_\+cars(char $\ast$ dst, const char $\ast$ ori, const char $\ast$ seps, size\+\_\+t n).}\par
+{\em funcion que se encaraga de eliminar ciertos caracteres que en este caso serán\+: \char`\"{}/,?\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & un puntero a la cadena dst que contiene el resultado final tras la modificación. \\
+\hline
+{\em ori} & un puntero a la cadena ori que contiene la cadena de origen antes de cualquier modificación. \\
+\hline
+{\em n} & es el tamaño máximo que debe tener la cadena de caracteres.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dst con todos los carcteres pasados a mayúsculas. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_util_cadena_8h_ae81da3391ae70f6e9d9c49d12b99d82d}{elimina\+\_\+cars} (char $\ast$dst, const char $\ast$ori, const char $\ast$seps, size\+\_\+t n)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ a\+\_\+mayusculas(char $\ast$ dst, const char $\ast$ ori, size\+\_\+t n);}\par
+{\em transforma los caracteres que están en minúsculas a caracteres que están en mayúsculas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & cadena de cracteres que contendrá el resultado de cambiar la cadena origen a mayúsculas. \\
+\hline
+{\em ori} & un puntero a la cadena ori que contiene la cadena de origen antes de cualquier modificación. \\
+\hline
+{\em n} & es el tamaño máximo que debe tener la cadena de caracteres.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dst que contiene la cadena en ori pero con todos los caracteres en mayúsculas. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_util_cadena_8h_a02a78269aadc81d4b20eb2c24d13caaa}{a\+\_\+mayusculas} (char $\ast$dst, const char $\ast$ori, size\+\_\+t n)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ reemplaza\+\_\+asterisco(char $\ast$ dst, const char $\ast$ ori, const char $\ast$ ins, size\+\_\+t n);}\par
+{\em Sustituye un asterisco en la cadena origen por una nueva cadena que recibe como argumento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & un puntero a la cadena dst que contiene el resultado final tras la modificación. \\
+\hline
+{\em ori} & un puntero a la cadena ori que contiene la cadena de origen antes de cualquier modificación. \\
+\hline
+{\em ins} & un puntero a la nueva cadena que sustituira al asterisco en la cadena origen. \\
+\hline
+{\em n} & es el tamaño máximo que debe tener la cadena de caracteres.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dst cadena modificada compuesta por otras dos, tras sustituir el asterisco. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_util_cadena_8h_aa29bc74654bd9f83e464068b873fe34e}{reemplaza\+\_\+asterisco} (char $\ast$dst, const char $\ast$ori, const char $\ast$ins, size\+\_\+t n)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ limpia\+\_\+espacios(char $\ast$ dst, const char $\ast$ ori, size\+\_\+t n);}\par
+{\em limpia los espacios en blanco al principo y al final de la cadena pasada por el usurio.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & un puntero a la cadena dst que contiene el resultado final tras la modificación. \\
+\hline
+{\em ori} & un puntero a la cadena ori que contiene la cadena de origen antes de cualquier modificación. \\
+\hline
+{\em n} & es el tamaño máximo que debe tener la cadena de caracteres.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dst cadena sin espacios al principo ni al final, es decir la cadena resultante. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_util_cadena_8h_ac6c6f667f059f4d4e2bd889f0cc6b1c1}{limpia\+\_\+espacios} (char $\ast$dst, const char $\ast$ori, size\+\_\+t n)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$elimina\+\_\+verbo\+\_\+accion(const char $\ast$txt\+\_\+ent);}\par
+{\em Crea una segunda cadena eliminandole el primer verbo
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt\+\_\+ent} & testo de entrada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char cadena sin primer verbo 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_util_cadena_8h_a1e684a8a6869b217fb1dbccac7ba0772}{elimina\+\_\+verbo\+\_\+accion} (char $\ast$txt\+\_\+return, const char $\ast$txt\+\_\+ent)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf int clean(char $\ast$dst);}\par
+{\em Funcion que limpia espacios intermedios en cadenas
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & texto de entrada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char cadena sin espacios en medio 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_util_cadena_8h_a3959f62dd9cb77c37e04cdfc977dc26b}{clean} (char $\ast$dst)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Este módulo contiene los prototipos de las funciones de manejo de cadenas de caracteres. 
+
+\begin{DoxyAuthor}{Author}
+Pablo Yus.
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/04-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_util_cadena_8h_ae0b4816fb45161ef9da5e6d6134ee28a}{\index{Util\+Cadena.\+h@{Util\+Cadena.\+h}!T\+A\+M@{T\+A\+M}}
+\index{T\+A\+M@{T\+A\+M}!Util\+Cadena.\+h@{Util\+Cadena.\+h}}
+\subsubsection[{T\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+A\+M~100}}\label{_util_cadena_8h_ae0b4816fb45161ef9da5e6d6134ee28a}
+!\+Tamaño de palabra 
+
+\subsection{Function Documentation}
+\hypertarget{_util_cadena_8h_a02a78269aadc81d4b20eb2c24d13caaa}{\index{Util\+Cadena.\+h@{Util\+Cadena.\+h}!a\+\_\+mayusculas@{a\+\_\+mayusculas}}
+\index{a\+\_\+mayusculas@{a\+\_\+mayusculas}!Util\+Cadena.\+h@{Util\+Cadena.\+h}}
+\subsubsection[{a\+\_\+mayusculas}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ a\+\_\+mayusculas (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{ori, }
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}}\label{_util_cadena_8h_a02a78269aadc81d4b20eb2c24d13caaa}
+\hypertarget{_util_cadena_8h_a3959f62dd9cb77c37e04cdfc977dc26b}{\index{Util\+Cadena.\+h@{Util\+Cadena.\+h}!clean@{clean}}
+\index{clean@{clean}!Util\+Cadena.\+h@{Util\+Cadena.\+h}}
+\subsubsection[{clean}]{\setlength{\rightskip}{0pt plus 5cm}int clean (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst}
+\end{DoxyParamCaption}
+)}}\label{_util_cadena_8h_a3959f62dd9cb77c37e04cdfc977dc26b}
+\hypertarget{_util_cadena_8h_ae81da3391ae70f6e9d9c49d12b99d82d}{\index{Util\+Cadena.\+h@{Util\+Cadena.\+h}!elimina\+\_\+cars@{elimina\+\_\+cars}}
+\index{elimina\+\_\+cars@{elimina\+\_\+cars}!Util\+Cadena.\+h@{Util\+Cadena.\+h}}
+\subsubsection[{elimina\+\_\+cars}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ elimina\+\_\+cars (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{ori, }
+\item[{const char $\ast$}]{seps, }
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}}\label{_util_cadena_8h_ae81da3391ae70f6e9d9c49d12b99d82d}
+\hypertarget{_util_cadena_8h_a1e684a8a6869b217fb1dbccac7ba0772}{\index{Util\+Cadena.\+h@{Util\+Cadena.\+h}!elimina\+\_\+verbo\+\_\+accion@{elimina\+\_\+verbo\+\_\+accion}}
+\index{elimina\+\_\+verbo\+\_\+accion@{elimina\+\_\+verbo\+\_\+accion}!Util\+Cadena.\+h@{Util\+Cadena.\+h}}
+\subsubsection[{elimina\+\_\+verbo\+\_\+accion}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ elimina\+\_\+verbo\+\_\+accion (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{txt\+\_\+return, }
+\item[{const char $\ast$}]{txt\+\_\+ent}
+\end{DoxyParamCaption}
+)}}\label{_util_cadena_8h_a1e684a8a6869b217fb1dbccac7ba0772}
+\hypertarget{_util_cadena_8h_ac6c6f667f059f4d4e2bd889f0cc6b1c1}{\index{Util\+Cadena.\+h@{Util\+Cadena.\+h}!limpia\+\_\+espacios@{limpia\+\_\+espacios}}
+\index{limpia\+\_\+espacios@{limpia\+\_\+espacios}!Util\+Cadena.\+h@{Util\+Cadena.\+h}}
+\subsubsection[{limpia\+\_\+espacios}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ limpia\+\_\+espacios (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{ori, }
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}}\label{_util_cadena_8h_ac6c6f667f059f4d4e2bd889f0cc6b1c1}
+\hypertarget{_util_cadena_8h_aa29bc74654bd9f83e464068b873fe34e}{\index{Util\+Cadena.\+h@{Util\+Cadena.\+h}!reemplaza\+\_\+asterisco@{reemplaza\+\_\+asterisco}}
+\index{reemplaza\+\_\+asterisco@{reemplaza\+\_\+asterisco}!Util\+Cadena.\+h@{Util\+Cadena.\+h}}
+\subsubsection[{reemplaza\+\_\+asterisco}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ reemplaza\+\_\+asterisco (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{ori, }
+\item[{const char $\ast$}]{ins, }
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}}\label{_util_cadena_8h_aa29bc74654bd9f83e464068b873fe34e}

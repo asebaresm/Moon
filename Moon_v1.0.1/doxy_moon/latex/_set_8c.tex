@@ -1,0 +1,110 @@
+\hypertarget{_set_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Set/\+Set.c File Reference}
+\label{_set_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Set/\+Set.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Set/\+Set.\+c}}
+}
+
+
+contiene las implementaciones de las funciones de S  
+
+
+{\ttfamily \#include \char`\"{}Set.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___set}{\+\_\+\+Set}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{_set_8c_ab17865f5cee4fff9e6943dd0f90cad97}{new\+\_\+set} ()
+\item 
+void \hyperlink{_set_8c_a7b31a60ec2802881a624a744a4f9df35}{destroy\+\_\+set} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ccj)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_set_8c_a155cc026d73dff0879ad898e5284befd}{add} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_set_8c_a836f467e2513189a19ee6d9f65ef2746}{contains} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_set_8c_ad0655699245e63cd80e113964b03c069}{remove\+\_\+id} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_ab5b5a106fd7981d8a25dce99b700ee5c}{Size} \hyperlink{_set_8c_aa3096793cddb7331b711f142df779bb5}{get\+\_\+size} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_set_8c_a4db002ffadfcf32648302e8f8b90fd18}{get\+\_\+i\+\_\+id} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj, int indice)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_set_8c_ab9ebdd880f6d9f149c357c16a32e0194}{is\+\_\+empty} (\hyperlink{_set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$cj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de S 
+
+\begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_set_8c_a155cc026d73dff0879ad898e5284befd}{\index{Set.\+c@{Set.\+c}!add@{add}}
+\index{add@{add}!Set.\+c@{Set.\+c}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} add (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{cj, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_a155cc026d73dff0879ad898e5284befd}
+\hypertarget{_set_8c_a836f467e2513189a19ee6d9f65ef2746}{\index{Set.\+c@{Set.\+c}!contains@{contains}}
+\index{contains@{contains}!Set.\+c@{Set.\+c}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{cj, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_a836f467e2513189a19ee6d9f65ef2746}
+\hypertarget{_set_8c_a7b31a60ec2802881a624a744a4f9df35}{\index{Set.\+c@{Set.\+c}!destroy\+\_\+set@{destroy\+\_\+set}}
+\index{destroy\+\_\+set@{destroy\+\_\+set}!Set.\+c@{Set.\+c}}
+\subsubsection[{destroy\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{ccj}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_a7b31a60ec2802881a624a744a4f9df35}
+\hypertarget{_set_8c_a4db002ffadfcf32648302e8f8b90fd18}{\index{Set.\+c@{Set.\+c}!get\+\_\+i\+\_\+id@{get\+\_\+i\+\_\+id}}
+\index{get\+\_\+i\+\_\+id@{get\+\_\+i\+\_\+id}!Set.\+c@{Set.\+c}}
+\subsubsection[{get\+\_\+i\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+i\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{cj, }
+\item[{int}]{indice}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_a4db002ffadfcf32648302e8f8b90fd18}
+\hypertarget{_set_8c_aa3096793cddb7331b711f142df779bb5}{\index{Set.\+c@{Set.\+c}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!Set.\+c@{Set.\+c}}
+\subsubsection[{get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Size} get\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{cj}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_aa3096793cddb7331b711f142df779bb5}
+\hypertarget{_set_8c_ab9ebdd880f6d9f149c357c16a32e0194}{\index{Set.\+c@{Set.\+c}!is\+\_\+empty@{is\+\_\+empty}}
+\index{is\+\_\+empty@{is\+\_\+empty}!Set.\+c@{Set.\+c}}
+\subsubsection[{is\+\_\+empty}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} is\+\_\+empty (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{cj}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_ab9ebdd880f6d9f149c357c16a32e0194}
+\hypertarget{_set_8c_ab17865f5cee4fff9e6943dd0f90cad97}{\index{Set.\+c@{Set.\+c}!new\+\_\+set@{new\+\_\+set}}
+\index{new\+\_\+set@{new\+\_\+set}!Set.\+c@{Set.\+c}}
+\subsubsection[{new\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ new\+\_\+set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_ab17865f5cee4fff9e6943dd0f90cad97}
+\hypertarget{_set_8c_ad0655699245e63cd80e113964b03c069}{\index{Set.\+c@{Set.\+c}!remove\+\_\+id@{remove\+\_\+id}}
+\index{remove\+\_\+id@{remove\+\_\+id}!Set.\+c@{Set.\+c}}
+\subsubsection[{remove\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} remove\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{cj, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_set_8c_ad0655699245e63cd80e113964b03c069}

@@ -1,0 +1,155 @@
+\hypertarget{_dialogue_x_m_lreader_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Dialogue\+Reader/\+Dialogue\+X\+M\+Lreader.c File Reference}
+\label{_dialogue_x_m_lreader_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue\+Reader/\+Dialogue\+X\+M\+Lreader.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue\+Reader/\+Dialogue\+X\+M\+Lreader.\+c}}
+}
+
+
+Lector de X\+Ml para dialogo.  
+
+
+{\ttfamily \#include \char`\"{}Dialogue\+X\+M\+Lreader.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_aebebc7af8eb60139cf55ec1e1a868e77}{D\+I\+A\+L\+O\+G\+U\+E}~\char`\"{}dialogue\char`\"{} /$\ast$Labels de topics$\ast$/
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_ac11e46cad047c00c58f5822792b51945}{T\+O\+P\+I\+C\+S}~\char`\"{}topics\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a39757563bccdc110e93a1914cef2663d}{T\+O\+P\+I\+C}~\char`\"{}topic\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_afda25e418f41b7057b2db9c1add3083e}{T\+O\+P\+I\+C\+I\+D}~\char`\"{}topicid\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a2f6cd14554be27d90f6f650f59a75160}{R\+U\+L\+E\+S\+T}~\char`\"{}rulest\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a356ab6c2b5c559270e5c551745312755}{R\+U\+L\+E\+T}~\char`\"{}rulet\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_af49cc0b753734f0d0d70298eae0786a0}{R\+U\+L\+E\+S}~\char`\"{}rules\char`\"{} /$\ast$labels de reglas$\ast$/
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_ac2f06b3729559aefeb2c260309ccdb30}{R\+U\+L\+E}~\char`\"{}rule\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a67528f289b12777e37853c6438a6f09f}{P\+A\+T\+T\+E\+R\+N\+S}~\char`\"{}patterns\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a96607e8d3432f4b72ad9efd97b657c89}{P\+A\+T\+T\+E\+R\+N}~\char`\"{}pattern\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a8b261cf061c0647a08c04d92e84ed426}{T\+E\+M\+P\+L\+A\+T\+E\+S}~\char`\"{}templates\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a491ddbf322aef9661794e38b7ff82c02}{T\+E\+M\+P\+L\+A\+T\+E}~\char`\"{}template\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a77ceac8d6af195fe72f95f6afd87c45e}{I\+D}~\char`\"{}id\char`\"{}
+\item 
+\#define \hyperlink{_dialogue_x_m_lreader_8c_a47f2e62c0dbebc787052c165afcada0e}{N\+A\+M\+E}~\char`\"{}name\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807e}{\+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N} \hyperlink{_dialogue_x_m_lreader_8c_a3f9e89da017407a44080228497e4b398}{xml\+\_\+\+R\+E\+T\+U\+R\+N}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807e}{\+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N} \{ \hyperlink{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807ea105ed37997379726540031d40f597258}{X\+M\+L\+\_\+\+E\+R\+R} = -\/1, 
+\hyperlink{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807eaae2c8b6aeba500cf6694f15f341cfb8b}{X\+M\+L\+\_\+\+O\+K} = 0, 
+\hyperlink{_world_x_m_l_reader_8c_a4754a9d8dbe8907bc7727e9ac75d807ea105ed37997379726540031d40f597258}{X\+M\+L\+\_\+\+E\+R\+R} = -\/1, 
+\hyperlink{_world_x_m_l_reader_8c_a4754a9d8dbe8907bc7727e9ac75d807eaae2c8b6aeba500cf6694f15f341cfb8b}{X\+M\+L\+\_\+\+O\+K} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_dialogue_x_m_lreader_8c_aab09cded870e046ff47fdf3b4be008da}{dialogue\+\_\+load} (char $\ast$file\+\_\+name, \hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Lector de X\+Ml para dialogo. 
+
+\begin{DoxyAuthor}{Author}
+Albert Soler 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+9-\/4-\/14 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_dialogue_x_m_lreader_8c_aebebc7af8eb60139cf55ec1e1a868e77}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!D\+I\+A\+L\+O\+G\+U\+E@{D\+I\+A\+L\+O\+G\+U\+E}}
+\index{D\+I\+A\+L\+O\+G\+U\+E@{D\+I\+A\+L\+O\+G\+U\+E}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{D\+I\+A\+L\+O\+G\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+A\+L\+O\+G\+U\+E~\char`\"{}dialogue\char`\"{} /$\ast$Labels de topics$\ast$/}}\label{_dialogue_x_m_lreader_8c_aebebc7af8eb60139cf55ec1e1a868e77}
+!\+Labels of the X\+M\+L file \hypertarget{_dialogue_x_m_lreader_8c_a77ceac8d6af195fe72f95f6afd87c45e}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!I\+D@{I\+D}}
+\index{I\+D@{I\+D}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D~\char`\"{}id\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a77ceac8d6af195fe72f95f6afd87c45e}
+\hypertarget{_dialogue_x_m_lreader_8c_a47f2e62c0dbebc787052c165afcada0e}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!N\+A\+M\+E@{N\+A\+M\+E}}
+\index{N\+A\+M\+E@{N\+A\+M\+E}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+A\+M\+E~\char`\"{}name\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a47f2e62c0dbebc787052c165afcada0e}
+\hypertarget{_dialogue_x_m_lreader_8c_a96607e8d3432f4b72ad9efd97b657c89}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!P\+A\+T\+T\+E\+R\+N@{P\+A\+T\+T\+E\+R\+N}}
+\index{P\+A\+T\+T\+E\+R\+N@{P\+A\+T\+T\+E\+R\+N}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{P\+A\+T\+T\+E\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+T\+T\+E\+R\+N~\char`\"{}pattern\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a96607e8d3432f4b72ad9efd97b657c89}
+\hypertarget{_dialogue_x_m_lreader_8c_a67528f289b12777e37853c6438a6f09f}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!P\+A\+T\+T\+E\+R\+N\+S@{P\+A\+T\+T\+E\+R\+N\+S}}
+\index{P\+A\+T\+T\+E\+R\+N\+S@{P\+A\+T\+T\+E\+R\+N\+S}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{P\+A\+T\+T\+E\+R\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+T\+T\+E\+R\+N\+S~\char`\"{}patterns\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a67528f289b12777e37853c6438a6f09f}
+\hypertarget{_dialogue_x_m_lreader_8c_ac2f06b3729559aefeb2c260309ccdb30}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!R\+U\+L\+E@{R\+U\+L\+E}}
+\index{R\+U\+L\+E@{R\+U\+L\+E}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{R\+U\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+U\+L\+E~\char`\"{}rule\char`\"{}}}\label{_dialogue_x_m_lreader_8c_ac2f06b3729559aefeb2c260309ccdb30}
+\hypertarget{_dialogue_x_m_lreader_8c_af49cc0b753734f0d0d70298eae0786a0}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!R\+U\+L\+E\+S@{R\+U\+L\+E\+S}}
+\index{R\+U\+L\+E\+S@{R\+U\+L\+E\+S}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+U\+L\+E\+S~\char`\"{}rules\char`\"{} /$\ast$labels de reglas$\ast$/}}\label{_dialogue_x_m_lreader_8c_af49cc0b753734f0d0d70298eae0786a0}
+\hypertarget{_dialogue_x_m_lreader_8c_a2f6cd14554be27d90f6f650f59a75160}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!R\+U\+L\+E\+S\+T@{R\+U\+L\+E\+S\+T}}
+\index{R\+U\+L\+E\+S\+T@{R\+U\+L\+E\+S\+T}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{R\+U\+L\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+U\+L\+E\+S\+T~\char`\"{}rulest\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a2f6cd14554be27d90f6f650f59a75160}
+\hypertarget{_dialogue_x_m_lreader_8c_a356ab6c2b5c559270e5c551745312755}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!R\+U\+L\+E\+T@{R\+U\+L\+E\+T}}
+\index{R\+U\+L\+E\+T@{R\+U\+L\+E\+T}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{R\+U\+L\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+U\+L\+E\+T~\char`\"{}rulet\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a356ab6c2b5c559270e5c551745312755}
+\hypertarget{_dialogue_x_m_lreader_8c_a491ddbf322aef9661794e38b7ff82c02}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!T\+E\+M\+P\+L\+A\+T\+E@{T\+E\+M\+P\+L\+A\+T\+E}}
+\index{T\+E\+M\+P\+L\+A\+T\+E@{T\+E\+M\+P\+L\+A\+T\+E}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{T\+E\+M\+P\+L\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+M\+P\+L\+A\+T\+E~\char`\"{}template\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a491ddbf322aef9661794e38b7ff82c02}
+\hypertarget{_dialogue_x_m_lreader_8c_a8b261cf061c0647a08c04d92e84ed426}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!T\+E\+M\+P\+L\+A\+T\+E\+S@{T\+E\+M\+P\+L\+A\+T\+E\+S}}
+\index{T\+E\+M\+P\+L\+A\+T\+E\+S@{T\+E\+M\+P\+L\+A\+T\+E\+S}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{T\+E\+M\+P\+L\+A\+T\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+M\+P\+L\+A\+T\+E\+S~\char`\"{}templates\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a8b261cf061c0647a08c04d92e84ed426}
+\hypertarget{_dialogue_x_m_lreader_8c_a39757563bccdc110e93a1914cef2663d}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!T\+O\+P\+I\+C@{T\+O\+P\+I\+C}}
+\index{T\+O\+P\+I\+C@{T\+O\+P\+I\+C}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{T\+O\+P\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+P\+I\+C~\char`\"{}topic\char`\"{}}}\label{_dialogue_x_m_lreader_8c_a39757563bccdc110e93a1914cef2663d}
+\hypertarget{_dialogue_x_m_lreader_8c_afda25e418f41b7057b2db9c1add3083e}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!T\+O\+P\+I\+C\+I\+D@{T\+O\+P\+I\+C\+I\+D}}
+\index{T\+O\+P\+I\+C\+I\+D@{T\+O\+P\+I\+C\+I\+D}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{T\+O\+P\+I\+C\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+P\+I\+C\+I\+D~\char`\"{}topicid\char`\"{}}}\label{_dialogue_x_m_lreader_8c_afda25e418f41b7057b2db9c1add3083e}
+\hypertarget{_dialogue_x_m_lreader_8c_ac11e46cad047c00c58f5822792b51945}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!T\+O\+P\+I\+C\+S@{T\+O\+P\+I\+C\+S}}
+\index{T\+O\+P\+I\+C\+S@{T\+O\+P\+I\+C\+S}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{T\+O\+P\+I\+C\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+P\+I\+C\+S~\char`\"{}topics\char`\"{}}}\label{_dialogue_x_m_lreader_8c_ac11e46cad047c00c58f5822792b51945}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_dialogue_x_m_lreader_8c_a3f9e89da017407a44080228497e4b398}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!xml\+\_\+\+R\+E\+T\+U\+R\+N@{xml\+\_\+\+R\+E\+T\+U\+R\+N}}
+\index{xml\+\_\+\+R\+E\+T\+U\+R\+N@{xml\+\_\+\+R\+E\+T\+U\+R\+N}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{xml\+\_\+\+R\+E\+T\+U\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N}  {\bf xml\+\_\+\+R\+E\+T\+U\+R\+N}}}\label{_dialogue_x_m_lreader_8c_a3f9e89da017407a44080228497e4b398}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807e}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!\+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N@{\+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N}}
+\index{\+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N@{\+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{\+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+xml\+\_\+\+R\+E\+T\+U\+R\+N}}}\label{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{X\+M\+L\+\_\+\+E\+R\+R@{X\+M\+L\+\_\+\+E\+R\+R}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!X\+M\+L\+\_\+\+E\+R\+R@{X\+M\+L\+\_\+\+E\+R\+R}}\item[{\em 
+\hypertarget{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807ea105ed37997379726540031d40f597258}{X\+M\+L\+\_\+\+E\+R\+R}\label{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807ea105ed37997379726540031d40f597258}
+}]\index{X\+M\+L\+\_\+\+O\+K@{X\+M\+L\+\_\+\+O\+K}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!X\+M\+L\+\_\+\+O\+K@{X\+M\+L\+\_\+\+O\+K}}\item[{\em 
+\hypertarget{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807eaae2c8b6aeba500cf6694f15f341cfb8b}{X\+M\+L\+\_\+\+O\+K}\label{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807eaae2c8b6aeba500cf6694f15f341cfb8b}
+}]\index{X\+M\+L\+\_\+\+E\+R\+R@{X\+M\+L\+\_\+\+E\+R\+R}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!X\+M\+L\+\_\+\+E\+R\+R@{X\+M\+L\+\_\+\+E\+R\+R}}\item[{\em 
+\hypertarget{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807ea105ed37997379726540031d40f597258}{X\+M\+L\+\_\+\+E\+R\+R}\label{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807ea105ed37997379726540031d40f597258}
+}]\index{X\+M\+L\+\_\+\+O\+K@{X\+M\+L\+\_\+\+O\+K}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!X\+M\+L\+\_\+\+O\+K@{X\+M\+L\+\_\+\+O\+K}}\item[{\em 
+\hypertarget{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807eaae2c8b6aeba500cf6694f15f341cfb8b}{X\+M\+L\+\_\+\+O\+K}\label{_dialogue_x_m_lreader_8c_a4754a9d8dbe8907bc7727e9ac75d807eaae2c8b6aeba500cf6694f15f341cfb8b}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{_dialogue_x_m_lreader_8c_aab09cded870e046ff47fdf3b4be008da}{\index{Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}!dialogue\+\_\+load@{dialogue\+\_\+load}}
+\index{dialogue\+\_\+load@{dialogue\+\_\+load}!Dialogue\+X\+M\+Lreader.\+c@{Dialogue\+X\+M\+Lreader.\+c}}
+\subsubsection[{dialogue\+\_\+load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+load (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+\_\+name, }
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr}
+\end{DoxyParamCaption}
+)}}\label{_dialogue_x_m_lreader_8c_aab09cded870e046ff47fdf3b4be008da}
+Carga un dialogo Recibe el fichero y puntero al dialogo a incilizar return T\+R\+U\+E in case of no E\+R\+R\+O\+R, F\+A\+L\+S\+E otherwise 

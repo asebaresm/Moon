@@ -1,0 +1,795 @@
+\hypertarget{_object_8h}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Object/\+Object.h File Reference}
+\label{_object_8h}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Object/\+Object.\+h@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Object/\+Object.\+h}}
+}
+
+
+contiene las implementaciones de las funciones de Object  
+
+
+{\ttfamily \#include \char`\"{}../\+Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../\+Set/\+Set.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___object}{\+\_\+\+Object} \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Id get\+\_\+object\+\_\+id(Object $\ast$obj);}\par
+{\em devuelve el id de un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el id del objeto o N\+U\+L\+L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_object_8h_abe488ca8ceaa7c2cf4f1a52a64ab21de}{get\+\_\+object\+\_\+id} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Object $\ast$obj\+\_\+create(Id id);}\par
+{\em functions to create the object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el objeto y en caso de error devuelve N\+U\+L\+L 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{_object_8h_a1196be6af8524bec98758a054f146c66}{obj\+\_\+create} (\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void obj\+\_\+destroy(Object $\ast$obj);}\par
+{\em function to destroy the object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_object_8h_ac9aeb62f8e8555a59661cca384db6b47}{obj\+\_\+destroy} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+description(Object $\ast$obj, char $\ast$description);}\par
+{\em se le da una descripcion a un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si ha ido todo correctamente o E\+R\+R\+O\+R en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_aafbd67c3a3fd911503fd328451eb346c}{obj\+\_\+set\+\_\+description} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, char $\ast$description)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+description\+\_\+moved(Object $\ast$object, char $\ast$description);}\par
+{\em se le da una descripcion\+Movil a un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido correctamente o E\+R\+R\+O\+R si ha habido algun problema 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a725369decf0ac85d0f07e1cde0f7a832}{obj\+\_\+set\+\_\+description\+\_\+moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$description)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+description\+\_\+inspect(Object $\ast$object, char $\ast$description);}\par
+{\em se le da una descripcion-\/\+Inspeccion a un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido correctamente o E\+R\+R\+O\+R si ha habido algun problema 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_abaf8d0e02e7cc0b541b182b44a8f2256}{obj\+\_\+set\+\_\+description\+\_\+inspect} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$description)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+description\+\_\+graphical(Object $\ast$object, char $\ast$description\+Graph);}\par
+{\em se le da una descripcion-\/grafica a un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em description\+Graph} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido correctamente o E\+R\+R\+O\+R si ha habido algun problema 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a6af104f9e2200f45eb0da48e3e57ed62}{obj\+\_\+set\+\_\+description\+\_\+graphical} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$description\+Graph)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S objet\+\_\+set\+\_\+location(Object $\ast$object, Id location);}\par
+{\em establece la localizaciond e un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em location} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido correctamente o E\+R\+R\+O\+R si ha habido algun problema 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_ab037f40d2876a7755ac3c41a3b509290}{obj\+\_\+set\+\_\+location} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} location)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+name(Object $\ast$obj, char $\ast$name);}\par
+{\em se establece un nombre a un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido correctamente o E\+R\+R\+O\+R si ha habido algun problema 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_aaf03e96213e913c07d16ee11b894675c}{obj\+\_\+set\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, char $\ast$name)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+movable(Object $\ast$obj, B\+O\+O\+L movable);}\par
+{\em function that modify the property, movable, of the object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em movable} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve O\+K si ha ido todo bien o E\+R\+R\+O\+R si ha habido algun problema. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a7f8c0edfd71cced82f122a0fd2f9e750}{obj\+\_\+set\+\_\+movable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} movable)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+lighted(Object $\ast$obj, B\+O\+O\+L lighted);}\par
+{\em function that modify the property, lighted, of the object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em lighted} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve O\+K si ha ido todo bien o E\+R\+R\+O\+R si ha habido algun problema. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a73cdcb70a1b2126fa0011e0365d20e56}{obj\+\_\+set\+\_\+lighted} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} lighted)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+lightable(Object $\ast$obj, B\+O\+O\+L lightable);}\par
+{\em function that modify the property, lightable, of the object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em lightable} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve O\+K si ha ido todo bien o E\+R\+R\+O\+R si ha habido algun problema. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a039d21b3251ab7d1b279415a384bf89c}{obj\+\_\+set\+\_\+lightable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} lightable)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+not\+\_\+hidden (Object $\ast$obj);}\par
+{\em establece como no oculto en objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve O\+K si ha ido todo bien o E\+R\+R\+O\+R si ha habido algun problema. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_af8c48e6f9cc1befaa59346a7bff21b64}{obj\+\_\+set\+\_\+not\+\_\+hidden} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+hide(Object $\ast$obj);}\par
+{\em Establece como oculto un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve O\+K si ha ido todo bien o E\+R\+R\+O\+R si ha habido algun problema. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a7d11ca958e34bad18d86f4eff19402b5}{obj\+\_\+hide} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ obj\+\_\+get\+\_\+description(Object $\ast$obj);}\par
+{\em function that get the description of the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve la descripcion del objeto o N\+U\+L\+L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_object_8h_a382717b2b5532b27ba45dd64c10550f4}{obj\+\_\+get\+\_\+description} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ obj\+\_\+get\+\_\+desc\+Inspect(Object $\ast$obj);}\par
+{\em function that get the description\+Inspect of the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve la descripcion del objeto o N\+U\+L\+L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_object_8h_adde1d9791bb11ccbc16c0453cb580344}{obj\+\_\+get\+\_\+desc\+Inspect} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ obj\+\_\+get\+\_\+desc\+Moved(Object $\ast$obj);}\par
+{\em function that get the description\+Moved of the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve la descripcion del objeto o N\+U\+L\+L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_object_8h_adb72513655ac0070c11efb270fde4604}{obj\+\_\+get\+\_\+desc\+Moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ obj\+\_\+get\+\_\+desc\+Graphical(Object $\ast$obj);}\par
+{\em function that get the description\+Graphical of the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve la descripcion del objeto o N\+U\+L\+L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_object_8h_a7dbb0bd6929580a2f159c17650e3dd45}{obj\+\_\+get\+\_\+desc\+Graphical} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$ obj\+\_\+get\+\_\+name(Object $\ast$obj);}\par
+{\em function that get the name of the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el nombre del objeto o N\+U\+L\+L en caso de error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_object_8h_a255fa6977adb684830a68531d8d1ba55}{obj\+\_\+get\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+O\+O\+L obj\+\_\+is\+\_\+movable(Object $\ast$obj);}\par
+{\em comprueba si un objeto es movable o no
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E si el objeto es movable, F\+A\+L\+S\+E si no es asi 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8h_a02f3705c93e5f0fe0ca328e58a99bd08}{obj\+\_\+is\+\_\+movable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+print(Object $\ast$obj);}\par
+{\em prints the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha impreso por pantalla correctamente o E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a614b6346bae24b7f4dd8f03c6baae320}{obj\+\_\+print} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+O\+O\+L obj\+\_\+is\+\_\+lightable(Object $\ast$obj);}\par
+{\em comprueba si el objeto es lightable
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E en caso de que sea lightable, F\+A\+L\+S\+E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8h_ae77af4f85237b48c4e1f2ca491078a50}{obj\+\_\+is\+\_\+lightable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+O\+O\+L obj\+\_\+is\+\_\+lighted(Object $\ast$obj);}\par
+{\em comprueba si el objeto es lighted
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E en caso de que sea lighted, F\+A\+L\+S\+E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8h_a8dbc642d141c38a04dbd9c3411a0a081}{obj\+\_\+is\+\_\+lighted} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+O\+O\+L obj\+\_\+is\+\_\+hidden(Object $\ast$obj);}\par
+{\em comprueba si el objeto es hidden(oculto)
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E en caso de que sea hidden(oculto), F\+A\+L\+S\+E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8h_a883dc62c0ee79dfd2a06d413f0be6eb7}{obj\+\_\+is\+\_\+hidden} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id obj\+\_\+is\+\_\+name(Object $\ast$obj, char $\ast$name);}\par
+{\em Given a name return I\+D if the objetc exists
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+D if the objetc exists, N\+O\+\_\+\+I\+D in the other case 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_object_8h_a7e772d9e98e00c6e076afba18cb83ab2}{obj\+\_\+is\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, char $\ast$name)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+open\+\_\+link(Object $\ast$object, Id new\+\_\+id);}\par
+{\em Añade un objeto en set del objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido bien o E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_ab3c3cd3b7f248173f1c94c2be58d09e5}{obj\+\_\+open\+\_\+link} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} new\+\_\+id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+add\+\_\+obj(Object $\ast$object, Id new\+\_\+id);}\par
+{\em Añade un objeto en set del objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido bien o E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_afe482c53e7015fb48b7c87cc024a9482}{obj\+\_\+add\+\_\+obj} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} new\+\_\+id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+print\+\_\+name(Object $\ast$obj);}\par
+{\em Printea el nombre de un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si todo ha ido bien o E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_a1ba6ba2a7a75d6759249e0e5d4357143}{obj\+\_\+print\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Id obj\+\_\+get\+\_\+location(Object $\ast$obj);}\par
+{\em Devuelve la localización de un objeto
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la id si todo ha ido bien o N\+O\+\_\+\+I\+D en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_object_8h_a2bd0352f6023deb89b2264164caba8bb}{obj\+\_\+get\+\_\+location} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S obj\+\_\+set\+\_\+moved(Object $\ast$obj, B\+O\+O\+L moved);}\par
+{\em function that modify the property, moved, of the object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em moved} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve O\+K si ha ido todo bien o E\+R\+R\+O\+R si ha habido algun problema. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8h_ae3ec295f93baf912f98abbab22d9afb0}{obj\+\_\+set\+\_\+moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} moved)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+O\+O\+L obj\+\_\+is\+\_\+moved(Object $\ast$obj);}\par
+{\em comprueba si el objeto es moved
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E en caso de que sea moved, F\+A\+L\+S\+E en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8h_ab1c898154de6ca50e133fc824bf0cc42}{obj\+\_\+is\+\_\+moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de Object 
+
+\begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{\index{Object.\+h@{Object.\+h}!Object@{Object}}
+\index{Object@{Object}!Object.\+h@{Object.\+h}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Object} {\bf Object}}}\label{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}
+
+
+T\+A\+D Object. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{_object_8h_abe488ca8ceaa7c2cf4f1a52a64ab21de}{\index{Object.\+h@{Object.\+h}!get\+\_\+object\+\_\+id@{get\+\_\+object\+\_\+id}}
+\index{get\+\_\+object\+\_\+id@{get\+\_\+object\+\_\+id}!Object.\+h@{Object.\+h}}
+\subsubsection[{get\+\_\+object\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+object\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_abe488ca8ceaa7c2cf4f1a52a64ab21de}
+\hypertarget{_object_8h_afe482c53e7015fb48b7c87cc024a9482}{\index{Object.\+h@{Object.\+h}!obj\+\_\+add\+\_\+obj@{obj\+\_\+add\+\_\+obj}}
+\index{obj\+\_\+add\+\_\+obj@{obj\+\_\+add\+\_\+obj}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+add\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+add\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{new\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_afe482c53e7015fb48b7c87cc024a9482}
+\hypertarget{_object_8h_a1196be6af8524bec98758a054f146c66}{\index{Object.\+h@{Object.\+h}!obj\+\_\+create@{obj\+\_\+create}}
+\index{obj\+\_\+create@{obj\+\_\+create}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ obj\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a1196be6af8524bec98758a054f146c66}
+\hypertarget{_object_8h_ac9aeb62f8e8555a59661cca384db6b47}{\index{Object.\+h@{Object.\+h}!obj\+\_\+destroy@{obj\+\_\+destroy}}
+\index{obj\+\_\+destroy@{obj\+\_\+destroy}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}void obj\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_ac9aeb62f8e8555a59661cca384db6b47}
+\hypertarget{_object_8h_a7dbb0bd6929580a2f159c17650e3dd45}{\index{Object.\+h@{Object.\+h}!obj\+\_\+get\+\_\+desc\+Graphical@{obj\+\_\+get\+\_\+desc\+Graphical}}
+\index{obj\+\_\+get\+\_\+desc\+Graphical@{obj\+\_\+get\+\_\+desc\+Graphical}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+get\+\_\+desc\+Graphical}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+desc\+Graphical (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a7dbb0bd6929580a2f159c17650e3dd45}
+\hypertarget{_object_8h_adde1d9791bb11ccbc16c0453cb580344}{\index{Object.\+h@{Object.\+h}!obj\+\_\+get\+\_\+desc\+Inspect@{obj\+\_\+get\+\_\+desc\+Inspect}}
+\index{obj\+\_\+get\+\_\+desc\+Inspect@{obj\+\_\+get\+\_\+desc\+Inspect}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+get\+\_\+desc\+Inspect}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+desc\+Inspect (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_adde1d9791bb11ccbc16c0453cb580344}
+\hypertarget{_object_8h_adb72513655ac0070c11efb270fde4604}{\index{Object.\+h@{Object.\+h}!obj\+\_\+get\+\_\+desc\+Moved@{obj\+\_\+get\+\_\+desc\+Moved}}
+\index{obj\+\_\+get\+\_\+desc\+Moved@{obj\+\_\+get\+\_\+desc\+Moved}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+get\+\_\+desc\+Moved}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+desc\+Moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_adb72513655ac0070c11efb270fde4604}
+\hypertarget{_object_8h_a382717b2b5532b27ba45dd64c10550f4}{\index{Object.\+h@{Object.\+h}!obj\+\_\+get\+\_\+description@{obj\+\_\+get\+\_\+description}}
+\index{obj\+\_\+get\+\_\+description@{obj\+\_\+get\+\_\+description}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+get\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a382717b2b5532b27ba45dd64c10550f4}
+\hypertarget{_object_8h_a2bd0352f6023deb89b2264164caba8bb}{\index{Object.\+h@{Object.\+h}!obj\+\_\+get\+\_\+location@{obj\+\_\+get\+\_\+location}}
+\index{obj\+\_\+get\+\_\+location@{obj\+\_\+get\+\_\+location}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+get\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} obj\+\_\+get\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a2bd0352f6023deb89b2264164caba8bb}
+\hypertarget{_object_8h_a255fa6977adb684830a68531d8d1ba55}{\index{Object.\+h@{Object.\+h}!obj\+\_\+get\+\_\+name@{obj\+\_\+get\+\_\+name}}
+\index{obj\+\_\+get\+\_\+name@{obj\+\_\+get\+\_\+name}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a255fa6977adb684830a68531d8d1ba55}
+\hypertarget{_object_8h_a7d11ca958e34bad18d86f4eff19402b5}{\index{Object.\+h@{Object.\+h}!obj\+\_\+hide@{obj\+\_\+hide}}
+\index{obj\+\_\+hide@{obj\+\_\+hide}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+hide}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+hide (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a7d11ca958e34bad18d86f4eff19402b5}
+\hypertarget{_object_8h_a883dc62c0ee79dfd2a06d413f0be6eb7}{\index{Object.\+h@{Object.\+h}!obj\+\_\+is\+\_\+hidden@{obj\+\_\+is\+\_\+hidden}}
+\index{obj\+\_\+is\+\_\+hidden@{obj\+\_\+is\+\_\+hidden}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+is\+\_\+hidden}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+hidden (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a883dc62c0ee79dfd2a06d413f0be6eb7}
+\hypertarget{_object_8h_ae77af4f85237b48c4e1f2ca491078a50}{\index{Object.\+h@{Object.\+h}!obj\+\_\+is\+\_\+lightable@{obj\+\_\+is\+\_\+lightable}}
+\index{obj\+\_\+is\+\_\+lightable@{obj\+\_\+is\+\_\+lightable}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+is\+\_\+lightable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+lightable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_ae77af4f85237b48c4e1f2ca491078a50}
+\hypertarget{_object_8h_a8dbc642d141c38a04dbd9c3411a0a081}{\index{Object.\+h@{Object.\+h}!obj\+\_\+is\+\_\+lighted@{obj\+\_\+is\+\_\+lighted}}
+\index{obj\+\_\+is\+\_\+lighted@{obj\+\_\+is\+\_\+lighted}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+is\+\_\+lighted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+lighted (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a8dbc642d141c38a04dbd9c3411a0a081}
+\hypertarget{_object_8h_a02f3705c93e5f0fe0ca328e58a99bd08}{\index{Object.\+h@{Object.\+h}!obj\+\_\+is\+\_\+movable@{obj\+\_\+is\+\_\+movable}}
+\index{obj\+\_\+is\+\_\+movable@{obj\+\_\+is\+\_\+movable}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+is\+\_\+movable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+movable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a02f3705c93e5f0fe0ca328e58a99bd08}
+\hypertarget{_object_8h_ab1c898154de6ca50e133fc824bf0cc42}{\index{Object.\+h@{Object.\+h}!obj\+\_\+is\+\_\+moved@{obj\+\_\+is\+\_\+moved}}
+\index{obj\+\_\+is\+\_\+moved@{obj\+\_\+is\+\_\+moved}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+is\+\_\+moved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_ab1c898154de6ca50e133fc824bf0cc42}
+\hypertarget{_object_8h_a7e772d9e98e00c6e076afba18cb83ab2}{\index{Object.\+h@{Object.\+h}!obj\+\_\+is\+\_\+name@{obj\+\_\+is\+\_\+name}}
+\index{obj\+\_\+is\+\_\+name@{obj\+\_\+is\+\_\+name}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+is\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} obj\+\_\+is\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a7e772d9e98e00c6e076afba18cb83ab2}
+\hypertarget{_object_8h_ab3c3cd3b7f248173f1c94c2be58d09e5}{\index{Object.\+h@{Object.\+h}!obj\+\_\+open\+\_\+link@{obj\+\_\+open\+\_\+link}}
+\index{obj\+\_\+open\+\_\+link@{obj\+\_\+open\+\_\+link}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+open\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+open\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{new\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_ab3c3cd3b7f248173f1c94c2be58d09e5}
+\hypertarget{_object_8h_a614b6346bae24b7f4dd8f03c6baae320}{\index{Object.\+h@{Object.\+h}!obj\+\_\+print@{obj\+\_\+print}}
+\index{obj\+\_\+print@{obj\+\_\+print}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a614b6346bae24b7f4dd8f03c6baae320}
+\hypertarget{_object_8h_a1ba6ba2a7a75d6759249e0e5d4357143}{\index{Object.\+h@{Object.\+h}!obj\+\_\+print\+\_\+name@{obj\+\_\+print\+\_\+name}}
+\index{obj\+\_\+print\+\_\+name@{obj\+\_\+print\+\_\+name}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+print\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+print\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a1ba6ba2a7a75d6759249e0e5d4357143}
+\hypertarget{_object_8h_aafbd67c3a3fd911503fd328451eb346c}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+description@{obj\+\_\+set\+\_\+description}}
+\index{obj\+\_\+set\+\_\+description@{obj\+\_\+set\+\_\+description}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{char $\ast$}]{description}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_aafbd67c3a3fd911503fd328451eb346c}
+\hypertarget{_object_8h_a6af104f9e2200f45eb0da48e3e57ed62}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+description\+\_\+graphical@{obj\+\_\+set\+\_\+description\+\_\+graphical}}
+\index{obj\+\_\+set\+\_\+description\+\_\+graphical@{obj\+\_\+set\+\_\+description\+\_\+graphical}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+description\+\_\+graphical}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description\+\_\+graphical (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{description\+Graph}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a6af104f9e2200f45eb0da48e3e57ed62}
+\hypertarget{_object_8h_abaf8d0e02e7cc0b541b182b44a8f2256}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+description\+\_\+inspect@{obj\+\_\+set\+\_\+description\+\_\+inspect}}
+\index{obj\+\_\+set\+\_\+description\+\_\+inspect@{obj\+\_\+set\+\_\+description\+\_\+inspect}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+description\+\_\+inspect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description\+\_\+inspect (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{description}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_abaf8d0e02e7cc0b541b182b44a8f2256}
+\hypertarget{_object_8h_a725369decf0ac85d0f07e1cde0f7a832}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+description\+\_\+moved@{obj\+\_\+set\+\_\+description\+\_\+moved}}
+\index{obj\+\_\+set\+\_\+description\+\_\+moved@{obj\+\_\+set\+\_\+description\+\_\+moved}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+description\+\_\+moved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description\+\_\+moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{description}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a725369decf0ac85d0f07e1cde0f7a832}
+\hypertarget{_object_8h_a039d21b3251ab7d1b279415a384bf89c}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+lightable@{obj\+\_\+set\+\_\+lightable}}
+\index{obj\+\_\+set\+\_\+lightable@{obj\+\_\+set\+\_\+lightable}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+lightable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+lightable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{lightable}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a039d21b3251ab7d1b279415a384bf89c}
+\hypertarget{_object_8h_a73cdcb70a1b2126fa0011e0365d20e56}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+lighted@{obj\+\_\+set\+\_\+lighted}}
+\index{obj\+\_\+set\+\_\+lighted@{obj\+\_\+set\+\_\+lighted}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+lighted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+lighted (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{lighted}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a73cdcb70a1b2126fa0011e0365d20e56}
+\hypertarget{_object_8h_ab037f40d2876a7755ac3c41a3b509290}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+location@{obj\+\_\+set\+\_\+location}}
+\index{obj\+\_\+set\+\_\+location@{obj\+\_\+set\+\_\+location}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{location}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_ab037f40d2876a7755ac3c41a3b509290}
+\hypertarget{_object_8h_a7f8c0edfd71cced82f122a0fd2f9e750}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+movable@{obj\+\_\+set\+\_\+movable}}
+\index{obj\+\_\+set\+\_\+movable@{obj\+\_\+set\+\_\+movable}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+movable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+movable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{movable}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_a7f8c0edfd71cced82f122a0fd2f9e750}
+\hypertarget{_object_8h_ae3ec295f93baf912f98abbab22d9afb0}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+moved@{obj\+\_\+set\+\_\+moved}}
+\index{obj\+\_\+set\+\_\+moved@{obj\+\_\+set\+\_\+moved}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+moved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{moved}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_ae3ec295f93baf912f98abbab22d9afb0}
+\hypertarget{_object_8h_aaf03e96213e913c07d16ee11b894675c}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+name@{obj\+\_\+set\+\_\+name}}
+\index{obj\+\_\+set\+\_\+name@{obj\+\_\+set\+\_\+name}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_aaf03e96213e913c07d16ee11b894675c}
+\hypertarget{_object_8h_af8c48e6f9cc1befaa59346a7bff21b64}{\index{Object.\+h@{Object.\+h}!obj\+\_\+set\+\_\+not\+\_\+hidden@{obj\+\_\+set\+\_\+not\+\_\+hidden}}
+\index{obj\+\_\+set\+\_\+not\+\_\+hidden@{obj\+\_\+set\+\_\+not\+\_\+hidden}!Object.\+h@{Object.\+h}}
+\subsubsection[{obj\+\_\+set\+\_\+not\+\_\+hidden}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+not\+\_\+hidden (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8h_af8c48e6f9cc1befaa59346a7bff21b64}

@@ -1,0 +1,326 @@
+\hypertarget{_object_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Object/\+Object.c File Reference}
+\label{_object_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Object/\+Object.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Object/\+Object.\+c}}
+}
+
+
+contiene las implementaciones de las funciones de Object  
+
+
+{\ttfamily \#include \char`\"{}Object.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___object}{\+\_\+\+Object}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_object_8c_abe488ca8ceaa7c2cf4f1a52a64ab21de}{get\+\_\+object\+\_\+id} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{_object_8c_a1196be6af8524bec98758a054f146c66}{obj\+\_\+create} (\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+void \hyperlink{_object_8c_ac9aeb62f8e8555a59661cca384db6b47}{obj\+\_\+destroy} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_aafbd67c3a3fd911503fd328451eb346c}{obj\+\_\+set\+\_\+description} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, char $\ast$description)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a725369decf0ac85d0f07e1cde0f7a832}{obj\+\_\+set\+\_\+description\+\_\+moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$description)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_abaf8d0e02e7cc0b541b182b44a8f2256}{obj\+\_\+set\+\_\+description\+\_\+inspect} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$description)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a6af104f9e2200f45eb0da48e3e57ed62}{obj\+\_\+set\+\_\+description\+\_\+graphical} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$description\+Graph)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_ab037f40d2876a7755ac3c41a3b509290}{obj\+\_\+set\+\_\+location} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} location)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a18d18ddd3c8eb9a5e858c43f3e17a096}{obj\+\_\+set\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$name)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a7f8c0edfd71cced82f122a0fd2f9e750}{obj\+\_\+set\+\_\+movable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} movable)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a73cdcb70a1b2126fa0011e0365d20e56}{obj\+\_\+set\+\_\+lighted} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} lighted)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a039d21b3251ab7d1b279415a384bf89c}{obj\+\_\+set\+\_\+lightable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} lightable)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_af8c48e6f9cc1befaa59346a7bff21b64}{obj\+\_\+set\+\_\+not\+\_\+hidden} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a7d11ca958e34bad18d86f4eff19402b5}{obj\+\_\+hide} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+char $\ast$ \hyperlink{_object_8c_a382717b2b5532b27ba45dd64c10550f4}{obj\+\_\+get\+\_\+description} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+char $\ast$ \hyperlink{_object_8c_adde1d9791bb11ccbc16c0453cb580344}{obj\+\_\+get\+\_\+desc\+Inspect} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+char $\ast$ \hyperlink{_object_8c_adb72513655ac0070c11efb270fde4604}{obj\+\_\+get\+\_\+desc\+Moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+char $\ast$ \hyperlink{_object_8c_a7dbb0bd6929580a2f159c17650e3dd45}{obj\+\_\+get\+\_\+desc\+Graphical} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+char $\ast$ \hyperlink{_object_8c_a255fa6977adb684830a68531d8d1ba55}{obj\+\_\+get\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8c_a02f3705c93e5f0fe0ca328e58a99bd08}{obj\+\_\+is\+\_\+movable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a614b6346bae24b7f4dd8f03c6baae320}{obj\+\_\+print} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8c_ae77af4f85237b48c4e1f2ca491078a50}{obj\+\_\+is\+\_\+lightable} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8c_a8dbc642d141c38a04dbd9c3411a0a081}{obj\+\_\+is\+\_\+lighted} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8c_a883dc62c0ee79dfd2a06d413f0be6eb7}{obj\+\_\+is\+\_\+hidden} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_object_8c_a7e772d9e98e00c6e076afba18cb83ab2}{obj\+\_\+is\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, char $\ast$name)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_ab3c3cd3b7f248173f1c94c2be58d09e5}{obj\+\_\+open\+\_\+link} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} new\+\_\+id)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_afe482c53e7015fb48b7c87cc024a9482}{obj\+\_\+add\+\_\+obj} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} new\+\_\+id)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_a1ba6ba2a7a75d6759249e0e5d4357143}{obj\+\_\+print\+\_\+name} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_object_8c_a2bd0352f6023deb89b2264164caba8bb}{obj\+\_\+get\+\_\+location} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_object_8c_ae3ec295f93baf912f98abbab22d9afb0}{obj\+\_\+set\+\_\+moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, \hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} moved)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_object_8c_ab1c898154de6ca50e133fc824bf0cc42}{obj\+\_\+is\+\_\+moved} (\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de Object 
+
+\begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_object_8c_abe488ca8ceaa7c2cf4f1a52a64ab21de}{\index{Object.\+c@{Object.\+c}!get\+\_\+object\+\_\+id@{get\+\_\+object\+\_\+id}}
+\index{get\+\_\+object\+\_\+id@{get\+\_\+object\+\_\+id}!Object.\+c@{Object.\+c}}
+\subsubsection[{get\+\_\+object\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+object\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_abe488ca8ceaa7c2cf4f1a52a64ab21de}
+\hypertarget{_object_8c_afe482c53e7015fb48b7c87cc024a9482}{\index{Object.\+c@{Object.\+c}!obj\+\_\+add\+\_\+obj@{obj\+\_\+add\+\_\+obj}}
+\index{obj\+\_\+add\+\_\+obj@{obj\+\_\+add\+\_\+obj}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+add\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+add\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{new\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_afe482c53e7015fb48b7c87cc024a9482}
+\hypertarget{_object_8c_a1196be6af8524bec98758a054f146c66}{\index{Object.\+c@{Object.\+c}!obj\+\_\+create@{obj\+\_\+create}}
+\index{obj\+\_\+create@{obj\+\_\+create}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ obj\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a1196be6af8524bec98758a054f146c66}
+\hypertarget{_object_8c_ac9aeb62f8e8555a59661cca384db6b47}{\index{Object.\+c@{Object.\+c}!obj\+\_\+destroy@{obj\+\_\+destroy}}
+\index{obj\+\_\+destroy@{obj\+\_\+destroy}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}void obj\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_ac9aeb62f8e8555a59661cca384db6b47}
+\hypertarget{_object_8c_a7dbb0bd6929580a2f159c17650e3dd45}{\index{Object.\+c@{Object.\+c}!obj\+\_\+get\+\_\+desc\+Graphical@{obj\+\_\+get\+\_\+desc\+Graphical}}
+\index{obj\+\_\+get\+\_\+desc\+Graphical@{obj\+\_\+get\+\_\+desc\+Graphical}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+get\+\_\+desc\+Graphical}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+desc\+Graphical (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a7dbb0bd6929580a2f159c17650e3dd45}
+\hypertarget{_object_8c_adde1d9791bb11ccbc16c0453cb580344}{\index{Object.\+c@{Object.\+c}!obj\+\_\+get\+\_\+desc\+Inspect@{obj\+\_\+get\+\_\+desc\+Inspect}}
+\index{obj\+\_\+get\+\_\+desc\+Inspect@{obj\+\_\+get\+\_\+desc\+Inspect}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+get\+\_\+desc\+Inspect}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+desc\+Inspect (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_adde1d9791bb11ccbc16c0453cb580344}
+\hypertarget{_object_8c_adb72513655ac0070c11efb270fde4604}{\index{Object.\+c@{Object.\+c}!obj\+\_\+get\+\_\+desc\+Moved@{obj\+\_\+get\+\_\+desc\+Moved}}
+\index{obj\+\_\+get\+\_\+desc\+Moved@{obj\+\_\+get\+\_\+desc\+Moved}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+get\+\_\+desc\+Moved}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+desc\+Moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_adb72513655ac0070c11efb270fde4604}
+\hypertarget{_object_8c_a382717b2b5532b27ba45dd64c10550f4}{\index{Object.\+c@{Object.\+c}!obj\+\_\+get\+\_\+description@{obj\+\_\+get\+\_\+description}}
+\index{obj\+\_\+get\+\_\+description@{obj\+\_\+get\+\_\+description}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+get\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a382717b2b5532b27ba45dd64c10550f4}
+\hypertarget{_object_8c_a2bd0352f6023deb89b2264164caba8bb}{\index{Object.\+c@{Object.\+c}!obj\+\_\+get\+\_\+location@{obj\+\_\+get\+\_\+location}}
+\index{obj\+\_\+get\+\_\+location@{obj\+\_\+get\+\_\+location}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+get\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} obj\+\_\+get\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a2bd0352f6023deb89b2264164caba8bb}
+\hypertarget{_object_8c_a255fa6977adb684830a68531d8d1ba55}{\index{Object.\+c@{Object.\+c}!obj\+\_\+get\+\_\+name@{obj\+\_\+get\+\_\+name}}
+\index{obj\+\_\+get\+\_\+name@{obj\+\_\+get\+\_\+name}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ obj\+\_\+get\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a255fa6977adb684830a68531d8d1ba55}
+\hypertarget{_object_8c_a7d11ca958e34bad18d86f4eff19402b5}{\index{Object.\+c@{Object.\+c}!obj\+\_\+hide@{obj\+\_\+hide}}
+\index{obj\+\_\+hide@{obj\+\_\+hide}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+hide}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+hide (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a7d11ca958e34bad18d86f4eff19402b5}
+\hypertarget{_object_8c_a883dc62c0ee79dfd2a06d413f0be6eb7}{\index{Object.\+c@{Object.\+c}!obj\+\_\+is\+\_\+hidden@{obj\+\_\+is\+\_\+hidden}}
+\index{obj\+\_\+is\+\_\+hidden@{obj\+\_\+is\+\_\+hidden}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+is\+\_\+hidden}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+hidden (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a883dc62c0ee79dfd2a06d413f0be6eb7}
+\hypertarget{_object_8c_ae77af4f85237b48c4e1f2ca491078a50}{\index{Object.\+c@{Object.\+c}!obj\+\_\+is\+\_\+lightable@{obj\+\_\+is\+\_\+lightable}}
+\index{obj\+\_\+is\+\_\+lightable@{obj\+\_\+is\+\_\+lightable}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+is\+\_\+lightable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+lightable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_ae77af4f85237b48c4e1f2ca491078a50}
+\hypertarget{_object_8c_a8dbc642d141c38a04dbd9c3411a0a081}{\index{Object.\+c@{Object.\+c}!obj\+\_\+is\+\_\+lighted@{obj\+\_\+is\+\_\+lighted}}
+\index{obj\+\_\+is\+\_\+lighted@{obj\+\_\+is\+\_\+lighted}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+is\+\_\+lighted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+lighted (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a8dbc642d141c38a04dbd9c3411a0a081}
+\hypertarget{_object_8c_a02f3705c93e5f0fe0ca328e58a99bd08}{\index{Object.\+c@{Object.\+c}!obj\+\_\+is\+\_\+movable@{obj\+\_\+is\+\_\+movable}}
+\index{obj\+\_\+is\+\_\+movable@{obj\+\_\+is\+\_\+movable}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+is\+\_\+movable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+movable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a02f3705c93e5f0fe0ca328e58a99bd08}
+\hypertarget{_object_8c_ab1c898154de6ca50e133fc824bf0cc42}{\index{Object.\+c@{Object.\+c}!obj\+\_\+is\+\_\+moved@{obj\+\_\+is\+\_\+moved}}
+\index{obj\+\_\+is\+\_\+moved@{obj\+\_\+is\+\_\+moved}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+is\+\_\+moved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} obj\+\_\+is\+\_\+moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_ab1c898154de6ca50e133fc824bf0cc42}
+\hypertarget{_object_8c_a7e772d9e98e00c6e076afba18cb83ab2}{\index{Object.\+c@{Object.\+c}!obj\+\_\+is\+\_\+name@{obj\+\_\+is\+\_\+name}}
+\index{obj\+\_\+is\+\_\+name@{obj\+\_\+is\+\_\+name}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+is\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} obj\+\_\+is\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a7e772d9e98e00c6e076afba18cb83ab2}
+\hypertarget{_object_8c_ab3c3cd3b7f248173f1c94c2be58d09e5}{\index{Object.\+c@{Object.\+c}!obj\+\_\+open\+\_\+link@{obj\+\_\+open\+\_\+link}}
+\index{obj\+\_\+open\+\_\+link@{obj\+\_\+open\+\_\+link}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+open\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+open\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{new\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_ab3c3cd3b7f248173f1c94c2be58d09e5}
+\hypertarget{_object_8c_a614b6346bae24b7f4dd8f03c6baae320}{\index{Object.\+c@{Object.\+c}!obj\+\_\+print@{obj\+\_\+print}}
+\index{obj\+\_\+print@{obj\+\_\+print}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a614b6346bae24b7f4dd8f03c6baae320}
+\hypertarget{_object_8c_a1ba6ba2a7a75d6759249e0e5d4357143}{\index{Object.\+c@{Object.\+c}!obj\+\_\+print\+\_\+name@{obj\+\_\+print\+\_\+name}}
+\index{obj\+\_\+print\+\_\+name@{obj\+\_\+print\+\_\+name}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+print\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+print\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a1ba6ba2a7a75d6759249e0e5d4357143}
+\hypertarget{_object_8c_aafbd67c3a3fd911503fd328451eb346c}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+description@{obj\+\_\+set\+\_\+description}}
+\index{obj\+\_\+set\+\_\+description@{obj\+\_\+set\+\_\+description}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{char $\ast$}]{description}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_aafbd67c3a3fd911503fd328451eb346c}
+\hypertarget{_object_8c_a6af104f9e2200f45eb0da48e3e57ed62}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+description\+\_\+graphical@{obj\+\_\+set\+\_\+description\+\_\+graphical}}
+\index{obj\+\_\+set\+\_\+description\+\_\+graphical@{obj\+\_\+set\+\_\+description\+\_\+graphical}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+description\+\_\+graphical}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description\+\_\+graphical (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{description\+Graph}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a6af104f9e2200f45eb0da48e3e57ed62}
+\hypertarget{_object_8c_abaf8d0e02e7cc0b541b182b44a8f2256}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+description\+\_\+inspect@{obj\+\_\+set\+\_\+description\+\_\+inspect}}
+\index{obj\+\_\+set\+\_\+description\+\_\+inspect@{obj\+\_\+set\+\_\+description\+\_\+inspect}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+description\+\_\+inspect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description\+\_\+inspect (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{description}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_abaf8d0e02e7cc0b541b182b44a8f2256}
+\hypertarget{_object_8c_a725369decf0ac85d0f07e1cde0f7a832}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+description\+\_\+moved@{obj\+\_\+set\+\_\+description\+\_\+moved}}
+\index{obj\+\_\+set\+\_\+description\+\_\+moved@{obj\+\_\+set\+\_\+description\+\_\+moved}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+description\+\_\+moved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+description\+\_\+moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{description}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a725369decf0ac85d0f07e1cde0f7a832}
+\hypertarget{_object_8c_a039d21b3251ab7d1b279415a384bf89c}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+lightable@{obj\+\_\+set\+\_\+lightable}}
+\index{obj\+\_\+set\+\_\+lightable@{obj\+\_\+set\+\_\+lightable}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+lightable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+lightable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{lightable}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a039d21b3251ab7d1b279415a384bf89c}
+\hypertarget{_object_8c_a73cdcb70a1b2126fa0011e0365d20e56}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+lighted@{obj\+\_\+set\+\_\+lighted}}
+\index{obj\+\_\+set\+\_\+lighted@{obj\+\_\+set\+\_\+lighted}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+lighted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+lighted (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{lighted}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a73cdcb70a1b2126fa0011e0365d20e56}
+\hypertarget{_object_8c_ab037f40d2876a7755ac3c41a3b509290}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+location@{obj\+\_\+set\+\_\+location}}
+\index{obj\+\_\+set\+\_\+location@{obj\+\_\+set\+\_\+location}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{location}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_ab037f40d2876a7755ac3c41a3b509290}
+\hypertarget{_object_8c_a7f8c0edfd71cced82f122a0fd2f9e750}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+movable@{obj\+\_\+set\+\_\+movable}}
+\index{obj\+\_\+set\+\_\+movable@{obj\+\_\+set\+\_\+movable}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+movable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+movable (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{movable}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a7f8c0edfd71cced82f122a0fd2f9e750}
+\hypertarget{_object_8c_ae3ec295f93baf912f98abbab22d9afb0}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+moved@{obj\+\_\+set\+\_\+moved}}
+\index{obj\+\_\+set\+\_\+moved@{obj\+\_\+set\+\_\+moved}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+moved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+moved (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf B\+O\+O\+L}}]{moved}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_ae3ec295f93baf912f98abbab22d9afb0}
+\hypertarget{_object_8c_a18d18ddd3c8eb9a5e858c43f3e17a096}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+name@{obj\+\_\+set\+\_\+name}}
+\index{obj\+\_\+set\+\_\+name@{obj\+\_\+set\+\_\+name}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_a18d18ddd3c8eb9a5e858c43f3e17a096}
+\hypertarget{_object_8c_af8c48e6f9cc1befaa59346a7bff21b64}{\index{Object.\+c@{Object.\+c}!obj\+\_\+set\+\_\+not\+\_\+hidden@{obj\+\_\+set\+\_\+not\+\_\+hidden}}
+\index{obj\+\_\+set\+\_\+not\+\_\+hidden@{obj\+\_\+set\+\_\+not\+\_\+hidden}!Object.\+c@{Object.\+c}}
+\subsubsection[{obj\+\_\+set\+\_\+not\+\_\+hidden}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} obj\+\_\+set\+\_\+not\+\_\+hidden (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_object_8c_af8c48e6f9cc1befaa59346a7bff21b64}

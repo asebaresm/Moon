@@ -1,0 +1,167 @@
+\hypertarget{_player_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Player/\+Player.c File Reference}
+\label{_player_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Player/\+Player.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Player/\+Player.\+c}}
+}
+
+
+contiene las implementaciones de las funciones de Player  
+
+
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___player}{\+\_\+\+Player}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{_player_8c_a37a8bafa3bd82b382ed0dc10b6a47bc6}{create\+\_\+player} ()
+\item 
+void \hyperlink{_player_8c_a2cbe20d0f858f5cbe571c48535063c6a}{destroy\+\_\+player} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_player_8c_aa50ce77ab79af7166d749619fd60acfe}{player\+\_\+get\+\_\+location} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+char $\ast$ \hyperlink{_player_8c_a260d3419c458edcdb3d2b5e9d4a867e8}{player\+\_\+get\+\_\+name} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_player_8c_a76f30db90ac442079f2b0196fd080e04}{player\+\_\+remove\+\_\+obj} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+id)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_player_8c_ab7900ea3244822f4da9e8e4ad38e872e}{player\+\_\+search\+\_\+obj} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+id)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_player_8c_abad520f06b20f68426190496f920058a}{is\+\_\+player\+\_\+inv\+\_\+full} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_player_8c_a5bbcef62933294bd39699155f4f99dd0}{player\+\_\+set\+\_\+max\+\_\+objects} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, unsigned int max\+\_\+objects)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_player_8c_af69494ddbfa83c542f25d9c99ad4d2dc}{player\+\_\+set\+\_\+location} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+id)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_player_8c_a6a30809f7775f5c2d3bef47d92769e59}{player\+\_\+set\+\_\+name} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, char $\ast$name)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_player_8c_a7a78306a87a33ed9524db08fbb7ab3ee}{player\+\_\+add\+\_\+obj} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+id)
+\item 
+\hyperlink{_types_8h_ab5b5a106fd7981d8a25dce99b700ee5c}{Size} \hyperlink{_player_8c_a1d59106cf562ed4f055cdd5282303344}{player\+\_\+inv\+\_\+size} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{_player_8c_a19145716ebc2170d98749f2775059414}{get\+\_\+player\+\_\+inv} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_player_8c_aad43ab4878222a74c15a51f80e410314}{get\+\_\+id\+\_\+from\+\_\+player\+\_\+inv\+\_\+set\+\_\+index} (\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, int indice)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de Player 
+
+\begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+01 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\hypertarget{_player_8c_a37a8bafa3bd82b382ed0dc10b6a47bc6}{\index{Player.\+c@{Player.\+c}!create\+\_\+player@{create\+\_\+player}}
+\index{create\+\_\+player@{create\+\_\+player}!Player.\+c@{Player.\+c}}
+\subsubsection[{create\+\_\+player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ create\+\_\+player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a37a8bafa3bd82b382ed0dc10b6a47bc6}
+\hypertarget{_player_8c_a2cbe20d0f858f5cbe571c48535063c6a}{\index{Player.\+c@{Player.\+c}!destroy\+\_\+player@{destroy\+\_\+player}}
+\index{destroy\+\_\+player@{destroy\+\_\+player}!Player.\+c@{Player.\+c}}
+\subsubsection[{destroy\+\_\+player}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+player (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a2cbe20d0f858f5cbe571c48535063c6a}
+\hypertarget{_player_8c_aad43ab4878222a74c15a51f80e410314}{\index{Player.\+c@{Player.\+c}!get\+\_\+id\+\_\+from\+\_\+player\+\_\+inv\+\_\+set\+\_\+index@{get\+\_\+id\+\_\+from\+\_\+player\+\_\+inv\+\_\+set\+\_\+index}}
+\index{get\+\_\+id\+\_\+from\+\_\+player\+\_\+inv\+\_\+set\+\_\+index@{get\+\_\+id\+\_\+from\+\_\+player\+\_\+inv\+\_\+set\+\_\+index}!Player.\+c@{Player.\+c}}
+\subsubsection[{get\+\_\+id\+\_\+from\+\_\+player\+\_\+inv\+\_\+set\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+id\+\_\+from\+\_\+player\+\_\+inv\+\_\+set\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{int}]{indice}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_aad43ab4878222a74c15a51f80e410314}
+\hypertarget{_player_8c_a19145716ebc2170d98749f2775059414}{\index{Player.\+c@{Player.\+c}!get\+\_\+player\+\_\+inv@{get\+\_\+player\+\_\+inv}}
+\index{get\+\_\+player\+\_\+inv@{get\+\_\+player\+\_\+inv}!Player.\+c@{Player.\+c}}
+\subsubsection[{get\+\_\+player\+\_\+inv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ get\+\_\+player\+\_\+inv (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a19145716ebc2170d98749f2775059414}
+\hypertarget{_player_8c_abad520f06b20f68426190496f920058a}{\index{Player.\+c@{Player.\+c}!is\+\_\+player\+\_\+inv\+\_\+full@{is\+\_\+player\+\_\+inv\+\_\+full}}
+\index{is\+\_\+player\+\_\+inv\+\_\+full@{is\+\_\+player\+\_\+inv\+\_\+full}!Player.\+c@{Player.\+c}}
+\subsubsection[{is\+\_\+player\+\_\+inv\+\_\+full}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} is\+\_\+player\+\_\+inv\+\_\+full (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_abad520f06b20f68426190496f920058a}
+\hypertarget{_player_8c_a7a78306a87a33ed9524db08fbb7ab3ee}{\index{Player.\+c@{Player.\+c}!player\+\_\+add\+\_\+obj@{player\+\_\+add\+\_\+obj}}
+\index{player\+\_\+add\+\_\+obj@{player\+\_\+add\+\_\+obj}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+add\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+add\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{object\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a7a78306a87a33ed9524db08fbb7ab3ee}
+\hypertarget{_player_8c_aa50ce77ab79af7166d749619fd60acfe}{\index{Player.\+c@{Player.\+c}!player\+\_\+get\+\_\+location@{player\+\_\+get\+\_\+location}}
+\index{player\+\_\+get\+\_\+location@{player\+\_\+get\+\_\+location}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} player\+\_\+get\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_aa50ce77ab79af7166d749619fd60acfe}
+\hypertarget{_player_8c_a260d3419c458edcdb3d2b5e9d4a867e8}{\index{Player.\+c@{Player.\+c}!player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}}
+\index{player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ player\+\_\+get\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a260d3419c458edcdb3d2b5e9d4a867e8}
+\hypertarget{_player_8c_a1d59106cf562ed4f055cdd5282303344}{\index{Player.\+c@{Player.\+c}!player\+\_\+inv\+\_\+size@{player\+\_\+inv\+\_\+size}}
+\index{player\+\_\+inv\+\_\+size@{player\+\_\+inv\+\_\+size}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+inv\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Size} player\+\_\+inv\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a1d59106cf562ed4f055cdd5282303344}
+\hypertarget{_player_8c_a76f30db90ac442079f2b0196fd080e04}{\index{Player.\+c@{Player.\+c}!player\+\_\+remove\+\_\+obj@{player\+\_\+remove\+\_\+obj}}
+\index{player\+\_\+remove\+\_\+obj@{player\+\_\+remove\+\_\+obj}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+remove\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+remove\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{object\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a76f30db90ac442079f2b0196fd080e04}
+\hypertarget{_player_8c_ab7900ea3244822f4da9e8e4ad38e872e}{\index{Player.\+c@{Player.\+c}!player\+\_\+search\+\_\+obj@{player\+\_\+search\+\_\+obj}}
+\index{player\+\_\+search\+\_\+obj@{player\+\_\+search\+\_\+obj}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+search\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} player\+\_\+search\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{object\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_ab7900ea3244822f4da9e8e4ad38e872e}
+\hypertarget{_player_8c_af69494ddbfa83c542f25d9c99ad4d2dc}{\index{Player.\+c@{Player.\+c}!player\+\_\+set\+\_\+location@{player\+\_\+set\+\_\+location}}
+\index{player\+\_\+set\+\_\+location@{player\+\_\+set\+\_\+location}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+set\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+set\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{space\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_af69494ddbfa83c542f25d9c99ad4d2dc}
+\hypertarget{_player_8c_a5bbcef62933294bd39699155f4f99dd0}{\index{Player.\+c@{Player.\+c}!player\+\_\+set\+\_\+max\+\_\+objects@{player\+\_\+set\+\_\+max\+\_\+objects}}
+\index{player\+\_\+set\+\_\+max\+\_\+objects@{player\+\_\+set\+\_\+max\+\_\+objects}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+set\+\_\+max\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+set\+\_\+max\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{unsigned int}]{max\+\_\+objects}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a5bbcef62933294bd39699155f4f99dd0}
+\hypertarget{_player_8c_a6a30809f7775f5c2d3bef47d92769e59}{\index{Player.\+c@{Player.\+c}!player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}}
+\index{player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}!Player.\+c@{Player.\+c}}
+\subsubsection[{player\+\_\+set\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{_player_8c_a6a30809f7775f5c2d3bef47d92769e59}

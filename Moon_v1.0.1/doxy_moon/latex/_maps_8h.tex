@@ -1,0 +1,174 @@
+\hypertarget{_maps_8h}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Map/\+Maps.h File Reference}
+\label{_maps_8h}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Map/\+Maps.\+h@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Map/\+Maps.\+h}}
+}
+
+
+contiene los protoipos de las funciones de Maps  
+
+
+{\ttfamily \#include \char`\"{}../\+Types.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_maps_8h_aa679baa4df180fe5fadb94c0e985a470}{W\+O\+R\+D\+\_\+\+M\+A\+X}~2000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S iden\+\_\+to\+\_\+spot(char $\ast$map, char $\ast$iden, int spot);}\par
+{\em Introduce un identificador (sin formato) en una posicion del mapa
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$map} & un puntero a la cadena que contiene el mapa. \\
+\hline
+{\em $\ast$iden} & un puntero a la cadena con el identificador. \\
+\hline
+{\em spot} & posicion en el mapa donde se insertará. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mapa si todo ha ido bien, N\+U\+L\+L si error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_maps_8h_a46043d58021597766364527c17a2de99}{iden\+\_\+to\+\_\+spot} (char $\ast$map, char $\ast$iden, int spot)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name(const char $\ast$obj\+\_\+name, char $\ast$name\+\_\+lista);}\par
+{\em Obtiene el identificador de un objeto a partir de su nombre y una lista de objetos
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$obj\+\_\+name} & un puntero a la cadena que contiene el nombre del objeto. \\
+\hline
+{\em $\ast$name\+\_\+lista} & un puntero a la cadena con el nombre de la lista con los identificadores. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+puntero al identificador del objeto (sin formato). 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_maps_8h_abdab5a94a1d935c09968d58dff271b53}{get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name} (const char $\ast$obj\+\_\+name, char $\ast$name\+\_\+lista)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf char $\ast$format\+\_\+iden(char $\ast$iden);}\par
+{\em Obtiene el identificador de un objeto a partir de su nombre y una lista de objetos
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$iden} & un puntero al identificador (sin formato) de un objeto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+puntero al identificador con formato de un objeto. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_maps_8h_a532a2b82dda0d56bf394300b5c0b038c}{format\+\_\+iden} (char $\ast$iden)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S add\+\_\+objeto\+\_\+map(const char $\ast$obj\+\_\+name, char $\ast$map, char $\ast$name\+\_\+lista);}\par
+{\em Añade un objeto en el mapa a traves de un identificador con formato
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$obj\+\_\+name} & un puntero a la cadena que contiene el nombre del objeto \\
+\hline
+{\em $\ast$map} & un puntero a la cadena que contiene el mapa. \\
+\hline
+{\em $\ast$name\+\_\+lista} & puntero a la cadena que contiene el nombre de la lista con los identificadores. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L si error/\+Mapa si todo ha ido bien. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_maps_8h_ac749d7339a5dc72b14c46bdbdab3d962}{add\+\_\+objeto\+\_\+map} (char $\ast$obj\+\_\+name, char $\ast$map, char $\ast$name\+\_\+lista)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S elimina\+\_\+objeto\+\_\+map(char $\ast$obj\+\_\+name, char $\ast$map, char $\ast$name\+\_\+lista);}\par
+{\em Elimina un objeto en el mapa a traves de un identificador con formato
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$obj\+\_\+name} & un puntero a la cadena que contiene el nombre del objeto \\
+\hline
+{\em $\ast$map} & un puntero a la cadena que contiene el mapa. \\
+\hline
+{\em $\ast$name\+\_\+lista} & puntero a la cadena que contiene el nombre de la lista con los identificadores. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L si error/\+Mapa si todo ha ido bien. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_maps_8h_a487bcba1470af2584ac3fdb16f58833b}{elimina\+\_\+objeto\+\_\+map} (char $\ast$obj\+\_\+name, char $\ast$map, char $\ast$name\+\_\+lista)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+contiene los protoipos de las funciones de Maps 
+
+\begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10-\/05-\/2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_maps_8h_aa679baa4df180fe5fadb94c0e985a470}{\index{Maps.\+h@{Maps.\+h}!W\+O\+R\+D\+\_\+\+M\+A\+X@{W\+O\+R\+D\+\_\+\+M\+A\+X}}
+\index{W\+O\+R\+D\+\_\+\+M\+A\+X@{W\+O\+R\+D\+\_\+\+M\+A\+X}!Maps.\+h@{Maps.\+h}}
+\subsubsection[{W\+O\+R\+D\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+O\+R\+D\+\_\+\+M\+A\+X~2000}}\label{_maps_8h_aa679baa4df180fe5fadb94c0e985a470}
+maximo de por defecto de tamaño de palabras 
+
+\subsection{Function Documentation}
+\hypertarget{_maps_8h_ac749d7339a5dc72b14c46bdbdab3d962}{\index{Maps.\+h@{Maps.\+h}!add\+\_\+objeto\+\_\+map@{add\+\_\+objeto\+\_\+map}}
+\index{add\+\_\+objeto\+\_\+map@{add\+\_\+objeto\+\_\+map}!Maps.\+h@{Maps.\+h}}
+\subsubsection[{add\+\_\+objeto\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ add\+\_\+objeto\+\_\+map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{obj\+\_\+name, }
+\item[{char $\ast$}]{map, }
+\item[{char $\ast$}]{name\+\_\+lista}
+\end{DoxyParamCaption}
+)}}\label{_maps_8h_ac749d7339a5dc72b14c46bdbdab3d962}
+\hypertarget{_maps_8h_a487bcba1470af2584ac3fdb16f58833b}{\index{Maps.\+h@{Maps.\+h}!elimina\+\_\+objeto\+\_\+map@{elimina\+\_\+objeto\+\_\+map}}
+\index{elimina\+\_\+objeto\+\_\+map@{elimina\+\_\+objeto\+\_\+map}!Maps.\+h@{Maps.\+h}}
+\subsubsection[{elimina\+\_\+objeto\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ elimina\+\_\+objeto\+\_\+map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{obj\+\_\+name, }
+\item[{char $\ast$}]{map, }
+\item[{char $\ast$}]{name\+\_\+lista}
+\end{DoxyParamCaption}
+)}}\label{_maps_8h_a487bcba1470af2584ac3fdb16f58833b}
+\hypertarget{_maps_8h_a532a2b82dda0d56bf394300b5c0b038c}{\index{Maps.\+h@{Maps.\+h}!format\+\_\+iden@{format\+\_\+iden}}
+\index{format\+\_\+iden@{format\+\_\+iden}!Maps.\+h@{Maps.\+h}}
+\subsubsection[{format\+\_\+iden}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ format\+\_\+iden (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{iden}
+\end{DoxyParamCaption}
+)}}\label{_maps_8h_a532a2b82dda0d56bf394300b5c0b038c}
+\hypertarget{_maps_8h_abdab5a94a1d935c09968d58dff271b53}{\index{Maps.\+h@{Maps.\+h}!get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name@{get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name}}
+\index{get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name@{get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name}!Maps.\+h@{Maps.\+h}}
+\subsubsection[{get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+iden\+\_\+from\+\_\+obj\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{obj\+\_\+name, }
+\item[{char $\ast$}]{name\+\_\+lista}
+\end{DoxyParamCaption}
+)}}\label{_maps_8h_abdab5a94a1d935c09968d58dff271b53}
+\hypertarget{_maps_8h_a46043d58021597766364527c17a2de99}{\index{Maps.\+h@{Maps.\+h}!iden\+\_\+to\+\_\+spot@{iden\+\_\+to\+\_\+spot}}
+\index{iden\+\_\+to\+\_\+spot@{iden\+\_\+to\+\_\+spot}!Maps.\+h@{Maps.\+h}}
+\subsubsection[{iden\+\_\+to\+\_\+spot}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ iden\+\_\+to\+\_\+spot (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{map, }
+\item[{char $\ast$}]{iden, }
+\item[{int}]{spot}
+\end{DoxyParamCaption}
+)}}\label{_maps_8h_a46043d58021597766364527c17a2de99}

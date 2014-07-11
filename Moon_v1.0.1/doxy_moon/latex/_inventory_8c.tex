@@ -1,0 +1,130 @@
+\hypertarget{_inventory_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Inventory/\+Inventory.c File Reference}
+\label{_inventory_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Inventory/\+Inventory.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Inventory/\+Inventory.\+c}}
+}
+
+
+contiene las implementaciones de las funciones de Inventory  
+
+
+{\ttfamily \#include \char`\"{}Inventory.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___inventory}{\+\_\+\+Inventory}
+\begin{DoxyCompactList}\small\item\em T\+A\+D inventario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{_inventory_8c_ac46d2d92f8dcc93f415c2067511542ce}{create\+\_\+inventory} ()
+\item 
+void \hyperlink{_inventory_8c_aa2de18095a84277a534e1b94a37de984}{destroy\+\_\+inventory} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_inventory_8c_a1015b35087fcdf0270363e6ffe1179b6}{inventory\+\_\+set\+\_\+max\+\_\+objects} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, unsigned int max\+\_\+objects)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_inventory_8c_a04f08935a726751f9633110cd08f86d3}{inventory\+\_\+add\+\_\+obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_inventory_8c_ab52cf5d051300007bb78e62e6994be27}{inventory\+\_\+search\+\_\+obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_inventory_8c_a969cfc1fb8d657b86bdf1841d5d2883a}{inventory\+\_\+remove\+\_\+obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_ab5b5a106fd7981d8a25dce99b700ee5c}{Size} \hyperlink{_inventory_8c_af787e9d7cd53b6d0d775001d7865a382}{get\+\_\+inventory\+\_\+set\+\_\+size} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)
+\item 
+\hyperlink{_types_8h_ab5b5a106fd7981d8a25dce99b700ee5c}{Size} \hyperlink{_inventory_8c_afa7cbb4fdaa21196739faf8a718aaf5a}{get\+\_\+inventory\+\_\+max} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_inventory_8c_acdf0965717966fd4f4998928e5d26e16}{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+obj} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_inventory_8c_acb8e023b33d761940c947671f5b05b2a}{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+index} (\hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv, int indice)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de Inventory 
+
+\begin{DoxyAuthor}{Author}
+Alfonso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\hypertarget{_inventory_8c_ac46d2d92f8dcc93f415c2067511542ce}{\index{Inventory.\+c@{Inventory.\+c}!create\+\_\+inventory@{create\+\_\+inventory}}
+\index{create\+\_\+inventory@{create\+\_\+inventory}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{create\+\_\+inventory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ create\+\_\+inventory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_ac46d2d92f8dcc93f415c2067511542ce}
+\hypertarget{_inventory_8c_aa2de18095a84277a534e1b94a37de984}{\index{Inventory.\+c@{Inventory.\+c}!destroy\+\_\+inventory@{destroy\+\_\+inventory}}
+\index{destroy\+\_\+inventory@{destroy\+\_\+inventory}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{destroy\+\_\+inventory}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+inventory (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_aa2de18095a84277a534e1b94a37de984}
+\hypertarget{_inventory_8c_acb8e023b33d761940c947671f5b05b2a}{\index{Inventory.\+c@{Inventory.\+c}!get\+\_\+id\+\_\+from\+\_\+inv\+\_\+index@{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+index}}
+\index{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+index@{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+index}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+id\+\_\+from\+\_\+inv\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv, }
+\item[{int}]{indice}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_acb8e023b33d761940c947671f5b05b2a}
+\hypertarget{_inventory_8c_acdf0965717966fd4f4998928e5d26e16}{\index{Inventory.\+c@{Inventory.\+c}!get\+\_\+id\+\_\+from\+\_\+inv\+\_\+obj@{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+obj}}
+\index{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+obj@{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+obj}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{get\+\_\+id\+\_\+from\+\_\+inv\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+id\+\_\+from\+\_\+inv\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_acdf0965717966fd4f4998928e5d26e16}
+\hypertarget{_inventory_8c_afa7cbb4fdaa21196739faf8a718aaf5a}{\index{Inventory.\+c@{Inventory.\+c}!get\+\_\+inventory\+\_\+max@{get\+\_\+inventory\+\_\+max}}
+\index{get\+\_\+inventory\+\_\+max@{get\+\_\+inventory\+\_\+max}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{get\+\_\+inventory\+\_\+max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Size} get\+\_\+inventory\+\_\+max (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_afa7cbb4fdaa21196739faf8a718aaf5a}
+\hypertarget{_inventory_8c_af787e9d7cd53b6d0d775001d7865a382}{\index{Inventory.\+c@{Inventory.\+c}!get\+\_\+inventory\+\_\+set\+\_\+size@{get\+\_\+inventory\+\_\+set\+\_\+size}}
+\index{get\+\_\+inventory\+\_\+set\+\_\+size@{get\+\_\+inventory\+\_\+set\+\_\+size}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{get\+\_\+inventory\+\_\+set\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Size} get\+\_\+inventory\+\_\+set\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_af787e9d7cd53b6d0d775001d7865a382}
+\hypertarget{_inventory_8c_a04f08935a726751f9633110cd08f86d3}{\index{Inventory.\+c@{Inventory.\+c}!inventory\+\_\+add\+\_\+obj@{inventory\+\_\+add\+\_\+obj}}
+\index{inventory\+\_\+add\+\_\+obj@{inventory\+\_\+add\+\_\+obj}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{inventory\+\_\+add\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+add\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_a04f08935a726751f9633110cd08f86d3}
+\hypertarget{_inventory_8c_a969cfc1fb8d657b86bdf1841d5d2883a}{\index{Inventory.\+c@{Inventory.\+c}!inventory\+\_\+remove\+\_\+obj@{inventory\+\_\+remove\+\_\+obj}}
+\index{inventory\+\_\+remove\+\_\+obj@{inventory\+\_\+remove\+\_\+obj}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{inventory\+\_\+remove\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+remove\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_a969cfc1fb8d657b86bdf1841d5d2883a}
+\hypertarget{_inventory_8c_ab52cf5d051300007bb78e62e6994be27}{\index{Inventory.\+c@{Inventory.\+c}!inventory\+\_\+search\+\_\+obj@{inventory\+\_\+search\+\_\+obj}}
+\index{inventory\+\_\+search\+\_\+obj@{inventory\+\_\+search\+\_\+obj}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{inventory\+\_\+search\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} inventory\+\_\+search\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_ab52cf5d051300007bb78e62e6994be27}
+\hypertarget{_inventory_8c_a1015b35087fcdf0270363e6ffe1179b6}{\index{Inventory.\+c@{Inventory.\+c}!inventory\+\_\+set\+\_\+max\+\_\+objects@{inventory\+\_\+set\+\_\+max\+\_\+objects}}
+\index{inventory\+\_\+set\+\_\+max\+\_\+objects@{inventory\+\_\+set\+\_\+max\+\_\+objects}!Inventory.\+c@{Inventory.\+c}}
+\subsubsection[{inventory\+\_\+set\+\_\+max\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+set\+\_\+max\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inv, }
+\item[{unsigned int}]{max\+\_\+objects}
+\end{DoxyParamCaption}
+)}}\label{_inventory_8c_a1015b35087fcdf0270363e6ffe1179b6}

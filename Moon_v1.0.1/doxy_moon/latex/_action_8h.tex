@@ -1,0 +1,243 @@
+\hypertarget{_action_8h}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Action/\+Action.h File Reference}
+\label{_action_8h}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Action/\+Action.\+h@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Action/\+Action.\+h}}
+}
+
+
+contiene las implementaciones de las funciones de Action  
+
+
+{\ttfamily \#include \char`\"{}../\+World/\+World.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_action_8h_aa9555d4c1299bc3e7c31862f84e69410}{I\+D\+\_\+\+C\+E\+N\+T\+R\+A\+L\+\_\+\+T\+E\+R\+M\+O\+E\+L\+E\+C\+T\+R\+I\+C\+A}~4
+\item 
+\#define \hyperlink{_action_8h_af5556ccee4f3b981f7329d9961336563}{I\+D\+\_\+\+C\+E\+N\+T\+R\+O\+\_\+\+M\+A\+N\+D\+O}~7
+\item 
+\#define \hyperlink{_action_8h_a501405ac03f4179d991481583e8376cb}{I\+D\+\_\+\+G\+E\+N\+E\+R\+A\+D\+O\+R}~13
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___action}{\+\_\+\+Action} \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action}
+\begin{DoxyCompactList}\small\item\em Estrucura accion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type} \{ \\*
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2ef6670867f7ad7e2c3f3015d4bf9039}{A\+\_\+\+G\+O}, 
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba48c40ad666f0d8e4b79040ac487424dc}{A\+\_\+\+P\+I\+C\+K\+\_\+\+U\+P}, 
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba722ab568cbe981ceab1670572d12cfe3}{A\+\_\+\+D\+R\+O\+P}, 
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950bae099005e8fdb093c7d5ac4b4e6cfdb41}{A\+\_\+\+I\+N\+S\+P\+E\+C\+T}, 
+\\*
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba51268c55bf3e455a4e8f6b6a518b3224}{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+N}, 
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba5d3df8b4833b3756c2427a1617438526}{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+F\+F}, 
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2810a33f8e4314f9011aea0ed7f25639}{A\+\_\+\+S\+P\+E\+A\+K}, 
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950bacf0c9981a2536371a6ef1eb76c9068af}{A\+\_\+\+A\+B\+R\+I\+R}, 
+\\*
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba81b2070d2e824e437d14fea163bb0b09}{A\+\_\+\+A\+C\+T\+I\+V\+A\+R}, 
+\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba5e295b05c6fd7c7f12c4057339d85af6}{A\+\_\+\+U\+S\+A\+R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S action\+\_\+execute(World $\ast$w, Action $\ast$a);}\par
+{\em ejecuta una accione en particular en mundo (excepto A\+\_\+\+P\+I\+C\+K\+\_\+\+U\+P)
+
+
+\begin{DoxyParams}{Parameters}
+{\em World} & $\ast$w\+: mundo sobre el que se ejecuta la accion \\
+\hline
+{\em Action} & $\ast$a\+: accion que se va a ejecutar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve O\+K si todo ha ido bien o E\+R\+R\+O\+R si algo ha fallado 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_action_8h_a63f8aa1fa3805bd81e924443336b4097}{action\+\_\+execute} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S action\+\_\+execute\+\_\+inspect(World $\ast$w, Action $\ast$a, char $\ast$inspected, Size max\+\_\+len);}\par
+{\em reserva memeoria para la cadena que almacenara la descripicion del objeto inspeccionado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em World} & $\ast$w\+: mundo que contine aquello que se va a inspeccionar. \\
+\hline
+{\em Action} & $\ast$a\+: accion a realizar \\
+\hline
+{\em char} & $\ast$inspected\+: cadena de caracteres que guarda la descripcion de lo inspeccionado. \\
+\hline
+{\em Size} & max\+\_\+len\+: tamño maximo de la cadena inspected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve Ok si todo ha ido bien o E\+R\+R\+O\+R si ha habido algun error. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_action_8h_a0f594fd8ee553b4e5bd5f277306ea30e}{action\+\_\+execute\+\_\+inspect} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a, char $\ast$inspected, \hyperlink{_types_8h_ab5b5a106fd7981d8a25dce99b700ee5c}{Size} max\+\_\+len)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Action$\ast$ new\+\_\+action(const char$\ast$ do\+\_\+act, Action\+Type id);}\par
+{\em crea una nueva accion
+
+
+\begin{DoxyParams}{Parameters}
+{\em do\+\_\+act} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la accion si se ha creado correctamente o N\+U\+L\+L en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$ \hyperlink{_action_8h_a76343bb555249eea2a60e629ae7e7b67}{new\+\_\+action} (const char $\ast$do\+\_\+act, \hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type} id)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf void destroy\+\_\+action(Action $\ast$a);}\par
+{\em destruye una accion liberando memoria que habia sido reservada previamente
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_action_8h_ac5668fcde5c28de5e93961ab66024126}{destroy\+\_\+action} (\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf S\+T\+A\+T\+U\+S set\+\_\+action(Action $\ast$a, const char $\ast$do\+\_\+act, Action\+Type id);}\par
+{\em edita una accion
+
+
+\begin{DoxyParams}{Parameters}
+{\em do\+\_\+act} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha editado bien o E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_action_8h_aff022cec73e8301a19014ce299b3d07b}{set\+\_\+action} (\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a, const char $\ast$do\+\_\+act, \hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type} id)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de Action 
+
+\begin{DoxyAuthor}{Author}
+Pablo Yus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_action_8h_aa9555d4c1299bc3e7c31862f84e69410}{\index{Action.\+h@{Action.\+h}!I\+D\+\_\+\+C\+E\+N\+T\+R\+A\+L\+\_\+\+T\+E\+R\+M\+O\+E\+L\+E\+C\+T\+R\+I\+C\+A@{I\+D\+\_\+\+C\+E\+N\+T\+R\+A\+L\+\_\+\+T\+E\+R\+M\+O\+E\+L\+E\+C\+T\+R\+I\+C\+A}}
+\index{I\+D\+\_\+\+C\+E\+N\+T\+R\+A\+L\+\_\+\+T\+E\+R\+M\+O\+E\+L\+E\+C\+T\+R\+I\+C\+A@{I\+D\+\_\+\+C\+E\+N\+T\+R\+A\+L\+\_\+\+T\+E\+R\+M\+O\+E\+L\+E\+C\+T\+R\+I\+C\+A}!Action.\+h@{Action.\+h}}
+\subsubsection[{I\+D\+\_\+\+C\+E\+N\+T\+R\+A\+L\+\_\+\+T\+E\+R\+M\+O\+E\+L\+E\+C\+T\+R\+I\+C\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+C\+E\+N\+T\+R\+A\+L\+\_\+\+T\+E\+R\+M\+O\+E\+L\+E\+C\+T\+R\+I\+C\+A~4}}\label{_action_8h_aa9555d4c1299bc3e7c31862f84e69410}
+Id de central termoelectrica \hypertarget{_action_8h_af5556ccee4f3b981f7329d9961336563}{\index{Action.\+h@{Action.\+h}!I\+D\+\_\+\+C\+E\+N\+T\+R\+O\+\_\+\+M\+A\+N\+D\+O@{I\+D\+\_\+\+C\+E\+N\+T\+R\+O\+\_\+\+M\+A\+N\+D\+O}}
+\index{I\+D\+\_\+\+C\+E\+N\+T\+R\+O\+\_\+\+M\+A\+N\+D\+O@{I\+D\+\_\+\+C\+E\+N\+T\+R\+O\+\_\+\+M\+A\+N\+D\+O}!Action.\+h@{Action.\+h}}
+\subsubsection[{I\+D\+\_\+\+C\+E\+N\+T\+R\+O\+\_\+\+M\+A\+N\+D\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+C\+E\+N\+T\+R\+O\+\_\+\+M\+A\+N\+D\+O~7}}\label{_action_8h_af5556ccee4f3b981f7329d9961336563}
+Id del centro de mando \hypertarget{_action_8h_a501405ac03f4179d991481583e8376cb}{\index{Action.\+h@{Action.\+h}!I\+D\+\_\+\+G\+E\+N\+E\+R\+A\+D\+O\+R@{I\+D\+\_\+\+G\+E\+N\+E\+R\+A\+D\+O\+R}}
+\index{I\+D\+\_\+\+G\+E\+N\+E\+R\+A\+D\+O\+R@{I\+D\+\_\+\+G\+E\+N\+E\+R\+A\+D\+O\+R}!Action.\+h@{Action.\+h}}
+\subsubsection[{I\+D\+\_\+\+G\+E\+N\+E\+R\+A\+D\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+G\+E\+N\+E\+R\+A\+D\+O\+R~13}}\label{_action_8h_a501405ac03f4179d991481583e8376cb}
+Id del generador 
+
+\subsection{Typedef Documentation}
+\hypertarget{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{\index{Action.\+h@{Action.\+h}!Action@{Action}}
+\index{Action@{Action}!Action.\+h@{Action.\+h}}
+\subsubsection[{Action}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Action} {\bf Action}}}\label{_action_8h_a01c7d823f4985d5878a7fb633744c26b}
+
+
+Estrucura accion. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{\index{Action.\+h@{Action.\+h}!Action\+Type@{Action\+Type}}
+\index{Action\+Type@{Action\+Type}!Action.\+h@{Action.\+h}}
+\subsubsection[{Action\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Action\+Type}}}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+\_\+\+G\+O@{A\+\_\+\+G\+O}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+G\+O@{A\+\_\+\+G\+O}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2ef6670867f7ad7e2c3f3015d4bf9039}{A\+\_\+\+G\+O}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2ef6670867f7ad7e2c3f3015d4bf9039}
+}]\index{A\+\_\+\+P\+I\+C\+K\+\_\+\+U\+P@{A\+\_\+\+P\+I\+C\+K\+\_\+\+U\+P}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+P\+I\+C\+K\+\_\+\+U\+P@{A\+\_\+\+P\+I\+C\+K\+\_\+\+U\+P}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba48c40ad666f0d8e4b79040ac487424dc}{A\+\_\+\+P\+I\+C\+K\+\_\+\+U\+P}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba48c40ad666f0d8e4b79040ac487424dc}
+}]\index{A\+\_\+\+D\+R\+O\+P@{A\+\_\+\+D\+R\+O\+P}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+D\+R\+O\+P@{A\+\_\+\+D\+R\+O\+P}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba722ab568cbe981ceab1670572d12cfe3}{A\+\_\+\+D\+R\+O\+P}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba722ab568cbe981ceab1670572d12cfe3}
+}]\index{A\+\_\+\+I\+N\+S\+P\+E\+C\+T@{A\+\_\+\+I\+N\+S\+P\+E\+C\+T}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+I\+N\+S\+P\+E\+C\+T@{A\+\_\+\+I\+N\+S\+P\+E\+C\+T}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950bae099005e8fdb093c7d5ac4b4e6cfdb41}{A\+\_\+\+I\+N\+S\+P\+E\+C\+T}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950bae099005e8fdb093c7d5ac4b4e6cfdb41}
+}]\index{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+N@{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+N}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+N@{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+N}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba51268c55bf3e455a4e8f6b6a518b3224}{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+N}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba51268c55bf3e455a4e8f6b6a518b3224}
+}]\index{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+F\+F@{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+F\+F}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+F\+F@{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+F\+F}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba5d3df8b4833b3756c2427a1617438526}{A\+\_\+\+T\+U\+R\+N\+\_\+\+L\+I\+G\+H\+T\+\_\+\+O\+F\+F}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba5d3df8b4833b3756c2427a1617438526}
+}]\index{A\+\_\+\+S\+P\+E\+A\+K@{A\+\_\+\+S\+P\+E\+A\+K}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+S\+P\+E\+A\+K@{A\+\_\+\+S\+P\+E\+A\+K}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2810a33f8e4314f9011aea0ed7f25639}{A\+\_\+\+S\+P\+E\+A\+K}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2810a33f8e4314f9011aea0ed7f25639}
+}]\index{A\+\_\+\+A\+B\+R\+I\+R@{A\+\_\+\+A\+B\+R\+I\+R}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+A\+B\+R\+I\+R@{A\+\_\+\+A\+B\+R\+I\+R}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950bacf0c9981a2536371a6ef1eb76c9068af}{A\+\_\+\+A\+B\+R\+I\+R}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950bacf0c9981a2536371a6ef1eb76c9068af}
+}]\index{A\+\_\+\+A\+C\+T\+I\+V\+A\+R@{A\+\_\+\+A\+C\+T\+I\+V\+A\+R}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+A\+C\+T\+I\+V\+A\+R@{A\+\_\+\+A\+C\+T\+I\+V\+A\+R}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba81b2070d2e824e437d14fea163bb0b09}{A\+\_\+\+A\+C\+T\+I\+V\+A\+R}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba81b2070d2e824e437d14fea163bb0b09}
+}]\index{A\+\_\+\+U\+S\+A\+R@{A\+\_\+\+U\+S\+A\+R}!Action.\+h@{Action.\+h}}\index{Action.\+h@{Action.\+h}!A\+\_\+\+U\+S\+A\+R@{A\+\_\+\+U\+S\+A\+R}}\item[{\em 
+\hypertarget{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba5e295b05c6fd7c7f12c4057339d85af6}{A\+\_\+\+U\+S\+A\+R}\label{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba5e295b05c6fd7c7f12c4057339d85af6}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{_action_8h_a63f8aa1fa3805bd81e924443336b4097}{\index{Action.\+h@{Action.\+h}!action\+\_\+execute@{action\+\_\+execute}}
+\index{action\+\_\+execute@{action\+\_\+execute}!Action.\+h@{Action.\+h}}
+\subsubsection[{action\+\_\+execute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} action\+\_\+execute (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Action} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{_action_8h_a63f8aa1fa3805bd81e924443336b4097}
+\hypertarget{_action_8h_a0f594fd8ee553b4e5bd5f277306ea30e}{\index{Action.\+h@{Action.\+h}!action\+\_\+execute\+\_\+inspect@{action\+\_\+execute\+\_\+inspect}}
+\index{action\+\_\+execute\+\_\+inspect@{action\+\_\+execute\+\_\+inspect}!Action.\+h@{Action.\+h}}
+\subsubsection[{action\+\_\+execute\+\_\+inspect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} action\+\_\+execute\+\_\+inspect (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Action} $\ast$}]{a, }
+\item[{char $\ast$}]{inspected, }
+\item[{{\bf Size}}]{max\+\_\+len}
+\end{DoxyParamCaption}
+)}}\label{_action_8h_a0f594fd8ee553b4e5bd5f277306ea30e}
+\hypertarget{_action_8h_ac5668fcde5c28de5e93961ab66024126}{\index{Action.\+h@{Action.\+h}!destroy\+\_\+action@{destroy\+\_\+action}}
+\index{destroy\+\_\+action@{destroy\+\_\+action}!Action.\+h@{Action.\+h}}
+\subsubsection[{destroy\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+action (
+\begin{DoxyParamCaption}
+\item[{{\bf Action} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{_action_8h_ac5668fcde5c28de5e93961ab66024126}
+\hypertarget{_action_8h_a76343bb555249eea2a60e629ae7e7b67}{\index{Action.\+h@{Action.\+h}!new\+\_\+action@{new\+\_\+action}}
+\index{new\+\_\+action@{new\+\_\+action}!Action.\+h@{Action.\+h}}
+\subsubsection[{new\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action}$\ast$ new\+\_\+action (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{do\+\_\+act, }
+\item[{{\bf Action\+Type}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_action_8h_a76343bb555249eea2a60e629ae7e7b67}
+\hypertarget{_action_8h_aff022cec73e8301a19014ce299b3d07b}{\index{Action.\+h@{Action.\+h}!set\+\_\+action@{set\+\_\+action}}
+\index{set\+\_\+action@{set\+\_\+action}!Action.\+h@{Action.\+h}}
+\subsubsection[{set\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} set\+\_\+action (
+\begin{DoxyParamCaption}
+\item[{{\bf Action} $\ast$}]{a, }
+\item[{const char $\ast$}]{do\+\_\+act, }
+\item[{{\bf Action\+Type}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_action_8h_aff022cec73e8301a19014ce299b3d07b}

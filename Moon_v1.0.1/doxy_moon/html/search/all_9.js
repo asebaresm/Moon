@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['id',['id',['../struct___action.html#a91375186f3b4cf1499e19cb577e41640',1,'_Action::id()'],['../struct___topic.html#a150a709e86e7134d17cd063de6810b6c',1,'_Topic::id()'],['../struct___rule.html#a150a709e86e7134d17cd063de6810b6c',1,'_Rule::id()'],['../struct___link.html#a150a709e86e7134d17cd063de6810b6c',1,'_Link::id()'],['../struct___object.html#a150a709e86e7134d17cd063de6810b6c',1,'_Object::id()'],['../struct___space.html#a150a709e86e7134d17cd063de6810b6c',1,'_Space::id()'],['../_dialogue_x_m_lreader_8c.html#a77ceac8d6af195fe72f95f6afd87c45e',1,'ID():&#160;DialogueXMLreader.c'],['../_world_x_m_l_reader_8c.html#a77ceac8d6af195fe72f95f6afd87c45e',1,'ID():&#160;WorldXMLReader.c'],['../_types_8h.html#a845e604fb28f7e3d97549da3448149d3',1,'Id():&#160;Types.h']]],
+  ['id_5fcentral_5ftermoelectrica',['ID_CENTRAL_TERMOELECTRICA',['../_action_8h.html#aa9555d4c1299bc3e7c31862f84e69410',1,'Action.h']]],
+  ['id_5fcentro_5fmando',['ID_CENTRO_MANDO',['../_action_8h.html#af5556ccee4f3b981f7329d9961336563',1,'Action.h']]],
+  ['id_5fgenerador',['ID_GENERADOR',['../_action_8h.html#a501405ac03f4179d991481583e8376cb',1,'Action.h']]],
+  ['id_5fsala_5fmaquinas',['ID_SALA_MAQUINAS',['../main_8c.html#a5faa8e01e57da254aae41da4175f171f',1,'main.c']]],
+  ['iden_5fto_5fspot',['iden_to_spot',['../_maps_8c.html#a46043d58021597766364527c17a2de99',1,'iden_to_spot(char *map, char *iden, int spot):&#160;Maps.c'],['../_maps_8h.html#a46043d58021597766364527c17a2de99',1,'iden_to_spot(char *map, char *iden, int spot):&#160;Maps.c']]],
+  ['illuminates',['illuminates',['../struct___object.html#adee3e2949a9ff2ac1f966508b19e6e6b',1,'_Object']]],
+  ['initial',['INITIAL',['../_world_x_m_l_reader_8c.html#aa3d063564f6ab16f6d408b8369d0e9ff',1,'WorldXMLReader.c']]],
+  ['inventory',['inventory',['../struct___player.html#ae077c9247ee2900bd0a7f5528b73f150',1,'_Player::inventory()'],['../_inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3',1,'Inventory():&#160;Inventory.h']]],
+  ['inventory_2ec',['Inventory.c',['../_inventory_8c.html',1,'']]],
+  ['inventory_2eh',['Inventory.h',['../_inventory_8h.html',1,'']]],
+  ['inventory_5fadd_5fobj',['inventory_add_obj',['../_inventory_8c.html#a04f08935a726751f9633110cd08f86d3',1,'inventory_add_obj(Inventory *inv, Id id):&#160;Inventory.c'],['../_inventory_8h.html#a04f08935a726751f9633110cd08f86d3',1,'inventory_add_obj(Inventory *inv, Id id):&#160;Inventory.c']]],
+  ['inventory_5fremove_5fobj',['inventory_remove_obj',['../_inventory_8c.html#a969cfc1fb8d657b86bdf1841d5d2883a',1,'inventory_remove_obj(Inventory *inv, Id id):&#160;Inventory.c'],['../_inventory_8h.html#a969cfc1fb8d657b86bdf1841d5d2883a',1,'inventory_remove_obj(Inventory *inv, Id id):&#160;Inventory.c']]],
+  ['inventory_5fsearch_5fobj',['inventory_search_obj',['../_inventory_8c.html#ab52cf5d051300007bb78e62e6994be27',1,'inventory_search_obj(Inventory *inv, Id id):&#160;Inventory.c'],['../_inventory_8h.html#ab52cf5d051300007bb78e62e6994be27',1,'inventory_search_obj(Inventory *inv, Id id):&#160;Inventory.c']]],
+  ['inventory_5fset_5fmax_5fobjects',['inventory_set_max_objects',['../_inventory_8c.html#a1015b35087fcdf0270363e6ffe1179b6',1,'inventory_set_max_objects(Inventory *inv, unsigned int max_objects):&#160;Inventory.c'],['../_inventory_8h.html#a1015b35087fcdf0270363e6ffe1179b6',1,'inventory_set_max_objects(Inventory *inv, unsigned int max_objects):&#160;Inventory.c']]],
+  ['is_5fempty',['is_empty',['../_set_8c.html#ab9ebdd880f6d9f149c357c16a32e0194',1,'is_empty(Set *cj):&#160;Set.c'],['../_set_8h.html#ab9ebdd880f6d9f149c357c16a32e0194',1,'is_empty(Set *cj):&#160;Set.c']]],
+  ['is_5fobject_5finventory',['is_object_inventory',['../_world_8h.html#a58e3a47ab4ad6f2f00550b902dc0ce81',1,'World.h']]],
+  ['is_5fobject_5finventory_5flighted',['is_object_inventory_lighted',['../_world_8c.html#a96a77734ff6f763196ab3fc7484dd8e9',1,'is_object_inventory_lighted(World *m, Inventory *inv):&#160;World.c'],['../_world_8h.html#a96a77734ff6f763196ab3fc7484dd8e9',1,'is_object_inventory_lighted(World *m, Inventory *inv):&#160;World.c']]],
+  ['is_5fplayer_5finv_5ffull',['is_player_inv_full',['../_player_8c.html#abad520f06b20f68426190496f920058a',1,'is_player_inv_full(Player *player):&#160;Player.c'],['../_player_8h.html#abad520f06b20f68426190496f920058a',1,'is_player_inv_full(Player *player):&#160;Player.c']]],
+  ['is_5fplayer_5fready_5ffor_5fspace',['is_player_ready_for_space',['../main_8c.html#a91d55de37131bbf520c1d05adc2b713c',1,'main.c']]],
+  ['is_5fspace_5flighted',['is_space_lighted',['../_space_8c.html#ae49c81f00ced22411476a4a6362db2fc',1,'is_space_lighted(Space *space):&#160;Space.c'],['../_space_8h.html#ae49c81f00ced22411476a4a6362db2fc',1,'is_space_lighted(Space *space):&#160;Space.c']]],
+  ['is_5fspace_5flighten_5fby_5fobject',['is_space_lighten_by_object',['../_world_8c.html#aff195841c28ab5af25958b51456c9e92',1,'is_space_lighten_by_object(World *m, Space *space):&#160;World.c'],['../_world_8h.html#aff195841c28ab5af25958b51456c9e92',1,'is_space_lighten_by_object(World *m, Space *space):&#160;World.c']]],
+  ['is_5fspace_5fset_5fempty',['is_space_set_empty',['../_space_8c.html#a907f66e51ddc4fa75f0b50c8e0c89ecf',1,'is_space_set_empty(Space *space):&#160;Space.c'],['../_space_8h.html#a907f66e51ddc4fa75f0b50c8e0c89ecf',1,'is_space_set_empty(Space *space):&#160;Space.c']]]
+];

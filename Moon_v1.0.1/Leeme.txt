@@ -1,0 +1,10 @@
+Observaciones:
+
+-> Ejecutables:
+	- Para ejecutar el juego despues de compilarlo, se debe hacer introduciendo los ficheros que necesita como parámetro:
+		" ./Moon world.xml DialogueRules.xml Lista_objetos.txt"
+	- El test del lector de mundo se ejecuta con los parametros de la misma forma que el prototipo:
+		" ./test_lector_mundo mundo07.ent mundo07_e10_o10.xml"
+
+-> Documentacion:
+	- El manual técnico se encuentra en la carpeta doxy_moon en forma de doxygen, navegable con el fichero index.html

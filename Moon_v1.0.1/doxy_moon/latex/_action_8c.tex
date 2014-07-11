@@ -1,0 +1,86 @@
+\hypertarget{_action_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Action/\+Action.c File Reference}
+\label{_action_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Action/\+Action.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Action/\+Action.\+c}}
+}
+
+
+contiene las implementaciones de las funciones de Action  
+
+
+{\ttfamily \#include \char`\"{}Action.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___action}{\+\_\+\+Action}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Acion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_action_8c_a63f8aa1fa3805bd81e924443336b4097}{action\+\_\+execute} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_action_8c_a0f594fd8ee553b4e5bd5f277306ea30e}{action\+\_\+execute\+\_\+inspect} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a, char $\ast$inspected, \hyperlink{_types_8h_ab5b5a106fd7981d8a25dce99b700ee5c}{Size} max\+\_\+len)
+\item 
+\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$ \hyperlink{_action_8c_a76343bb555249eea2a60e629ae7e7b67}{new\+\_\+action} (const char $\ast$do\+\_\+act, \hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type} id)
+\item 
+void \hyperlink{_action_8c_ac5668fcde5c28de5e93961ab66024126}{destroy\+\_\+action} (\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_action_8c_aff022cec73e8301a19014ce299b3d07b}{set\+\_\+action} (\hyperlink{_action_8h_a01c7d823f4985d5878a7fb633744c26b}{Action} $\ast$a, const char $\ast$do\+\_\+act, \hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type} id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contiene las implementaciones de las funciones de Action 
+
+\begin{DoxyAuthor}{Author}
+Pablo Yus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_action_8c_a63f8aa1fa3805bd81e924443336b4097}{\index{Action.\+c@{Action.\+c}!action\+\_\+execute@{action\+\_\+execute}}
+\index{action\+\_\+execute@{action\+\_\+execute}!Action.\+c@{Action.\+c}}
+\subsubsection[{action\+\_\+execute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} action\+\_\+execute (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Action} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{_action_8c_a63f8aa1fa3805bd81e924443336b4097}
+\hypertarget{_action_8c_a0f594fd8ee553b4e5bd5f277306ea30e}{\index{Action.\+c@{Action.\+c}!action\+\_\+execute\+\_\+inspect@{action\+\_\+execute\+\_\+inspect}}
+\index{action\+\_\+execute\+\_\+inspect@{action\+\_\+execute\+\_\+inspect}!Action.\+c@{Action.\+c}}
+\subsubsection[{action\+\_\+execute\+\_\+inspect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} action\+\_\+execute\+\_\+inspect (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Action} $\ast$}]{a, }
+\item[{char $\ast$}]{inspected, }
+\item[{{\bf Size}}]{max\+\_\+len}
+\end{DoxyParamCaption}
+)}}\label{_action_8c_a0f594fd8ee553b4e5bd5f277306ea30e}
+\hypertarget{_action_8c_ac5668fcde5c28de5e93961ab66024126}{\index{Action.\+c@{Action.\+c}!destroy\+\_\+action@{destroy\+\_\+action}}
+\index{destroy\+\_\+action@{destroy\+\_\+action}!Action.\+c@{Action.\+c}}
+\subsubsection[{destroy\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+action (
+\begin{DoxyParamCaption}
+\item[{{\bf Action} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{_action_8c_ac5668fcde5c28de5e93961ab66024126}
+\hypertarget{_action_8c_a76343bb555249eea2a60e629ae7e7b67}{\index{Action.\+c@{Action.\+c}!new\+\_\+action@{new\+\_\+action}}
+\index{new\+\_\+action@{new\+\_\+action}!Action.\+c@{Action.\+c}}
+\subsubsection[{new\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action}$\ast$ new\+\_\+action (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{do\+\_\+act, }
+\item[{{\bf Action\+Type}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_action_8c_a76343bb555249eea2a60e629ae7e7b67}
+\hypertarget{_action_8c_aff022cec73e8301a19014ce299b3d07b}{\index{Action.\+c@{Action.\+c}!set\+\_\+action@{set\+\_\+action}}
+\index{set\+\_\+action@{set\+\_\+action}!Action.\+c@{Action.\+c}}
+\subsubsection[{set\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} set\+\_\+action (
+\begin{DoxyParamCaption}
+\item[{{\bf Action} $\ast$}]{a, }
+\item[{const char $\ast$}]{do\+\_\+act, }
+\item[{{\bf Action\+Type}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_action_8c_aff022cec73e8301a19014ce299b3d07b}

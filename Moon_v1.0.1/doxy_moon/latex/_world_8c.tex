@@ -1,0 +1,442 @@
+\hypertarget{_world_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+World/\+World.c File Reference}
+\label{_world_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+World/\+World.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+World/\+World.\+c}}
+}
+
+
+T\+A\+D que representa un mundo.  
+
+
+{\ttfamily \#include \char`\"{}World.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___world}{\+\_\+\+World}
+\begin{DoxyCompactList}\small\item\em T\+A\+D World. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$ \hyperlink{_world_8c_a579bc7a837e35e1a9f7b888dd5c27e68}{create\+\_\+world} ()
+\item 
+void \hyperlink{_world_8c_a4929b8795ea4ef44dc848717ec5ce03b}{destroy\+\_\+world} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_a5a2aaa2808be60b1f493a41381806196}{world\+\_\+add\+\_\+space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{_world_8c_a33a4926515d01b0cb7a802366324ccda}{world\+\_\+add\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{_world_8c_a82a3e6bafc1b379fa2ed855d9c0b9e85}{world\+\_\+add\+\_\+link} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{_world_8c_acdf09fed8abc6faa60f6292e79af7c22}{world\+\_\+set\+\_\+player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_a8e755d97683ccb5b617b304d6e4247bc}{world\+\_\+get\+\_\+space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{_world_8c_ac12ba0b866696faaef8023a3aa2c9866}{world\+\_\+get\+\_\+link} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{_world_8c_a1096bf81322c41ceba51ff19d2ece0eb}{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+name} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$name)
+\item 
+\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{_world_8c_a32776b91e59a4d339fcc9ea373e1f2ee}{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+desc\+Inspec} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$desc\+Inspec)
+\item 
+\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{_world_8c_a396d75f1323bf0360c54d6a83053e4cd}{world\+\_\+get\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_ae78a01836b7a8dc7fdc48250eb434b10}{world\+\_\+get\+\_\+space\+\_\+north} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_a30f3b7f990612cfeae8af017d010b4c3}{world\+\_\+get\+\_\+space\+\_\+south} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_a6fd15a7f387089f7d853ef521e7e7fb1}{world\+\_\+get\+\_\+space\+\_\+east} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_af819a6afb809c1dff9fa28a3b07acf63}{world\+\_\+get\+\_\+space\+\_\+west} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_a49f6603e1445b12dda8d6909aa59583b}{world\+\_\+get\+\_\+space\+\_\+up} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\item 
+\hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{_world_8c_aa6b9fde7f5e0bc64c307ec0787b23b76}{world\+\_\+get\+\_\+space\+\_\+down} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\item 
+\hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{_world_8c_ad3c636d2c4142b2e1d730466e110e535}{world\+\_\+get\+\_\+obj\+\_\+from\+\_\+space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$name, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a1c3cbdc760fde903d4afad687d4d231d}{world\+\_\+get\+\_\+space\+\_\+description} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space, char $\ast$desc, \hyperlink{_types_8h_ab5b5a106fd7981d8a25dce99b700ee5c}{Size} max\+\_\+len)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a88e080ea1522b070c94ff610f32d6aa2}{world\+\_\+move\+\_\+player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+O\+N} dir)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a564335cce09d3a709f90b0d8c67bb5bc}{world\+\_\+inspect\+\_\+space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$desc, int max\+\_\+len)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_ab7c2389c1b930817fa354604c74d9854}{world\+\_\+inspect\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj}, char $\ast$desc, int max\+\_\+len)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a2c9386f8e6cd7e60195ffa94715830c2}{world\+\_\+pick\+\_\+up\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a9cdcc7a6e812f6484f418a0ea6f22c7a}{world\+\_\+drop\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a4b6b9b2fd63a83155257be174c239e9e}{world\+\_\+turn\+\_\+light\+\_\+on\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a4ffbc0d2d702397d38d80ad928b627fe}{world\+\_\+turn\+\_\+light\+\_\+off\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$\hyperlink{_world_x_m_l_reader_8c_a2860d074fd2d86b8826bef4be8e71cd0}{obj})
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a2aa080be80c43657e010e8a7d722d8ce}{world\+\_\+illuminate\+\_\+space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_world_8c_aff195841c28ab5af25958b51456c9e92}{is\+\_\+space\+\_\+lighten\+\_\+by\+\_\+object} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_world_8c_a96a77734ff6f763196ab3fc7484dd8e9}{is\+\_\+object\+\_\+inventory\+\_\+lighted} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$m, \hyperlink{_inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a8aef7d378e914716e74267f80db8229d}{set\+\_\+player\+\_\+location} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_world_8c_ad0659f4c43f609d9d92e70a7d2adb4a8}{where\+\_\+is\+\_\+player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{_world_8c_af960f6e07a5683ef61dfdec954ac472a}{game\+\_\+finish} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_afe9218d192bcf5c794ef4cd7d957aaa5}{consume\+\_\+obj} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+id)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_ac5e1b5935d43c7080d00c1dbd5e02b78}{reveal\+\_\+space\+\_\+objects} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$s)
+\item 
+\hyperlink{_player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{_world_8c_ac0599ac07ca0def208153704b26b72e9}{world\+\_\+get\+\_\+player} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_af221a510d4810065be1ce2ea20a49e37}{you\+\_\+shall\+\_\+turn\+\_\+linterna\+\_\+off} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_ac6ce6ccf8db82ff4cf13df3cd114a940}{print\+\_\+inventory\+\_\+full} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a457745d04e3e5800746f68b57e0f9022}{print\+\_\+inventory} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a8a543cfb12e9630d74b185442453e579}{world\+\_\+open\+\_\+door} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+id)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_af3e0b6b2618065656ec468f46684fab4}{print\+\_\+objs\+\_\+space} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, \hyperlink{_space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$s)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_world_8c_a2ed81e0679c8b89b1fa9fadfbaa4836f}{consume\+\_\+obj\+\_\+oxi} (\hyperlink{_world_8h_a3b6b221e0f9a22185ceebd53e2d17f33}{World} $\ast$w, char $\ast$c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+A\+D que representa un mundo. 
+
+\begin{DoxyAuthor}{Author}
+Albert Soler, Alfonso Sebares y Pablo yus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_world_8c_afe9218d192bcf5c794ef4cd7d957aaa5}{\index{World.\+c@{World.\+c}!consume\+\_\+obj@{consume\+\_\+obj}}
+\index{consume\+\_\+obj@{consume\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{consume\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} consume\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{object\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_afe9218d192bcf5c794ef4cd7d957aaa5}
+\hypertarget{_world_8c_a2ed81e0679c8b89b1fa9fadfbaa4836f}{\index{World.\+c@{World.\+c}!consume\+\_\+obj\+\_\+oxi@{consume\+\_\+obj\+\_\+oxi}}
+\index{consume\+\_\+obj\+\_\+oxi@{consume\+\_\+obj\+\_\+oxi}!World.\+c@{World.\+c}}
+\subsubsection[{consume\+\_\+obj\+\_\+oxi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} consume\+\_\+obj\+\_\+oxi (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{char $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a2ed81e0679c8b89b1fa9fadfbaa4836f}
+\hypertarget{_world_8c_a579bc7a837e35e1a9f7b888dd5c27e68}{\index{World.\+c@{World.\+c}!create\+\_\+world@{create\+\_\+world}}
+\index{create\+\_\+world@{create\+\_\+world}!World.\+c@{World.\+c}}
+\subsubsection[{create\+\_\+world}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World}$\ast$ create\+\_\+world (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a579bc7a837e35e1a9f7b888dd5c27e68}
+\hypertarget{_world_8c_a4929b8795ea4ef44dc848717ec5ce03b}{\index{World.\+c@{World.\+c}!destroy\+\_\+world@{destroy\+\_\+world}}
+\index{destroy\+\_\+world@{destroy\+\_\+world}!World.\+c@{World.\+c}}
+\subsubsection[{destroy\+\_\+world}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+world (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a4929b8795ea4ef44dc848717ec5ce03b}
+\hypertarget{_world_8c_af960f6e07a5683ef61dfdec954ac472a}{\index{World.\+c@{World.\+c}!game\+\_\+finish@{game\+\_\+finish}}
+\index{game\+\_\+finish@{game\+\_\+finish}!World.\+c@{World.\+c}}
+\subsubsection[{game\+\_\+finish}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} game\+\_\+finish (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_af960f6e07a5683ef61dfdec954ac472a}
+\hypertarget{_world_8c_a96a77734ff6f763196ab3fc7484dd8e9}{\index{World.\+c@{World.\+c}!is\+\_\+object\+\_\+inventory\+\_\+lighted@{is\+\_\+object\+\_\+inventory\+\_\+lighted}}
+\index{is\+\_\+object\+\_\+inventory\+\_\+lighted@{is\+\_\+object\+\_\+inventory\+\_\+lighted}!World.\+c@{World.\+c}}
+\subsubsection[{is\+\_\+object\+\_\+inventory\+\_\+lighted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} is\+\_\+object\+\_\+inventory\+\_\+lighted (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{m, }
+\item[{{\bf Inventory} $\ast$}]{inv}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a96a77734ff6f763196ab3fc7484dd8e9}
+\hypertarget{_world_8c_aff195841c28ab5af25958b51456c9e92}{\index{World.\+c@{World.\+c}!is\+\_\+space\+\_\+lighten\+\_\+by\+\_\+object@{is\+\_\+space\+\_\+lighten\+\_\+by\+\_\+object}}
+\index{is\+\_\+space\+\_\+lighten\+\_\+by\+\_\+object@{is\+\_\+space\+\_\+lighten\+\_\+by\+\_\+object}!World.\+c@{World.\+c}}
+\subsubsection[{is\+\_\+space\+\_\+lighten\+\_\+by\+\_\+object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} is\+\_\+space\+\_\+lighten\+\_\+by\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{m, }
+\item[{{\bf Space} $\ast$}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_aff195841c28ab5af25958b51456c9e92}
+\hypertarget{_world_8c_a457745d04e3e5800746f68b57e0f9022}{\index{World.\+c@{World.\+c}!print\+\_\+inventory@{print\+\_\+inventory}}
+\index{print\+\_\+inventory@{print\+\_\+inventory}!World.\+c@{World.\+c}}
+\subsubsection[{print\+\_\+inventory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} print\+\_\+inventory (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a457745d04e3e5800746f68b57e0f9022}
+\hypertarget{_world_8c_ac6ce6ccf8db82ff4cf13df3cd114a940}{\index{World.\+c@{World.\+c}!print\+\_\+inventory\+\_\+full@{print\+\_\+inventory\+\_\+full}}
+\index{print\+\_\+inventory\+\_\+full@{print\+\_\+inventory\+\_\+full}!World.\+c@{World.\+c}}
+\subsubsection[{print\+\_\+inventory\+\_\+full}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} print\+\_\+inventory\+\_\+full (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ac6ce6ccf8db82ff4cf13df3cd114a940}
+\hypertarget{_world_8c_af3e0b6b2618065656ec468f46684fab4}{\index{World.\+c@{World.\+c}!print\+\_\+objs\+\_\+space@{print\+\_\+objs\+\_\+space}}
+\index{print\+\_\+objs\+\_\+space@{print\+\_\+objs\+\_\+space}!World.\+c@{World.\+c}}
+\subsubsection[{print\+\_\+objs\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} print\+\_\+objs\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Space} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_af3e0b6b2618065656ec468f46684fab4}
+\hypertarget{_world_8c_ac5e1b5935d43c7080d00c1dbd5e02b78}{\index{World.\+c@{World.\+c}!reveal\+\_\+space\+\_\+objects@{reveal\+\_\+space\+\_\+objects}}
+\index{reveal\+\_\+space\+\_\+objects@{reveal\+\_\+space\+\_\+objects}!World.\+c@{World.\+c}}
+\subsubsection[{reveal\+\_\+space\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} reveal\+\_\+space\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Space} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ac5e1b5935d43c7080d00c1dbd5e02b78}
+\hypertarget{_world_8c_a8aef7d378e914716e74267f80db8229d}{\index{World.\+c@{World.\+c}!set\+\_\+player\+\_\+location@{set\+\_\+player\+\_\+location}}
+\index{set\+\_\+player\+\_\+location@{set\+\_\+player\+\_\+location}!World.\+c@{World.\+c}}
+\subsubsection[{set\+\_\+player\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} set\+\_\+player\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a8aef7d378e914716e74267f80db8229d}
+\hypertarget{_world_8c_ad0659f4c43f609d9d92e70a7d2adb4a8}{\index{World.\+c@{World.\+c}!where\+\_\+is\+\_\+player@{where\+\_\+is\+\_\+player}}
+\index{where\+\_\+is\+\_\+player@{where\+\_\+is\+\_\+player}!World.\+c@{World.\+c}}
+\subsubsection[{where\+\_\+is\+\_\+player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} where\+\_\+is\+\_\+player (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ad0659f4c43f609d9d92e70a7d2adb4a8}
+\hypertarget{_world_8c_a82a3e6bafc1b379fa2ed855d9c0b9e85}{\index{World.\+c@{World.\+c}!world\+\_\+add\+\_\+link@{world\+\_\+add\+\_\+link}}
+\index{world\+\_\+add\+\_\+link@{world\+\_\+add\+\_\+link}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+add\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ world\+\_\+add\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a82a3e6bafc1b379fa2ed855d9c0b9e85}
+\hypertarget{_world_8c_a33a4926515d01b0cb7a802366324ccda}{\index{World.\+c@{World.\+c}!world\+\_\+add\+\_\+obj@{world\+\_\+add\+\_\+obj}}
+\index{world\+\_\+add\+\_\+obj@{world\+\_\+add\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+add\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ world\+\_\+add\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a33a4926515d01b0cb7a802366324ccda}
+\hypertarget{_world_8c_a5a2aaa2808be60b1f493a41381806196}{\index{World.\+c@{World.\+c}!world\+\_\+add\+\_\+space@{world\+\_\+add\+\_\+space}}
+\index{world\+\_\+add\+\_\+space@{world\+\_\+add\+\_\+space}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+add\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+add\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a5a2aaa2808be60b1f493a41381806196}
+\hypertarget{_world_8c_a9cdcc7a6e812f6484f418a0ea6f22c7a}{\index{World.\+c@{World.\+c}!world\+\_\+drop\+\_\+obj@{world\+\_\+drop\+\_\+obj}}
+\index{world\+\_\+drop\+\_\+obj@{world\+\_\+drop\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+drop\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+drop\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a9cdcc7a6e812f6484f418a0ea6f22c7a}
+\hypertarget{_world_8c_ac12ba0b866696faaef8023a3aa2c9866}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+link@{world\+\_\+get\+\_\+link}}
+\index{world\+\_\+get\+\_\+link@{world\+\_\+get\+\_\+link}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ world\+\_\+get\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ac12ba0b866696faaef8023a3aa2c9866}
+\hypertarget{_world_8c_a396d75f1323bf0360c54d6a83053e4cd}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+obj@{world\+\_\+get\+\_\+obj}}
+\index{world\+\_\+get\+\_\+obj@{world\+\_\+get\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ world\+\_\+get\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a396d75f1323bf0360c54d6a83053e4cd}
+\hypertarget{_world_8c_a32776b91e59a4d339fcc9ea373e1f2ee}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+obj\+\_\+by\+\_\+desc\+Inspec@{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+desc\+Inspec}}
+\index{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+desc\+Inspec@{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+desc\+Inspec}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+desc\+Inspec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ world\+\_\+get\+\_\+obj\+\_\+by\+\_\+desc\+Inspec (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{char $\ast$}]{desc\+Inspec}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a32776b91e59a4d339fcc9ea373e1f2ee}
+\hypertarget{_world_8c_a1096bf81322c41ceba51ff19d2ece0eb}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+obj\+\_\+by\+\_\+name@{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+name}}
+\index{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+name@{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+name}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+obj\+\_\+by\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ world\+\_\+get\+\_\+obj\+\_\+by\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a1096bf81322c41ceba51ff19d2ece0eb}
+\hypertarget{_world_8c_ad3c636d2c4142b2e1d730466e110e535}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+obj\+\_\+from\+\_\+space@{world\+\_\+get\+\_\+obj\+\_\+from\+\_\+space}}
+\index{world\+\_\+get\+\_\+obj\+\_\+from\+\_\+space@{world\+\_\+get\+\_\+obj\+\_\+from\+\_\+space}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+obj\+\_\+from\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ world\+\_\+get\+\_\+obj\+\_\+from\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ad3c636d2c4142b2e1d730466e110e535}
+\hypertarget{_world_8c_ac0599ac07ca0def208153704b26b72e9}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+player@{world\+\_\+get\+\_\+player}}
+\index{world\+\_\+get\+\_\+player@{world\+\_\+get\+\_\+player}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ world\+\_\+get\+\_\+player (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ac0599ac07ca0def208153704b26b72e9}
+\hypertarget{_world_8c_a8e755d97683ccb5b617b304d6e4247bc}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space@{world\+\_\+get\+\_\+space}}
+\index{world\+\_\+get\+\_\+space@{world\+\_\+get\+\_\+space}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+get\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a8e755d97683ccb5b617b304d6e4247bc}
+\hypertarget{_world_8c_a1c3cbdc760fde903d4afad687d4d231d}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space\+\_\+description@{world\+\_\+get\+\_\+space\+\_\+description}}
+\index{world\+\_\+get\+\_\+space\+\_\+description@{world\+\_\+get\+\_\+space\+\_\+description}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+get\+\_\+space\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{space, }
+\item[{char $\ast$}]{desc, }
+\item[{{\bf Size}}]{max\+\_\+len}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a1c3cbdc760fde903d4afad687d4d231d}
+\hypertarget{_world_8c_aa6b9fde7f5e0bc64c307ec0787b23b76}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space\+\_\+down@{world\+\_\+get\+\_\+space\+\_\+down}}
+\index{world\+\_\+get\+\_\+space\+\_\+down@{world\+\_\+get\+\_\+space\+\_\+down}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space\+\_\+down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+get\+\_\+space\+\_\+down (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_aa6b9fde7f5e0bc64c307ec0787b23b76}
+\hypertarget{_world_8c_a6fd15a7f387089f7d853ef521e7e7fb1}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space\+\_\+east@{world\+\_\+get\+\_\+space\+\_\+east}}
+\index{world\+\_\+get\+\_\+space\+\_\+east@{world\+\_\+get\+\_\+space\+\_\+east}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space\+\_\+east}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+get\+\_\+space\+\_\+east (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a6fd15a7f387089f7d853ef521e7e7fb1}
+\hypertarget{_world_8c_ae78a01836b7a8dc7fdc48250eb434b10}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space\+\_\+north@{world\+\_\+get\+\_\+space\+\_\+north}}
+\index{world\+\_\+get\+\_\+space\+\_\+north@{world\+\_\+get\+\_\+space\+\_\+north}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space\+\_\+north}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+get\+\_\+space\+\_\+north (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ae78a01836b7a8dc7fdc48250eb434b10}
+\hypertarget{_world_8c_a30f3b7f990612cfeae8af017d010b4c3}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space\+\_\+south@{world\+\_\+get\+\_\+space\+\_\+south}}
+\index{world\+\_\+get\+\_\+space\+\_\+south@{world\+\_\+get\+\_\+space\+\_\+south}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space\+\_\+south}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+get\+\_\+space\+\_\+south (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a30f3b7f990612cfeae8af017d010b4c3}
+\hypertarget{_world_8c_a49f6603e1445b12dda8d6909aa59583b}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space\+\_\+up@{world\+\_\+get\+\_\+space\+\_\+up}}
+\index{world\+\_\+get\+\_\+space\+\_\+up@{world\+\_\+get\+\_\+space\+\_\+up}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space\+\_\+up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+get\+\_\+space\+\_\+up (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a49f6603e1445b12dda8d6909aa59583b}
+\hypertarget{_world_8c_af819a6afb809c1dff9fa28a3b07acf63}{\index{World.\+c@{World.\+c}!world\+\_\+get\+\_\+space\+\_\+west@{world\+\_\+get\+\_\+space\+\_\+west}}
+\index{world\+\_\+get\+\_\+space\+\_\+west@{world\+\_\+get\+\_\+space\+\_\+west}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+get\+\_\+space\+\_\+west}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Space}$\ast$ world\+\_\+get\+\_\+space\+\_\+west (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_af819a6afb809c1dff9fa28a3b07acf63}
+\hypertarget{_world_8c_a2aa080be80c43657e010e8a7d722d8ce}{\index{World.\+c@{World.\+c}!world\+\_\+illuminate\+\_\+space@{world\+\_\+illuminate\+\_\+space}}
+\index{world\+\_\+illuminate\+\_\+space@{world\+\_\+illuminate\+\_\+space}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+illuminate\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+illuminate\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{m, }
+\item[{{\bf Space} $\ast$}]{space}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a2aa080be80c43657e010e8a7d722d8ce}
+\hypertarget{_world_8c_ab7c2389c1b930817fa354604c74d9854}{\index{World.\+c@{World.\+c}!world\+\_\+inspect\+\_\+obj@{world\+\_\+inspect\+\_\+obj}}
+\index{world\+\_\+inspect\+\_\+obj@{world\+\_\+inspect\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+inspect\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+inspect\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{m, }
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{char $\ast$}]{desc, }
+\item[{int}]{max\+\_\+len}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_ab7c2389c1b930817fa354604c74d9854}
+\hypertarget{_world_8c_a564335cce09d3a709f90b0d8c67bb5bc}{\index{World.\+c@{World.\+c}!world\+\_\+inspect\+\_\+space@{world\+\_\+inspect\+\_\+space}}
+\index{world\+\_\+inspect\+\_\+space@{world\+\_\+inspect\+\_\+space}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+inspect\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+inspect\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Space} $\ast$}]{space, }
+\item[{char $\ast$}]{desc, }
+\item[{int}]{max\+\_\+len}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a564335cce09d3a709f90b0d8c67bb5bc}
+\hypertarget{_world_8c_a88e080ea1522b070c94ff610f32d6aa2}{\index{World.\+c@{World.\+c}!world\+\_\+move\+\_\+player@{world\+\_\+move\+\_\+player}}
+\index{world\+\_\+move\+\_\+player@{world\+\_\+move\+\_\+player}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+move\+\_\+player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+move\+\_\+player (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf D\+I\+R\+E\+C\+T\+I\+O\+N}}]{dir}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a88e080ea1522b070c94ff610f32d6aa2}
+\hypertarget{_world_8c_a8a543cfb12e9630d74b185442453e579}{\index{World.\+c@{World.\+c}!world\+\_\+open\+\_\+door@{world\+\_\+open\+\_\+door}}
+\index{world\+\_\+open\+\_\+door@{world\+\_\+open\+\_\+door}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+open\+\_\+door}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+open\+\_\+door (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Id}}]{link\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a8a543cfb12e9630d74b185442453e579}
+\hypertarget{_world_8c_a2c9386f8e6cd7e60195ffa94715830c2}{\index{World.\+c@{World.\+c}!world\+\_\+pick\+\_\+up\+\_\+obj@{world\+\_\+pick\+\_\+up\+\_\+obj}}
+\index{world\+\_\+pick\+\_\+up\+\_\+obj@{world\+\_\+pick\+\_\+up\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+pick\+\_\+up\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+pick\+\_\+up\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a2c9386f8e6cd7e60195ffa94715830c2}
+\hypertarget{_world_8c_acdf09fed8abc6faa60f6292e79af7c22}{\index{World.\+c@{World.\+c}!world\+\_\+set\+\_\+player@{world\+\_\+set\+\_\+player}}
+\index{world\+\_\+set\+\_\+player@{world\+\_\+set\+\_\+player}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+set\+\_\+player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ world\+\_\+set\+\_\+player (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_acdf09fed8abc6faa60f6292e79af7c22}
+\hypertarget{_world_8c_a4ffbc0d2d702397d38d80ad928b627fe}{\index{World.\+c@{World.\+c}!world\+\_\+turn\+\_\+light\+\_\+off\+\_\+obj@{world\+\_\+turn\+\_\+light\+\_\+off\+\_\+obj}}
+\index{world\+\_\+turn\+\_\+light\+\_\+off\+\_\+obj@{world\+\_\+turn\+\_\+light\+\_\+off\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+turn\+\_\+light\+\_\+off\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+turn\+\_\+light\+\_\+off\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a4ffbc0d2d702397d38d80ad928b627fe}
+\hypertarget{_world_8c_a4b6b9b2fd63a83155257be174c239e9e}{\index{World.\+c@{World.\+c}!world\+\_\+turn\+\_\+light\+\_\+on\+\_\+obj@{world\+\_\+turn\+\_\+light\+\_\+on\+\_\+obj}}
+\index{world\+\_\+turn\+\_\+light\+\_\+on\+\_\+obj@{world\+\_\+turn\+\_\+light\+\_\+on\+\_\+obj}!World.\+c@{World.\+c}}
+\subsubsection[{world\+\_\+turn\+\_\+light\+\_\+on\+\_\+obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} world\+\_\+turn\+\_\+light\+\_\+on\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w, }
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_a4b6b9b2fd63a83155257be174c239e9e}
+\hypertarget{_world_8c_af221a510d4810065be1ce2ea20a49e37}{\index{World.\+c@{World.\+c}!you\+\_\+shall\+\_\+turn\+\_\+linterna\+\_\+off@{you\+\_\+shall\+\_\+turn\+\_\+linterna\+\_\+off}}
+\index{you\+\_\+shall\+\_\+turn\+\_\+linterna\+\_\+off@{you\+\_\+shall\+\_\+turn\+\_\+linterna\+\_\+off}!World.\+c@{World.\+c}}
+\subsubsection[{you\+\_\+shall\+\_\+turn\+\_\+linterna\+\_\+off}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} you\+\_\+shall\+\_\+turn\+\_\+linterna\+\_\+off (
+\begin{DoxyParamCaption}
+\item[{{\bf World} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{_world_8c_af221a510d4810065be1ce2ea20a49e37}

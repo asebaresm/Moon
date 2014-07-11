@@ -1,0 +1,187 @@
+\hypertarget{_reglas__dialogo_8c}{\section{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.0.1\+\_\+doxy/\+Dialogue/\+Reglas\+\_\+dialogo.c File Reference}
+\label{_reglas__dialogo_8c}\index{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue/\+Reglas\+\_\+dialogo.\+c@{C\+:/\+Documents and Settings/e280850/\+Escritorio/\+Moon\+\_\+v1.\+0.\+1\+\_\+doxy/\+Dialogue/\+Reglas\+\_\+dialogo.\+c}}
+}
+
+
+Reglas de dialogo del programa.  
+
+
+{\ttfamily \#include \char`\"{}Reglas\+\_\+dialogo.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___topic}{\+\_\+\+Topic}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Topic. \end{DoxyCompactList}\item 
+struct \hyperlink{struct___rule}{\+\_\+\+Rule}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Rule. \end{DoxyCompactList}\item 
+struct \hyperlink{struct___dialogue_rules}{\+\_\+\+Dialogue\+Rules}
+\begin{DoxyCompactList}\small\item\em T\+A\+D Dialogue\+Rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$ \hyperlink{_reglas__dialogo_8c_a15f096f5343e6b1b5b6c3e75e9812bd2}{create\+\_\+dialog} ()
+\item 
+void \hyperlink{_reglas__dialogo_8c_ac4576b529ef30484fec2d85b3d54b9d7}{destroy\+\_\+dialog} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr)
+\item 
+int \hyperlink{_reglas__dialogo_8c_a10a3cc5b442f1f2413a7c688a6894486}{dialog\+\_\+add\+\_\+topic} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, char $\ast$topic\+\_\+name, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} topic\+\_\+id)
+\item 
+int \hyperlink{_reglas__dialogo_8c_a0fa7d6d4da528852b080dc09cee7ddeb}{dialog\+\_\+add\+\_\+rule} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_reglas__dialogo_8c_a7a1a11c7ecb56d94f077a8931a096650}{dialog\+\_\+add\+\_\+pattern} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule, char $\ast$pattern)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_reglas__dialogo_8c_ae87dc07e7a5361b33c033d7cb51fdd04}{dialog\+\_\+add\+\_\+output\+\_\+templ} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule, char $\ast$template)
+\item 
+\hyperlink{_types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{_reglas__dialogo_8c_a67f2bb2004a8ca2cd42bf38d27f998fe}{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} topic\+\_\+id, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id)
+\item 
+char $\ast$ \hyperlink{_reglas__dialogo_8c_a98f16bd4253047957eabf1ac4558b219}{select\+\_\+output\+\_\+template} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id)
+\item 
+char $\ast$ \hyperlink{_reglas__dialogo_8c_ada18e5c9c964b3945e222f25a49b3065}{select\+\_\+random\+\_\+output\+\_\+template} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_reglas__dialogo_8c_a3a6881c9058de241983490d4a51f39bd}{search\+\_\+rule\+\_\+and\+\_\+pattern} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, int $\ast$ind\+\_\+patr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} topic, const char $\ast$txt\+\_\+ent)
+\item 
+int \hyperlink{_reglas__dialogo_8c_a215eda5d03c8216e3b3a7f4d4914ff85}{search\+\_\+pattern\+\_\+coincidence} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, int rule\+\_\+index, const char $\ast$txt\+\_\+ent)
+\item 
+\hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{_reglas__dialogo_8c_a3505ba5ccab8d14843605c2a52bc9a17}{get\+\_\+id\+\_\+from\+\_\+topic} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, const char $\ast$txt\+\_\+ent)
+\item 
+int \hyperlink{_reglas__dialogo_8c_aad61c3f49b5d84f7dd129d9ba15c3c77}{size\+\_\+rule\+\_\+pattern} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, int rule\+\_\+id, int ind\+\_\+patr)
+\item 
+char $\ast$ \hyperlink{_reglas__dialogo_8c_aed1f73036b139daa89eed706403d374b}{get\+\_\+pattern\+\_\+from\+\_\+index} (\hyperlink{_reglas__dialogo_8h_a70506fcb47fc80e274f6fb15eeb00d3a}{Dialogue\+Rules} $\ast$dr, \hyperlink{_types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rule\+\_\+id, int $\ast$index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reglas de dialogo del programa. 
+
+Este modulo incluye aquellas funciones relativas a la gestión de las reglas que rigen el diálogo del juego.
+
+\begin{DoxyAuthor}{Author}
+Alfonso Sebares 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09-\/03-\/2014 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_reglas__dialogo_8c_a15f096f5343e6b1b5b6c3e75e9812bd2}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!create\+\_\+dialog@{create\+\_\+dialog}}
+\index{create\+\_\+dialog@{create\+\_\+dialog}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{create\+\_\+dialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dialogue\+Rules}$\ast$ create\+\_\+dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a15f096f5343e6b1b5b6c3e75e9812bd2}
+\hypertarget{_reglas__dialogo_8c_ac4576b529ef30484fec2d85b3d54b9d7}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!destroy\+\_\+dialog@{destroy\+\_\+dialog}}
+\index{destroy\+\_\+dialog@{destroy\+\_\+dialog}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{destroy\+\_\+dialog}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+\_\+dialog (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_ac4576b529ef30484fec2d85b3d54b9d7}
+\hypertarget{_reglas__dialogo_8c_ae87dc07e7a5361b33c033d7cb51fdd04}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!dialog\+\_\+add\+\_\+output\+\_\+templ@{dialog\+\_\+add\+\_\+output\+\_\+templ}}
+\index{dialog\+\_\+add\+\_\+output\+\_\+templ@{dialog\+\_\+add\+\_\+output\+\_\+templ}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{dialog\+\_\+add\+\_\+output\+\_\+templ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialog\+\_\+add\+\_\+output\+\_\+templ (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule, }
+\item[{char $\ast$}]{template}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_ae87dc07e7a5361b33c033d7cb51fdd04}
+\hypertarget{_reglas__dialogo_8c_a7a1a11c7ecb56d94f077a8931a096650}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!dialog\+\_\+add\+\_\+pattern@{dialog\+\_\+add\+\_\+pattern}}
+\index{dialog\+\_\+add\+\_\+pattern@{dialog\+\_\+add\+\_\+pattern}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{dialog\+\_\+add\+\_\+pattern}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialog\+\_\+add\+\_\+pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule, }
+\item[{char $\ast$}]{pattern}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a7a1a11c7ecb56d94f077a8931a096650}
+\hypertarget{_reglas__dialogo_8c_a0fa7d6d4da528852b080dc09cee7ddeb}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!dialog\+\_\+add\+\_\+rule@{dialog\+\_\+add\+\_\+rule}}
+\index{dialog\+\_\+add\+\_\+rule@{dialog\+\_\+add\+\_\+rule}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{dialog\+\_\+add\+\_\+rule}]{\setlength{\rightskip}{0pt plus 5cm}int dialog\+\_\+add\+\_\+rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a0fa7d6d4da528852b080dc09cee7ddeb}
+\hypertarget{_reglas__dialogo_8c_a67f2bb2004a8ca2cd42bf38d27f998fe}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic@{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic}}
+\index{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic@{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialog\+\_\+add\+\_\+ruleid\+\_\+to\+\_\+topic (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{topic\+\_\+id, }
+\item[{{\bf Id}}]{rule\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a67f2bb2004a8ca2cd42bf38d27f998fe}
+\hypertarget{_reglas__dialogo_8c_a10a3cc5b442f1f2413a7c688a6894486}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!dialog\+\_\+add\+\_\+topic@{dialog\+\_\+add\+\_\+topic}}
+\index{dialog\+\_\+add\+\_\+topic@{dialog\+\_\+add\+\_\+topic}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{dialog\+\_\+add\+\_\+topic}]{\setlength{\rightskip}{0pt plus 5cm}int dialog\+\_\+add\+\_\+topic (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{char $\ast$}]{topic\+\_\+name, }
+\item[{{\bf Id}}]{topic\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a10a3cc5b442f1f2413a7c688a6894486}
+\hypertarget{_reglas__dialogo_8c_a3505ba5ccab8d14843605c2a52bc9a17}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!get\+\_\+id\+\_\+from\+\_\+topic@{get\+\_\+id\+\_\+from\+\_\+topic}}
+\index{get\+\_\+id\+\_\+from\+\_\+topic@{get\+\_\+id\+\_\+from\+\_\+topic}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{get\+\_\+id\+\_\+from\+\_\+topic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} get\+\_\+id\+\_\+from\+\_\+topic (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{const char $\ast$}]{txt\+\_\+ent}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a3505ba5ccab8d14843605c2a52bc9a17}
+\hypertarget{_reglas__dialogo_8c_aed1f73036b139daa89eed706403d374b}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!get\+\_\+pattern\+\_\+from\+\_\+index@{get\+\_\+pattern\+\_\+from\+\_\+index}}
+\index{get\+\_\+pattern\+\_\+from\+\_\+index@{get\+\_\+pattern\+\_\+from\+\_\+index}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{get\+\_\+pattern\+\_\+from\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+pattern\+\_\+from\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule\+\_\+id, }
+\item[{int $\ast$}]{index}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_aed1f73036b139daa89eed706403d374b}
+\hypertarget{_reglas__dialogo_8c_a215eda5d03c8216e3b3a7f4d4914ff85}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!search\+\_\+pattern\+\_\+coincidence@{search\+\_\+pattern\+\_\+coincidence}}
+\index{search\+\_\+pattern\+\_\+coincidence@{search\+\_\+pattern\+\_\+coincidence}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{search\+\_\+pattern\+\_\+coincidence}]{\setlength{\rightskip}{0pt plus 5cm}int search\+\_\+pattern\+\_\+coincidence (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{int}]{rule\+\_\+index, }
+\item[{const char $\ast$}]{txt\+\_\+ent}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a215eda5d03c8216e3b3a7f4d4914ff85}
+\hypertarget{_reglas__dialogo_8c_a3a6881c9058de241983490d4a51f39bd}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!search\+\_\+rule\+\_\+and\+\_\+pattern@{search\+\_\+rule\+\_\+and\+\_\+pattern}}
+\index{search\+\_\+rule\+\_\+and\+\_\+pattern@{search\+\_\+rule\+\_\+and\+\_\+pattern}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{search\+\_\+rule\+\_\+and\+\_\+pattern}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} search\+\_\+rule\+\_\+and\+\_\+pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{int $\ast$}]{ind\+\_\+patr, }
+\item[{{\bf Id}}]{topic, }
+\item[{const char $\ast$}]{txt\+\_\+ent}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a3a6881c9058de241983490d4a51f39bd}
+\hypertarget{_reglas__dialogo_8c_a98f16bd4253047957eabf1ac4558b219}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!select\+\_\+output\+\_\+template@{select\+\_\+output\+\_\+template}}
+\index{select\+\_\+output\+\_\+template@{select\+\_\+output\+\_\+template}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{select\+\_\+output\+\_\+template}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ select\+\_\+output\+\_\+template (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_a98f16bd4253047957eabf1ac4558b219}
+\hypertarget{_reglas__dialogo_8c_ada18e5c9c964b3945e222f25a49b3065}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!select\+\_\+random\+\_\+output\+\_\+template@{select\+\_\+random\+\_\+output\+\_\+template}}
+\index{select\+\_\+random\+\_\+output\+\_\+template@{select\+\_\+random\+\_\+output\+\_\+template}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{select\+\_\+random\+\_\+output\+\_\+template}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ select\+\_\+random\+\_\+output\+\_\+template (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{{\bf Id}}]{rule\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_ada18e5c9c964b3945e222f25a49b3065}
+\hypertarget{_reglas__dialogo_8c_aad61c3f49b5d84f7dd129d9ba15c3c77}{\index{Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}!size\+\_\+rule\+\_\+pattern@{size\+\_\+rule\+\_\+pattern}}
+\index{size\+\_\+rule\+\_\+pattern@{size\+\_\+rule\+\_\+pattern}!Reglas\+\_\+dialogo.\+c@{Reglas\+\_\+dialogo.\+c}}
+\subsubsection[{size\+\_\+rule\+\_\+pattern}]{\setlength{\rightskip}{0pt plus 5cm}int size\+\_\+rule\+\_\+pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue\+Rules} $\ast$}]{dr, }
+\item[{int}]{rule\+\_\+id, }
+\item[{int}]{ind\+\_\+patr}
+\end{DoxyParamCaption}
+)}}\label{_reglas__dialogo_8c_aad61c3f49b5d84f7dd129d9ba15c3c77}

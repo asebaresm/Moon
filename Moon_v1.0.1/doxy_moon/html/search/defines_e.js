@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['t_5fend_5fgame',['T_END_GAME',['../main_8c.html#a57b16037ae74a462eeff251f3fe3ea56',1,'main.c']]],
+  ['t_5fhablar',['T_HABLAR',['../main_8c.html#aa58545d9499c4d892da97047ec4a77ae',1,'main.c']]],
+  ['t_5fhablar_5ferror',['T_HABLAR_ERROR',['../main_8c.html#ac33963a1cb4bf1c944d60962e532d601',1,'main.c']]],
+  ['t_5fhelp_5fcontrols',['T_HELP_CONTROLS',['../main_8c.html#a4330ab1366ed54729da6154baf2e5577',1,'main.c']]],
+  ['t_5finit_5fgame',['T_INIT_GAME',['../main_8c.html#a32b0ebf32197dfff93abb78c4ab78750',1,'main.c']]],
+  ['t_5fpc_5fayuda',['T_PC_AYUDA',['../main_8c.html#a2fc3c52d91963c6362537bfd9d018692',1,'main.c']]],
+  ['t_5fpc_5fdespedida',['T_PC_DESPEDIDA',['../main_8c.html#ad3a1e15f43bab48fff727b6e99bde274',1,'main.c']]],
+  ['t_5fpc_5fflag1',['T_PC_FLAG1',['../main_8c.html#a0bc3b1345abfafcc6fdbc9e8dbd4373f',1,'main.c']]],
+  ['t_5fpc_5fflag2',['T_PC_FLAG2',['../main_8c.html#a3125289dd5a38b64cb9be544011231fb',1,'main.c']]],
+  ['t_5fpc_5fflag3',['T_PC_FLAG3',['../main_8c.html#abd2c8ffba48db7f80c512ed5b671e616',1,'main.c']]],
+  ['t_5fpc_5finicio',['T_PC_INICIO',['../main_8c.html#a80c84b6c01d0d86b034fdd3615243efa',1,'main.c']]],
+  ['t_5fpc_5fnormal',['T_PC_NORMAL',['../main_8c.html#ad8e25e87b1364aaf2039d177eb7beb3d',1,'main.c']]],
+  ['t_5fpc_5ftonta',['T_PC_TONTA',['../main_8c.html#ad91431f8caaa0d2ae7e9f820c540c69b',1,'main.c']]],
+  ['t_5fpc_5fvictory',['T_PC_VICTORY',['../main_8c.html#ae5cf2b82756bcbbcc32278e60f9efe54',1,'main.c']]],
+  ['t_5ftonta',['T_TONTA',['../main_8c.html#a90a3e1d54ee81565e65bdeb2be152889',1,'main.c']]],
+  ['t_5fvacia',['T_VACIA',['../main_8c.html#ab2e3db8eced66417027d346800f82e43',1,'main.c']]],
+  ['tam',['TAM',['../_util_cadena_8h.html#ae0b4816fb45161ef9da5e6d6134ee28a',1,'UtilCadena.h']]],
+  ['template',['TEMPLATE',['../_dialogue_x_m_lreader_8c.html#a491ddbf322aef9661794e38b7ff82c02',1,'DialogueXMLreader.c']]],
+  ['templates',['TEMPLATES',['../_dialogue_x_m_lreader_8c.html#a8b261cf061c0647a08c04d92e84ed426',1,'DialogueXMLreader.c']]],
+  ['topic',['TOPIC',['../_dialogue_x_m_lreader_8c.html#a39757563bccdc110e93a1914cef2663d',1,'DialogueXMLreader.c']]],
+  ['topicid',['TOPICID',['../_dialogue_x_m_lreader_8c.html#afda25e418f41b7057b2db9c1add3083e',1,'DialogueXMLreader.c']]],
+  ['topics',['TOPICS',['../_dialogue_x_m_lreader_8c.html#ac11e46cad047c00c58f5822792b51945',1,'DialogueXMLreader.c']]],
+  ['true_5fvalue',['TRUE_VALUE',['../_world_x_m_l_reader_8c.html#a72ad74b06a961a37aaf79205aefd7805',1,'WorldXMLReader.c']]]
+];
